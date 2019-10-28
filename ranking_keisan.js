@@ -517,11 +517,7 @@ function list_deta(detaname,root){
             break;
             case "その他":
             switch(kan_list[i][0]){
-                case "アイリス":
-                case "ヴィシア":
-                case "東煌":
                 case "北連":
-                case "サディア":
                 case "ブリ":
                 case "ネプテューヌ":
                 case "うたわれるもの":
