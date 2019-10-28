@@ -521,6 +521,7 @@ function list_deta(detaname,root){
                 case "ヴィシア":
                 case "東煌":
                 case "北連":
+                case "サディア":
                 case "ブリ":
                 case "ネプテューヌ":
                 case "うたわれるもの":
