@@ -278,3 +278,12 @@ function profile_in(){
     target_profile[19].textContent="";//イラスト
     target_profile[19].insertAdjacentHTML("afterbegin",kan_profile[index_n][9]);//イラスト
 };
+
+function click_button(getid){
+var id_deta = document.getElementById(getid);
+if(id_deta.style.display=="none"){
+id_deta.style.display="block";
+}else{
+id_deta.style.display="none";
+}
+};
