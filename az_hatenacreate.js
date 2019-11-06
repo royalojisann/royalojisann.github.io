@@ -254,10 +254,10 @@ function spec_in(){
     var kan_crt = Math.floor((0.05+kan.命中*1/(kan.命中*1+100+2000)+(kan.幸運+50+0)/5000)*10000)/100;
     var kan_body = Math.floor(kan.耐久/(1-kan_kaihi/100));
 
-    var texta = '<p>・<strong>'+target_kansen+'</strong><br>'+'\n'+'<strong>回避率</strong>：<strong>'+kan_kaihi+'%</strong><br>';
-    var textb = '<strong>命中率</strong>：<strong>'+kan_hit+'%</strong><br>';
-    var textc = '<strong>ＣＲＴ</strong>：<strong>'+kan_crt+'%</strong><br>';
-    var textd = '<strong>総耐久</strong>：<strong>'+kan_body+'</strong></p>';
+    var texta = '<p><strong>'+target_kansen+'の性能</strong><br>'+'\n'+'<ul><li><strong>回避率</strong>：<strong>'+kan_kaihi+'%</strong></li>';
+    var textb = '<li><strong>命中率</strong>：<strong>'+kan_hit+'%</strong></li>';
+    var textc = '<li><strong>ＣＲＴ</strong>：<strong>'+kan_crt+'%</strong></li>';
+    var textd = '<li><strong>総耐久</strong>：<strong>'+kan_body+'</strong></li></ul></p>';
     kan_spec.insertAdjacentHTML("afterbegin",texta+textb+textc+textd);
 };
 
