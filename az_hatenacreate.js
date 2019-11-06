@@ -10,11 +10,11 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
     status_in();
-
     profile_in();
 });
 
 function status_in(){
+    var tabledetalist = [];
     var target_area = document.getElementById("target_status");
     target_area.textContent="";
     target_area.insertAdjacentHTML("afterbegin",
