@@ -248,16 +248,17 @@ function status_in(){
 
 function spec_in(){
     var kan_spec = document.getElementById("target_spec");
+    kan_spec.textContent="";
     var kan = tabledetalist[0][13];
     var kan_kaihi =Math.floor((1-(0.1+100/(100+kan.回避+2)+(50-kan.幸運+0)/1000))*10000)/100;
     var kan_hit =Math.floor(((0.1+kan.命中/(kan.命中+100+2)+(kan.幸運-50+0)/1000))*10000)/100;
     var kan_crt = Math.floor((0.05+kan.命中*1/(kan.命中*1+100+2000)+(kan.幸運+50+0)/5000)*10000)/100;
     var kan_body = Math.floor(kan.耐久/(1-kan_kaihi/100));
 
-    var texta = '<p><strong>'+target_kansen+'の性能</strong><br>'+'\n'+'<ul><li><strong>回避率</strong>：<strong>'+kan_kaihi+'%</strong></li>';
+    var texta = '<strong>'+target_kansen+'の性能</strong>'+'\n'+'<ul><li><strong>回避率</strong>：<strong>'+kan_kaihi+'%</strong></li>';
     var textb = '<li><strong>命中率</strong>：<strong>'+kan_hit+'%</strong></li>';
     var textc = '<li><strong>ＣＲＴ</strong>：<strong>'+kan_crt+'%</strong></li>';
-    var textd = '<li><strong>総耐久</strong>：<strong>'+kan_body+'</strong></li></ul></p>';
+    var textd = '<li><strong>総耐久</strong>：<strong>'+kan_body+'</strong></li></ul>';
     kan_spec.insertAdjacentHTML("afterbegin",texta+textb+textc+textd);
 };
 
