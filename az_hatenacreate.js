@@ -32,9 +32,9 @@ function status_in(){
     '</tbody></table>'+
     '<table class="character_deta css_setin" style="border-bottom: 1px solid #ddd;"><tbody>'+
     '<tr>'+
-    '<td style="background: #ffdfdf;"><span class="deta_seve"></span><span class="deta_seve"></span></td><td style="background: #ffdfdf;"><span>最大</span><span class="deta_seve"></span></td>'+
-    '<td style="background: #faebd7;"><span class="deta_seve"></span><span class="deta_seve"></span></td><td style="background: #faebd7;"><span>最大</span><span class="deta_seve"></span></td>'+
-    '<td style="background: #cfdbff;"><span class="deta_seve"></span><span class="deta_seve"></span></td><td style="background: #cfdbff;"><span>最大</span><span class="deta_seve"></span></td>'+            
+    '<td style="background: #ffdfdf;"><span class="deta_seve"></span>'+'<br>'+'<span class="deta_seve"></span></td><td style="background: #ffdfdf;"><span>最大</span>'+'<br>'+'<span class="deta_seve"></span></td>'+
+    '<td style="background: #faebd7;"><span class="deta_seve"></span>'+'<br>'+'<span class="deta_seve"></span></td><td style="background: #faebd7;"><span>最大</span>'+'<br>'+'<span class="deta_seve"></span></td>'+
+    '<td style="background: #cfdbff;"><span class="deta_seve"></span>'+'<br>'+'<span class="deta_seve"></span></td><td style="background: #cfdbff;"><span>最大</span>'+'<br>'+'<span class="deta_seve"></span></td>'+            
     '</tr>'+
     '</tbody></table>'+
     '</div>'
