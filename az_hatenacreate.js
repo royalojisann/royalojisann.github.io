@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
     status_in();
-    spec_in();
+
     profile_in();
 });
 
@@ -244,6 +244,7 @@ function status_in(){
             break;
         }
     }
+    spec_in();
 };
 
 function spec_in(){
