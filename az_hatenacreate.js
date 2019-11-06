@@ -30,7 +30,7 @@ function status_in(){
     '<tr class="status_deta"><td>火力</td><td><span class="deta_seve"></span><span class="soubi_seve"></span></td><td>雷装</td><td><span class="deta_seve"></span><span class="soubi_seve"></span></td><td>航空</td><td><span class="deta_seve"></span><span class="soubi_seve"></span></td><td>対空</td><td><span class="deta_seve"></span><span class="soubi_seve"></span></td></tr>'+
     '<tr class="status_deta"><td>対潜</td><td><span class="deta_seve"></span><span class="soubi_seve"></span></td><td>速力</td><td><span class="deta_seve"></span><span class="soubi_seve"></span></td><td>幸運</td><td><span class="deta_seve"></span><span class="soubi_seve"></span></td><td>燃費</td><td><span class="deta_seve"></span></td></tr>'+
     '</tbody></table>'+
-    '<table class="character_deta" style="border-bottom: 1px solid #bbb;"><tbody>'+
+    '<table class="character_deta css_setin" style="border-bottom: 1px solid #bbb;"><tbody>'+
     '<tr>'+
     '<td style="background: #ffdfdf;"><span class="deta_seve"></span><span class="deta_seve"></span></td><td style="background: #ffdfdf;"><span>最大</span><span class="deta_seve"></span></td>'+
     '<td style="background: #faebd7;"><span class="deta_seve"></span><span class="deta_seve"></span></td><td style="background: #faebd7;"><span>最大</span><span class="deta_seve"></span></td>'+
