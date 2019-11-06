@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 function status_in(){
-    var tabledetalist = [];
+    tabledetalist = [];
     var target_area = document.getElementById("target_status");
     target_area.textContent="";
     target_area.insertAdjacentHTML("afterbegin",
