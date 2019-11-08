@@ -2,7 +2,8 @@ var tabledetalist = [];
 var target_kansen = "";
 var index_n = 0;
 window.addEventListener('DOMContentLoaded', function() {
-    target_kansen = document.getElementById("target_name").textContent
+    if(document.getElementById("target_name") != null){
+    target_kansen = document.getElementById("target_name").textContent;
     tabledetalist = [];
     for(index_n = 0; index_n < kan_list.length; index_n++){
         if(kan_list[index_n][2]==target_kansen){
@@ -10,10 +11,12 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
     status_in();
-    profile_in();
+    profile_in();       
+    }
 });
 
 function status_in(){
+    if(document.getElementById("target_name") != null){
     tabledetalist = [];
     var target_area = document.getElementById("target_status");
     target_area.textContent="";
@@ -245,6 +248,7 @@ function status_in(){
         }
     }
     spec_in();
+    }
 };
 
 function spec_in(){
