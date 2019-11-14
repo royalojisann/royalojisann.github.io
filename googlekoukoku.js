@@ -2,8 +2,8 @@ window.addEventListener('DOMContentLoaded', function() {
     var koukoku_width = "<ins class='adsbygoogle'style='display:block'data-ad-client='ca-pub-1820058722476319'data-ad-slot='8302844276'data-ad-format='auto'data-full-width-responsive='true'></ins>";
     var koukoku_textlink = "<ins class='adsbygoogle'style='display:block'data-ad-client='ca-pub-1820058722476319'data-ad-slot='6195555686'data-ad-format='link'data-full-width-responsive='true'></ins>";
 
-    var setlist_text = document.getElementById("koukoku_setlist").value;
-    var setlist_hairetu = setlist_text.split('/');
+    var setlist_text = document.getElementById("koukoku_setlist");
+    var setlist_hairetu = setlist_text.value.split('/');
     var h2deta = document.getElementsByClassName("entry-content")[0].getElementsByTagName("h2");
     for(var i = 0; i<setlist_hairetu.length; i++){
         switch(i){
