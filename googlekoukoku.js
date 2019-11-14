@@ -1,7 +1,8 @@
 window.addEventListener('DOMContentLoaded', function() {
+    if(document.getElementById("koukoku_setlist") != null){
     var koukoku_width = "<ins class='adsbygoogle'style='display:block'data-ad-client='ca-pub-1820058722476319'data-ad-slot='8302844276'data-ad-format='auto'data-full-width-responsive='true'></ins>";
     var koukoku_textlink = "<ins class='adsbygoogle'style='display:block'data-ad-client='ca-pub-1820058722476319'data-ad-slot='6195555686'data-ad-format='link'data-full-width-responsive='true'></ins>";
-
+    
     var setlist_text = document.getElementById("koukoku_setlist");
     var setlist_hairetu = setlist_text.value.split('/');
     var h2deta = document.getElementsByClassName("entry-content")[0].getElementsByTagName("h2");
@@ -36,5 +37,6 @@ window.addEventListener('DOMContentLoaded', function() {
                 }
             break;
         }
+    }
     }
 });
