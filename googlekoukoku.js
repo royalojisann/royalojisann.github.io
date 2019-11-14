@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', function() {
             break;
             default:
                 if(setlist_hairetu[i] != 0){
-                    h2deta[setlist_hairetu[i]].insertAdjacentHTML('afterend',koukoku_width);
+                    h2deta[setlist_hairetu[i]].insertAdjacentHTML('beforebegin',koukoku_width);
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 }
             break;
