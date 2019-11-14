@@ -8,24 +8,28 @@ window.addEventListener('DOMContentLoaded', function() {
     for(var i = 0; i<setlist_hairetu.length; i++){
         switch(i){
             case 0:
+                //下の広告
                 if(setlist_hairetu[0] != 0){
                     document.getElementsByClassName("entry-content")[0].insertAdjacentHTML('beforeend',koukoku_width);
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 }
             break;
             case 1:
+                //上のリンク
                 if(setlist_hairetu[1] != 0){
                     h2deta[0].insertAdjacentHTML('beforebegin',koukoku_textlink);
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 }
             break;
             case 2:
+                //中
                 if(setlist_hairetu[2] != 0){
-                    h2deta[setlist_hairetu[2]].insertAdjacentHTML('afterend',koukoku_width);
+                    h2deta[setlist_hairetu[2]].insertAdjacentHTML('beforebegin',koukoku_width);
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 }
             break;
             default:
+                //その他
                 if(setlist_hairetu[i] != 0){
                     h2deta[setlist_hairetu[i]].insertAdjacentHTML('beforebegin',koukoku_width);
                     (adsbygoogle = window.adsbygoogle || []).push({});
