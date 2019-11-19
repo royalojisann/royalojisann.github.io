@@ -370,7 +370,7 @@ var kan_profile = [
 ['重桜','空母','赤城(μ兵装)','','「激奏のポラリス」限定建造','2019年10月31日','未定','1925年4月22日','<a href="https://twitter.com/mai__nakahara?lang=ja" target="_blank" >中原麻衣</a>','<a href="https://www.pixiv.net/member.php?id=1393609" target="_blank" >ハオ</a>'],
 ['ヴィシア','戦艦','ガスコーニュ(μ兵装)','','「激奏のポラリス」限定建造','2019年10月31日','未定','君が建造した日','<a href="https://twitter.com/mikakokomatsu?lang=ja" target="_blank" >小松未可子</a>','<a href="https://www.pixiv.net/member.php?id=38088" target="_blank" >Liduke(日子)</a>'],
 ['ロイヤル','軽巡','グラスゴー','R','小型建造','2019年11月14日','未定','1936年6月20日','不明','<a href="https://twitter.com/lpmya" target="_blank" >Lpip</a>'],
-['','','','','','','','','',''],
+['ホロライブ','駆逐','白上フブキ','SSR','期間限定イベント','2019年11月末','未定','デビュー2018年・誕生日10月5日','<a href="https://twitter.com/shirakamifubuki" target="_blank" >白上フブキ</a>','<a href="https://twitter.com/lemon_mito" target="_blank" >凪白みと</a>'],
 ['','','','','','','','','',''],
 ['','','','','','','','','',''],
 ['','','','','','','','','',''],
