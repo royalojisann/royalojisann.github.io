@@ -35,7 +35,7 @@ var kan_profile = [
 ['ロイヤル','軽巡','シェフィールド','SR','小型建造','2018年2月26日','未定','1936年7月23日','<a href="https://www.instagram.com/konomi_kohara0628/?hl=ja" target="_blank" >小原好美</a>','<a href="https://twitter.com/mayag_nya?lang=ja" target="_blank" >瑪雅G</a>'],
 ['ロイヤル','軽巡','オーロラ','SR','小型建造','2018年2月12日','未定','1936年8月20日','<a href="https://twitter.com/yuisakakibara" target="_blank" >柳原ゆい</a>','<a href="https://twitter.com/mayag_nya?lang=ja" target="_blank" >瑪雅G</a>'],
 ['ロイヤル','軽巡','エディンバラ','SR','建造(小型/大型./特型)','初期','未定','1938年3月31日','<a href="https://ameblo.jp/goto-yuko/" target="_blank" >後藤邑子</a>','<a href="https://www.pixiv.net/member.php?id=1562284" target="_blank" >深蓝的杰克(JackNavy)</a>'],
-['ロイヤル','軽巡','シリアス','SSR','小型建造','初期','未定','1940年9月18日','<a  target="_blank" href="https://twitter.com/coloruri?lang=ja" target="_blank" >青木瑠璃子</a>','<a href="https://www.pixiv.net/member.php?id=3054186" target="_blank" >KIn</a>'],
+['ロイヤル','軽巡','シリアス','SSR','小型建造','2019年1月24日','未定','1940年9月18日','<a  target="_blank" href="https://twitter.com/coloruri?lang=ja" target="_blank" >青木瑠璃子</a>','<a href="https://www.pixiv.net/member.php?id=3054186" target="_blank" >KIn</a>'],
 ['ロイヤル','軽巡','ベルファスト','SSR','建造(小型/大型./特型)','初期','未定','1938年3月17日','<a href="https://twitter.com/kuronekounion" target="_blank" >堀江由衣</a>',''],
 ['ロイヤル','軽巡','ネプチューン','PR','特別計画艦一期','2018年4月26日','未定','君が建造した日','<a href="https://twitter.com/izawamikako" target="_blank" >井澤美香子</a>','<a href="https://www.pixiv.net/member.php?id=1023957" target="_blank" >かえで(夢咲楓)</a>'],
 ['ロイヤル','重巡','ノーフォーク','R','建造(大型/特型)、海域','初期','未定','1928年12月12日','','<a href="https://www.pixiv.net/member.php?id=1023957" target="_blank" >かえで(夢咲楓)</a>'],
