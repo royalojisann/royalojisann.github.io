@@ -457,52 +457,6 @@ var tweetdeta1 ="";
 var tweetdeta2 ="";
 var tweetdeta3 ="";
 
-function twion(){
-
-	// Twitterの初期化
-$(function() {
-  var d = document;
-  var s = 'script';
-  var id = 'twitter-wjs';
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (!d.getElementById(id)) {
-    js = d.createElement(s);
-    js.id = id;
-    js.src = 'https://platform.twitter.com/widgets.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }
-});
-
-// twttrの初期化(platform.twitter.com/widgets.jsの完了)が未だなら待つ。
-function callAfterTwitterInitialization(callback){
-  if(typeof twttr !== "undefined"){
-    callback();
-  } else {
-    setTimeout(function(){
-        callAfterTwitterInitialization(callback);
-    }, 100);
-  }
-}
-var shareUrl = "https://royalojisann.jp/az_gatya_new_get.html";
-var targetId = "tweet1";
-var message = '#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3;
-var hashtag = "アズールレーン";
-	
-// twttrが使えるようになったらシェアボタンを作る。
-callAfterTwitterInitialization(function(){
-  $('#' + targetId).empty();
-  twttr.widgets.createShareButton(
-    shareUrl,
-    document.getElementById(targetId),
-    {
-      count: 'none',
-      text: message,
-      size: "large",
-      hashtags: hashtag,
-    });
-});
-}
-
 function img_pic(root){
     switch(root){
         case 1:
