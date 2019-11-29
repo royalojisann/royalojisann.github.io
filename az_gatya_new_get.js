@@ -392,8 +392,28 @@ function onedays(){
     twion();
 }
 
-
 function simulation(){
+	/**
+ * オブジェクト同士を加算
+ * @return Object 左辺と右辺を加算して作られた新しいオブジェクト
+ */
+Object.prototype.plus = function(arg){
+	var ret = {};
+	for(key in this){
+		ret[key] = this[key];
+	}
+	for(key in arg){
+		if(key in ret){
+			if(typeof arg[key] === 'function')continue;
+			ret[key] = ret[key] + arg[key];
+		}
+		else{
+			ret[key] = arg[key];
+		}
+	}
+	return ret;
+};
+
     hairetuset();
     bloodLists = ProbabilisticChoice(checkset);
     var bunsi = 0;
@@ -412,21 +432,7 @@ function simulation(){
             hantei = types[checkset[d].item]==0 ? hantei+=0 : hantei+=1;
         }
         bunsi = hantei==checkset.length-4 ? bunsi+=1 : bunsi+=0;
-        sum_types = sum_types.prototype.plus = function(types){
-	var ret = {};
-	for(key in this){
-		ret[key] = this[key];
-	}
-	for(key in arg){
-		if(key in ret){
-			if(typeof types[key] === 'function')continue;
-			ret[key] = ret[key] + types[key];
-		}
-		else{
-			ret[key] = types[key];
-		}
-	}
-	return ret;
+        sum_types = sum_types.plus(types);
     }
     days_text = document.getElementById("gatya_set").value*1+'連建造×1000セットした結果'+'<br>'+(Math.floor(bunsi)/10)+'％の確率でコンプリート！';
     tweet_deta1 = document.getElementById("gatya_set").value*1+'連建造×1000セットした結果'+'\n'+(Math.floor(bunsi)/10)+'％の確率でコンプリート！';
