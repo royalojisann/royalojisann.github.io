@@ -452,17 +452,52 @@ function simulation(){
     twion();
     img_pic(1);
 }
+
 var tweetdeta1 ="";
 var tweetdeta2 ="";
 var tweetdeta3 ="";
+
+var shareUrl = "https://royalojisann.jp/az_gatya_new_get.html";
+var hashtag = "アズールレーン";
 function twion(){
-    $(function(){
-        $.fn.appendTweetButton = function(url,text,tagu){
-            $(this).append($("<a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-url=\""+url+"\" data-text=\""+text+"\" data-size=\"large\" data-hashtags=\""+tagu+"\" data-count=\"vertical\">Tweet<\/a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}else{twttr.widgets.load();}}(document, 'script', 'twitter-wjs');<\/script>"));
-        }
-            document.getElementById("tweet1").textContent = "";
-            $("#tweet1").appendTweetButton("https://royalojisann.jp/az_gatya_new_get.html",'#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3,"アズールレーン");
-        });
+	// Twitterの初期化
+$(function() {
+  var d = document;
+  var s = 'script';
+  var id = 'twitter-wjs';
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (!d.getElementById(id)) {
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://platform.twitter.com/widgets.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }
+});
+
+// twttrの初期化(platform.twitter.com/widgets.jsの完了)が未だなら待つ。
+function callAfterTwitterInitialization(callback){
+  if(typeof twttr !== "undefined"){
+    callback();
+  } else {
+    setTimeout(function(){
+        callAfterTwitterInitialization(callback);
+    }, 100);
+  }
+}
+
+// twttrが使えるようになったらシェアボタンを作る。
+callAfterTwitterInitialization(function(){
+  $('#' + targetId).empty();
+  twttr.widgets.createShareButton(
+    shareUrl,
+    document.getElementById('tweet1'),
+    {
+      count: 'none',
+      text: '#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3;
+      size: "large",
+      hashtags: hashtag,
+    });
+});
 }
 
 function img_pic(root){
