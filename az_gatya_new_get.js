@@ -471,7 +471,7 @@ function img_pic(root){
    var targetId = "tweet1";
    //var message = tweet_deta1;
    var hashtag = "アズールレーン";
-   function twion(){
+function twion(){
    // Twitterの初期化
      var d = document;
      var s = 'script';
@@ -497,6 +497,8 @@ function img_pic(root){
 
    // twttrが使えるようになったらシェアボタンを作る。
    callAfterTwitterInitialization(function(){
+    if(document.getElementById(targetId)!=null){
+     document.getElementById(targetId).textContent="";
      twttr.widgets.createShareButton(
        shareUrl,
        document.getElementById(targetId),
@@ -506,5 +508,6 @@ function img_pic(root){
          size: "large",
          hashtags: '',
        });
+    }
    });
 }
