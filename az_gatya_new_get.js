@@ -461,7 +461,7 @@ function twion(){
             $(this).append($("<a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-url=\""+url+"\" data-text=\""+text+"\" data-size=\"large\" data-hashtags=\""+tagu+"\" data-count=\"vertical\">Tweet<\/a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}else{twttr.widgets.load();}}(document, 'script', 'twitter-wjs');<\/script>"));
         }
             document.getElementById("tweet1").textContent = "";
-            $("#tweet1").appendTweetButton("https://az-royalojisann.hatenablog.com/entry/az-gatya-simulation",'#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3,"アズールレーン");
+            $("#tweet1").appendTweetButton("https://royalojisann.jp/az_gatya_new_get.html",'#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3,"アズールレーン");
         });
 }
 
