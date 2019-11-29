@@ -472,4 +472,3 @@ function img_pic(root){
    //var message = tweet_deta1;
    var hashtag = "アズールレーン";
 
-}
