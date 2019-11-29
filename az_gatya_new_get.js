@@ -427,7 +427,6 @@ function simulation(){
 		}
 	}
 	return ret;
-};
     }
     days_text = document.getElementById("gatya_set").value*1+'連建造×1000セットした結果'+'<br>'+(Math.floor(bunsi)/10)+'％の確率でコンプリート！';
     tweet_deta1 = document.getElementById("gatya_set").value*1+'連建造×1000セットした結果'+'\n'+(Math.floor(bunsi)/10)+'％の確率でコンプリート！';
