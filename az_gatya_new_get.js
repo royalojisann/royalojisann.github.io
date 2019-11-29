@@ -392,27 +392,6 @@ function onedays(){
     twion();
 }
 
-/**
- * オブジェクト同士を加算
- * @return Object 左辺と右辺を加算して作られた新しいオブジェクト
- */
-Object.prototype.plus = function(arg){
-	var ret = {};
-	for(key in this){
-		ret[key] = this[key];
-	}
-	for(key in arg){
-		if(key in ret){
-			if(typeof arg[key] === 'function')continue;
-			ret[key] = ret[key] + arg[key];
-		}
-		else{
-			ret[key] = arg[key];
-		}
-	}
-	return ret;
-};
-
 function simulation(){
     hairetuset();
     bloodLists = ProbabilisticChoice(checkset);
@@ -526,7 +505,7 @@ function img_pic(root){
          count: 'none',
          text: '#アズレン建造チャレンジ'+'\n'+tweet_deta1+'\n'+tweet_deta2+'ほか:'+tweet_deta3+'\n'+'アズールレーン'+'\n',
          size: "large",
-         hashtags: hashtag,
+         hashtags: '',
        });
    });
 }
