@@ -457,9 +457,11 @@ var tweetdeta1 ="";
 var tweetdeta2 ="";
 var tweetdeta3 ="";
 
-var shareUrl = "https://royalojisann.jp/az_gatya_new_get.html";
-var hashtag = "アズールレーン";
+
 function twion(){
+var shareUrl = "https://royalojisann.jp/az_gatya_new_get.html";
+var message = '#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3;
+var hashtag = "アズールレーン";
 	// Twitterの初期化
 $(function() {
   var d = document;
@@ -493,7 +495,7 @@ callAfterTwitterInitialization(function(){
     document.getElementById('tweet1'),
     {
       count: 'none',
-      text: '#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3;
+      text: message,
       size: "large",
       hashtags: hashtag,
     });
