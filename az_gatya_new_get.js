@@ -471,7 +471,23 @@ function img_pic(root){
     document.getElementsByClassName("pic_area")[0].src =character[0];
     document.getElementsByClassName("pic_area")[1].textContent =character[1];
 }
-   
+
+function img_pic(root){
+    switch(root){
+        case 1:
+            var character = kome01[Math.floor(Math.random() * kome01.length)]
+        break;
+        case 2:
+            var character = kome02[Math.floor(Math.random() * kome02.length)]
+        break;
+        case 3:
+            var character = kome03[Math.floor(Math.random() * kome03.length)]
+        break;
+    }
+    document.getElementsByClassName("pic_area")[0].src =character[0];
+    document.getElementsByClassName("pic_area")[1].textContent =character[1];
+}
+
    var shareUrl = "https://royalojisann.jp/az_gatya_new_get.html";
    var targetId = "tweet1";
    //var message = tweet_deta1;
@@ -488,7 +504,7 @@ function img_pic(root){
        js.src = 'https://platform.twitter.com/widgets.js';
        fjs.parentNode.insertBefore(js, fjs);
      }
-   
+
    // twttrの初期化(platform.twitter.com/widgets.jsの完了)が未だなら待つ。
    function callAfterTwitterInitialization(callback){
      if(typeof twttr !== "undefined"){
@@ -499,7 +515,7 @@ function img_pic(root){
        }, 100);
      }
    }
-   
+
    // twttrが使えるようになったらシェアボタンを作る。
    callAfterTwitterInitialization(function(){
      $('#' + targetId).empty();
