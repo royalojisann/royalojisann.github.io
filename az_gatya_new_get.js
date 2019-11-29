@@ -266,15 +266,15 @@ function hairetuset(){
 var txtdeta = "";
 var txtdeta_b ="";
 function resultset(types_deta){
-    txtdeta = "";tweetdeta2 ="";
+    txtdeta = "";tweet_deta2 ="";
     for(var txt=0; txt<checkset.length-4; txt++){
         txtdeta += checkset[txt].item+':'+types_deta[checkset[txt].item]+'<br>';
-        tweetdeta2 +=  checkset[txt].item+':'+types_deta[checkset[txt].item]+'\n';
+        tweet_deta2 +=  checkset[txt].item+':'+types_deta[checkset[txt].item]+'\n';
     }
-    txtdeta_b ="";tweetdeta3 ="";
+    txtdeta_b ="";tweet_deta3 ="";
     for(var txt=0; txt<4; txt++){
         txtdeta_b += '['+checkset[checkset.length-4+txt].item+':'+types_deta[checkset[checkset.length-4+txt].item]+']';
-        tweetdeta3 += '['+checkset[checkset.length-4+txt].item+':'+types_deta[checkset[checkset.length-4+txt].item]+']';
+        tweet_deta3 += '['+checkset[checkset.length-4+txt].item+':'+types_deta[checkset[checkset.length-4+txt].item]+']';
     }
 }
 var days_text = "";
@@ -301,11 +301,11 @@ function set_start(){
     }
     if(hantei==checkset.length-4){
         days_text = document.getElementById("gatya_set").value*1+'連建造した結果'+'<br>'+'ピックアップコンプリート！';
-        tweetdeta1 = document.getElementById("gatya_set").value*1+'連建造した結果'+'\n'+'ピックアップコンプリート！';
+        tweet_deta1 = document.getElementById("gatya_set").value*1+'連建造した結果'+'\n'+'ピックアップコンプリート！';
         img_pic(1);
     }else{
         days_text = document.getElementById("gatya_set").value*1+'連建造した結果'+'<br>'+'そろいませんでした…';
-        tweetdeta1 =  document.getElementById("gatya_set").value*1+'連建造した結果'+'\n'+'そろいませんでした…';
+        tweet_deta1 =  document.getElementById("gatya_set").value*1+'連建造した結果'+'\n'+'そろいませんでした…';
         img_pic(2);
     }
     document.getElementById("result_text").textContent = "";document.getElementById("result_area").textContent ="";
@@ -340,7 +340,7 @@ function all_comp(){
         }
     }
     days_text = '出るまで建造した結果'+'<br>'+'建造<strong>'+i+'</strong>回目でコンプリート！';
-    tweetdeta1 = '出るまで建造した結果'+'\n'+'建造'+i+'回目でコンプリート！';
+    tweet_deta1 = '出るまで建造した結果'+'\n'+'建造'+i+'回目でコンプリート！';
     document.getElementById("result_text").textContent = "";document.getElementById("result_area").textContent ="";
     document.getElementById("result_text").insertAdjacentHTML('afterbegin',days_text);
     resultset(types);
@@ -376,12 +376,12 @@ function onedays(){
         if(hantei==checkset.length-4){
           days++;
             days_text = document.getElementById("days_set").value*1+'日間、毎日3回建造した結果'+'<br>'+days+'日目でコンプリート！';
-            tweetdeta1 = document.getElementById("days_set").value*1+'日間、毎日3回建造した結果'+'\n'+days+'日目でコンプリート！';
+            tweet_deta1 = document.getElementById("days_set").value*1+'日間、毎日3回建造した結果'+'\n'+days+'日目でコンプリート！';
             img_pic(1);
             break;
         }else{
             days_text = document.getElementById("days_set").value*1+'日間、毎日3回建造した結果'+'<br>'+'そろいませんでした…';
-            tweetdeta1 = document.getElementById("days_set").value*1+'日間、毎日3回建造した結果'+'\n'+'そろいませんでした…';
+            tweet_deta1 = document.getElementById("days_set").value*1+'日間、毎日3回建造した結果'+'\n'+'そろいませんでした…';
             img_pic(3);
         }
     }
@@ -435,27 +435,27 @@ function simulation(){
         sum_types = sum_types.plus(types);
     }
     days_text = document.getElementById("gatya_set").value*1+'連建造×1000セットした結果'+'<br>'+(Math.floor(bunsi)/10)+'％の確率でコンプリート！';
-    tweetdeta1 = document.getElementById("gatya_set").value*1+'連建造×1000セットした結果'+'\n'+(Math.floor(bunsi)/10)+'％の確率でコンプリート！';
+    tweet_deta1 = document.getElementById("gatya_set").value*1+'連建造×1000セットした結果'+'\n'+(Math.floor(bunsi)/10)+'％の確率でコンプリート！';
     document.getElementById("result_text").textContent = "";document.getElementById("result_area").textContent ="";
     document.getElementById("result_text").insertAdjacentHTML('afterbegin',days_text);
-    txtdeta = "";tweetdeta2 = "";
+    txtdeta = "";tweet_deta2 = "";
     for(var txt=0; txt<checkset.length-4; txt++){
         txtdeta += checkset[txt].item+':'+sum_types[checkset[txt].item]/1000+'<br>';
-        tweetdeta2 += checkset[txt].item+':'+sum_types[checkset[txt].item]/1000+'\n';
+        tweet_deta2 += checkset[txt].item+':'+sum_types[checkset[txt].item]/1000+'\n';
     }
-    txtdeta_b ="";tweetdeta3 = "";
+    txtdeta_b ="";tweet_deta3 = "";
     for(var txt=0; txt<4; txt++){
         txtdeta_b += '['+checkset[checkset.length-4+txt].item+':'+sum_types[checkset[checkset.length-4+txt].item]/1000+']';
-        tweetdeta3 += '['+checkset[checkset.length-4+txt].item+':'+sum_types[checkset[checkset.length-4+txt].item]/1000+']';
+        tweet_deta3 += '['+checkset[checkset.length-4+txt].item+':'+sum_types[checkset[checkset.length-4+txt].item]/1000+']';
     }
     document.getElementById("result_area").insertAdjacentHTML('afterbegin',txtdeta+'ほか:'+txtdeta_b);
     twion();
     img_pic(1);
 }
 
-var tweetdeta1 ="";
-var tweetdeta2 ="";
-var tweetdeta3 ="";
+var tweet_deta1 ="";
+var tweet_deta2 ="";
+var tweet_deta3 ="";
 
 function img_pic(root){
     switch(root){
