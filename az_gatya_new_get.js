@@ -471,43 +471,5 @@ function img_pic(root){
    var targetId = "tweet1";
    //var message = tweet_deta1;
    var hashtag = "アズールレーン";
-function twion(){
-   // Twitterの初期化
-     var d = document;
-     var s = 'script';
-     var id = 'twitter-wjs';
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (!d.getElementById(id)) {
-       js = d.createElement(s);
-       js.id = id;
-       js.src = 'https://platform.twitter.com/widgets.js';
-       fjs.parentNode.insertBefore(js, fjs);
-     }
 
-   // twttrの初期化(platform.twitter.com/widgets.jsの完了)が未だなら待つ。
-   function callAfterTwitterInitialization(callback){
-     if(typeof twttr !== "undefined"){
-       callback();
-     } else {
-       setTimeout(function(){
-           callAfterTwitterInitialization(callback);
-       }, 100);
-     }
-   }
-
-   // twttrが使えるようになったらシェアボタンを作る。
-   callAfterTwitterInitialization(function(){
-    if(document.getElementById(targetId)!=null){
-     document.getElementById(targetId).textContent="";
-     twttr.widgets.createShareButton(
-       shareUrl,
-       document.getElementById(targetId),
-       {
-         count: 'none',
-         text: '#アズレン建造チャレンジ'+'\n'+tweet_deta1+'\n'+tweet_deta2+'ほか:'+tweet_deta3+'\n'+'アズールレーン'+'\n',
-         size: "large",
-         hashtags: '',
-       });
-    }
-   });
 }
