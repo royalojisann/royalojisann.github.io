@@ -113,56 +113,56 @@ var gatya_title =[
 ]
 
 var kome01 = [
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「よくわからないですけど……ちょっと嬉しい、です」','綾波'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/akagi.png','「ふふふ……赤城、いつでも準備万端ですわ」','赤城'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/akagi.png','「うふふふ…盛り上がってきたわ～」','赤城'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/akasi.png','「まいどありだにゃ～」','明石'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/gura-futuxextuperinn.png','「さぁ条件が全て揃った。では建造するとしよう......」','にくすべ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/San_Diego_1.png','「おめディエゴ！」','サンディエゴ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「リアルは神ゲー…だったです？」','綾波'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「ジャベリン、全力でイキま～す、です！」','ジャベリン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「とってもラッキーです！」','ジャベリン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「ラフィー…ガチャ…好き」','ラフィー'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「この程度、あの時と比べて全然…」','ラフィー'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Prinz_Eugen.png','「指揮官～もう一回♪もう二回♪もっと回しちゃえ～」','オイゲン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「こうなったら仕方ありません、実力行使です！！」','ニーミ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「ジャベリンは運がとってもいいんですよ！」','ジャベリン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「指揮官、ちゃんとコンプしてくださいね！」','ニーミ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「よくわからないですけど……ちょっと嬉しい、です」','綾波'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/akagi.png','「ふふふ……赤城、いつでも準備万端ですわ」','赤城'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/akagi.png','「うふふふ…盛り上がってきたわ～」','赤城'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/akasi.png','「まいどありだにゃ～」','明石'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/gura-futuxextuperinn.png','「さぁ条件が全て揃った。では建造するとしよう......」','にくすべ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/San_Diego_1.png','「おめディエゴ！」','サンディエゴ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「リアルは神ゲー…だったです？」','綾波'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「ジャベリン、全力でイキま～す、です！」','ジャベリン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「とってもラッキーです！」','ジャベリン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「ラフィー…ガチャ…好き」','ラフィー'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「この程度、あの時と比べて全然…」','ラフィー'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Prinz_Eugen.png','「指揮官～もう一回♪もう二回♪もっと回しちゃえ～」','オイゲン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「こうなったら仕方ありません、実力行使です！！」','ニーミ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「ジャベリンは運がとってもいいんですよ！」','ジャベリン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「指揮官、ちゃんとコンプしてくださいね！」','ニーミ'],
   ];
  var kome02 = [
-    ['https://azroyal.bakufu.org/imgpic/face_icon/akagi.png','「うふふ…指揮官様、絶対に、絶対に、絶対に絶対に絶対に…この建造から逃げないでくださいね…」','赤城'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/akasi.png','「ん…？これは？課金が必要そうだにゃ…」','明石'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「少しだけ悲しい…です」','綾波'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/gura-futuxextuperinn.png','「憎んでいる。すべてを。」','にくすべ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「指揮官、がっかりした？（ツンツン」','ラフィー'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/San_Diego_1.png','「早くお金を出して！！このままじゃ「おりゅ？」になっちゃうよ！！」','サンディエゴ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/enterprise.png','「終わりだ！デデドン！(絶望)」','エンタープライズ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Saratoga.png','「うわぁ！大ピンチ！」','サラトガ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「新キャラのためなら、「課金」してもいい……です」','綾波'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「ガチャは嫌いではないけど好きじゃないです。」','綾波'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「コンプしたいなら、回転数をもーっと増やさないとダメですよ？」','ジャベリン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「指揮官、お金貸して、回す。」','ラフィー'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「自己リミッター解除……」','ラフィー'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「…無理だよ。常識的に考えて」','ニーミ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「うぅ…だめ、まだ泣いちゃ…！」','ニーミ']
+    ['http://azroyal.bakufu.org/imgpic/face_icon/akagi.png','「うふふ…指揮官様、絶対に、絶対に、絶対に絶対に絶対に…この建造から逃げないでくださいね…」','赤城'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/akasi.png','「ん…？これは？課金が必要そうだにゃ…」','明石'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「少しだけ悲しい…です」','綾波'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/gura-futuxextuperinn.png','「憎んでいる。すべてを。」','にくすべ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「指揮官、がっかりした？（ツンツン」','ラフィー'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/San_Diego_1.png','「早くお金を出して！！このままじゃ「おりゅ？」になっちゃうよ！！」','サンディエゴ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/enterprise.png','「終わりだ！デデドン！(絶望)」','エンタープライズ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Saratoga.png','「うわぁ！大ピンチ！」','サラトガ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「新キャラのためなら、「課金」してもいい……です」','綾波'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「ガチャは嫌いではないけど好きじゃないです。」','綾波'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「コンプしたいなら、回転数をもーっと増やさないとダメですよ？」','ジャベリン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「指揮官、お金貸して、回す。」','ラフィー'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「自己リミッター解除……」','ラフィー'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「…無理だよ。常識的に考えて」','ニーミ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「うぅ…だめ、まだ泣いちゃ…！」','ニーミ']
   ];
  var kome03 = [
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Saratoga.png','「サラトガちゃん、あなた(のサイフ)がダイスキだよ～♪」','サラトガ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/unicorn.png','「ぐーぐるぷれい…？ユニコーン、お兄ちゃんが何言ってるかわかんない…」','ユニコーン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Saratoga.png','「ナントカナルゼッタイダイジョウブノープロブレム！」','サラトガ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/enterprise.png','「指揮官、教えてくれ。私はあと何回建造すればいい？」','エンタープライズ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/San_Diego_1.png','「よくわかんないけど、頑張ればきっとダイジョウブ！！」','サンディエゴ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Prinz_Eugen.png','「この程度で満足かしら？」','オイゲン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/akasi.png','「指揮官(のサイフ)ダイスキだにゃ！」','明石'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「回転数は大切ですよ。「出るまで回せば100％」と偉人の方が仰っていました……」','ニーミ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「大丈夫です、指揮官…綾波を信じて――」','綾波'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Prinz_Eugen.png','「この程度じゃ足りないわ。もっと、もっとだ……！」','オイゲン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「単発で当てちゃうよ！…えい！」','ジャベリン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「ナルホド　ナルホド　ソウイウ仕組ミナンデスネ」','ジャベリン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「うん…二度寝しよう……」','ラフィー'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/unicorn.png','「くれじっとかーど？ないよ？そんなの…」','ユニコーン'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「対策を考えないと……」','ニーミ'],
-    ['https://azroyal.bakufu.org/imgpic/face_icon/gura-futuxextuperinn.png','「神への祈りは果たして意味があるか？神が応えてくれるか？Nein(違う)、神は慈悲がないからこそ神になりえるのだ」','にくすべ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Saratoga.png','「サラトガちゃん、あなた(のサイフ)がダイスキだよ～♪」','サラトガ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/unicorn.png','「ぐーぐるぷれい…？ユニコーン、お兄ちゃんが何言ってるかわかんない…」','ユニコーン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Saratoga.png','「ナントカナルゼッタイダイジョウブノープロブレム！」','サラトガ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/enterprise.png','「指揮官、教えてくれ。私はあと何回建造すればいい？」','エンタープライズ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/San_Diego_1.png','「よくわかんないけど、頑張ればきっとダイジョウブ！！」','サンディエゴ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Prinz_Eugen.png','「この程度で満足かしら？」','オイゲン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/akasi.png','「指揮官(のサイフ)ダイスキだにゃ！」','明石'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「回転数は大切ですよ。「出るまで回せば100％」と偉人の方が仰っていました……」','ニーミ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「大丈夫です、指揮官…綾波を信じて――」','綾波'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Prinz_Eugen.png','「この程度じゃ足りないわ。もっと、もっとだ……！」','オイゲン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「単発で当てちゃうよ！…えい！」','ジャベリン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/Javelin.png','「ナルホド　ナルホド　ソウイウ仕組ミナンデスネ」','ジャベリン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「うん…二度寝しよう……」','ラフィー'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/unicorn.png','「くれじっとかーど？ないよ？そんなの…」','ユニコーン'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/ni-mi.png','「対策を考えないと……」','ニーミ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/gura-futuxextuperinn.png','「神への祈りは果たして意味があるか？神が応えてくれるか？Nein(違う)、神は慈悲がないからこそ神になりえるのだ」','にくすべ'],
   ];
 
 var table_main = '<table border="1" id="area_table" style="border-collapse: collapse;width:100%;">'+
@@ -461,7 +461,7 @@ function twion(){
             $(this).append($("<a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-url=\""+url+"\" data-text=\""+text+"\" data-size=\"large\" data-hashtags=\""+tagu+"\" data-count=\"vertical\">Tweet<\/a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}else{twttr.widgets.load();}}(document, 'script', 'twitter-wjs');<\/script>"));
         }
             document.getElementById("tweet1").textContent = "";
-            $("#tweet1").appendTweetButton("https://royalojisann.jp/az_gatya_new_get.html",'#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3,"アズールレーン");
+            $("#tweet1").appendTweetButton("https://az-royalojisann.hatenablog.com/entry/az-gatya-simulation",'#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3,"アズールレーン");
         });
 }
 
