@@ -497,7 +497,7 @@ function img_pic(root){
 
    // twttrが使えるようになったらシェアボタンを作る。
    callAfterTwitterInitialization(function(){
-     $('#' + targetId).empty();
+     document.getElementById(targetId).textContent="";
      twttr.widgets.createShareButton(
        shareUrl,
        document.getElementById(targetId),
