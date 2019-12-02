@@ -85,11 +85,13 @@
     margin-right:4px;
     margin-left:0px;
     border: 1px solid #ddd;
+    height: 32px;
+    vertical-align: bottom;
 }
-button {
+#pageallbox button {
     width: 40px;
     height: 36px;
-    margin: 2px 0px 2px 0px;
+    margin: 0px;
     padding: 0px;
     cursor: pointer;
     vertical-align: middle;
