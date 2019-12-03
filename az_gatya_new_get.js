@@ -452,9 +452,9 @@ Object.prototype.plus = function(arg){
     twion();
     img_pic(1);
 }
-var tweet_deta1 ="";
-var tweet_deta2 ="";
-var tweet_deta3 ="";
+tweet_deta1 ="";
+tweet_deta2 ="";
+tweet_deta3 ="";
 
 function img_pic(root){
     switch(root){
