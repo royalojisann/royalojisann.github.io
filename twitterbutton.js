@@ -25,20 +25,6 @@ if(typeof twttr !== "undefined"){
  }, 100);
 }
 }
- 
-// twttrが使えるようになったらシェアボタンを作る。
-callAfterTwitterInitialization(function(){
-$('#' + targetId).empty();
-twttr.widgets.createShareButton(
- shareUrl,
- document.getElementById(targetId),
- {
-   count: 'none',
-   text: message,
-   size: "large",
-   hashtags: hashtag,
- });
-});
 }
 
 function retry(){
