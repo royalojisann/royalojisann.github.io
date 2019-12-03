@@ -484,11 +484,7 @@ var kansen_namelist = [
     });
     }
     
-    function retry(){
-        document.getElementById("az_content").style.display="block";
-        document.getElementById("result_area").style.display="none";
-        toi_n = 0;
-        kaitou = [];
-        hantei = [];
-        toiset();
-    }
+function retry(){
+    document.getElementById("az_content").style.display="block";
+    document.getElementById("result_area").style.display="none";
+}
