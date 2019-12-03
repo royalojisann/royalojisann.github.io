@@ -227,10 +227,10 @@ function resultset(){
 twion();
 }
 
-var shareUrl = "https://az-royalojisann.hatenablog.com/entry/az-matching_tool";
+var shareUrl = "https://az-royalojisann.hatenablog.com/entry/";
 var targetId = "tweet1";
-//var message = '#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3;
-//var hashtag = "アズールレーン";
+//var message = 'アズレンマッチング！'+'\n'+'\n'+'マッチした艦船'+'\n'+'１位：'+hantei[0][0]+'\n'+'２位：'+hantei[1][0]+'\n'+'３位：'+hantei[2][0]+'\n'+'４位：'+hantei[3][0]+'\n'+'５位：'+hantei[4][0]+'\n'+'アズールレーン'+'\n';
+var hashtag = "アズールレーン";
 
 // Twitterの初期化
 var d = document;
