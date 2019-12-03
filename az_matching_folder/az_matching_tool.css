@@ -1,0 +1,86 @@
+@charset "UTF-8";
+body{
+    margin: 0;
+}
+
+#az_content,#VS_area,#name_area01,#name_area02,#name_area03,#name_area04{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+         box-sizing: border-box;
+}
+@media screen and (min-width:0px){
+    #page{
+    width: auto;
+    font-size: 20px;
+    margin: auto;
+    }
+    #az_content{
+        text-align: center;
+        padding: 6px;
+    }
+    #result_area{
+        text-align: left;
+        background: rgb(234, 251, 255);
+        padding: 8px;
+        border-radius: 5px;
+    }
+    #VS_area{
+        width: 100%;
+        border-radius: 10px;
+        padding: 0.8em 0;
+        margin: 0 0 10px 0;
+        background: #ffd4d4;
+    }
+    #name_area01,#name_area02,#name_area03,#name_area04{
+        width: 100%;
+        height: 70px;
+        padding: 0.8em 0;
+        border-radius: 10px;
+        margin: 0 0 10px 0;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #name_area01{
+        background: rgba(0, 175, 236, 1);
+        border-bottom: solid 6px #0046cc;
+    }
+    #name_area02{
+        background:rgba(255, 230, 0, 1);
+        border-bottom: solid 6px #eba500;
+    }
+    #name_area03{
+        background: rgb(0, 236, 80);
+        border-bottom: solid 6px #287f00;
+    }
+    #name_area04{
+        background: rgb(204, 204, 204);
+        border-bottom: solid 6px #585858;
+    }
+}
+@media screen and (min-width:680px){
+    #page{
+        width: 680px;
+        font-size: 20px;
+        margin: auto;
+    }
+}
+
+#name_area01:active,#name_area02:active,#name_area03:active,#name_area04:active{
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
+
+.retry_b {
+    background: #f3a93d;
+    border-radius: 3px;
+    color: white;
+    padding: 2px 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+}
