@@ -488,10 +488,10 @@ function img_pic(root){
     document.getElementsByClassName("pic_area")[1].textContent =character[1];
 }
 
-   var shareUrl = "https://royalojisann.jp/az_gatya_new_get.html";
-   var targetId = "tweet1";
-   //var message = tweet_deta1;
-   var hashtag = "アズールレーン";
+var shareUrl = "https://az-royalojisann.hatenablog.com/entry/az-gatya-simulation";
+var targetId = "tweet1";
+//var message = '#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3;
+//var hashtag = "アズールレーン";
 
 // Twitterの初期化
   var d = document;
@@ -515,10 +515,6 @@ function callAfterTwitterInitialization(callback){
     }, 100);
   }
 }
-var shareUrl = "https://royalojisann.jp/az_gatya_new_get.html";
-var targetId = "tweet1";
-//var message = '#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3;
-//var hashtag = "アズールレーン";
 	
 // twttrが使えるようになったらシェアボタンを作る。
 callAfterTwitterInitialization(function(){
