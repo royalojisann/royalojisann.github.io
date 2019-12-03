@@ -1,7 +1,7 @@
-var shareUrl = "https://az-royalojisann.hatenablog.com/entry/";
-var targetId = "tweet1";
-var message = 'アズールレーン';
-var hashtag = "アズールレーン";
+shareUrl = "https://az-royalojisann.hatenablog.com/entry/";
+targetId = "tweet1";
+message = 'アズールレーン';
+hashtag = "アズールレーン";
 
 // Twitterの初期化
 var d = document;
