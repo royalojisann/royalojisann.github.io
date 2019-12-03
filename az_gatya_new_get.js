@@ -452,9 +452,9 @@ Object.prototype.plus = function(arg){
     twion();
     img_pic(1);
 }
-tweet_deta1 ="";
-tweet_deta2 ="";
-tweet_deta3 ="";
+var tweet_deta1 ="";
+var tweet_deta2 ="";
+var tweet_deta3 ="";
 
 function img_pic(root){
     switch(root){
@@ -486,4 +486,55 @@ function img_pic(root){
     }
     document.getElementsByClassName("pic_area")[0].src =character[0];
     document.getElementsByClassName("pic_area")[1].textContent =character[1];
+}
+
+var shareUrl = "https://az-royalojisann.hatenablog.com/entry/";
+var targetId = "tweet1";
+var hashtag = "アズールレーン";
+
+// Twitterの初期化
+var d = document;
+var s = 'script';
+var id = 'twitter-wjs';
+var js, fjs = d.getElementsByTagName(s)[0];
+if (!d.getElementById(id)) {
+ js = d.createElement(s);
+ js.id = id;
+ js.src = 'https://platform.twitter.com/widgets.js';
+ fjs.parentNode.insertBefore(js, fjs);
+}
+function twion(){
+// twttrの初期化(platform.twitter.com/widgets.jsの完了)が未だなら待つ。
+function callAfterTwitterInitialization(callback){
+if(typeof twttr !== "undefined"){
+ callback();
+} else {
+ setTimeout(function(){
+     callAfterTwitterInitialization(callback);
+ }, 100);
+}
+}
+ 
+// twttrが使えるようになったらシェアボタンを作る。
+callAfterTwitterInitialization(function(){
+$('#' + targetId).empty();
+twttr.widgets.createShareButton(
+ shareUrl,
+ document.getElementById(targetId),
+ {
+   count: 'none',
+   text: "#アズレン建造チャレンジ"+"\n"+tweet_deta1+"\n"+tweet_deta2+"ほか:"+tweet_deta3+"\n"+"アズールレーン"+"\n",
+   size: "large",
+   hashtags: hashtag,
+ });
+});
+}
+
+function retry(){
+    document.getElementById("az_content").style.display="block";
+    document.getElementById("result_area").style.display="none";
+    toi_n = 0;
+    kaitou = [];
+    hantei = [];
+    toiset();
 }
