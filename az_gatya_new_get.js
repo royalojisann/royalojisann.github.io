@@ -488,9 +488,10 @@ function img_pic(root){
     document.getElementsByClassName("pic_area")[1].textContent =character[1];
 }
 
-var shareUrl = "https://az-royalojisann.hatenablog.com/entry/";
+var shareUrl = "https://az-royalojisann.hatenablog.com/entry/az-matching_tool";
 var targetId = "tweet1";
-var hashtag = "アズールレーン";
+//var message = '#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3;
+//var hashtag = "アズールレーン";
 
 // Twitterの初期化
 var d = document;
@@ -525,7 +526,7 @@ twttr.widgets.createShareButton(
    count: 'none',
    text: "#アズレン建造チャレンジ"+"\n"+tweet_deta1+"\n"+tweet_deta2+"ほか:"+tweet_deta3+"\n"+"アズールレーン"+"\n",
    size: "large",
-   hashtags: hashtag,
+   hashtags: "",
  });
 });
 }
