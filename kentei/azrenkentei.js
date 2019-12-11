@@ -14,6 +14,12 @@ var timedeta = 0;
 var tweetdeta1 = 0;
 var tweetdeta2 = 0;
 function startnow(){
+  titledeta();
+  document.getElementById("startpic").style.display="none";
+  document.getElementById("haikei").style.opacity=1;
+  document.getElementById("senntaku").style.display="block";
+}
+window.addEventListener('DOMContentLoaded', function() {
   document.getElementsByClassName("text_deta")[0].onclick = rootdeta;
   document.getElementById("sentakuA").onclick = detakaitou;
   document.getElementById("sentakuB").onclick = detakaitou;
@@ -31,31 +37,7 @@ function startnow(){
           img.src = quizdeta[i][7];
         }
     }
-  titledeta();
-  document.getElementById("startpic").style.display="none";
-  document.getElementById("haikei").style.opacity=1;
-  document.getElementById("senntaku").style.display="block";
-}
-
-// window.onload = function (){
-//   document.getElementsByClassName("text_deta")[0].onclick = rootdeta;
-//   document.getElementById("sentakuA").onclick = detakaitou;
-//   document.getElementById("sentakuB").onclick = detakaitou;
-//   document.getElementById("sentakuC").onclick = detakaitou;
-//       // 画像プリロード
-//       for (i = 0; i < quizdeta.length; i++){
-//         var img = document.createElement('img');
-//         if(quizdeta[i][5] != 0){
-//           img.src = quizdeta[i][5];
-//         }
-//         if(quizdeta[i][6] != 0){
-//           img.src = quizdeta[i][6];
-//         }
-//         if(quizdeta[i][7] != 0){
-//           img.src = quizdeta[i][7];
-//         }
-//     }
-// }
+})
 
 function rootdeta(){
     switch(root){
