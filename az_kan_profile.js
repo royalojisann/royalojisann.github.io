@@ -383,5 +383,7 @@ var kan_profile = [
 ['ユニオン','戦艦','ジョージア','PR','特別計画艦二期','2019年4月18日','未定','君が建造した日','<a href="https://ja.wikipedia.org/wiki/%E4%B8%8B%E5%9C%B0%E7%B4%AB%E9%87%8E" target="_blank" >下地紫野</a>','<a href="https://www.pixiv.net/member.php?id=4935155" target="_blank" >八九鼓风机</a>'],
 ['鉄血','戦艦','フリードリヒ','DR','特別計画艦二期','2019年4月18日','未定','君が建造した日','<a href="https://ja.wikipedia.org/wiki/%E7%94%9F%E5%A4%A9%E7%9B%AE%E4%BB%81%E7%BE%8E" target="_blank" >生天目仁美</a>',''],
 ['ヴィシア','戦艦','ガスコーニュ','PR','特別計画艦二期','2019年4月18日','未定','君が建造した日','<a href="https://twitter.com/mikakokomatsu?lang=ja" target="_blank" >小松未可子</a>','<a href="https://www.pixiv.net/member.php?id=38088" target="_blank" >Liduke(日子)</a>'],
+['重桜','戦艦','駿河','SSR','期間限定イベント','2019年12月末','未定','君が建造した日','<a href="https://ja.wikipedia.org/wiki/%E9%81%A0%E8%97%A4%E7%B6%BE" target="_blank" >遠藤綾</a>','<a href="https://twitter.com/fuzichoco?lang=ja" target="_blank" >藤ちょこ</a>'],
+['重桜','軽巡','能代','SSR','期間限定イベント','2019年12月末','未定','1942年7月19日','<a href="https://twitter.com/anju_inami?lang=ja" target="_blank" >伊波杏樹</a>','<a href="https://twitter.com/atdan86" target="_blank" >ATDAN</a>'],
 
 ];
