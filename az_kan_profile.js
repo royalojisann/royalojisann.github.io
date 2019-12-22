@@ -385,5 +385,6 @@ var kan_profile = [
 ['ヴィシア','戦艦','ガスコーニュ','PR','特別計画艦二期','2019年4月18日','未定','君が建造した日','<a href="https://twitter.com/mikakokomatsu?lang=ja" target="_blank" >小松未可子</a>','<a href="https://www.pixiv.net/member.php?id=38088" target="_blank" >Liduke(日子)</a>'],
 ['重桜','戦艦','駿河','SSR','期間限定イベント','2019年12月末','未定','君が建造した日','<a href="https://ja.wikipedia.org/wiki/%E9%81%A0%E8%97%A4%E7%B6%BE" target="_blank" >遠藤綾</a>','<a href="https://twitter.com/fuzichoco?lang=ja" target="_blank" >藤ちょこ</a>'],
 ['重桜','軽巡','能代','SSR','期間限定イベント','2019年12月末','未定','1942年7月19日','<a href="https://twitter.com/anju_inami?lang=ja" target="_blank" >伊波杏樹</a>','<a href="https://twitter.com/atdan86" target="_blank" >ATDAN</a>'],
-
+['重桜','軽巡','鬼怒','SR→SSR','期間限定イベント','2019年12月末','未定','1922年5月29日','<a href="https://twitter.com/yahagi_sayuri" target="_blank" >矢作紗友里</a>','不明'],
+  
 ];
