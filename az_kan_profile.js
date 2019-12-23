@@ -386,5 +386,6 @@ var kan_profile = [
 ['重桜','戦艦','駿河','SSR','期間限定イベント','2019年12月末','未定','君が建造した日','<a href="https://ja.wikipedia.org/wiki/%E9%81%A0%E8%97%A4%E7%B6%BE" target="_blank" >遠藤綾</a>','<a href="https://twitter.com/fuzichoco?lang=ja" target="_blank" >藤ちょこ</a>'],
 ['重桜','軽巡','能代','SSR','期間限定イベント','2019年12月末','未定','1942年7月19日','<a href="https://twitter.com/anju_inami?lang=ja" target="_blank" >伊波杏樹</a>','<a href="https://twitter.com/atdan86" target="_blank" >ATDAN</a>'],
 ['重桜','軽巡','鬼怒','SR→SSR','期間限定イベント','2019年12月末','未定','1922年5月29日','<a href="https://twitter.com/yahagi_sayuri" target="_blank" >矢作紗友里</a>','不明'],
-  
+['重桜','駆逐','霞','SR','期間限定イベント','2019年12月末','未定','1937年11月18日','<a href="https://twitter.com/takeda_mariko" target="_blank" >たけだまりこ</a>','<a href="https://twitter.com/Byul_zzi" target="_blank" >ビョルチ</a>'],
+
 ];
