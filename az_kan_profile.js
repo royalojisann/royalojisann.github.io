@@ -383,9 +383,11 @@ var kan_profile = [
 ['ユニオン','戦艦','ジョージア','PR','特別計画艦二期','2019年4月18日','未定','君が建造した日','<a href="https://ja.wikipedia.org/wiki/%E4%B8%8B%E5%9C%B0%E7%B4%AB%E9%87%8E" target="_blank" >下地紫野</a>','<a href="https://www.pixiv.net/member.php?id=4935155" target="_blank" >八九鼓风机</a>'],
 ['鉄血','戦艦','フリードリヒ','DR','特別計画艦二期','2019年4月18日','未定','君が建造した日','<a href="https://ja.wikipedia.org/wiki/%E7%94%9F%E5%A4%A9%E7%9B%AE%E4%BB%81%E7%BE%8E" target="_blank" >生天目仁美</a>',''],
 ['ヴィシア','戦艦','ガスコーニュ','PR','特別計画艦二期','2019年4月18日','未定','君が建造した日','<a href="https://twitter.com/mikakokomatsu?lang=ja" target="_blank" >小松未可子</a>','<a href="https://www.pixiv.net/member.php?id=38088" target="_blank" >Liduke(日子)</a>'],
-['重桜','戦艦','駿河','SSR','期間限定イベント','2019年12月末','未定','君が建造した日','<a href="https://ja.wikipedia.org/wiki/%E9%81%A0%E8%97%A4%E7%B6%BE" target="_blank" >遠藤綾</a>','<a href="https://twitter.com/fuzichoco?lang=ja" target="_blank" >藤ちょこ</a>'],
-['重桜','軽巡','能代','SSR','期間限定イベント','2019年12月末','未定','1942年7月19日','<a href="https://twitter.com/anju_inami?lang=ja" target="_blank" >伊波杏樹</a>','<a href="https://twitter.com/atdan86" target="_blank" >ATDAN</a>'],
-['重桜','軽巡','鬼怒','SR→SSR','期間限定イベント','2019年12月末','未定','1922年5月29日','<a href="https://twitter.com/yahagi_sayuri" target="_blank" >矢作紗友里</a>','不明'],
-['重桜','駆逐','霞','SR','期間限定イベント','2019年12月末','未定','1937年11月18日','<a href="https://twitter.com/takeda_mariko" target="_blank" >たけだまりこ</a>','<a href="https://twitter.com/Byul_zzi" target="_blank" >ビョルチ</a>'],
+['重桜','戦艦','駿河','SSR','「翳りし満ちる影の華」限定建造','2019年12月26日','未定','君が建造した日','<a href="https://ja.wikipedia.org/wiki/%E9%81%A0%E8%97%A4%E7%B6%BE" target="_blank" >遠藤綾</a>','<a href="https://twitter.com/fuzichoco?lang=ja" target="_blank" >藤ちょこ</a>'],
+['重桜','軽巡','能代','SSR','「翳りし満ちる影の華」交換＆限定建造','2019年12月26日','未定','1942年7月19日','<a href="https://twitter.com/anju_inami?lang=ja" target="_blank" >伊波杏樹</a>','<a href="https://twitter.com/atdan86" target="_blank" >ATDAN</a>'],
+['重桜','軽巡','鬼怒','SR→SSR','「翳りし満ちる影の華」交換＆限定建造','2019年12月26日','2019年12月26日','1922年5月29日','<a href="https://twitter.com/yahagi_sayuri" target="_blank" >矢作紗友里</a>','<a href="https://twitter.com/Werkbau01" target="_blank" >Werkbau</a>'],
+['重桜','駆逐','霞','SR','「翳りし満ちる影の華」限定建造','2019年12月26日','未定','1937年11月18日','<a href="https://twitter.com/takeda_mariko" target="_blank" >たけだまりこ</a>','<a href="https://twitter.com/Byul_zzi" target="_blank" >ビョルチ</a>'],
+['重桜','駆逐','響','SR','「翳りし満ちる影の華」累計PT','2019年12月26日','未定','1932年6月16日','<a href="https://twitter.com/maaya_taso?lang=ja" target="_blank" >内田真礼</a>','不明'],
+['重桜','軽母','龍鳳','SSR','「翳りし満ちる影の華」限定建造','2019年12月26日','未定','1933年11月16日','<a href="https://twitter.com/nagatsumajuri" target="_blank" >長妻樹里</a>','<a href="https://twitter.com/Tony_T2ARTWORKS" target="_blank" >Tony</a>'],
 
 ];
