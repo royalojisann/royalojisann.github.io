@@ -1,4 +1,11 @@
 var gatya_title =[
+ ['翳りし満ちる影の華','大型',[
+        {item:'龍鳳',k_rare:'SSR',weight:2,k_bikou:'先'},
+        {item:'駿河',k_rare:'SSR',weight:2,k_bikou:'先'},
+        {item:'能代',k_rare:'SSR',weight:0.5,k_bikou:'先/交'},
+        {item:'鬼怒',k_rare:'SR',weight:0.5,k_bikou:'先/交'},
+        {item:'霞',k_rare:'SR',weight:2.5,k_bikou:'先'}
+    ]],	
  ['幻想と真実の二重奏','大型',[
         {item:'ときのそら',k_rare:'SSR',weight:0.5,k_bikou:'交/？'},
         {item:'白上フブキ',k_rare:'SSR',weight:2,k_bikou:'？'},
