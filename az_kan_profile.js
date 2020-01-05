@@ -208,7 +208,7 @@ var kan_profile = [
 ['重桜','軽巡','神通','SR→SSR','海域10-4ボス限定','2018年1月19日','2018年1月19日','1923年12月8日','<a href="https://ameblo.jp/kanemoto-hisako/" target="_blank" >金本寿子</a>','<a href="https://www.pixiv.net/member_illust.php?id=1584611" target="_blank" >卑しい人间</a>'],
 ['重桜','軽巡','阿賀野','SR','海域11-2','2018年4月19日','未定','1941年10月22日','<a href="https://twitter.com/shiraishi_haruk" target="_blank" >白石晴香</a>','<a href="https://www.pixiv.net/member.php?id=3312169" target="_blank" >和茶</a>'],
 ['重桜','軽巡','三隈','SR','「紅染の来訪者」累計Pt','2018年3月27日','未定','1934年5月31日','<a href="https://twitter.com/annakoto117" target="_blank" >八巻アンナ</a>','<a href="https://twitter.com/realmbw" target="_blank" >RJ(REALMBW)</a>'],
-['重桜','軽巡','最上(半改)','SR','「紅染の来訪者」限定建造','2018年3月27日','2018年3月27日','1934年3月14日','<a href="https://ja.wikipedia.org/wiki/%E4%BC%8A%E8%97%A4%E9%9D%99" target="_blank" >伊藤静</a>','<a href="https://twitter.com/realmbw" target="_blank" >RJ(REALMBW)</a>'],
+['重桜','軽巡','最上(半改)','SR→SSR','「紅染の来訪者」限定建造','2018年3月27日','2018年3月27日','1934年3月14日','<a href="https://ja.wikipedia.org/wiki/%E4%BC%8A%E8%97%A4%E9%9D%99" target="_blank" >伊藤静</a>','<a href="https://twitter.com/realmbw" target="_blank" >RJ(REALMBW)</a>'],
 ['重桜','重巡','古鷹','N→R','海域(3-3/4-4など)','初期','2017年11月9日','1925年2月25日','<a href="https://twitter.com/akari_kageyama?lang=ja" target="_blank" >影山灯</a>','<a href="https://www.pixiv.net/member.php?id=317823">K箱</a>'],
 ['重桜','重巡','加古','N→R','海域(3-3/4-4など)','初期','2017年11月9日','1925年4月10日','<a href="https://twitter.com/akari_kageyama?lang=ja" target="_blank" >影山灯</a>','<a href="https://www.pixiv.net/member.php?id=317823">K箱</a>'],
 ['重桜','重巡','青葉','N','建造(大型/特型)','初期','未定','1926年9月25日','<a href="https://twitter.com/akari_kageyama?lang=ja" target="_blank" >影山灯</a>','<a href="https://www.pixiv.net/member.php?id=317823">K箱</a>'],
@@ -217,7 +217,7 @@ var kan_profile = [
 ['重桜','重巡','那智','R','海域8-3/8-4/10-1','初期','未定','1927年6月15日','<a href="https://twitter.com/erietty_55?lang=ja" target="_blank" >鈴木絵理</a>','<a href="https://www.pixiv.net/member.php?id=317823">K箱</a>'],
 ['重桜','重巡','鈴谷','SR','「墨染まりし鋼の桜」限定建造','2019年3月28日','未定','1934年11月20日','<a href="https://twitter.com/azumi_waki" target="_blank" >和氣あず未</a>','<a href="https://www.pixiv.net/member.php?id=117402" target="_blank" >momi</a>'],
 ['重桜','重巡','足柄','SR','「縹映る深緋の残響」限定建造','2018年12月27日','未定','1928年4月22日','<a href="https://ja.wikipedia.org/wiki/%E6%96%8E%E8%97%A4%E5%8D%83%E5%92%8C" target="_blank" >斎藤千和</a>','<a href="https://www.pixiv.net/member.php?id=54749" target="_blank" >鉄人桃子</a>'],
-['重桜','重巡','最上改','SSR','「紅染の来訪者」限定建造','2018年3月27日','2018年3月27日','1934年3月14日','<a href="https://ja.wikipedia.org/wiki/%E4%BC%8A%E8%97%A4%E9%9D%99" target="_blank" >伊藤静</a>','<a href="https://twitter.com/realmbw" target="_blank" >RJ(REALMBW)</a>'],
+['重桜','重巡','最上改','SR→SSR','「紅染の来訪者」限定建造','2018年3月27日','2018年3月27日','1934年3月14日','<a href="https://ja.wikipedia.org/wiki/%E4%BC%8A%E8%97%A4%E9%9D%99" target="_blank" >伊藤静</a>','<a href="https://twitter.com/realmbw" target="_blank" >RJ(REALMBW)</a>'],
 ['重桜','重巡','高雄','SSR','建造(大型/特型)','初期','未定','1930年5月12日','<a href="https://twitter.com/aimausu?lang=ja" target="_blank" >加隈亜衣</a>','<a href="https://twitter.com/kishiyo1943" target="_blank" >木shiyo</a>'],
 ['重桜','重巡','愛宕','SSR','建造(大型/特型)','2017年9月28日','未定','1930年6月16日','<a href="https://ja.wikipedia.org/wiki/%E8%8C%85%E9%87%8E%E6%84%9B%E8%A1%A3" target="_blank" >茅野愛衣</a>','<a href="https://twitter.com/kishiyo1943" target="_blank" >木shiyo</a>'],
 ['重桜','重巡','摩耶','SSR','海域8-4ボス限定','2017年10月19日','未定','1930年11月8日','<a href="https://ja.wikipedia.org/wiki/%E5%A4%A7%E8%A5%BF%E6%B2%99%E7%B9%94" target="_blank" >大西沙織</a>','<a href="https://twitter.com/kishiyo1943" target="_blank" >木shiyo</a>'],
@@ -387,7 +387,7 @@ var kan_profile = [
 ['重桜','軽巡','能代','SSR','「翳りし満ちる影の華」交換＆限定建造','2019年12月26日','未定','1942年7月19日','<a href="https://twitter.com/anju_inami?lang=ja" target="_blank" >伊波杏樹</a>','<a href="https://twitter.com/atdan86" target="_blank" >ATDAN</a>'],
 ['重桜','軽巡','鬼怒','SR→SSR','「翳りし満ちる影の華」交換＆限定建造','2019年12月26日','2019年12月26日','1922年5月29日','<a href="https://twitter.com/yahagi_sayuri" target="_blank" >矢作紗友里</a>','<a href="https://twitter.com/Werkbau01" target="_blank" >Werkbau</a>'],
 ['重桜','駆逐','霞','SR','「翳りし満ちる影の華」限定建造','2019年12月26日','未定','1937年11月18日','<a href="https://twitter.com/takeda_mariko" target="_blank" >たけだまりこ</a>','<a href="https://twitter.com/Byul_zzi" target="_blank" >ビョルチ</a>'],
-['重桜','駆逐','響','SR','「翳りし満ちる影の華」累計PT','2019年12月26日','未定','1932年6月16日','<a href="https://twitter.com/maaya_taso?lang=ja" target="_blank" >内田真礼</a>','不明'],
+['重桜','駆逐','響','SR','「翳りし満ちる影の華」累計PT','2019年12月26日','未定','1932年6月16日','<a href="https://twitter.com/maaya_taso?lang=ja" target="_blank" >内田真礼</a>','<a href="https://www.weibo.com/soaryuna?is_hot=1">侑了个侑</a>'],
 ['重桜','軽母','龍鳳','SSR','「翳りし満ちる影の華」限定建造','2019年12月26日','未定','1933年11月16日','<a href="https://twitter.com/nagatsumajuri" target="_blank" >長妻樹里</a>','<a href="https://twitter.com/Tony_T2ARTWORKS" target="_blank" >Tony</a>'],
 
 ];
