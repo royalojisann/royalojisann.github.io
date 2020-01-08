@@ -3,7 +3,7 @@ var gatya_title =[
         {item:'龍鳳',k_rare:'SSR',weight:2,k_bikou:'先'},
         {item:'駿河',k_rare:'SSR',weight:2,k_bikou:'先'},
         {item:'能代',k_rare:'SSR',weight:0.5,k_bikou:'先/交'},
-        {item:'鬼怒',k_rare:'SR',weight:0.5,k_bikou:'先/交'},
+        {item:'鬼怒',k_rare:'SR',weight:0.7,k_bikou:'先/交'},
         {item:'霞',k_rare:'SR',weight:2.5,k_bikou:'先'}
     ]],	
  ['幻想と真実の二重奏','大型',[
