@@ -391,6 +391,6 @@ var kan_profile = [
 ['重桜','軽母','龍鳳','SSR','「翳りし満ちる影の華」限定建造','2019年12月26日','未定','1933年11月16日','<a href="https://twitter.com/nagatsumajuri" target="_blank" >長妻樹里</a>','<a href="https://twitter.com/Tony_T2ARTWORKS" target="_blank" >Tony</a>'],
 ['ロイヤル','軽巡','ダイドー','SSR','小型建造','未定','未定','1939年7月18日','不明','<a href="https://twitter.com/KIncoraK" target="_blank" >KIncora</a>'],
 ['ユニオン','駆逐','ハルゼー・パウエル','R','小型建造','未定','未定','1943年6月30日','不明','<a href="https://twitter.com/h49889577" target="_blank" >Rain Lan</a>'],
-['ユニオン','軽巡','ピロクシ','SR','小型建造','未定','未定','1943年2月23日','不明','不明'],
+['ユニオン','軽巡','ビロクシ','SR','小型建造','未定','未定','1943年2月23日','不明','不明'],
 
 ];
