@@ -162,7 +162,7 @@ var kan_profile = [
 ['重桜','駆逐','如月','N→R','小型建造','初期','2019年4月26日','1925年6月5日','<a href="https://ja.wikipedia.org/wiki/%E5%A4%A7%E4%B9%85%E4%BF%9D%E7%91%A0%E7%BE%8E" target="_blank" >大久保瑠美</a>','<a href="https://www.pixiv.net/member.php?id=786200" target="_blank" >月見</a>'],
 ['重桜','駆逐','水無月','N','海域10章','2018年1月19日','未定','1926年5月25日','<a href="https://twitter.com/manya02" target="_blank" >MAKO</a>','<a href="https://www.pixiv.net/member.php?id=786200" target="_blank" >月見</a>'],
 ['重桜','駆逐','神風','R→SR','小型建造','初期','2018年3月15日','1922年9月25日','<a href="https://twitter.com/maruasahina" target="_blank" >朝日奈丸佳</a>','<a href="https://www.pixiv.net/member.php?id=4592232" target="_blank" >NoriZC</a>'],
-['重桜','駆逐','松風','R→SR','小型建造','初期','2018年3月15日','1923年10月30日','<a href="https://twitter.com/maruasahina" target="_blank" >朝日奈丸佳</a>','<a href="https://www.pixiv.net/member.php?id=4592232" target="_blank" >NoriZC</a>'],
+['重桜','駆逐','松風','R→SR','2018年1月ログインスタンプ、小型建造','2017年12月26日','2018年3月15日','1923年10月30日','<a href="https://twitter.com/maruasahina" target="_blank" >朝日奈丸佳</a>','<a href="https://www.pixiv.net/member.php?id=4592232" target="_blank" >NoriZC</a>'],
 ['重桜','駆逐','三日月','N','海域10章','2018年1月19日','未定','1926年7月12日','<a href="https://twitter.com/manya02" target="_blank" >MAKO</a>','<a href="https://www.pixiv.net/member.php?id=786200" target="_blank" >月見</a>'],
 ['重桜','駆逐','旗風','R','「縹映る深緋の残響」','2018年12月27日','未定','1924年3月15日','<a href="https://twitter.com/maruasahina" target="_blank" >朝日奈丸佳</a>','<a href="https://www.pixiv.net/member.php?id=4592232" target="_blank" >NoriZC</a>'],
 ['重桜','駆逐','卯月','N','小型建造','2017年12月7日','未定','1925年10月15日','<a href="https://twitter.com/manya02" target="_blank" >MAKO</a>','<a href="https://www.pixiv.net/member.php?id=786200" target="_blank" >月見</a>'],
@@ -389,5 +389,8 @@ var kan_profile = [
 ['重桜','駆逐','霞','SR','「翳りし満ちる影の華」限定建造','2019年12月26日','未定','1937年11月18日','<a href="https://twitter.com/takeda_mariko" target="_blank" >たけだまりこ</a>','<a href="https://twitter.com/Byul_zzi" target="_blank" >ビョルチ</a>'],
 ['重桜','駆逐','響','SR','「翳りし満ちる影の華」累計PT','2019年12月26日','未定','1932年6月16日','<a href="https://twitter.com/maaya_taso?lang=ja" target="_blank" >内田真礼</a>','<a href="https://www.weibo.com/soaryuna?is_hot=1">侑了个侑</a>'],
 ['重桜','軽母','龍鳳','SSR','「翳りし満ちる影の華」限定建造','2019年12月26日','未定','1933年11月16日','<a href="https://twitter.com/nagatsumajuri" target="_blank" >長妻樹里</a>','<a href="https://twitter.com/Tony_T2ARTWORKS" target="_blank" >Tony</a>'],
+['ロイヤル','軽巡','ダイドー','SSR','小型建造','未定','未定','1939年7月18日','不明','<a href="https://twitter.com/KIncoraK" target="_blank" >KIncora</a>'],
+['ユニオン','駆逐','ハルゼー・パウエル','R','小型建造','未定','未定','1943年6月30日','不明','<a href="https://twitter.com/h49889577" target="_blank" >Rain Lan</a>'],
+['ユニオン','軽巡','ピロクシ','SR','小型建造','未定','未定','1943年2月23日','不明','不明'],
 
 ];
