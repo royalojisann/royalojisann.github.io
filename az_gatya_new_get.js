@@ -1,4 +1,10 @@
 var gatya_title =[
+ ['戦え！ロイヤルメイド隊2nd','小型',[
+        {item:'ダイドー',k_rare:'SSR',weight:2,k_bikou:'先'},
+        {item:'ビロクシ',k_rare:'SR',weight:2.5,k_bikou:'先'},
+        {item:'グロスター',k_rare:'SR',weight:2.5,k_bikou:'先'},
+        {item:'ハルゼー・パウエル',k_rare:'R',weight:5,k_bikou:'先'}
+    ]],
  ['翳りし満ちる影の華','大型',[
         {item:'龍鳳',k_rare:'SSR',weight:2,k_bikou:'先'},
         {item:'駿河',k_rare:'SSR',weight:2,k_bikou:'先'},
