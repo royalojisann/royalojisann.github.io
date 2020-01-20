@@ -324,7 +324,7 @@ function set_start(){
     document.getElementById("result_text").textContent = "";document.getElementById("result_area").textContent ="";
     document.getElementById("result_text").insertAdjacentHTML('afterbegin',days_text);
     resultset(types);
-    document.getElementById("result_area").insertAdjacentHTML('afterbegin',txtdeta+'ほか:'+txtdeta_b);
+    document.getElementById("result_area").insertAdjacentHTML('afterbegin',txtdeta+'ほか'+txtdeta_b);
     twion();
 }
 
@@ -357,7 +357,7 @@ function all_comp(){
     document.getElementById("result_text").textContent = "";document.getElementById("result_area").textContent ="";
     document.getElementById("result_text").insertAdjacentHTML('afterbegin',days_text);
     resultset(types);
-    document.getElementById("result_area").insertAdjacentHTML('afterbegin',txtdeta+'ほか:'+txtdeta_b);
+    document.getElementById("result_area").insertAdjacentHTML('afterbegin',txtdeta+'ほか'+txtdeta_b);
     twion();
     img_pic(1);
 }
@@ -401,7 +401,7 @@ function onedays(){
     document.getElementById("result_text").textContent = "";document.getElementById("result_area").textContent ="";
     document.getElementById("result_text").insertAdjacentHTML('afterbegin',days_text);
     resultset(types);
-    document.getElementById("result_area").insertAdjacentHTML('afterbegin',txtdeta+'ほか:'+txtdeta_b);
+    document.getElementById("result_area").insertAdjacentHTML('afterbegin',txtdeta+'ほか'+txtdeta_b);
     twion();
 }
 
@@ -461,7 +461,7 @@ Object.prototype.plus = function(arg){
         txtdeta_b += '['+checkset[checkset.length-4+txt].item+':'+sum_types[checkset[checkset.length-4+txt].item]/1000+']';
         tweet_deta3 += '['+checkset[checkset.length-4+txt].item+':'+sum_types[checkset[checkset.length-4+txt].item]/1000+']';
     }
-    document.getElementById("result_area").insertAdjacentHTML('afterbegin',txtdeta+'ほか:'+txtdeta_b);
+    document.getElementById("result_area").insertAdjacentHTML('afterbegin',txtdeta+'ほか'+txtdeta_b);
     twion();
     img_pic(1);
 }
@@ -503,7 +503,7 @@ function img_pic(root){
 
 var shareUrl = "https://az-royalojisann.hatenablog.com/entry/az-matching_tool";
 var targetId = "tweet1";
-//var message = '#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか:'+tweetdeta3;
+//var message = '#アズレン建造チャレンジ'+'\n'+tweetdeta1+'\n'+tweetdeta2+'ほか'+tweetdeta3;
 //var hashtag = "アズールレーン";
 
 // Twitterの初期化
@@ -537,7 +537,7 @@ twttr.widgets.createShareButton(
  document.getElementById(targetId),
  {
    count: 'none',
-   text: "#アズレン建造チャレンジ"+"\n"+tweet_deta1+"\n"+tweet_deta2+"ほか:"+tweet_deta3+"\n"+"アズールレーン"+"\n",
+   text: "#アズレン建造チャレンジ"+"\n"+tweet_deta1+"\n"+tweet_deta2+"ほか"+tweet_deta3+"\n"+"アズールレーン"+"\n",
    size: "large",
    hashtags: "",
  });
