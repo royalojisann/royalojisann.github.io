@@ -149,7 +149,7 @@ var kome01 = [
     ['http://azroyal.bakufu.org/imgpic/face_icon/gura-futuxextuperinn.png','「憎んでいる。すべてを。」','にくすべ'],
     ['http://azroyal.bakufu.org/imgpic/face_icon/ruffy.png','「指揮官、がっかりした？（ツンツン」','ラフィー'],
     ['http://azroyal.bakufu.org/imgpic/face_icon/San_Diego_1.png','「早くお金を出して！！このままじゃ「おりゅ？」になっちゃうよ！！」','サンディエゴ'],
-    ['http://azroyal.bakufu.org/imgpic/face_icon/enterprise.png','「終わりだ！デデドン！(絶望)」','エンタープライズ'],
+    ['http://azroyal.bakufu.org/imgpic/face_icon/enterprise.png','「終わりだ・・・（絶望）」','エンタープライズ'],
     ['http://azroyal.bakufu.org/imgpic/face_icon/Saratoga.png','「うわぁ！大ピンチ！」','サラトガ'],
     ['http://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「新キャラのためなら、「課金」してもいい……です」','綾波'],
     ['http://azroyal.bakufu.org/imgpic/face_icon/ayanami.png','「ガチャは嫌いではないけど好きじゃないです。」','綾波'],
