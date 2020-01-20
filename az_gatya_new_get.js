@@ -537,7 +537,7 @@ twttr.widgets.createShareButton(
  document.getElementById(targetId),
  {
    count: 'none',
-   text: "#アズレン建造チャレンジ"+"\n"+tweet_deta1+"\n"+tweet_deta2+"ほか"+tweet_deta3+"\n"+"アズールレーン"+"\n",
+   text: "#アズレン建造チャレンジ"+"\n"+tweet_deta1+"\n"+tweet_deta2+"ほか"+tweet_deta3+"\n",
    size: "large",
    hashtags: "",
  });
