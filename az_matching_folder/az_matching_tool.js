@@ -263,7 +263,7 @@ twttr.widgets.createShareButton(
  document.getElementById(targetId),
  {
    count: 'none',
-   text: '#アズレンマッチング！'+'\n'+'\n'+'マッチした艦船'+'\n'+'１位：'+hantei[0][0]+'\n'+'２位：'+hantei[1][0]+'\n'+'３位：'+hantei[2][0]+'\n'+'４位：'+hantei[3][0]+'\n'+'５位：'+hantei[4][0]+'\n'+'#アズールレーン'+'\n',
+   text: '#アズールレーン'+'\n'+'#アズレンマッチング！'+'\n'+'\n'+'マッチした艦船'+'\n'+'１位：'+hantei[0][0]+'\n'+'２位：'+hantei[1][0]+'\n'+'３位：'+hantei[2][0]+'\n'+'４位：'+hantei[3][0]+'\n'+'５位：'+hantei[4][0]+'\n',
    size: "large",
    hashtags: "",
  });
