@@ -490,7 +490,7 @@ function mondaiset(){
                 }
             }
             shuffle(set_0);
-            questionset('この艦船の『名前』を当てよう！');
+            questionset('このキャラの『名前』を当てよう');
         break;
         case 1:
             //画像で艦種当て
@@ -512,7 +512,7 @@ function mondaiset(){
                 }
             }
             shuffle(set_0);
-            questionset('この艦船の『艦種』はどれ？');
+            questionset('このキャラの『艦種』を選ぼう');
 
         break;
         case 2:
@@ -535,7 +535,7 @@ function mondaiset(){
                 }
             }
             shuffle(set_0);
-            questionset('この艦船の初期『レアリティ』はどれ？');
+            questionset('このキャラの初期『レアリティ』はどれ？');
             
         break;
         case 3:
@@ -547,7 +547,7 @@ function mondaiset(){
             shuffle(dummyhairetu);
             sonotaset_02(3,3,2,2,dummyhairetu);
             shuffle(set_0);
-            var text_you = '次の選択肢から『'+hairetuset[toi][2]+"』を選ぼう！";
+            var text_you = '選択肢から『'+hairetuset[toi][2]+"』を選ぼう";
             questionset(text_you);
         break;
         case 4:
@@ -559,7 +559,7 @@ function mondaiset(){
             shuffle(dummyhairetu);
             sonotaset_02(3,3,4,4,dummyhairetu);
             shuffle(set_0);
-            var text_you = '初期レアリティ『'+hairetuset[toi][4]+"』を選ぼう！";
+            var text_you = '初期レアリティ『'+hairetuset[toi][4]+"』のキャラはどれ？";
             questionset(text_you);
         break;
 
