@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+<link href="az-question.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <script>
+        function after_cut() {
+        // １．切り出す元となるテキスト取得
+        var str     = document.getElementById('cutout_after1').value;
+        // ２．切り出す基準となるテキスト取得
+        var cut_str = document.getElementById('cutout_after2').value;
+        // ３．基準となる文字列の位置を取得
+        var index   = str.indexOf(cut_str);
+        // ４．基準文字列から前の文字列を切り出して表示
+        str         = str.substring(0, index);
+        document.getElementById('cutout_after_text').innerHTML = str;
+    }
+    </script>
+    <form id="cutout">
+        <div class="cutout_area">
+            <p>指定文字列から前を切り出す</p>
+            <p>切り出し元文字列<input type="text" id="cutout_after1"></p>
+            <p>基準となる文字列<input type="text" id="cutout_after2"></p>
+            <button id="cutout_btn2" type="button" onclick="after_cut()">実行</button>
+            <div id="cutout_after_text"></div>
+        </div>
+    </form>
+
+<div id="page">
+    <select name="az-game" id="az-chara" oninput="az_deta_check(value)">
+        <option value="選択">選択</option>
+        <option value="ユニオン">ユニオン</option>
+        <option value="ロイヤル">ロイヤル</option>
+        <option value="重桜">重桜</option>
+        <option value="鉄血">鉄血</option>
+    </select>
+    <div id="check_picture"></div>
+
+    <script>
+        function az_deta_check(aria){
+            var aria_deta = "";
+            switch(aria){
+                case "ユニオン":
+                    aria_deta = "unionset";
+                break;
+                case "ロイヤル":
+                    aria_deta = "royalset";
+                break;
+                case "重桜":
+                    aria_deta = "sakuraset";
+                break;
+                case "鉄血":
+                    aria_deta = "ironset";
+                break;
+                case "その他":
+                    aria_deta = "allset";
+                break;
+
+            }
+            
+            var space_1 = document.getElementById("check_picture");
+            space_1.textContent = "";
+    
+            var tab = document.createElement("table");
+            
+            space_1.appendChild(tab);
+            let count = 0;
+            for(var i = 0; i < az_kan_deta_00.length; i++){
+                if(az_kan_deta_00[i][1]==aria){
+                    var tr1 = document.createElement("tr");
+                    tr1.className = 'retu';
+
+                    for(var p = 0; p<5; p++){
+                        var td1 = document.createElement("td");
+                        tr1.appendChild(td1);
+                    }
+                    tab.appendChild(tr1);
+                    
+                    document.getElementsByClassName("retu")[count].getElementsByTagName("td")[1].insertAdjacentHTML("beforeend",az_kan_deta_00[i][3]+'<img src="http://azroyal.bakufu.org/azpicture/'+aria_deta+'/'+az_kan_deta_00[i][11]+'/'+az_kan_deta_00[i][11]+'000.png"/>'+'<img src="http://azroyal.bakufu.org/azpicture/'+aria_deta+'/'+az_kan_deta_00[i][11]+'/'+az_kan_deta_00[i][11]+'002.png"/>'+'<img src="http://azroyal.bakufu.org/azpicture/'+aria_deta+'/'+az_kan_deta_00[i][11]+'/'+az_kan_deta_00[i][11]+'003.png"/>');
+                    document.getElementsByClassName("retu")[count].getElementsByTagName("td")[2].insertAdjacentHTML("beforeend",'<img src="http://azroyal.bakufu.org/azpicture/'+aria_deta+'/'+az_kan_deta_00[i][11]+'/'+az_kan_deta_00[i][11]+'001.png"/>');
+                    count++;
+                }
+            }
+        }
+    
+    
+    
+    </script>
+
+    <div id="az_content" onmousedown="return false;" onselectstart="return false" oncontextmenu="return false;">
+        <div id="picbox" style="text-align: center;height: 168px;"></div>
+        <div id="VS_area"><span id="vs_first" style="font-weight: bold;"></span><span id="vs_second" style="font-weight: bold;"></span></div>
+        <div id="text_box00">
+            <div id="text_box01"><span id="text_in"></span></div>
+            <div id="text_box02" onclick="kaitouset(5)"><span id="next_in"></span></div>
+        </div>
+        <div id="sentakubox00">
+            <div id="topsentaku">
+                <div class="sentakubox" onclick="kaitouset(1)"><span id="name_area01"></span></div>
+                <div class="sentakubox" onclick="kaitouset(2)"><span id="name_area02"></span></div>
+            </div>
+            <div id="bottomsentaku">
+                <div class="sentakubox" onclick="kaitouset(3)"><span id="name_area03"></span></div>
+                <div class="sentakubox" onclick="kaitouset(4)"><span id="name_area04"></span></div>
+            </div>
+        </div>
+        
+    </div>
+    <br>
+    <script src="https://royalojisann.github.io/jquery-3.3.1.min.js"></script>
+    <script src="az-question.js"></script>
+    ##～他のおもしろツール～
+    
+    
+    ##アズレンマッチング！について
+    選ばれた選択肢からマッチ度の高い艦船が上位に表示されます。<br>
+    艦船の候補は<strong>約130種類</strong>以上おり、そのせいで一致数は被りがちです。<br>
+    艦船に設定しているタイプや属性などは作者の判断基準で決めています。
+</div>
+</body>
+</html>
