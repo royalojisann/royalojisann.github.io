@@ -622,6 +622,7 @@ function kaitouset(n_sentaku){
                     twitext = emblem[6];
                 }
             }else if(document.getElementById("next_in").textContent == "次へ進む！"){
+                picaria.textContent = "";
                 vs_area01.textContent = '';
                 vs_area02.textContent = '結果をツイートできます';
                 document.getElementById("text_in").textContent = "";
@@ -631,6 +632,7 @@ function kaitouset(n_sentaku){
 
             }else{
                 //全問終了テキスト
+                picaria.textContent = "";
                 vs_area01.textContent = '';
                 vs_area02.textContent = '全問終了！';
                 document.getElementById("sentakubox00").style.display = "none";
