@@ -230,7 +230,7 @@ twion();
 var shareUrl = "https://az-royalojisann.hatenablog.com/entry/";
 var targetId = "tweet1";
 //var message = 'アズレンマッチング！'+'\n'+'\n'+'マッチした艦船'+'\n'+'１位：'+hantei[0][0]+'\n'+'２位：'+hantei[1][0]+'\n'+'３位：'+hantei[2][0]+'\n'+'４位：'+hantei[3][0]+'\n'+'５位：'+hantei[4][0]+'\n'+'アズールレーン'+'\n';
-var hashtag = "アズールレーン";
+var hashtag = "";
 
 // Twitterの初期化
 var d = document;
