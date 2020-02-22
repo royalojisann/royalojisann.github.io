@@ -300,7 +300,7 @@ var kan_profile = [
 ['ヴィシア','駆逐','ル・マルス','R→SR','「光と影のアイリス」ドロップ(C3,D3など)','2018年7月26日','2018年7月26日','1926年8月28日','<a href="http://blog.livedoor.jp/onigiriwa315/" target="_blank" >長谷川明子</a>','<a href="https://twitter.com/mituk1" target="_blank" >夜ノみつき</a>',''],
 ['ヴィシア','戦艦','ジャン・バール','SSR','「光と影のアイリス」限定建造','2018年7月26日','未定','1940年3月6日','<a href="https://twitter.com/mari_navi?lang=ja" target="_blank" >井上麻里奈</a>','<a href="https://www.pixiv.net/member.php?id=1980643" target="_blank" >ASK</a>',''],
 ['ヴィシア','巡戦','ダンケルク','SR','「光と影のアイリス」限定建造','2018年7月26日','未定','1935年10月2日','<a href="https://twitter.com/sayaka_harada_" target="_blank" >原田彩楓</a>','<a href="https://www.pixiv.net/member.php?id=38088" target="_blank" >Liduke(日子)</a>',''],
-['北連','軽巡','アヴローラ','SSR','クローズドβ参加者特典シリアルコード、「再誕の暁」','初期','未定','1900年5月24日','<a href="https://twitter.com/38kmarie" target="_blank" >三宅麻理恵</a>','<a href="https://www.pixiv.net/member.php?id=1023957" target="_blank" >かえで(夢咲楓)</a>',''],
+['北連','軽巡','アヴローラ','SSR','クローズドβ参加者特典シリアルコード、「再誕の暁」、「凍絶の北海」限定建造','初期','未定','1900年5月24日','<a href="https://twitter.com/38kmarie" target="_blank" >三宅麻理恵</a>','<a href="https://www.pixiv.net/member.php?id=1023957" target="_blank" >かえで(夢咲楓)</a>',''],
 ['ネプテューヌ','駆逐','ブラン','SR','「別次元からの来訪者」限定建造','2018年1月26日','未定','誕生日12月15日','<a href="https://twitter.com/0812asumikana?lang=ja" target="_blank" >阿澄佳奈</a>','<a href="https://www.tunamayoza.com/illust" target="_blank" >つなこ</a>',''],
 ['ネプテューヌ','駆逐','ホワイトハート','SSR','「別次元からの来訪者」限定建造','2018年1月26日','未定','誕生日12月15日','<a href="https://twitter.com/0812asumikana?lang=ja" target="_blank" >阿澄佳奈</a>','<a href="https://www.tunamayoza.com/illust" target="_blank" >つなこ</a>',''],
 ['ネプテューヌ','軽巡','ネプテューヌ','SR','「別次元からの来訪者」任務報酬','2018年1月26日','未定','誕生日10月7日','<a href="https://twitter.com/tanakarie" target="_blank" >田中理恵</a>','<a href="https://www.tunamayoza.com/illust" target="_blank" >つなこ</a>',''],
@@ -394,5 +394,12 @@ var kan_profile = [
 ['ユニオン','軽巡','ビロクシ','SR','期間限定小型建造','2020年1月21日','未定','1943年2月23日','不明','不明','birokusi'],
 ['ロイヤル','軽巡','グロスター','SR','期間限定小型建造','2020年1月21日','未定','1937年10月19日','<a href="https://twitter.com/reinaueda_staff" target="_blank" >上田麗奈</a>','<a href="https://twitter.com/inayama" target="_blank" >稲山</a>','gurosuta-'],
 ['重桜','駆逐','浦波','SR','『母港春節』スタンプ報酬','2020年1月21日','未定','1928年11月29日','不明','不明','uranami'],
+['北連','戦艦','ガングート','SR','「凍絶の北海」累計PT','未定','未定','1911年10月20日','<a href="https://twitter.com/fuyuka_ono" target="_blank" >緒乃冬華</a>','',''],
+['北連','駆逐','ミンスク','SR','「凍絶の北海」交換','未定','未定','1935年11月6日','','',''],
+['北連','軽巡','チャパエフ','SSR','「凍絶の北海」交換','未定','未定','1941年4月28日','<a href="https://twitter.com/masu_mikan?lang=ja" target="_blank" >田澤茉純</a>','<a href="https://www.pixiv.net/member.php?id=12834728" target="_blank" >股间少女</a>',''],
+['北連','軽巡','パーミャチ・メルクーリヤ','SR','「凍絶の北海」限定建造','未定','未定','1902年5月20日','<a href="https://twitter.com/maya_no_a?lang=ja" target="_blank" >吉岡麻耶</a>','',''],
+['北連','駆逐','グロズヌイ','SR','「凍絶の北海」限定建造','未定','未定','1936年7月31日','<a href="https://twitter.com/chiyo_tomaru" target="_blank" >都丸ちよ</a>','',''],
+['北連','軽巡','タシュケント','SSR','「凍絶の北海」限定建造','未定','未定','1937年12月28日','<a href="https://twitter.com/shiori_izawa?lang=ja" target="_blank" >井澤詩織</a>','<a href="https://twitter.com/KIncoraK" target="_blank" >KIncora</a>',''],
+['北連','戦艦','ソビエツカヤ・ロシア','SSR','「凍絶の北海」限定建造','未定','未定','君が建造した日','','<a href="https://www.weibo.com/soaryuna?is_hot=1">侑了个侑</a>',''],
 
 ];
