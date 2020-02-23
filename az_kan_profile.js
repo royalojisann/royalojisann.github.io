@@ -399,7 +399,7 @@ var kan_profile = [
 ['北連','軽巡','チャパエフ','SSR','「凍絶の北海」交換','未定','未定','1941年4月28日','<a href="https://twitter.com/masu_mikan?lang=ja" target="_blank" >田澤茉純</a>','<a href="https://www.pixiv.net/member.php?id=12834728" target="_blank" >股间少女</a>',''],
 ['北連','軽巡','パーミャチ・メルクーリヤ','SR','「凍絶の北海」限定建造','未定','未定','1902年5月20日','<a href="https://twitter.com/maya_no_a?lang=ja" target="_blank" >吉岡麻耶</a>','',''],
 ['北連','駆逐','グロズヌイ','SR','「凍絶の北海」限定建造','未定','未定','1936年7月31日','<a href="https://twitter.com/chiyo_tomaru" target="_blank" >都丸ちよ</a>','',''],
-['北連','軽巡','タシュケント','SSR','「凍絶の北海」限定建造','未定','未定','1937年12月28日','<a href="https://twitter.com/shiori_izawa?lang=ja" target="_blank" >井澤詩織</a>','<a href="https://twitter.com/KIncoraK" target="_blank" >KIncora</a>',''],
+['北連','駆逐','タシュケント','SSR','「凍絶の北海」限定建造','未定','未定','1937年12月28日','<a href="https://twitter.com/shiori_izawa?lang=ja" target="_blank" >井澤詩織</a>','<a href="https://twitter.com/KIncoraK" target="_blank" >KIncora</a>',''],
 ['北連','戦艦','ソビエツカヤ・ロシア','SSR','「凍絶の北海」限定建造','未定','未定','君が建造した日','','<a href="https://www.weibo.com/soaryuna?is_hot=1">侑了个侑</a>',''],
 
 ];
