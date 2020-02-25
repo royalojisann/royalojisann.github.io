@@ -1,4 +1,12 @@
 var gatya_title =[
+ ['凍絶の北海','大型',[
+        {item:'ソビエツカヤ・ロシア',k_rare:'SSR',weight:2,k_bikou:'先'},
+        {item:'タシュケント',k_rare:'SSR',weight:2,k_bikou:'先'},
+        {item:'チャパエフ',k_rare:'SSR',weight:0.5,k_bikou:'先/交/堀'},
+        {item:'アヴローラ',k_rare:'SSR',weight:1.5,k_bikou:'復'},
+	{item:'グロズヌイ',k_rare:'SR',weight:2.5,k_bikou:'先'},
+	{item:'パーミャチ・メルクーリヤ',k_rare:'SR',weight:2.5,k_bikou:'先'},
+    ]],
  ['戦え！ロイヤルメイド隊2nd','小型',[
         {item:'ダイドー',k_rare:'SSR',weight:2,k_bikou:'先'},
         {item:'ビロクシ',k_rare:'SR',weight:2.5,k_bikou:'先'},
