@@ -13,6 +13,7 @@
         text-align: center;
         font-size: 18px;
         font-weight: bold;
+        border: 1px solid #bbb;
     }
     #VS_area{
         width: 98%;
