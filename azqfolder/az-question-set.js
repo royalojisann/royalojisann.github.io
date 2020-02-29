@@ -692,7 +692,7 @@ function kaitouset(n_sentaku){
                 var seikairitu = 1/challenge[1]*challenge[2]*100;
                 
                 if(seikairitu == 100){
-                    if(challenge[0]=="50問チャレンジ！"){
+                    if(challenge[0]=="50問チャレンジ"){
                         document.getElementById("text_in").insertAdjacentHTML("beforeend","結果は"+challenge[1]+"問中…"+challenge[2]+"問正解！<br>"+kingset[1]);
                         twitext = kingset[1];
                     }else{
