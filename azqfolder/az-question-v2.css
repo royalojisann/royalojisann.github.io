@@ -11,17 +11,24 @@
     #az_content{
         height: 520px;
         text-align: center;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         border: 1px solid #bbb;
     }
     #VS_area{
-        width: 98%;
-        padding: 0.6em 0;
+        width: 98.4%;
+        height: 52px;
         background: #ffd4d4;
+        padding: 0 2px;
         margin: 0 auto 6px auto;
-        line-height: 1;
         border-radius: 10px;
+        display: inline-block;
+        line-height: 52px;
+    }
+    #VS_area span{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
     }
     #text_box00{
         display: none;
@@ -62,21 +69,17 @@
         vertical-align: middle;
         line-height: normal;
     }
-}
-@media screen and (min-width:680px){
-    #page{
-        width: 680px;
-        font-size: 20px;
-        margin: auto;
+    #canvas1{
+        width: 300px;
+        height: 300px;
     }
 }
-#boxer_canvas{
-    width: 100%;
-    height: 300px;
-}
-#canvas1{
-width: 100%;
-height: 300px;
+@media screen and (min-width:640px){
+    #page{
+        width: 640px;
+        font-size: 16px;
+        margin: auto;
+    }
 }
 
 #topsentaku .sentakubox:nth-child(1){
@@ -114,7 +117,7 @@ height: 300px;
 #picbox {
     text-align: center;
     height: 300px;
-    padding: 4px 0;
+    padding: 2px 0 4px 0;
 }
 .retry_b {
     background: #f3a93d;
@@ -126,4 +129,3 @@ height: 300px;
     display: inline-block;
     vertical-align: top;
 }
-
