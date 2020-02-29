@@ -374,28 +374,29 @@ var dummyhairetu = [];
 var toi = 0;
 var reload_go = 0;
 var challenge ="";
-var canvas = document.getElementById("canvas1");
-var ctx = canvas.getContext('2d');
+var ctx = document.getElementById('canvas1').getContext('2d');
 var kingset = "";
 var mondailist = [];
 var vs_area01 = document.getElementById("vs_first");
-var vs_area02 = document.getElementById("vs_second");
 var text_area01 = document.getElementById("name_area01");
 var text_area02 = document.getElementById("name_area02");
 var text_area03 = document.getElementById("name_area03");
 var text_area04 = document.getElementById("name_area04");
 function allreset(){
+    clearInterval(timerId);
+    textcount = 1;
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    startTimer('問 題 数 を 選 択');
     toi = 0;
     reload_go = 0;
-    vs_area01.textContent = "";
-    vs_area02.textContent = "どれに挑戦する？";
+    vs_area01.textContent = "どれに挑戦する？";
     document.getElementById("sentakubox00").style.display = "block";
     document.getElementById("text_box00").style.display = "none";
     document.getElementById("text_box02").style.display = "inline-block";
-    text_area01.textContent = "10問チャレンジ！";
-    text_area02.textContent = "20問チャレンジ！";
-    text_area03.textContent = "30問チャレンジ！";
-    text_area04.textContent = "50問チャレンジ！";
+    text_area01.textContent = "10問チャレンジ";
+    text_area02.textContent = "20問チャレンジ";
+    text_area03.textContent = "30問チャレンジ";
+    text_area04.textContent = "50問チャレンジ";
 }
 
 function shuffle(arr) {
@@ -414,25 +415,34 @@ window.addEventListener('DOMContentLoaded', function() {
 var countup = 0;
 var image = new Image();
 image.onload = function(e){
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    var	imgWidth = image.width, //画像の元の幅を取得
-        imgHeight = image.height; //画像の元の高さを取得
-    var canvaswidth = canvas.width,
-        canvasheight = canvas.height;
-    var asp = canvasheight/imgHeight;//比率
-    var sw = asp*imgWidth/2;
-    var sy = asp*imgHeight;
-    var centerline = (canvaswidth-sw)/2;
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    var canvasAspect = ctx.canvas.width / ctx.canvas.height, // canvasのアスペクト比
+    imgAspect = image.width / image.height, // 画像のアスペクト比
+    left, top, width, height;
+    
+        if(imgAspect >= canvasAspect) {// 画像が横長
+            left = 0;
+            width = ctx.canvas.width;
+            height = ctx.canvas.width / imgAspect;
+            top = (ctx.canvas.height - height) / 2;
+        } else {// 画像が縦長
+            top = 0;
+            height = ctx.canvas.height;
+            width = ctx.canvas.height * imgAspect;
+            left = (ctx.canvas.width - width) / 2;
+        }
+
     ctx.globalCompositeOperation = 'source-over';
-    ctx.drawImage(image,centerline,0,sw,sy);
+    ctx.drawImage(image, 0, 0, image.width, image.height, 
+        left, top, width, height);
 
     if(mondailist[toi][0]==5){
             //シルエットオン・オフ
             if(countup == 0){
                 countup = 1;
                 ctx.globalCompositeOperation = 'source-atop';//下の画像でクリッピング
-                ctx.fillStyle = "rgb(0, 0, 0)";//塗りスタイルに黒色を指定する
-                ctx.fillRect(0,0,canvaswidth,canvasheight);//左から20上から20の位置に幅50高さ50の塗りつぶしの四角形を描く
+                ctx.fillStyle = "rgb(0, 0, 0)";//黒色
+                ctx.fillRect(0,0,ctx.canvas.width,ctx.canvas.height);//塗りつぶし
             }else{
                 ;
             }
@@ -479,19 +489,21 @@ function kingdeta(){
 
 function kaitouset(n_sentaku){
     if(reload_go==0){
+        clearInterval(timerId);
+        textcount = 1;
         //初期設定
         switch(n_sentaku){
             case 1:
-                challenge = ["10問チャレンジ！",10,0];
+                challenge = ["10問チャレンジ",10,0];
             break;
             case 2:
-                challenge = ["20問チャレンジ！",20,0];
+                challenge = ["20問チャレンジ",20,0];
             break;
             case 3:
-                challenge = ["30問チャレンジ！",30,0];
+                challenge = ["30問チャレンジ",30,0];
             break;
             case 4:
-                challenge = ["50問チャレンジ！",50,0];
+                challenge = ["50問チャレンジ",50,0];
             break;
         }
 
@@ -569,7 +581,7 @@ function kaitouset(n_sentaku){
                     //選択肢　4
                     hairetulist.push(set_0);
                     //テキスト　5
-                    hairetulist.push('このキャラの『名前』を当てよう');
+                    hairetulist.push('艦船の『名前』を当てよう');
                 break;
                 case 1:
                     //艦種
@@ -591,7 +603,7 @@ function kaitouset(n_sentaku){
                         }
                     }
                     hairetulist.push(set_0);
-                    hairetulist.push('このキャラの『艦種』を選ぼう');
+                    hairetulist.push('『艦種』を当てよう');
                 break;
                 case 2:
                     //レア
@@ -613,7 +625,7 @@ function kaitouset(n_sentaku){
                         }
                     }
                     hairetulist.push(set_0);
-                    hairetulist.push('このキャラの初期『レアリティ』はどれ？');
+                    hairetulist.push('『初期レア度』を当てよう');
                 break;
                 case 3:
                     //艦種から名前を当てる
@@ -625,7 +637,7 @@ function kaitouset(n_sentaku){
                     shuffle(dummyhairetu);
                     sonotaset_02(3,3,2,2,dummyhairetu);
                     hairetulist.push(set_0);
-                    hairetulist.push('選択肢から『'+hairetuset[toi][2]+'』を選ぼう');
+                    hairetulist.push('艦種『'+hairetuset[toi][2]+'』を選ぼう');
                 break;
                 case 4:
                     //レアから名前を当てる
@@ -637,7 +649,7 @@ function kaitouset(n_sentaku){
                     shuffle(dummyhairetu);
                     sonotaset_02(3,3,4,4,dummyhairetu);
                     hairetulist.push(set_0);
-                    hairetulist.push('選択肢から『'+hairetuset[toi][4]+'』を選ぼう');
+                    hairetulist.push('初期レア度『'+hairetuset[toi][4]+'』を選ぼう');
                 break;
                 case 5:
                     //シルエット
@@ -707,9 +719,7 @@ function kaitouset(n_sentaku){
                     twitext = kingset[7];
                 }
             }else if(document.getElementById("next_in").textContent == "次へ進む！"){
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                vs_area01.textContent = '';
-                vs_area02.textContent = '結果をツイートできます';
+                vs_area01.textContent = '結果をツイートできます';
                 document.getElementById("text_in").textContent = "";
                 document.getElementById("text_in").insertAdjacentHTML("beforeend",'<p><span id="tweet1"></span>　<span class="retry_b" onclick="allreset();">もう１回やる</span><br>結果をツイートできます。<br>ボタンが現れない時は⇒<span class="retry_b" onclick="twion();">タッチ</span></p>');
                 document.getElementById("text_box02").style.display = "none";
@@ -717,16 +727,16 @@ function kaitouset(n_sentaku){
 
             }else{
                 //全問終了テキスト
-                vs_area01.textContent = '';
-                vs_area02.textContent = '全問終了！';
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                vs_area01.textContent = '全問終了！';
+                ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                startTimer('Thank you!!');
                 document.getElementById("sentakubox00").style.display = "none";
                 document.getElementById("text_box00").style.display = "block";
                 document.getElementById("text_in").textContent　="";
                 document.getElementById("text_in").insertAdjacentHTML("beforeend",challenge[0]+"<br>"+"おつかれさまでした！");
                 document.getElementById("next_in").textContent = "結果を見る！";
             }
-        }else{    
+        }else{
             questionset();
         }
     }else{
@@ -744,6 +754,23 @@ function kaitouset(n_sentaku){
         document.getElementById("next_in").textContent = "次へ";
     }
 }
+ctx.font = "bold 60px sans-serif";
+ctx.canvas.textAlign = "center";
+ctx.canvas.textBaseline = "middle";
+var textcount = 1;
+var timerId;
+function startTimer(displayText){
+    var textWidth = ctx.measureText(displayText).width;
+    ctx.fillStyle  = '#f00';
+
+    timerId = setInterval(function(){
+        ctx.fillText(displayText.substr(0, textcount), (ctx.canvas.width-textWidth)/2, ctx.canvas.height/2);
+        textcount++;
+        if (textcount > displayText.length) {
+            clearInterval(timerId);
+        }
+    },80);
+}
 
 function questionset(){
     toi++;
@@ -756,8 +783,7 @@ function questionset(){
     text_area02.textContent = mondailist[toi][4][1];
     text_area03.textContent = mondailist[toi][4][2];
     text_area04.textContent = mondailist[toi][4][3];
-    vs_area01.textContent = '【問'+(toi)+'】 ';
-    vs_area02.textContent = mondailist[toi][5];
+    vs_area01.textContent = '【問'+(toi)+'】'+mondailist[toi][5];
 }
 
 var shareUrl = "https://az-royalojisann.hatenablog.com/entry/";
