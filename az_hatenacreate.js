@@ -12,8 +12,10 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     if(document.getElementsByClassName('entry-content')[0] != null){
         var getclass = document.getElementsByClassName("table-of-contents");
-        getclass[0].insertAdjacentHTML('afterend', '<details><summary>もくじ</summary>'+getclass[0].outerHTML+'</details><br>');
-        getclass[0].parentNode.removeChild(getclass[0]);
+        for(var i=0; i<getclass.length; i++){
+            getclass[i].insertAdjacentHTML('afterend', '<details><summary>もくじ</summary>'+getclass[i].outerHTML+'</details><br>');
+            getclass[i].parentNode.removeChild(getclass[i]);
+        }
     }
     status_in();
     profile_in();       
