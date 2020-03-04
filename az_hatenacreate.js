@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function() {
             break;
         }
     }
-    if(document.getElementsByClassName('entry-content')[0].document.getElementsByClassName("table-of-contents")[0]){
+    if(document.getElementsByClassName('entry-content')[0].document.getElementsByClassName("table-of-contents")[0] != null){
         var getclass = document.getElementsByClassName("table-of-contents");
         getclass[0].insertAdjacentHTML('afterend', '<details><summary>もくじ</summary>'+getclass[0].outerHTML+'</details><br>');
         getclass[0].parentNode.removeChild(getclass[0]);
