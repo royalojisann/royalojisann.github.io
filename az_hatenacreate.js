@@ -19,8 +19,6 @@ window.addEventListener('DOMContentLoaded', function() {
     profile_in();       
     }
 });
-
-
     
 function status_in(){
     if(document.getElementById("target_name") != null){
