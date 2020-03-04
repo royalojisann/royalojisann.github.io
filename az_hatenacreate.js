@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', function() {
     if(document.getElementsByClassName('entry-content')[0] != null){
         var getclass = document.getElementsByClassName("table-of-contents");
         for(var i=0; i<getclass.length; i++){
+            var getclass = document.getElementsByClassName("table-of-contents");
             getclass[i].insertAdjacentHTML('afterend', '<details><summary>もくじ</summary>'+getclass[i].outerHTML+'</details><br>');
             getclass[i].parentNode.removeChild(getclass[i]);
         }
