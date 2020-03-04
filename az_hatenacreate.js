@@ -10,18 +10,17 @@ window.addEventListener('DOMContentLoaded', function() {
             break;
         }
     }
-    bookmark();
+    if(document.getElementsByClassName('entry-content')[0].document.getElementsByClassName("table-of-contents")[0]){
+        var getclass = document.getElementsByClassName("table-of-contents");
+        getclass[0].insertAdjacentHTML('afterend', '<details><summary>もくじ</summary>'+getclass[0].outerHTML+'</details><br>');
+        getclass[0].parentNode.removeChild(getclass[0]);
+    }
     status_in();
     profile_in();       
     }
 });
 
-function bookmark(){
-if(document.getElementsByClassName('entry-content')[0].document.getElementsByClassName("table-of-contents")[0]){
-var getclass = document.getElementsByClassName("table-of-contents");
-getclass[0].insertAdjacentHTML('afterend', '<details><summary>もくじ</summary>'+getclass[0].outerHTML+'</details><br>');
-getclass[0].parentNode.removeChild(getclass[0]);
-}
+
     
 function status_in(){
     if(document.getElementById("target_name") != null){
@@ -292,10 +291,12 @@ function profile_in(){
 };
 
 function click_button(getid){
-var id_deta = document.getElementById(getid);
-if(id_deta.style.display=="none"){
-id_deta.style.display="block";
-}else{
-id_deta.style.display="none";
-}
+    if(document.getElementById(getid) != null){
+        var id_deta = document.getElementById(getid);
+        if(id_deta.style.display=="none"){
+            id_deta.style.display="block";
+        }else{
+        id_deta.style.display="none";
+        }
+    }
 };
