@@ -187,7 +187,7 @@ function status_in(){
             var keisan = (kan_list[index_n][30]*1);
             keisan=keisan+(get_level.value*1-1)*(kan_list[index_n][31]*1)/1000;
             keisan=keisan+(Math.max(get_level.value*1,100)-100)*(kan_list[index_n][32]*1)/1000;
-            keisan=keisan+(kan_list[index_n][54]*1);
+            keisan=keisan+(kan_list[index_n][53]*1);
             rensou_hairetudeta.速力 = keisan;
             seve_list[dd].textContent=keisan;
             break;
