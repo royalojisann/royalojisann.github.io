@@ -176,14 +176,14 @@ function spec_in(){
     var kan_crt = Math.floor((0.05+status_deta.命中*1/(status_deta.命中*1+100+2000)+(status_deta.幸運+50+0)/5000)*10000)/100;
     var kan_body = Math.floor(status_deta.耐久/(1-kan_kaihi/100));
 
-    var kan_spec = '<ul>'+'\n'+
+    var spec_in = '<ul>'+'\n'+
     '<li><strong>'+status_deta.名前+'の性能</strong></li>'+'\n'+
     '<li><strong>回避率</strong>：<strong>'+kan_kaihi+'%</strong></li>'+'\n'+
     '<li><strong>命中率</strong>：<strong>'+kan_hit+'%</strong></li>'+'\n'+
     '<li><strong>ＣＲＴ</strong>：<strong>'+kan_crt+'%</strong></li>'+'\n'+
     '<li><strong>総耐久</strong>：<strong>'+kan_body+'</strong></li>'+'\n'+
     '</ul>\n';
-    kan_spec.insertAdjacentHTML("afterbegin",kan_spec);
+    kan_spec.insertAdjacentHTML("afterbegin",spec_in);
 };
 
 function profile_in(){
