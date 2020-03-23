@@ -404,6 +404,9 @@ var kan_profile = [
 ['ユニオン','空母','イントレピッド','SSR','「闇靄を払う銀翼」限定建造','2020年3月26日','未定','1943年4月26日','<a href="http://www.pro-fit.co.jp/talent_fairouzai.html" target="_blank" >ファイルーズあい</a>','不明','inntorepixtudo',['','','','','']],
 ['ユニオン','軽母','カサブランカ','R','「闇靄を払う銀翼」','2020年3月26日','未定','1943年4月5日','<a href="https://ja.wikipedia.org/wiki/%E9%95%B7%E8%B0%B7%E5%B7%9D%E8%82%B2%E7%BE%8E" target="_blank" >長谷川育美</a>','不明','kasaburannka',['','','','','']],
 ['ユニオン','潜水','ブルーギル','SR','「闇靄を払う銀翼」','2020年3月26日','未定','1943年8月8日','<a href="https://twitter.com/shutoyuki_1219" target="_blank" >首藤志奈</a>','不明','buru-giru',['','','','','']],
-['ユニオン','駆逐','クーパー','SR','「闇靄を払う銀翼」','2020年3月26日','未定','1944年2月9日','不明','不明','ku-pa-',['','','','','']],
+['ユニオン','駆逐','クーパー','SR','「闇靄を払う銀翼」限定建造','2020年3月26日','未定','1944年2月9日','不明','<a href="https://twitter.com/shisantian" target="_blank" >真明</a>','ku-pa-',['','','','','']],
+['ユニオン','軽巡','リノ','SSR','「闇靄を払う銀翼」限定建造','2020年3月26日','未定','1942年12月23日','不明','<a href="https://twitter.com/Pandea_work" target="_blank" >Jimmy Pan</a>','rino',['','','','','']],
+['ユニオン','重巡','ブレマートン','SSR','「闇靄を払う銀翼」','2020年3月26日','未定','1944年7月2日','<a href="https://twitter.com/yuiko_ttm0917" target="_blank" >巽悠衣子</a>','<a href="https://twitter.com/katsudansou" target="_blank" >活断層</a>','burema-tonn',['','','','','']],
+['ユニオン','軽巡','マーブルヘッド','R','「闇靄を払う銀翼」限定建造','2020年3月26日','未定','1923年10月9日','<a href="https://ja.wikipedia.org/wiki/%E6%AD%A6%E7%94%B0%E7%BE%85%E6%A2%A8%E6%B2%99%E5%A4%9A%E8%83%A1" target="_blank" >武田羅梨沙多胡</a>','1900年1月0日','ma-buruhextudo',['','','','','']],
 
 ];
