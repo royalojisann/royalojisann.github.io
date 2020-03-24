@@ -1,4 +1,11 @@
 var gatya_title =[
+ ['闇露払う銀翼','大型',[
+        {item:'イントレピッド',k_rare:'SSR',weight:2,k_bikou:'先'},
+        {item:'リノ',k_rare:'SSR',weight:2,k_bikou:'先'},
+        {item:'ブレマートン',k_rare:'SSR',weight:0.5,k_bikou:'先/交/堀'},
+        {item:'クーパー',k_rare:'SR',weight:2.5,k_bikou:'先'},
+	{item:'マーブルヘッド',k_rare:'R',weight:5,k_bikou:'先'},
+    ]],
  ['凍絶の北海','大型',[
         {item:'ソビエツカヤ・ロシア',k_rare:'SSR',weight:2,k_bikou:'先'},
         {item:'タシュケント',k_rare:'SSR',weight:2,k_bikou:'先'},
