@@ -195,11 +195,13 @@ function profile_in(){
     target_profile[9].textContent = kan_profile[index_n][4];//入手
     target_profile[11].textContent = kan_profile[index_n][5];//実装日
     target_profile[13].textContent = kan_profile[index_n][6];//改造日
-    target_profile[15].textContent = kan_profile[index_n][7];//進水日
-    target_profile[17].textContent="";//ボイス
-    target_profile[17].insertAdjacentHTML("afterbegin",kan_profile[index_n][8]);//ボイス
-    target_profile[19].textContent="";//イラスト
-    target_profile[19].insertAdjacentHTML("afterbegin",kan_profile[index_n][9]);//イラスト
+    target_profile[15].textContent = kan_profile[index_n][13];//起工日
+    target_profile[17].textContent = kan_profile[index_n][7];//進水日
+    target_profile[19].textContent = kan_profile[index_n][14];//就役日
+    target_profile[21].textContent="";//ボイス
+    target_profile[23].insertAdjacentHTML("afterbegin",kan_profile[index_n][8]);//ボイス
+    target_profile[25].textContent="";//イラスト
+    target_profile[27].insertAdjacentHTML("afterbegin",kan_profile[index_n][9]);//イラスト
 };
 
 function click_button(getid){
