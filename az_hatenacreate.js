@@ -187,21 +187,40 @@ function spec_in(){
 };
 
 function profile_in(){
-    var target_profile =document.getElementById("character_profile").getElementsByTagName("td");
-    target_profile[1].textContent = kan_profile[index_n][2];//名前
-    target_profile[3].textContent = kan_profile[index_n][1];//艦種
-    target_profile[5].textContent = kan_profile[index_n][0];//陣営
-    target_profile[7].textContent = kan_profile[index_n][3];//レア
-    target_profile[9].textContent = kan_profile[index_n][4];//入手
-    target_profile[11].textContent = kan_profile[index_n][5];//実装日
-    target_profile[13].textContent = kan_profile[index_n][6];//改造日
-    target_profile[15].textContent = kan_profile[index_n][13];//起工日
-    target_profile[17].textContent = kan_profile[index_n][7];//進水日
-    target_profile[19].textContent = kan_profile[index_n][14];//就役日
-    target_profile[21].textContent="";//ボイス
-    target_profile[23].insertAdjacentHTML("afterbegin",kan_profile[index_n][8]);//ボイス
-    target_profile[25].textContent="";//イラスト
-    target_profile[27].insertAdjacentHTML("afterbegin",kan_profile[index_n][9]);//イラスト
+    var areaid = document.getElementById("character_profile");
+    areaid.textContent = "";
+//     var target_profile =document.getElementById("character_profile").getElementsByTagName("td");
+//     target_profile[1].textContent = kan_profile[index_n][2];//名前
+//     target_profile[3].textContent = kan_profile[index_n][1];//艦種
+//     target_profile[5].textContent = kan_profile[index_n][0];//陣営
+//     target_profile[7].textContent = kan_profile[index_n][3];//レア
+//     target_profile[9].textContent = kan_profile[index_n][4];//入手
+//     target_profile[11].textContent = kan_profile[index_n][5];//実装日
+//     target_profile[13].textContent = kan_profile[index_n][6];//改造日
+//     target_profile[15].textContent = kan_profile[index_n][13];//起工日
+//     target_profile[17].textContent = kan_profile[index_n][7];//進水日
+//     target_profile[19].textContent = kan_profile[index_n][14];//就役日
+//     target_profile[21].textContent="";//ボイス
+//     target_profile[23].insertAdjacentHTML("afterbegin",kan_profile[index_n][8]);//ボイス
+//     target_profile[25].textContent="";//イラスト
+//     target_profile[27].insertAdjacentHTML("afterbegin",kan_profile[index_n][9]);//イラスト
+    
+    var profile_deta = 
+        '<table  style="border-bottom: 1px solid #ddd;border-right: 1px solid #ddd;width: 100%;"><tbody>'+'\n'+
+        '<tr><td>艦船</td><td id="target_name">'+kan_profile[index_n][2]+'</td></tr>'+'\n'+
+        '<tr><td>艦種</td><td>'+kan_profile[index_n][1]+'</td></tr>'+'\n'+
+        '<tr><td>陣営</td><td>'+kan_profile[index_n][0]+'</td></tr>'+'\n'+
+        '<tr><td>レアリティ</td><td>'+kan_profile[index_n][3]+'</td></tr>'+'\n'+
+        '<tr><td>入手方法</td><td>'+kan_profile[index_n][4]+'</td></tr>'+'\n'+
+        '<tr><td>実装日</td><td>'+kan_profile[index_n][5]+'</td></tr>'+'\n'+
+        '<tr><td>改造日</td><td>'+kan_profile[index_n][6]+'</td></tr>'+'\n'+
+        '<tr><td>起工日</td><td>'+kan_profile[index_n][13]+'</td></tr>'+'\n'+
+        '<tr><td>進水日</td><td>'+kan_profile[index_n][7]+'</td></tr>'+'\n'+
+        '<tr><td>就役日</td><td>'+kan_profile[index_n][14]+'</td></tr>'+'\n'+
+        '<tr><td>CV・声優</td><td>'+kan_profile[index_n][8]+'</td></tr>'+'\n'+
+        '<tr><td>イラスト・絵師</td><td>'+kan_profile[index_n][9]+'</td></tr>'+'\n'+
+        '</tbody></table>';
+    areaid.insertAdjacentHTML('beforeend',profile_deta);
 };
 
 function click_button(getid){
