@@ -115,3 +115,23 @@ function urlset(){
     }
     set.appendChild(table);
 }
+
+var kingdeta = function(jin){
+    switch(jin){
+        case "ユニオン":
+            return "unionset";
+        break;
+        case "ロイヤル":
+            return "royalset";
+        break;
+        case "重桜":
+            return "sakuraempire";
+        break;
+        case "鉄血":
+            return "ironset";
+        break;
+        default:
+            return "allset";
+        break;
+    }
+}
