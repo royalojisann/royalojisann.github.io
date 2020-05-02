@@ -3,7 +3,7 @@ var typelist = [];
 var rarelist = [];
 
 //キーワードリンク削除
-addEventListener("DOMContentLoaded",function(){var a=document.getElementsByClassName("entry-content");if(a)for(var i=0;i<a.length;i++)for(var b=a[i].getElementsByClassName("keyword");b.length;)b[0].outerHTML=b[0].textContent},!1);
+//addEventListener("DOMContentLoaded",function(){var a=document.getElementsByClassName("entry-content");if(a)for(var i=0;i<a.length;i++)for(var b=a[i].getElementsByClassName("keyword");b.length;)b[0].outerHTML=b[0].textContent},!1);
 
 function urlset(){
 
