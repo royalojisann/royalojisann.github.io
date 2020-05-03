@@ -188,6 +188,8 @@ function loadpic(){
         }
         ctx2.strokeRect((10+(10*i))+(244*i), 325,244,244);
     }
+    var imgurl = document.getElementById("canvas3").toDataURL();
+    document.getElementById("newImg").src = imgurl;
 }
 
 var kingdeta = function(jin){
