@@ -61,22 +61,18 @@ function picget(){
 
     var imgurl = function(index){
             var td1 = document.createElement("td");
-            //var anchor = document.createElement("a");
-            //anchor.href = "https://az-royalojisann.hatenablog.com/entry/az-kokosuki-"+kan_profile[index][10];//https://az-royalojisann.hatenablog.com/entry/az-kokosuki-
             var image = new Image();
             image.src = 'http://azroyal.bakufu.org/azpicture/'+kingdeta(kan_profile[index][0])+'/'+kan_profile[index][10]+'/'+kan_profile[index][10]+'003.png';
             image.classList = "sentaku_pict";
-            //anchor.appendChild(image);
-            //anchor.innerHTML += ('<br>'+kan_profile[index][2]);
-            //anchor.target = "_blank";
-            //var td2 = document.createElement("td");
-            //td2.textContent = kan_profile[index][2];
-            //td1.appendChild(anchor);
-            //tr.appendChild(td1);
-            //tr.appendChild(td2);
-
+        
+            var kanname = "";
+            if(kan_profile[index][2].indexOf('(半改)')!= -1){
+                kanname = kan_profile[index][2].substring(0,kan_profile[index][2].indexOf('('));
+            }else{
+                kanname =kan_profile[index][2];
+            }
             td1.appendChild(image);
-            td1.innerHTML += ('<br>'+kan_profile[index][2]);//非url
+            td1.innerHTML += ('<br>'+kanname);//非url
             table.appendChild(tr.appendChild(td1));
     }
 
@@ -103,6 +99,9 @@ function picget(){
     }
 
     for(var i = 0; i<kan_profile.length; i++){
+        if(kan_profile[i][12] == "改有り"){
+            ;
+        }else{
         //陣営
         if(Object.keys(kunilist).length == 0){
             //陣営指定なし
@@ -134,6 +133,7 @@ function picget(){
                     }
                 }
             }
+        }
         }
     }
 
