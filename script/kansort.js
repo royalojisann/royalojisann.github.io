@@ -79,41 +79,39 @@ function urlset(){
     }
 
     for(var i = 0; i<kan_profile.length; i++){
-        if(kan_profile[i][12] == "改有り"){
-            ;
-        }else{
-        //陣営
-        if(Object.keys(kunilist).length == 0){
-            //陣営指定なし
-            if(Object.keys(typelist).length == 0){
-                //艦種指定なし
-                rarehanntei(i);
-            }else{
-                //艦種指定
-                for(var r=0; r<typelist.length; r++){
-                    if(typelist[r]==kan_profile[i][1]){
-                        rarehanntei(i);
+        if(kan_profile[i][12] == "有り"){
+            //陣営
+            if(Object.keys(kunilist).length == 0){
+                //陣営指定なし
+                if(Object.keys(typelist).length == 0){
+                    //艦種指定なし
+                    rarehanntei(i);
+                }else{
+                    //艦種指定
+                    for(var r=0; r<typelist.length; r++){
+                        if(typelist[r]==kan_profile[i][1]){
+                            rarehanntei(i);
+                        }
                     }
                 }
-            }
-        }else{
-            //陣営指定
-            for(var j=0; j<kunilist.length; j++){
-                if(kunilist[j]==kan_profile[i][0]){
-                    if(Object.keys(typelist).length == 0){
-                        //艦種指定なし
-                        rarehanntei(i);
-                    }else{
-                        //艦種指定
-                        for(var r=0; r<typelist.length; r++){
-                            if(typelist[r]==kan_profile[i][1]){
-                                rarehanntei(i);
+            }else{
+                //陣営指定
+                for(var j=0; j<kunilist.length; j++){
+                    if(kunilist[j]==kan_profile[i][0]){
+                        if(Object.keys(typelist).length == 0){
+                            //艦種指定なし
+                            rarehanntei(i);
+                        }else{
+                            //艦種指定
+                            for(var r=0; r<typelist.length; r++){
+                                if(typelist[r]==kan_profile[i][1]){
+                                    rarehanntei(i);
+                                }
                             }
                         }
                     }
                 }
             }
-        }
         }
     }
     set.appendChild(table);
