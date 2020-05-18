@@ -17,10 +17,10 @@ window.addEventListener('DOMContentLoaded', function() {
             break;
             case 1:
                 //上のリンク
-                if(setlist_hairetu[1] != 0){
-                    h2deta[0].insertAdjacentHTML('beforebegin',koukoku_width);
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                }
+//                 if(setlist_hairetu[1] != 0){
+//                     h2deta[0].insertAdjacentHTML('beforebegin',koukoku_width);
+//                     (adsbygoogle = window.adsbygoogle || []).push({});
+//                 }
             break;
             case 2:
                 //中
