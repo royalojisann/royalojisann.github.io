@@ -1,4 +1,10 @@
 var gatya_title =[
+ ['神穹を衝く聖歌','大型',[
+        {item:'リシュリュー',k_rare:'SSR',weight:2,k_bikou:'先'},
+        {item:'アルジェリー',k_rare:'SSR',weight:2,k_bikou:'先'},
+        {item:'ジャンヌ・ダルク',k_rare:'SSR',weight:0.5,k_bikou:'先/交/堀'},
+        {item:'ヴォークラン',k_rare:'SR',weight:2.5,k_bikou:'先'},
+    ]],
     ['縹映る深緋の残響（復刻）','大型',[
         {item:'天城',k_rare:'SSR',weight:2,k_bikou:'復'},
 	{item:'土佐',k_rare:'SSR',weight:2,k_bikou:'先'},
