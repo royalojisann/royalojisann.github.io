@@ -64,6 +64,7 @@ function status_in(){
         case '暫定':
             for(var pr=0; pr<pr_kansenn.length;pr++){
                 if(pr_kansenn[pr][2]==status_deta.名前){
+                    status_deta.名前=kan_list[index_n][2]+'(暫定120愛)';
                     status_deta.耐久=(pr_kansenn[pr][3]*1);
                     status_deta.火力=(pr_kansenn[pr][4]*1);
                     status_deta.雷装=(pr_kansenn[pr][5]*1);
@@ -200,8 +201,7 @@ function spec_in(){
     var kan_crt = Math.floor((0.05+status_deta.命中*1/(status_deta.命中*1+100+2000)+(status_deta.幸運+50+0)/5000)*10000)/100;
     var kan_body = Math.floor(status_deta.耐久/(1-kan_kaihi/100));
 
-    var spec_in = '<ul>'+'\n'+
-    '<li><strong>'+status_deta.名前+'の性能</strong></li>'+'\n'+
+    var spec_in = '★'+kan_profile[index_n][2]+'の性能\n'+'<ul>'+'\n'+
     '<li><strong>回避率</strong>：<strong>'+kan_kaihi+'%</strong></li>'+'\n'+
     '<li><strong>命中率</strong>：<strong>'+kan_hit+'%</strong></li>'+'\n'+
     '<li><strong>ＣＲＴ</strong>：<strong>'+kan_crt+'%</strong></li>'+'\n'+
