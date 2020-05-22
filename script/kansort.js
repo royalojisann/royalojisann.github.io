@@ -79,7 +79,7 @@ function urlset(){
     }
 
     for(var i = 0; i<kan_profile.length; i++){
-        if(kan_profile[i][12] == "有り"){
+        if(kan_profile[i][12] == "有り"||"暫定"){
             //陣営
             if(Object.keys(kunilist).length == 0){
                 //陣営指定なし
