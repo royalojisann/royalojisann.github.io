@@ -1,4 +1,5 @@
 ﻿//kan_listとは艦種名が一部異なる
+kan_profile = [
 ['ロイヤル','駆逐','ブルドッグ','N','小型建造、海域','初期','未定','1930年11月6日','<a href="https://twitter.com/erietty_55?lang=ja" target="_blank" >鈴木絵理</a>','<a href="https://www.pixiv.net/member.php?id=1245646" target="_blank" >林大B</a>','burudoxtugu',['緊急回避','','','','','全弾発射-B級II'],'有り','1929年8月10日','1931年4月8日'],
 ['ロイヤル','駆逐','フォックスハウンド','N→R','小型建造、海域','初期','2018年2月26日','1934年10月12日','<a href="https://twitter.com/yuri_yamaoka" target="_blank" >山岡ゆり</a>','<a href="https://www.pixiv.net/member.php?id=12785336" target="_blank" >哈路卡</a>','foxtukusuhaunndo',['装填指揮・駆逐艦','側面援護','','','','全弾発射-F級II'],'有り','1933年8月21日','1935年6月6日'],
 ['ロイヤル','駆逐','ビーグル','N','小型建造、海域','初期','未定','1930年9月26日','<a href="https://twitter.com/erietty_55?lang=ja" target="_blank" >鈴木絵理</a>','<a href="https://www.pixiv.net/member.php?id=1245646" target="_blank" >林大B</a>','bi-guru',['緊急回避','','','','','全弾発射-B級II'],'有り','1929年10月11日','1931年4月9日'],
