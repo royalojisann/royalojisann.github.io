@@ -1,28 +1,9 @@
-﻿var sinnsuibilist = {
-    年1月:[],
-    年2月:[],
-    年3月:[],
-    年4月:[],
-    年5月:[],
-    年6月:[],
-    年7月:[],
-    年8月:[],
-    年9月:[],
-    年10月:[],
-    年11月:[],
-    年12月:[],
-    誕生日:[],
-    同じ:[],
-    君が建造:[],
-    不明:[]
-};
+var sinnsuibilist = {年1月:[],年2月:[],年3月:[],年4月:[],年5月:[],年6月:[],年7月:[],年8月:[],年9月:[],年10月:[],年11月:[],年12月:[],誕生日:[],同じ:[],君が建造:[],不明:[]};
 var sinnsuibikeys = Object.keys(sinnsuibilist);
 var jinset = [];
 var rareset = [];
 var kantypeset = [];
-
 window.addEventListener('DOMContentLoaded', function() {
-
     for(var i=0; i<kan_profile.length;i++){
         if(kan_profile[i][12] == "有り" || kan_profile[i][12] == "暫定"){
             for(var p=0; p<Object.keys(sinnsuibilist).length;p++){
@@ -36,7 +17,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
         }
     }
-
     for(var d=0; d<sinnsuibikeys.length;d++){
         switch(sinnsuibikeys[d]){
             case '誕生日':
@@ -51,17 +31,14 @@ window.addEventListener('DOMContentLoaded', function() {
                 });
             break;
         }
-    }
-    
+    } 
 });
-
 function sinnsuisort(){
     var settable = document.getElementById("sinnsuibitable");
     settable.textContent = "";
     jinset = [];
     rareset = [];
     kantypeset = [];
-
     for (var i = 0; i < document.getElementsByName("kuni001").length; i++) {
         if (document.getElementsByName("kuni001")[i].checked) {
             jinset.push(document.getElementsByName("kuni001")[i].value);
@@ -77,14 +54,11 @@ function sinnsuisort(){
             rareset.push(document.getElementsByName("rare001")[i].value);
         }
     }
-
     for(var i=0; i<sinnsuibikeys.length;i++){
-
         var h3deta = document.createElement("h3");
         h3deta.id = sinnsuibikeys[i];
         var atag1 = document.createElement("a");
         atag1.href = "#sinnsuibitable";
-
         var sinnsuitannjyou = "進水日";
         switch(sinnsuibikeys[i]){
             case '誕生日':
@@ -104,14 +78,11 @@ function sinnsuisort(){
                 atag1.textContent = sinnsuibikeys[i].match(/(\d+)月/)[1]+'月進水の艦船';
             break;
         }
-
         h3deta.appendChild(atag1)
         settable.appendChild(h3deta);
         var cretable = document.createElement("table");
         cretable.id= sinnsuibikeys[i]+"table";
         settable.appendChild(cretable);
-
-
         var template = function(ideta,pdeta){
             if(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2].indexOf('(半改)')!= -1){
                 kanname = sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2].substring(0,sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2].indexOf('('));
@@ -136,7 +107,6 @@ function sinnsuisort(){
             '</tr>'
             );
         }
-
         var rarehanntei = function(ideta,pdeta){
             //改造前のレアリティ
             var res = "";
@@ -145,7 +115,6 @@ function sinnsuisort(){
             }else{
                 res =sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][3];
             }
-    
             if(Object.keys(rareset).length == 0){
                 //rare指定なし
                 template(ideta,pdeta);
@@ -158,7 +127,6 @@ function sinnsuisort(){
                 }
             }
         }
-
         for(var p=0;p<sinnsuibilist[Object.keys(sinnsuibilist)[i]].length;p++){
             //陣営
             if(Object.keys(jinset).length == 0){
@@ -200,9 +168,20 @@ function sinnsuisort(){
 function sinnsuibifanc(){
     var settable = document.getElementById("sinnsuibitable");
     settable.textContent = "";
+    jinset = [];
+    rareset = [];
+    kantypeset = [];
+    for (var i = 0; i < document.getElementsByName("kuni001").length; i++) {
+        document.getElementsByName("kuni001")[i].checked= false;
+    }
+    for (var i = 0; i < document.getElementsByName("type001").length; i++) {
+        document.getElementsByName("type001")[i].checked= false;
+    }
+    for (var i = 0; i < document.getElementsByName("rare001").length; i++) {
+        document.getElementsByName("rare001")[i].checked= false;
+    }
 
     for(var i=0; i<sinnsuibikeys.length;i++){
-
         var h3deta = document.createElement("h3");
         h3deta.id = sinnsuibikeys[i];
         var atag1 = document.createElement("a");
