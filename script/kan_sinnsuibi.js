@@ -55,10 +55,11 @@ function sinnsuisort(){
         }
     }
     for(var i=0; i<sinnsuibikeys.length;i++){
-        var h3deta = document.createElement("h3");
-        h3deta.id = sinnsuibikeys[i];
+        var h2deta = document.createElement("h2");
+        h2deta.id = sinnsuibikeys[i];
         var atag1 = document.createElement("a");
         atag1.href = "#sinnsuibitable";
+
         var sinnsuitannjyou = "進水日";
         switch(sinnsuibikeys[i]){
             case '誕生日':
@@ -78,8 +79,8 @@ function sinnsuisort(){
                 atag1.textContent = sinnsuibikeys[i].match(/(\d+)月/)[1]+'月進水の艦船';
             break;
         }
-        h3deta.appendChild(atag1)
-        settable.appendChild(h3deta);
+        h2deta.appendChild(atag1)
+        settable.appendChild(h2deta);
         var cretable = document.createElement("table");
         cretable.id= sinnsuibikeys[i]+"table";
         settable.appendChild(cretable);
@@ -95,7 +96,7 @@ function sinnsuisort(){
                 sin =sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][7];
             }
             document.getElementById(sinnsuibikeys[ideta]+"table").insertAdjacentHTML('beforeend','<tr>'+
-            '<td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][12]+'" target="_blank" >'+
+            '<td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'" target="_blank" >'+
             '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'002.png"><br>'+kanname+'</a>'+
             '</td>'+
             '<td>'+
@@ -163,8 +164,6 @@ function sinnsuisort(){
         }
     }
 }
-
-
 function sinnsuibifanc(){
     var settable = document.getElementById("sinnsuibitable");
     settable.textContent = "";
@@ -180,25 +179,22 @@ function sinnsuibifanc(){
     for (var i = 0; i < document.getElementsByName("rare001").length; i++) {
         document.getElementsByName("rare001")[i].checked= false;
     }
-
     for(var i=0; i<sinnsuibikeys.length;i++){
-        var h3deta = document.createElement("h3");
-        h3deta.id = sinnsuibikeys[i];
+        var h2deta = document.createElement("h2");
+        h2deta.id = sinnsuibikeys[i];
         var atag1 = document.createElement("a");
         atag1.href = "#sinnsuibitable";
-
         var sinnsuitannjyou = "進水日";
         switch(sinnsuibikeys[i]){
             case '誕生日':
                 sinnsuitannjyou ="誕生日";
-                atag1.textContent = sinnsuibikeys[i];
+                atag1.textContent = 'コラボ艦船の誕生日';
             break;
             case '同じ':
                 atag1.textContent = "リトル＆ちゃんズ";
             break;
             case '君が建造':
                 atag1.textContent = "未成艦";
-                atag1.textContent = sinnsuibikeys[i];
             break;
             case '不明':
                 atag1.textContent = sinnsuibikeys[i];
@@ -207,9 +203,8 @@ function sinnsuibifanc(){
                 atag1.textContent = sinnsuibikeys[i].match(/(\d+)月/)[1]+'月進水の艦船';
             break;
         }
-
-        h3deta.appendChild(atag1)
-        settable.appendChild(h3deta);
+        h2deta.appendChild(atag1)
+        settable.appendChild(h2deta);
         var cretable = document.createElement("table");
         cretable.id= sinnsuibikeys[i]+"table";
         settable.appendChild(cretable);
@@ -220,7 +215,7 @@ function sinnsuibifanc(){
                 kanname =sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2];
             }
             document.getElementById(sinnsuibikeys[i]+"table").insertAdjacentHTML('beforeend','<tr>'+
-            '<td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][12]+'" target="_blank" >'+
+            '<td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'" target="_blank" >'+
             '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'002.png"><br>'+kanname+'</a>'+
             '</td>'+
             '<td>'+
