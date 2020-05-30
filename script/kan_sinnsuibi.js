@@ -3,6 +3,9 @@ var sinnsuibikeys = Object.keys(sinnsuibilist);
 var jinset = [];
 var rareset = [];
 var kantypeset = [];
+var sinsuikakunou0 = "";
+var sinsuikakunou1 = "";
+var settable = document.getElementById("sinnsuibitable");
 window.addEventListener('DOMContentLoaded', function() {
     for(var i=0; i<kan_profile.length;i++){
         if(kan_profile[i][12] == "有り" || kan_profile[i][12] == "暫定"){
@@ -31,14 +34,15 @@ window.addEventListener('DOMContentLoaded', function() {
                 });
             break;
         }
-    } 
+    }
 });
 function sinnsuisort(){
-    var settable = document.getElementById("sinnsuibitable");
     settable.textContent = "";
+    sinsuikakunou1 = "";
     jinset = [];
     rareset = [];
     kantypeset = [];
+
     for (var i = 0; i < document.getElementsByName("kuni001").length; i++) {
         if (document.getElementsByName("kuni001")[i].checked) {
             jinset.push(document.getElementsByName("kuni001")[i].value);
@@ -54,36 +58,29 @@ function sinnsuisort(){
             rareset.push(document.getElementsByName("rare001")[i].value);
         }
     }
-    for(var i=0; i<sinnsuibikeys.length;i++){
-        var h2deta = document.createElement("h2");
-        h2deta.id = sinnsuibikeys[i];
-        var atag1 = document.createElement("a");
-        atag1.href = "#sinnsuibitable";
 
+    for(var i=0; i<sinnsuibikeys.length;i++){
         var sinnsuitannjyou = "進水日";
         switch(sinnsuibikeys[i]){
             case '誕生日':
                 sinnsuitannjyou ="誕生日";
-                atag1.textContent = 'コラボ艦船の誕生日';
+                atag1 = 'コラボ艦船の誕生日';
             break;
             case '同じ':
-                atag1.textContent = "リトル＆ちゃんズ";
+                atag1 = "リトル＆ちゃんズ";
             break;
             case '君が建造':
-                atag1.textContent = "未成艦";
+                atag1 = "未成艦";
             break;
             case '不明':
-                atag1.textContent = sinnsuibikeys[i];
+                atag1 = sinnsuibikeys[i];
             break;
             default:
-                atag1.textContent = sinnsuibikeys[i].match(/(\d+)月/)[1]+'月進水の艦船';
+                atag1 = sinnsuibikeys[i].match(/(\d+)月/)[1]+'月進水の艦船';
             break;
         }
-        h2deta.appendChild(atag1)
-        settable.appendChild(h2deta);
-        var cretable = document.createElement("table");
-        cretable.id= sinnsuibikeys[i]+"table";
-        settable.appendChild(cretable);
+
+        hako0 = "";
         var template = function(ideta,pdeta){
             if(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2].indexOf('(半改)')!= -1){
                 kanname = sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2].substring(0,sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2].indexOf('('));
@@ -95,19 +92,20 @@ function sinnsuisort(){
             }else{
                 sin =sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][7];
             }
-            document.getElementById(sinnsuibikeys[ideta]+"table").insertAdjacentHTML('beforeend','<tr>'+
-            '<td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'" target="_blank" >'+
-            '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'002.png"><br>'+kanname+'</a>'+
-            '</td>'+
-            '<td>'+
-            ' 実装日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][5]+'<br>'+
-            ' 改造日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][6]+'<br>'+
-            ' 起工日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][13]+'<br>'+
-            ' <strong>'+sinnsuitannjyou+'　'+sin+'</strong><br>'+
-            ' 就役日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][14]+'</td>'+
-            '</tr>'
+            
+            hako0 += (
+                '<tr><td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'" target="_blank" >'+
+                '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'002.png"><br>'+kanname+'</a></td>'+
+                '<td>'+
+                ' 実装日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][5]+'<br>'+
+                ' 改造日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][6]+'<br>'+
+                ' 起工日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][13]+'<br>'+
+                ' <strong>'+sinnsuitannjyou+'　'+sin+'</strong><br>'+
+                ' 就役日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][14]+'</td>'+
+                '</tr>'
             );
         }
+
         var rarehanntei = function(ideta,pdeta){
             //改造前のレアリティ
             var res = "";
@@ -116,6 +114,7 @@ function sinnsuisort(){
             }else{
                 res =sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][3];
             }
+    
             if(Object.keys(rareset).length == 0){
                 //rare指定なし
                 template(ideta,pdeta);
@@ -128,6 +127,7 @@ function sinnsuisort(){
                 }
             }
         }
+
         for(var p=0;p<sinnsuibilist[Object.keys(sinnsuibilist)[i]].length;p++){
             //陣営
             if(Object.keys(jinset).length == 0){
@@ -162,14 +162,21 @@ function sinnsuisort(){
                 }
             }
         }
+        sinsuikakunou1 += (
+            '<h2 id="'+sinnsuibikeys[i]+'"><a href="#kan_kensaku" target="_blank" >'+atag1+'</a></h2>'+
+            '<table id="'+sinnsuibikeys[i]+'table">'+
+            hako0+
+            '</table>'
+        )
     }
+    settable.insertAdjacentHTML('beforeend',sinsuikakunou1);
 }
 function sinnsuibifanc(){
-    var settable = document.getElementById("sinnsuibitable");
     settable.textContent = "";
     jinset = [];
     rareset = [];
     kantypeset = [];
+
     for (var i = 0; i < document.getElementsByName("kuni001").length; i++) {
         document.getElementsByName("kuni001")[i].checked= false;
     }
@@ -179,55 +186,62 @@ function sinnsuibifanc(){
     for (var i = 0; i < document.getElementsByName("rare001").length; i++) {
         document.getElementsByName("rare001")[i].checked= false;
     }
-    for(var i=0; i<sinnsuibikeys.length;i++){
-        var h2deta = document.createElement("h2");
-        h2deta.id = sinnsuibikeys[i];
-        var atag1 = document.createElement("a");
-        atag1.href = "#sinnsuibitable";
-        var sinnsuitannjyou = "進水日";
-        switch(sinnsuibikeys[i]){
-            case '誕生日':
-                sinnsuitannjyou ="誕生日";
-                atag1.textContent = 'コラボ艦船の誕生日';
-            break;
-            case '同じ':
-                atag1.textContent = "リトル＆ちゃんズ";
-            break;
-            case '君が建造':
-                atag1.textContent = "未成艦";
-            break;
-            case '不明':
-                atag1.textContent = sinnsuibikeys[i];
-            break;
-            default:
-                atag1.textContent = sinnsuibikeys[i].match(/(\d+)月/)[1]+'月進水の艦船';
-            break;
-        }
-        h2deta.appendChild(atag1)
-        settable.appendChild(h2deta);
-        var cretable = document.createElement("table");
-        cretable.id= sinnsuibikeys[i]+"table";
-        settable.appendChild(cretable);
-        for(var p=0;p<sinnsuibilist[Object.keys(sinnsuibilist)[i]].length;p++){
-            if(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2].indexOf('(半改)')!= -1){
-                kanname = sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2].substring(0,sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2].indexOf('('));
-            }else{
-                kanname =sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2];
+
+    if(sinsuikakunou0 == ""){
+        for(var i=0; i<sinnsuibikeys.length;i++){
+            var sinnsuitannjyou = "進水日";
+            switch(sinnsuibikeys[i]){
+                case '誕生日':
+                    sinnsuitannjyou ="誕生日";
+                    atag1 = 'コラボ艦船の誕生日';
+                break;
+                case '同じ':
+                    atag1 = "リトル＆ちゃんズ";
+                break;
+                case '君が建造':
+                    atag1 = "未成艦";
+                break;
+                case '不明':
+                    atag1 = sinnsuibikeys[i];
+                break;
+                default:
+                    atag1 = sinnsuibikeys[i].match(/(\d+)月/)[1]+'月進水の艦船';
+                break;
             }
-            document.getElementById(sinnsuibikeys[i]+"table").insertAdjacentHTML('beforeend','<tr>'+
-            '<td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'" target="_blank" >'+
-            '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'002.png"><br>'+kanname+'</a>'+
-            '</td>'+
-            '<td>'+
-            ' 実装日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][5]+'<br>'+
-            ' 改造日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][6]+'<br>'+
-            ' 起工日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][13]+'<br>'+
-            ' <strong>'+sinnsuitannjyou+'　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7]+'</strong><br>'+
-            ' 就役日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][14]+'</td>'+
-            '</tr>'
-            );
+
+            hako0 = "";
+            for(var p=0;p<sinnsuibilist[Object.keys(sinnsuibilist)[i]].length;p++){
+                if(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2].indexOf('(半改)')!= -1){
+                    kanname = sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2].substring(0,sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2].indexOf('('));
+                }else{
+                    kanname =sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2];
+                }
+                if(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7].indexOf('誕生日')!= -1){
+                    sin = sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7].substring(3);
+                }else{
+                    sin =sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7];
+                }
+                hako0 += (
+                    '<tr><td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'" target="_blank" >'+
+                    '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'002.png"><br>'+kanname+'</a></td>'+
+                    '<td>'+
+                    ' 実装日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][5]+'<br>'+
+                    ' 改造日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][6]+'<br>'+
+                    ' 起工日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][13]+'<br>'+
+                    ' <strong>'+sinnsuitannjyou+'　'+sin+'</strong><br>'+
+                    ' 就役日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][14]+
+                    '</td></tr>'
+                );
+            }
+            sinsuikakunou0 += (
+                '<h2 id="'+sinnsuibikeys[i]+'"><a href="#kan_kensaku" target="_blank" >'+atag1+'</a></h2>'+
+                '<table id="'+sinnsuibikeys[i]+'table">'+
+                hako0+
+                '</table>'
+            )
         }
     }
+    settable.insertAdjacentHTML('beforeend',sinsuikakunou0);
 }
 var kingdeta = function(jin){
     switch(jin){
