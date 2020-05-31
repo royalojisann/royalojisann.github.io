@@ -259,11 +259,11 @@ function sinnsuisort(){
                 '<tr><td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'" target="_blank" >'+
                 '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'002.png"><br>'+kanname+'</a></td>'+
                 '<td>'+
-                ' 実装日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][5]+'<br>'+
-                ' 改造日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][6]+'<br>'+
-                ' 起工日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][13]+'<br>'+
-                ' <strong>'+sinnsuitannjyou+'　'+sin+'</strong><br>'+
-                ' 就役日　'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][14]+'</td>'+
+                ' 実装日 '+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][5]+'<br>'+
+                ' 改造日 '+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][6]+'<br>'+
+                ' 起工日 '+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][13]+'<br>'+
+                ' <strong>'+sinnsuitannjyou+' '+sin+'</strong><br>'+
+                ' 就役日 '+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][14]+'</td>'+
                 '</tr>'
             );
         }
@@ -388,11 +388,11 @@ function sinnsuibifanc(){
                     '<tr><td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'" target="_blank" >'+
                     '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'002.png"><br>'+kanname+'</a></td>'+
                     '<td>'+
-                    ' 実装日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][5]+'<br>'+
-                    ' 改造日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][6]+'<br>'+
-                    ' 起工日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][13]+'<br>'+
-                    ' <strong>'+sinnsuitannjyou+'　'+sin+'</strong><br>'+
-                    ' 就役日　'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][14]+
+                    ' 実装日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][5]+'<br>'+
+                    ' 改造日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][6]+'<br>'+
+                    ' 起工日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][13]+'<br>'+
+                    ' <strong>'+sinnsuitannjyou+' '+sin+'</strong><br>'+
+                    ' 就役日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][14]+
                     '</td></tr>'
                 );
             }
