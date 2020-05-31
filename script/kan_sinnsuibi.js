@@ -191,7 +191,7 @@ callAfterTwitterInitialization(function(){
      document.getElementById(targetId),
      {
        count: 'none',
-       text: tweetset.text1+'\n近い艦船だと…\n'+tweetset.text2+tweetset.text3+'\n…などがいます\n\n'+'#アズールレーン',
+       text: tweetset.text1+'\n近いところだと…\n'+tweetset.text2+tweetset.text3+'…などがいます\n\n'+'#アズールレーン'+'\n',
        size: "large",
        hashtags: "",
      });
