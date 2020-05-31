@@ -110,7 +110,7 @@ function macthbirthday(){
         tweetset.text1 = '進水日「'+moon_n+'月'+sun_n+'日」の艦船を探しました！\n'+twi;
     }else{
         texta = '進水日「'+moon_n+'月'+sun_n+'日」の艦船は見つかりませんでした…';
-        tweetset.text1 = 'n進水日「'+moon_n+'月'+sun_n+'日」の艦船は見つかりませんでした…\n';
+        tweetset.text1 = '進水日「'+moon_n+'月'+sun_n+'日」の艦船は見つかりませんでした…\n';
     }
 
     if(box.purasu.length){
