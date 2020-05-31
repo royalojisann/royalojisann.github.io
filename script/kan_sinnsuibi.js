@@ -285,8 +285,54 @@ function sinnsuisort(){
                 }
             }
         }
-        settable[i].textContent = "";
         settable[i].insertAdjacentHTML('beforeend','<table>'+hako0+'</table>');
+    }
+}
+function sinnsuibifanc(){
+    jinset = [];
+    rareset = [];
+    kantypeset = [];
+    for (var i = 0; i < document.getElementsByName("kuni001").length; i++) {
+        document.getElementsByName("kuni001")[i].checked= false;
+    }
+    for (var i = 0; i < document.getElementsByName("type001").length; i++) {
+        document.getElementsByName("type001")[i].checked= false;
+    }
+    for (var i = 0; i < document.getElementsByName("rare001").length; i++) {
+        document.getElementsByName("rare001")[i].checked= false;
+    }
+
+    if(sinsuikakunou0 == ""){
+        for(var i=0; i<settable.length; i++){
+            settable[i].textContent = "";
+            var sinnsuitannjyou = "進水日";
+            hako0 = "";
+            for(var p=0;p<sinnsuibilist[Object.keys(sinnsuibilist)[i]].length;p++){
+                if(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7].indexOf('誕生日')!= -1){
+                    sin = sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7].substring(3);
+                }else{
+                    sin =sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7];
+                }
+                hako0 += (
+                    '<tr><td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'" target="_blank" >'+
+                    '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'002.png" alt="'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2]+'"><br>'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2]+'</a></td>'+
+                    '<td>'+
+                    ' 実装日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][5]+'<br>'+
+                    ' 改造日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][6]+'<br>'+
+                    ' 起工日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][13]+'<br>'+
+                    ' <strong>'+sinnsuitannjyou+' '+sin+'</strong><br>'+
+                    ' 就役日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][14]+
+                    '</td></tr>'
+                );
+            }
+            sinsuikakunou0.push(['<table>'+hako0+'</table>']);
+            settable[i].insertAdjacentHTML('beforeend',sinsuikakunou0[i]);
+        }
+    }else{
+        for(var i=0; i<settable.length; i++){
+            settable[i].textContent = "";
+            settable[i].insertAdjacentHTML('beforeend',sinsuikakunou0[i]);
+        }
     }
 }
 var kingdeta = function(jin){
