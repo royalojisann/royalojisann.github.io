@@ -16,7 +16,6 @@ window.addEventListener('DOMContentLoaded', function() {
                     break;
                 }
             }
-
         }
     }
     for(var d=0; d<sinnsuibikeys.length;d++){
@@ -326,7 +325,7 @@ function sinnsuisort(){
             }
         }
         sinsuikakunou1 += (
-            '<h2 id="'+sinnsuibikeys[i]+'"><a href="#kan_kensaku" target="_blank" >'+atag1+'</a></h2>'+
+            '<h2 id="'+sinnsuibikeys[i]+'"><a href="#kan_kensaku">'+atag1+'</a></h2>'+
             '<table id="'+sinnsuibikeys[i]+'table">'+
             hako0+
             '</table>'
@@ -398,7 +397,7 @@ function sinnsuibifanc(){
                 );
             }
             sinsuikakunou0 += (
-                '<h2 id="'+sinnsuibikeys[i]+'"><a href="#kan_kensaku" target="_blank" >'+atag1+'</a></h2>'+
+                '<h2 id="'+sinnsuibikeys[i]+'"><a href="#kan_kensaku">'+atag1+'</a></h2>'+
                 '<table id="'+sinnsuibikeys[i]+'table">'+
                 hako0+
                 '</table>'
