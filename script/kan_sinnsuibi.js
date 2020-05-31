@@ -5,7 +5,6 @@ var rareset = [];
 var kantypeset = [];
 var sinsuikakunou0 = "";
 var sinsuikakunou1 = "";
-var settable = document.getElementById("sinnsuibitable");
 window.addEventListener('DOMContentLoaded', function() {
     for(var i=0; i<kan_profile.length;i++){
         if(kan_profile[i][12] == "有り" || kan_profile[i][12] == "暫定"){
@@ -36,7 +35,171 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+var box = [];
+var tweetset = {
+    text1:'',
+    text2:'',
+    text3:''
+};
+function macthbirthday(){
+    var tosi = [31,31,28,31,30,31,30,31,31,30,31,30,31.31];
+    var moon_n = document.getElementById("moon").value*1;
+    var sun_n = document.getElementById("sun").value*1;
+    box = {
+        macthng:[],
+        purasu:[],
+        mainasu:[]
+    }
+    for(var i=0;i<5;i++){
+        switch(i){
+            case 0:
+                for(var p=0; p<sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]].length;p++){
+                    if(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p][15][1] == sun_n){
+                        box.macthng.push(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p]);
+                    }
+                }
+            break;
+            default:
+                if(sun_n+i > tosi[moon_n]){
+                    atari = (moon_n+1 == 13) ? 0 : moon_n;
+                    for(var p=0; p<sinnsuibilist[Object.keys(sinnsuibilist)[atari]].length;p++){
+                        if(sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p][15][1] == i){
+                            box.purasu.push(sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p]);
+                        }
+                    }
+                }else{
+                    for(var p=0; p<sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]].length;p++){
+                        if(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p][15][1] == sun_n+i){
+                            box.purasu.push(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p]);
+                        }
+                    }
+                }
+
+                if(sun_n-i <= 0){
+                    atari = (moon_n-1 == 0) ? 11 : moon_n-2;
+
+                    for(var p=0; p<sinnsuibilist[Object.keys(sinnsuibilist)[atari]].length;p++){
+                        if(sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p][15][1] == tosi[atari]-i+1){
+                            box.mainasu.push(sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p]);
+                        }
+                    }
+                }else{
+                    for(var p=0; p<sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]].length;p++){
+                        if(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p][15][1] == sun_n-i){
+                            box.mainasu.push(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p]);
+                        }
+                    }
+                }
+            break;
+        }
+    }
+
+    dammset = {
+        damm0:[],
+        damm1:[],
+        damm2:[]
+    }
+    texta = "";
+    textb = "";
+    textc = "";
+    if(box.macthng.length){
+        aaa="";
+        twi="";
+        icount=0;
+        for(var i=0;i<box.macthng.length;i++){
+            dammset.damm0.push(box.macthng[i][2]);
+            aaa += '☆'+dammset.damm0[i]+'<br>';
+            if(icount!=2){
+                twi += '☆'+dammset.damm0[i]+'\n';
+                icount++;
+            }
+        }
+        texta = '進水日「'+moon_n+'月'+sun_n+'日」の艦船は<br>'+aaa+'…です！';
+        tweetset.text1 = '私と同じ誕生日の艦船を探しました！\n\n進水日「'+moon_n+'月'+sun_n+'日」の艦船は…\n'+twi;
+    }else{
+        texta = '進水日「'+moon_n+'月'+sun_n+'日」の艦船は見つかりませんでした…';
+        tweetset.text1 = '私と同じ誕生日の艦船を探しました！\n\n進水日「'+moon_n+'月'+sun_n+'日」の艦船は見つかりませんでした…';
+    }
+
+    if(box.purasu.length){
+        twi="";
+        icount=0;
+        for(var i=0;i<box.purasu.length;i++){
+            dammset.damm1.push(box.purasu[i][2]+'('+box.purasu[i][7].substring(5)+')');
+            textb += '☆'+dammset.damm1[i]+'<br>';
+            if(icount!=2){
+                twi += '☆'+dammset.damm1[i]+'\n';
+                icount++;
+            }
+        }
+        tweetset.text2 = twi;
+    }
+
+    if(box.mainasu.length){
+        twi="";
+        icount=0;
+        for(var i=0;i<box.mainasu.length;i++){
+            dammset.damm2.push(box.mainasu[i][2]+'('+box.mainasu[i][7].substring(5)+')');
+            textc += '☆'+dammset.damm2[i]+'<br>';
+            if(icount!=2){
+                twi += '☆'+dammset.damm2[i]+'\n';
+                icount++;
+            }
+        }
+        tweetset.text3 = twi;
+    }
+
+    document.getElementById("match_birthday").textContent ="";
+    document.getElementById("match_birthday").insertAdjacentHTML('beforeend',
+    texta+'<br><br>'+'近い艦船だと、<br>'+textb+textc+'…などがいます<br><br>結果をツイートできます。<br>ボタンが現れない時は⇒<span class="retry_b" onclick="twion();">タッチ</span>'
+    )
+    twion();
+}
+
+var shareUrl = "https://az-royalojisann.hatenablog.com/entry/az-sinnsuibi";
+var targetId = "tweet1";
+var twitext = "";
+var hashtag = "アズールレーン";
+
+// Twitterの初期化
+var d = document;
+var s = 'script';
+var id = 'twitter-wjs';
+var js, fjs = d.getElementsByTagName(s)[0];
+if (!d.getElementById(id)) {
+ js = d.createElement(s);
+ js.id = id;
+ js.src = 'https://platform.twitter.com/widgets.js';
+ fjs.parentNode.insertBefore(js, fjs);
+}
+function twion(){
+// twttrの初期化(platform.twitter.com/widgets.jsの完了)が未だなら待つ。
+function callAfterTwitterInitialization(callback){
+if(typeof twttr !== "undefined"){
+ callback();
+} else {
+ setTimeout(function(){
+     callAfterTwitterInitialization(callback);
+ }, 100);
+}
+}
+// twttrが使えるようになったらシェアボタンを作る。
+callAfterTwitterInitialization(function(){
+    $('#' + targetId).empty();
+    twttr.widgets.createShareButton(
+     shareUrl,
+     document.getElementById(targetId),
+     {
+       count: 'none',
+       text: tweetset.text1+'\n近い艦船だと…\n'+tweetset.text2+tweetset.text3+'\n…などがいます\n\n'+'#アズールレーン',
+       size: "large",
+       hashtags: "",
+     });
+    });
+    }
+
 function sinnsuisort(){
+    var settable = document.getElementById("sinnsuibitable");
     settable.textContent = "";
     sinsuikakunou1 = "";
     jinset = [];
@@ -172,6 +335,7 @@ function sinnsuisort(){
     settable.insertAdjacentHTML('beforeend',sinsuikakunou1);
 }
 function sinnsuibifanc(){
+    var settable = document.getElementById("sinnsuibitable");
     settable.textContent = "";
     jinset = [];
     rareset = [];
