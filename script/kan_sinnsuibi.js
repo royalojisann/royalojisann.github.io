@@ -106,7 +106,11 @@ function macthbirthday(){
         twi="";
         icount=0;
         for(var i=0;i<box.macthng.length;i++){
-            dammset.damm0.push(box.macthng[i][2]);
+            if(box.macthng[i][2].indexOf('(半改)') != -1){
+                dammset.damm0.push(box.macthng[i][2].substring(0,box.macthng[i][2].indexOf('(')));
+            }else{
+                dammset.damm0.push(box.macthng[i][2]);
+            }
             aaa += '☆'+dammset.damm0[i]+'<br>';
             if(icount!=2){
                 twi += '☆'+dammset.damm0[i]+'\n';
@@ -124,7 +128,11 @@ function macthbirthday(){
         twi="";
         icount=0;
         for(var i=0;i<box.purasu.length;i++){
-            dammset.damm1.push(box.purasu[i][2]+'('+box.purasu[i][7].substring(5)+')');
+            if(box.purasu[i][2].indexOf('(半改)') != -1){
+                dammset.damm1.push(box.purasu[i][2].substring(0,box.purasu[i][2].indexOf('('))+'('+box.purasu[i][7].substring(5)+')');
+            }else{
+                dammset.damm1.push(box.purasu[i][2]+'('+box.purasu[i][7].substring(5)+')');
+            }
             textb += '☆'+dammset.damm1[i]+'<br>';
             if(icount!=2){
                 twi += '☆'+dammset.damm1[i]+'\n';
@@ -138,7 +146,11 @@ function macthbirthday(){
         twi="";
         icount=0;
         for(var i=0;i<box.mainasu.length;i++){
-            dammset.damm2.push(box.mainasu[i][2]+'('+box.mainasu[i][7].substring(5)+')');
+            if(box.mainasu[i][2].indexOf('(半改)') != -1){
+                dammset.damm2.push(box.mainasu[i][2].substring(0,box.mainasu[i][2].indexOf('('))+'('+box.mainasu[i][7].substring(5)+')');
+            }else{
+                dammset.damm2.push(box.mainasu[i][2]+'('+box.mainasu[i][7].substring(5)+')');
+            }
             textc += '☆'+dammset.damm2[i]+'<br>';
             if(icount!=2){
                 twi += '☆'+dammset.damm2[i]+'\n';
