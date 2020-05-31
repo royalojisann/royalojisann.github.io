@@ -202,7 +202,7 @@ callAfterTwitterInitialization(function(){
      document.getElementById(targetId),
      {
        count: 'none',
-       text: tweetset.text1+'\n近いところだと…\n'+tweetset.text2+tweetset.text3+'…などがいます\n\n'+'#アズールレーン'+'\n'+'#アズレン進水日検索'+'\n',
+       text: tweetset.text1+'\n近いところだと…\n'+tweetset.text2+tweetset.text3+'…などがいます\n\n'+'#アズールレーン'+'\n'+'#アズレン進水日'+'\n',
        size: "large",
        hashtags: "",
      });
