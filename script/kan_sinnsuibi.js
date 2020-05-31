@@ -214,6 +214,7 @@ function sinnsuisort(){
         var template = function(ideta,pdeta){
             if(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][7].indexOf('誕生日')!= -1){
                 sin = sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][7].substring(3);
+                sinnsuitannjyou = "誕生日";
             }else{
                 sin =sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][7];
             }
@@ -310,6 +311,7 @@ function sinnsuibifanc(){
             for(var p=0;p<sinnsuibilist[Object.keys(sinnsuibilist)[i]].length;p++){
                 if(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7].indexOf('誕生日')!= -1){
                     sin = sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7].substring(3);
+                    sinnsuitannjyou = "誕生日";
                 }else{
                     sin =sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7];
                 }
