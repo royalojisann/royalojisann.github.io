@@ -285,6 +285,7 @@ function sinnsuisort(){
                 }
             }
         }
+        settable[i].textContent = "";
         settable[i].insertAdjacentHTML('beforeend','<table>'+hako0+'</table>');
     }
 }
