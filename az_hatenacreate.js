@@ -230,14 +230,3 @@ function profile_in(){
         '</tbody></table>';
     areaid.insertAdjacentHTML('beforeend',profile_deta);
 };
-
-function click_button(getid){
-    if(document.getElementById(getid) != null){
-        var id_deta = document.getElementById(getid);
-        if(id_deta.style.display=="none"){
-            id_deta.style.display="block";
-        }else{
-        id_deta.style.display="none";
-        }
-    }
-};
