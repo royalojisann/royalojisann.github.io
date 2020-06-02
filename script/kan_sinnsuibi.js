@@ -220,7 +220,7 @@ function sinnsuisort(){
             }
             hako0 += (
                 '<tr><td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'" target="_blank" >'+
-                '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'002.png" alt="'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2]+'"><br>'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2]+'</a></td>'+
+                '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'002.png" alt="'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2]+'" class="hatena-fotolife"><br>'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2]+'</a></td>'+
                 '<td>'+
                 ' 実装日 '+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][5]+'<br>'+
                 ' 改造日 '+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][6]+'<br>'+
@@ -317,7 +317,7 @@ function sinnsuibifanc(){
                 }
                 hako0 += (
                     '<tr><td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'" target="_blank" >'+
-                    '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'002.png" alt="'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2]+'"><br>'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2]+'</a></td>'+
+                    '<img src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'002.png" alt="'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2]+'" class="hatena-fotolife"><br>'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2]+'</a></td>'+
                     '<td>'+
                     ' 実装日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][5]+'<br>'+
                     ' 改造日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][6]+'<br>'+
