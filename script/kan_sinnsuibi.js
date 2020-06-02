@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
             break;
             default:
                 sinnsuibilist[Object.keys(sinnsuibilist)[d]].sort(function(a,b) {
-                    return (a[15][1]*1 < b[15][1]*1 ? -1 : 1);
+                    return (a[a.length-1][1]*1 < b[a.length-1][1]*1 ? -1 : 1);
                 });
             break;
         }
@@ -58,7 +58,7 @@ function macthbirthday(){
         switch(i){
             case 0:
                 for(var p=0; p<sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]].length;p++){
-                    if(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p][15][1] == sun_n){
+                    if(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p][sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p].length-1][1] == sun_n){
                         box.macthng.push(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p]);
                     }
                 }
@@ -67,13 +67,13 @@ function macthbirthday(){
                 if(sun_n+i > tosi[moon_n]){
                     atari = (moon_n+1 == 13) ? 0 : moon_n;
                     for(var p=0; p<sinnsuibilist[Object.keys(sinnsuibilist)[atari]].length;p++){
-                        if(sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p][15][1] == i){
+                        if(sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p][sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p].length-1][1] == i){
                             box.purasu.push(sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p]);
                         }
                     }
                 }else{
                     for(var p=0; p<sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]].length;p++){
-                        if(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p][15][1] == sun_n+i){
+                        if(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p][sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p].length-1][1] == sun_n+i){
                             box.purasu.push(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p]);
                         }
                     }
@@ -81,13 +81,13 @@ function macthbirthday(){
                 if(sun_n-i <= 0){
                     atari = (moon_n-1 == 0) ? 11 : moon_n-2;
                     for(var p=0; p<sinnsuibilist[Object.keys(sinnsuibilist)[atari]].length;p++){
-                        if(sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p][15][1] == tosi[atari]-i+1){
+                        if(sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p][sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p].length-1][1] == tosi[atari]-i+1){
                             box.mainasu.push(sinnsuibilist[Object.keys(sinnsuibilist)[atari]][p]);
                         }
                     }
                 }else{
                     for(var p=0; p<sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]].length;p++){
-                        if(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p][15][1] == sun_n-i){
+                        if(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p][sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p].length-1][1] == sun_n-i){
                             box.mainasu.push(sinnsuibilist[Object.keys(sinnsuibilist)[moon_n-1]][p]);
                         }
                     }
