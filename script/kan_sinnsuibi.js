@@ -219,9 +219,9 @@ function sinnsuisort(){
                 sin =sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][7];
             }
             hako0 += (
-                '<tr><td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'" target="_blank" >'+
-                '<img data-src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'002.png" alt="'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2]+'" class="lozad"><br>'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2]+'</a></td>'+
-                '<td>'+
+                '<tr><td style="width: 32%;border: 2px solid #00BCD4;padding: 2px;line-height: 1.5;text-align: center;">'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'" target="_blank" >'+
+                '<img data-src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][10]+'002.png" alt="'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2]+'" class="lozad" style="height: 80%;"><br>'+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][2]+'</a></td>'+
+                '<td style="border: 2px solid #00BCD4;padding: 2px;line-height: 1.5;padding-left:8px;">'+
                 ' 実装日 '+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][5]+'<br>'+
                 ' 改造日 '+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][6]+'<br>'+
                 ' 起工日 '+sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][13]+'<br>'+
@@ -316,9 +316,9 @@ function sinnsuibifanc(){
                     sin =sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][7];
                 }
                 hako0 += (
-                    '<tr><td>'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'" target="_blank" >'+
-                    '<img data-src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'002.png" alt="'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2]+'"  class="lozad"><br>'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2]+'</a></td>'+
-                    '<td>'+
+                    '<tr><td style="width: 32%;border: 2px solid #00BCD4;padding: 2px;line-height: 1.5;text-align: center;">'+'<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'" target="_blank" >'+
+                    '<img data-src="http://azroyal.bakufu.org/azpicture/'+kingdeta(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0])+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'/'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][10]+'002.png" alt="'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2]+'"  class="lozad" style="height: 80%;"><br>'+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][2]+'</a></td>'+
+                    '<td style="border: 2px solid #00BCD4;padding: 2px;line-height: 1.5;padding-left:8px;">'+
                     ' 実装日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][5]+'<br>'+
                     ' 改造日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][6]+'<br>'+
                     ' 起工日 '+sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][13]+'<br>'+
