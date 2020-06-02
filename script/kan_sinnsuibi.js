@@ -287,6 +287,24 @@ function sinnsuisort(){
             }
         }
         settable[i].insertAdjacentHTML('beforeend','<table>'+hako0+'</table>');
+        $(".hatena-fotolife").addClass("lozad");
+
+$(".hatena-fotolife").each(function(i, img) {
+    $(img).attr("data-src", ""+$(img).attr("src")+"");
+    $(img).attr("src", "");
+});
+
+$(".urllist-image").addClass("lozad");
+
+$(".urllist-image").each(function(i, img) {
+    $(img).attr("data-src", ""+$(img).attr("src")+"");
+    $(img).attr("src", "");
+});
+
+const observer = lozad('.lozad', {
+rootMargin: '200px 0px'
+});
+observer.observe();
     }
 }
 function sinnsuibifanc(){
@@ -329,6 +347,7 @@ function sinnsuibifanc(){
             }
             sinsuikakunou0.push(['<table>'+hako0+'</table>']);
             settable[i].insertAdjacentHTML('beforeend',sinsuikakunou0[i]);
+            
         }
     }else{
         for(var i=0; i<settable.length; i++){
@@ -336,6 +355,24 @@ function sinnsuibifanc(){
             settable[i].insertAdjacentHTML('beforeend',sinsuikakunou0[i]);
         }
     }
+    $(".hatena-fotolife").addClass("lozad");
+
+$(".hatena-fotolife").each(function(i, img) {
+    $(img).attr("data-src", ""+$(img).attr("src")+"");
+    $(img).attr("src", "");
+});
+
+$(".urllist-image").addClass("lozad");
+
+$(".urllist-image").each(function(i, img) {
+    $(img).attr("data-src", ""+$(img).attr("src")+"");
+    $(img).attr("src", "");
+});
+
+const observer = lozad('.lozad', {
+rootMargin: '200px 0px'
+});
+observer.observe();
 }
 var kingdeta = function(jin){
     switch(jin){
