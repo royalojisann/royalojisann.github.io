@@ -99,7 +99,7 @@ function urlset(){
             document.getElementById("kansenn_box").getElementsByTagName("td")[index].style.display="inline-table";
         }else{
             for(var y=0; y<rarelist.length; y++){
-                if(jinei_deta[kunilist[0]][i][3] == rarelist[y]){
+                if(jinei_deta[kunilist[0]][index][3] == rarelist[y]){
                     //rare指定
                     document.getElementById("kansenn_box").getElementsByTagName("td")[index].style.display="inline-table";
                 }
@@ -109,25 +109,8 @@ function urlset(){
 
     for(var i = 0; i<jinei_deta[kunilist[0]].length; i++){
         document.getElementById("kansenn_box").getElementsByTagName("td")[i].style.display="none";
-        //陣営
-        if(Object.keys(kunilist).length == 0){
-            //陣営指定なし
-            if(Object.keys(typelist).length == 0){
-                //艦種指定なし
-                rarehanntei(i);
-            }else{
-                //艦種指定
-                for(var r=0; r<typelist.length; r++){
-                    if(typelist[r]==jinei_deta[kunilist[0]][i][1]){
-                        rarehanntei(i);
-                    }
-                }
-            }
-        }else{
-            //陣営指定
-            for(var j=0; j<kunilist.length; j++){
-                if(kunilist[j]==jinei_deta[kunilist[0]][i][0]){
-                    if(Object.keys(typelist).length == 0){
+        
+                            if(Object.keys(typelist).length == 0){
                         //艦種指定なし
                         rarehanntei(i);
                     }else{
@@ -138,8 +121,5 @@ function urlset(){
                             }
                         }
                     }
-                }
-            }
-        }
     }
 }
