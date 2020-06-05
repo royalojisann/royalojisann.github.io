@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function() {
             if(kan_profile[i][3].indexOf('→')!= -1){
                 kan_profile[i][3] = kan_profile[i][3].substring(0,kan_profile[i][3].indexOf('→'));
             }
-            
+
             for(var p=0;p<jineikeys.length;p++){
                 if(jineikeys[p] == kan_profile[i][0]){
                     kan_profile[i].push('<td style="display: inline-table;"><a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+kan_profile[i][10]+'" target="_blank" >'+
