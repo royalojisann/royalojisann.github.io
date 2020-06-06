@@ -17,25 +17,6 @@ var jinei_deta = {
 var jineikeys = Object.keys(jinei_deta);
 var korabo = ['ネプテューヌ','kizunaai','うたわれるもの','ホロライブ','その他'];
 var kunilist = [],typelist = [],rarelist = [];
-var kingdeta = function(jin){
-    switch(jin){
-        case "ユニオン":
-            return "unionset";
-        break;
-        case "ロイヤル":
-            return "royalset";
-        break;
-        case "重桜":
-            return "sakuraempire";
-        break;
-        case "鉄血":
-            return "ironset";
-        break;
-        default:
-            return "allset";
-        break;
-    }
-}
 
 window.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < document.getElementsByName("kuni").length; i++) {
@@ -56,8 +37,7 @@ window.addEventListener('DOMContentLoaded', function() {
             for(var p=0;p<jineikeys.length;p++){
                 if(jineikeys[p] == kan_profile[i][0]){
                     kan_profile[i].push('<td style="display: inline-table;"><a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+kan_profile[i][10]+'" target="_blank" >'+
-                    '<img data-src="http://azroyal.bakufu.org/azpicture/'+kingdeta(kan_profile[i][0])+'/'+kan_profile[i][10]+'/'+kan_profile[i][10]+'003.png" class="lozad" alt="'+kan_profile[i][2]+'"/><br>'+
-                    kan_profile[i][2]+'</a></td>');
+                    '<img data-src="'+kan_profile[i][16][0]+'" class="lozad" alt="'+kan_profile[i][2]+'"/><br>'+kan_profile[i][2]+'</a></td>');
                     jinei_deta[jineikeys[p]].push(kan_profile[i]);
                 }
             }
