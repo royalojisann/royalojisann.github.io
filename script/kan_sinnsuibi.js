@@ -1,9 +1,7 @@
 var sinnsuibilist = {January:[],February:[],March:[],April:[],May:[],June:[],July:[],August:[],September:[],October:[],November:[],December:[],prkansenn:[],little:[],colabo:[],nodeta:[]};
 var checklist = {年1月:[],年2月:[],年3月:[],年4月:[],年5月:[],年6月:[],年7月:[],年8月:[],年9月:[],年10月:[],年11月:[],年12月:[],君が建造:[],同じ:[],誕生日:[],不明:[]};
-var sinnsuibikeys = Object.keys(sinnsuibilist);
-var settable = document.getElementsByClassName("table_box");
-var jinset = [],rareset = [],kantypeset = [];
-
+var valuedata = {jinset:[],rareset:[],kantypeset:[]};
+var valuename = ['kuni001','type001','rare001'];
 window.addEventListener('DOMContentLoaded', function() {
     for(var i=0; i<kan_profile.length;i++){
         if(kan_profile[i][12] == "有り" || kan_profile[i][12] == "暫定"){
@@ -31,8 +29,8 @@ window.addEventListener('DOMContentLoaded', function() {
         }
         }
     }
-    for(var d=0; d<sinnsuibikeys.length;d++){
-        switch(sinnsuibikeys[d]){
+    for(var d=0; d<Object.keys(sinnsuibilist).length;d++){
+        switch(Object.keys(sinnsuibilist)[d]){
             case 'prkansenn':
             case 'little':
             case 'colabo':
@@ -45,8 +43,35 @@ window.addEventListener('DOMContentLoaded', function() {
                 });
             break;
         }
+        var hikaku = sinnsuibilist[Object.keys(sinnsuibilist)[d]].length-document.getElementsByClassName("table_box")[d].getElementsByTagName("tr").length;
+        var kakunou = "";
+        for(var p=0;p<hikaku;p++){
+            var dataindex = sinnsuibilist[Object.keys(sinnsuibilist)[d]][document.getElementsByClassName("table_box")[d].getElementsByTagName("tr").length+p];
+            if(dataindex[7].indexOf('誕生日')!= -1){
+                sin = dataindex[7].substring(3);
+                sinnsuitannjyou = "誕生日";
+            }else{
+                sin = dataindex[7];
+                sinnsuitannjyou = "進水日";
+            }
+            kakunou += (
+                '<tr style="display: table-row;">'+
+                '<td style="width: 32%;border: 2px solid #00BCD4;padding: 2px;line-height: 1.5;text-align: center;">'+
+                '<a href="https://az-royalojisann.hatenablog.com/entry/az-kokosuki-'+dataindex[10]+'" target="_blank"><img src="'+dataindex[16][1]+'" alt="'+dataindex[2]+'" class="lozad" style="height: 80%;"><br>'+dataindex[2]+'</td>'+
+                '<td style="border: 2px solid #00BCD4;padding: 2px;line-height: 1.5;padding-left:8px;">'+
+                ' 実装日 '+dataindex[5]+'<br>'+
+                ' 改造日 '+dataindex[6]+'<br>'+
+                ' 起工日 '+dataindex[13]+'<br>'+
+                ' <strong>'+sinnsuitannjyou+' '+sin+'</strong><br>'+
+                ' 就役日 '+dataindex[14]+
+                '</td>'+
+                '</tr>'
+            );
+        }
+        document.getElementsByClassName("table_box")[d].insertAdjacentHTML("beforeend",kakunou);
     }
 });
+
 var box = [];
 var tweetset = {text1:'',text2:'',text3:''};
 function macthbirthday(){
@@ -96,7 +121,7 @@ function macthbirthday(){
         }
     }
 
-    dammset = {damm0:[],damm1:[],damm2:[]}
+    dammset = {damm0:[],damm1:[],damm2:[]};
     texta = "",textb = "",textc = "";
     if(box.macthng.length){
         aaa="",twi="",icount=0;
@@ -142,7 +167,7 @@ function macthbirthday(){
     }
     document.getElementById("match_birthday").textContent ="";
     document.getElementById("match_birthday").insertAdjacentHTML('beforeend',
-    texta+'<br><br>'+'近いところだと、<br>'+textb+textc+'…などがいます<br><br>結果をツイートできます。<br>ボタンが現れない時は⇒<span class="retry_b" onclick="twion();">タッチ</span>'
+    texta+'<br><br>'+'近いところだと、<br>'+textb+textc+'…などがいます<br><br>結果をツイートできます。<br>ボタンが現れない時は⇒<span onclick="twion();"  style="background: #f3a93d;border-radius: 3px;color: white;padding: 2px 8px;font-size: 16px;cursor: pointer;display: inline-block;vertical-align: top;">タッチ</span>'
     )
     twion();
 }
@@ -187,70 +212,59 @@ callAfterTwitterInitialization(function(){
        hashtags: "",
      });
     });
-    }
+}
 
 function sinnsuisort(){
-    jinset = [];
-    rareset = [];
-    kantypeset = [];
-    for (var i = 0; i < document.getElementsByName("kuni001").length; i++) {
-        if (document.getElementsByName("kuni001")[i].checked) {
-            jinset.push(document.getElementsByName("kuni001")[i].value);
-        }
-    }
-    for (var i = 0; i < document.getElementsByName("type001").length; i++) {
-        if (document.getElementsByName("type001")[i].checked) {
-            kantypeset.push(document.getElementsByName("type001")[i].value);
-        }
-    }
-    for (var i = 0; i < document.getElementsByName("rare001").length; i++) {
-        if (document.getElementsByName("rare001")[i].checked) {
-            rareset.push(document.getElementsByName("rare001")[i].value);
+    valuedata = {jinset:[],kantypeset:[],rareset:[]};
+    for(var i=0;i<Object.keys(valuedata).length;i++){
+        for (var d=0; d<document.getElementsByName(valuename[i]).length;d++){
+            if (document.getElementsByName(valuename[i])[d].checked) {
+                valuedata[Object.keys(valuedata)[i]].push(document.getElementsByName(valuename[i])[d].value);
+            }
         }
     }
 
-    for(var i=0; i<settable.length; i++){
+    for(var i=0; i<document.getElementsByClassName("table_box").length; i++){
         var rarehanntei = function(ideta,pdeta){
-            if(Object.keys(rareset).length == 0){
+            if(valuedata.rareset.length == 0){
                 //rare指定なし
-                settable[ideta].getElementsByTagName("tr")[pdeta].style.display="table-row";
+                document.getElementsByClassName("table_box")[ideta].getElementsByTagName("tr")[pdeta].style.display="table-row";
             }else{
-                for(var y=0; y<rareset.length; y++){
-                    if(sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][3] == rareset[y]){
+                for(var y=0; y<valuedata.rareset.length; y++){
+                    if(sinnsuibilist[Object.keys(sinnsuibilist)[ideta]][pdeta][3] == valuedata.rareset[y]){
                         //rare指定
-                        settable[ideta].getElementsByTagName("tr")[pdeta].style.display="table-row";
+                        document.getElementsByClassName("table_box")[ideta].getElementsByTagName("tr")[pdeta].style.display="table-row";
                     }
                 }
             }
         }
-
         for(var p=0;p<sinnsuibilist[Object.keys(sinnsuibilist)[i]].length;p++){
-            settable[i].getElementsByTagName("tr")[p].style.display="none";
+            document.getElementsByClassName("table_box")[i].getElementsByTagName("tr")[p].style.display="none";
             //陣営
-            if(Object.keys(jinset).length == 0){
+            if(valuedata.jinset.length == 0){
                 //陣営指定なし
-                if(Object.keys(kantypeset).length == 0){
+                if(valuedata.kantypeset.length == 0){
                     //艦種指定なし
                     rarehanntei(i,p);
                 }else{
                     //艦種指定
-                    for(var r=0; r<kantypeset.length; r++){
-                        if(kantypeset[r]==sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][1]){
+                    for(var r=0; r<valuedata.kantypeset.length; r++){
+                        if(valuedata.kantypeset[r]==sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][1]){
                             rarehanntei(i,p);
                         }
                     }
                 }
             }else{
                 //陣営指定
-                for(var j=0; j<jinset.length; j++){
-                    if(jinset[j]==sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0]){
-                        if(Object.keys(kantypeset).length == 0){
+                for(var j=0; j<valuedata.jinset.length; j++){
+                    if(valuedata.jinset[j]==sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][0]){
+                        if(valuedata.kantypeset.length == 0){
                             //艦種指定なし
                             rarehanntei(i,p);
                         }else{
                             //艦種指定
-                            for(var r=0; r<kantypeset.length; r++){
-                                if(kantypeset[r]==sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][1]){
+                            for(var r=0; r<valuedata.kantypeset.length; r++){
+                                if(valuedata.kantypeset[r]==sinnsuibilist[Object.keys(sinnsuibilist)[i]][p][1]){
                                     rarehanntei(i,p);
                                 }
                             }
@@ -261,42 +275,15 @@ function sinnsuisort(){
         }
     }
 }
-function sinnsuibifanc(){
-    jinset = [];
-    rareset = [];
-    kantypeset = [];
-    for (var i = 0; i < document.getElementsByName("kuni001").length; i++) {
-        document.getElementsByName("kuni001")[i].checked= false;
-    }
-    for (var i = 0; i < document.getElementsByName("type001").length; i++) {
-        document.getElementsByName("type001")[i].checked= false;
-    }
-    for (var i = 0; i < document.getElementsByName("rare001").length; i++) {
-        document.getElementsByName("rare001")[i].checked= false;
-    }
 
-        for(var i=0; i<settable.length; i++){
-            for(var p=0;p<sinnsuibilist[Object.keys(sinnsuibilist)[i]].length;p++){
-                settable[i].getElementsByTagName("tr")[p].style.display="table-row";
-            }
+function sinnsuibifanc(){
+    valuedata = {jinset:[],kantypeset:[],rareset:[]};
+    for(var i=0;i<Object.keys(valuedata).length;i++){
+        for (var d=0; d<document.getElementsByName(valuename[i]).length;d++){
+            document.getElementsByName(valuename[i])[d].checked = false;
         }
-}
-var kingdeta = function(jin){
-    switch(jin){
-        case "ユニオン":
-            return "unionset";
-        break;
-        case "ロイヤル":
-            return "royalset";
-        break;
-        case "重桜":
-            return "sakuraempire";
-        break;
-        case "鉄血":
-            return "ironset";
-        break;
-        default:
-            return "allset";
-        break;
+        for(var p=0;p<document.getElementsByClassName("table_box")[i].getElementsByTagName("tr").length;p++){
+            document.getElementsByClassName("table_box")[i].getElementsByTagName("tr")[p].style.display="table-row";
+        }
     }
 }
