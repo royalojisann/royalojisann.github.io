@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', function() {
           areatd[17].textContent = kan_profile[index_n][7];
           areatd[19].textContent = kan_profile[index_n][14];
           areatd[21].textContent = kan_profile[index_n][8];
-          areatd[21].textContent = kan_profile[index_n][9];
+          areatd[23].textContent = kan_profile[index_n][9];
           status_in();
           break;
         }
@@ -204,7 +204,7 @@ if(document.getElementById("target_name") != null){
     tdget[19].textContent = status_deta.速力;
     tdget[21].textContent = status_deta.幸運;
     tdget[23].textContent = status_deta.消費;
-    tdget[24].textContent = status_deta.主砲装備+status_deta.主砲補正+'％<br>最大'+status_deta.主砲砲座;
+    tdget[24].textContent = status_deta.主砲装備+status_deta.主砲補正+'％/n最大'+status_deta.主砲砲座;
     tdget[25].textContent = status_deta.副砲装備+status_deta.副砲補正+'％<br>最大'+status_deta.副砲砲座;
     tdget[26].textContent = status_deta.対空装備+status_deta.対空補正+'％<br>最大'+status_deta.対空砲座;
         
