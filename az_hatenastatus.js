@@ -16,8 +16,11 @@ window.addEventListener('DOMContentLoaded', function() {
           areatd[15].textContent = kan_profile[index_n][13];
           areatd[17].textContent = kan_profile[index_n][7];
           areatd[19].textContent = kan_profile[index_n][14];
-          areatd[21].textContent = kan_profile[index_n][8];
-          areatd[23].textContent = kan_profile[index_n][9];
+            
+          areatd[21].textContent = "";
+          areatd[23].textContent = "";
+          areatd[21].insertAdjacentHTML("beforeend",kan_profile[index_n][8]);
+          areatd[23].insertAdjacentHTML("beforeend",kan_profile[index_n][9]);
           status_in();
           break;
         }
@@ -204,9 +207,14 @@ if(document.getElementById("target_name") != null){
     tdget[19].textContent = status_deta.速力;
     tdget[21].textContent = status_deta.幸運;
     tdget[23].textContent = status_deta.消費;
-    tdget[24].textContent = status_deta.主砲装備+status_deta.主砲補正+'％/n最大'+status_deta.主砲砲座;
-    tdget[25].textContent = status_deta.副砲装備+status_deta.副砲補正+'％<br>最大'+status_deta.副砲砲座;
-    tdget[26].textContent = status_deta.対空装備+status_deta.対空補正+'％<br>最大'+status_deta.対空砲座;
+    
+    tdget[24].textContent = "";
+    tdget[25].textContent = "";
+    tdget[26].textContent = "";
+    
+    tdget[24].insertAdjacentHTML("beforeend",status_deta.主砲装備+status_deta.主砲補正+'％<br>最大'+status_deta.主砲砲座);
+    tdget[25].insertAdjacentHTML("beforeend",status_deta.副砲装備+status_deta.副砲補正+'％<br>最大'+status_deta.副砲砲座);
+    tdget[26].insertAdjacentHTML("beforeend",status_deta.対空装備+status_deta.対空補正+'％<br>最大'+status_deta.対空砲座);
         
     var kan_kaihi =Math.floor((1-(0.1+100/(100+status_deta.回避+2)+(50-status_deta.幸運+0)/1000))*10000)/100;
     var kan_hit =Math.floor(((0.1+status_deta.命中/(status_deta.命中+100+2)+(status_deta.幸運-50+0)/1000))*10000)/100;
