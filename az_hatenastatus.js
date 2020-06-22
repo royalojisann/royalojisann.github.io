@@ -185,7 +185,7 @@ if(document.getElementById("target_name") != null){
     }
     var thget = document.getElementById("target_status").getElementsByTagName("th");
     var tdget = document.getElementById("target_status").getElementsByTagName("td");
-    thget[0].getElementsByTagName("img")[0].src=status_deta.はてな[1];
+    thget[0].getElementsByTagName("img")[0].dataset.src=status_deta.はてな[1];
     thget[1].textContent = status_deta.名前;
     thget[2].textContent = status_deta.レア;
     thget[3].textContent = status_deta.艦種;
