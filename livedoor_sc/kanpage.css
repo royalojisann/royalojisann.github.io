@@ -1,0 +1,32 @@
+﻿@charset "UTF-8";
+
+.article-body h2{
+    color: white;
+    background: #9cc5f6;
+    line-height: 1.4;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.article-body h2:before {
+    content: "\◆";
+    color: #ff6a6a;
+    padding: 0 0.2em 0 0;
+}
+
+
+.article-body h3 {
+    padding: 0.5em 0.5em 0.5em 1.5em;
+    line-height: 1.4;
+    color: #ff6a6a;
+    background: #fffff4;
+}
+
+.entry-content h3:before {
+    content: "\★";
+    padding: 0 0.2em 0 0;
+    color: #ff6a6a;
+}
+
+
+
+
