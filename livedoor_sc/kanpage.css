@@ -21,10 +21,10 @@
     background: #fffff4;
 }
 
-.entry-content h3:before {
+.article-body h3:before {
     content: "\★";
-    padding: 0 0.2em 0 0;
     color: #ff6a6a;
+    padding: 0 0.2em 0 0;
 }
 
 
