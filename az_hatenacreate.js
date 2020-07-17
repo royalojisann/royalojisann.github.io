@@ -62,6 +62,7 @@ function status_in(){
 
     switch(status_deta.記事){
         case '暫定':
+        case '無し':
             for(var pr=0; pr<pr_kansenn.length;pr++){
                 if(pr_kansenn[pr][2]==status_deta.名前){
                     status_deta.名前=kan_list[index_n][2]+'(暫定120愛)';
