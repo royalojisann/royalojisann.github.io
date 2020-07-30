@@ -275,7 +275,7 @@ function kijicreate(){
 	statusth[0].textContent = kannamedeta;
 	var statusdeta = document.getElementById("target_status").getElementsByTagName("td");
 	for(var i=0; i<18;i++){
-		profile[i].textContent = "";
+		statusdeta[i].textContent = "";
 	}
 	statusdeta[0].textContent = status_deta.耐久;
 	statusdeta[1].textContent = status_deta.装甲;
