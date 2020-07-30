@@ -203,6 +203,9 @@ function kijicreate(){
     }
 	
 	var profile = document.getElementById("character_profile_table").getElementsByTagName("td");
+	for(var i=1; i<13;i++){
+		profile[i].textContent = "";
+	}
 	profile[1].textContent = kan_profile[index_n][1];
 	profile[2].textContent = kan_profile[index_n][0];
 	profile[3].textContent = kan_profile[index_n][3];
@@ -212,9 +215,8 @@ function kijicreate(){
 	profile[7].textContent = kan_profile[index_n][13];
 	profile[8].textContent = kan_profile[index_n][7];
 	profile[9].textContent = kan_profile[index_n][14];
-	profile[10].textContent = kan_profile[index_n][8];
-	profile[11].textContent = kan_profile[index_n][9];
-	profile[12].textContent = "";
+	profile[10].insertAdjacentHTML('beforeend' ,kan_profile[index_n][8]);
+	profile[11].insertAdjacentHTML('beforeend' ,kan_profile[index_n][9]);
 	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" data-echo="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
 	
 	var kan_kaihi =Math.floor((1-(0.1+100/(100+status_deta.回避+2)+(50-status_deta.幸運+0)/1000))*10000)/100;
@@ -272,6 +274,9 @@ function kijicreate(){
 	var statusth = document.getElementById("target_status").getElementsByTagName("th");
 	statusth[0].textContent = kannamedeta;
 	var statusdeta = document.getElementById("target_status").getElementsByTagName("td");
+	for(var i=0; i<18;i++){
+		profile[i].textContent = "";
+	}
 	statusdeta[0].textContent = status_deta.耐久;
 	statusdeta[1].textContent = status_deta.装甲;
 	statusdeta[2].textContent = status_deta.装填;
@@ -285,11 +290,6 @@ function kijicreate(){
 	statusdeta[10].textContent = status_deta.命中;
 	statusdeta[11].textContent = status_deta.速力;
 	statusdeta[12].textContent = status_deta.幸運;
-	statusdeta[13].textContent = "";
-	statusdeta[14].textContent = "";
-	statusdeta[15].textContent = "";
-	statusdeta[16].textContent = "";
-	statusdeta[17].textContent = "";
 	statusdeta[15].insertAdjacentHTML('beforeend' ,status_deta.主砲装備+status_deta.主砲補正+'％<br>最大'+status_deta.主砲砲座);
 	statusdeta[16].insertAdjacentHTML('beforeend' ,status_deta.副砲装備+status_deta.副砲補正+'％<br>最大'+status_deta.副砲砲座);
 	statusdeta[17].insertAdjacentHTML('beforeend' ,status_deta.対空装備+status_deta.対空補正+'％<br>最大'+status_deta.対空砲座);	
