@@ -246,7 +246,7 @@ function kijicreate(){
                 		ketugou += '<tr><th>備考</th><td>'+status_deta.突破[3]+'</td></tr>\n';
             		}
             		ketugou += '</tbody></table>';
-			topasuu.insertAdjacentHTML('beforeend' ,ketugou};
+			topasuu.insertAdjacentHTML('beforeend',ketugou);
         	break;
         	case 6:
         	case 7:
@@ -262,7 +262,7 @@ function kijicreate(){
                 		ketugou += '<tr><th>備考</th><td>'+status_deta.突破[3]+'</td></tr>\n';
             		}
             		ketugou += '</tbody></table>';
-			topasuu.insertAdjacentHTML('beforeend' ,ketugou};
+			topasuu.insertAdjacentHTML('beforeend',ketugou);
         	break;
     	}
 	var statusdeta = document.getElementById("target_status").getElementsByTagName("td");
