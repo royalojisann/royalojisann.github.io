@@ -285,9 +285,11 @@ function kijicreate(){
 	statusdeta[10].textContent = status_deta.命中;
 	statusdeta[11].textContent = status_deta.速力;
 	statusdeta[12].textContent = status_deta.幸運;
-	statusdeta[13].insertAdjacentHTML('beforeend' ,status_deta.主砲装備+status_deta.主砲補正+'％<br>最大'+status_deta.主砲砲座);
-	statusdeta[14].insertAdjacentHTML('beforeend' ,status_deta.副砲装備+status_deta.副砲補正+'％<br>最大'+status_deta.副砲砲座);
-	statusdeta[15].insertAdjacentHTML('beforeend' ,status_deta.対空装備+status_deta.対空補正+'％<br>最大'+status_deta.対空砲座);	
+	statusdeta[13].textContent = "";
+	statusdeta[14].textContent = "";
+	statusdeta[15].insertAdjacentHTML('beforeend' ,status_deta.主砲装備+status_deta.主砲補正+'％<br>最大'+status_deta.主砲砲座);
+	statusdeta[16].insertAdjacentHTML('beforeend' ,status_deta.副砲装備+status_deta.副砲補正+'％<br>最大'+status_deta.副砲砲座);
+	statusdeta[17].insertAdjacentHTML('beforeend' ,status_deta.対空装備+status_deta.対空補正+'％<br>最大'+status_deta.対空砲座);	
 }
 
 /*! echo-js v1.7.3 | (c) 2016 @toddmotto | https://github.com/toddmotto/echo */
