@@ -32,6 +32,7 @@ if(document.getElementsByClassName("article-body")[0]!=null){
         document.getElementsByClassName("article-body")[0].insertAdjacentHTML('afterend',contentkoukoku);
         (adsbygoogle = window.adsbygoogle || []).push({});
     }
+kijicreate();
 })
 
 index_n = '';
