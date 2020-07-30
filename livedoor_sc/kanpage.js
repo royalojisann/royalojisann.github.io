@@ -37,7 +37,7 @@ kijicreate();
 
 index_n = '';
 function kijicreate(){
-    var taget = document.getElementById("input_name").value;
+    var taget = document.getElementById("target_name").textContent;
     for(var index_n = 0; index_n < kan_profile.length; index_n++){
         if(kan_profile[index_n][2]==taget){
             break;
