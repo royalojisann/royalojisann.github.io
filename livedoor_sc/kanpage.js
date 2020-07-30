@@ -287,6 +287,9 @@ function kijicreate(){
 	statusdeta[12].textContent = status_deta.幸運;
 	statusdeta[13].textContent = "";
 	statusdeta[14].textContent = "";
+	statusdeta[15].textContent = "";
+	statusdeta[16].textContent = "";
+	statusdeta[17].textContent = "";
 	statusdeta[15].insertAdjacentHTML('beforeend' ,status_deta.主砲装備+status_deta.主砲補正+'％<br>最大'+status_deta.主砲砲座);
 	statusdeta[16].insertAdjacentHTML('beforeend' ,status_deta.副砲装備+status_deta.副砲補正+'％<br>最大'+status_deta.副砲砲座);
 	statusdeta[17].insertAdjacentHTML('beforeend' ,status_deta.対空装備+status_deta.対空補正+'％<br>最大'+status_deta.対空砲座);	
