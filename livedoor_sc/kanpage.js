@@ -198,7 +198,7 @@ function kijicreate(){
         break;
     }
 	
-	var profile = document.getElementById("character_profile_table"}.getElementsByTagName("td");
+	var profile = document.getElementById("character_profile_table").getElementsByTagName("td");
 	profile[1].textContent = kan_profile[index_n][1];
 	profile[2].textContent = kan_profile[index_n][0];
 	profile[3].textContent = kan_profile[index_n][3];
@@ -210,6 +210,8 @@ function kijicreate(){
 	profile[9].textContent = kan_profile[index_n][14];
 	profile[10].textContent = kan_profile[index_n][8];
 	profile[11].textContent = kan_profile[index_n][9];
+	profile[12].textContent = "";
+	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" data-echo="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
 	
 	var kan_kaihi =Math.floor((1-(0.1+100/(100+status_deta.回避+2)+(50-status_deta.幸運+0)/1000))*10000)/100;
     	var kan_hit =Math.floor(((0.1+status_deta.命中/(status_deta.命中+100+2)+(status_deta.幸運-50+0)/1000))*10000)/100;
