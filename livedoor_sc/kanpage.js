@@ -203,7 +203,7 @@ function kijicreate(){
     }
 	
 	var profile = document.getElementById("character_profile_table").getElementsByTagName("td");
-	for(var i=1; i<13;i++){
+	for(var i=1; i<profile.length;i++){
 		profile[i].textContent = "";
 	}
 	profile[1].textContent = kan_profile[index_n][1];
