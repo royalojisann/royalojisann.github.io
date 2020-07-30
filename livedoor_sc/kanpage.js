@@ -217,7 +217,7 @@ function kijicreate(){
     	var kan_hit =Math.floor(((0.1+status_deta.命中/(status_deta.命中+100+2)+(status_deta.幸運-50+0)/1000))*10000)/100;
     	var kan_crt = Math.floor((0.05+status_deta.命中*1/(status_deta.命中*1+100+2000)+(status_deta.幸運+50+0)/5000)*10000)/100;
     	var kan_body = Math.floor(status_deta.耐久/(1-kan_kaihi/100));
-	var specdeta = document.getElementById("target_spec"}.getElementsByTagName("td");
+	var specdeta = document.getElementById("target_spec").getElementsByTagName("td");
 	specdeta.textContent = kan_kaihi+'%';
 	specdeta.textContent = kan_hit+'%';
 	specdeta.textContent = kan_crt+'%';
@@ -265,7 +265,7 @@ function kijicreate(){
 			topasuu.insertAdjacentHTML('beforeend' ,ketugou};
         	break;
     	}
-	var statusdeta = document.getElementById("target_status"}.getElementsByTagName("td");
+	var statusdeta = document.getElementById("target_status").getElementsByTagName("td");
 	statusdeta[0].textContent = status_deta.耐久;
 	statusdeta[1].textContent = status_deta.装甲;
 	statusdeta[2].textContent = status_deta.装填;
