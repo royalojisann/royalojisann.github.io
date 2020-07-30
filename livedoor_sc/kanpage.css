@@ -35,3 +35,6 @@ p.linkbutton {padding: 0.3em 0;text-align: center;border: 2px solid red;}
 p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight: bold;font-size: 18px;}
 .maintagu_sute table th{background-color: #EEE;}
 #character_profile table th{background-color: #EEE;}
+
+.linkbutton:nth-child(1){display:none;}
+.linkbutton:nth-child(3){display:none;}
