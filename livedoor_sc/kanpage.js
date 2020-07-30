@@ -210,6 +210,7 @@ function kijicreate(){
 	profile[9].textContent = kan_profile[index_n][14];
 	profile[10].textContent = kan_profile[index_n][8];
 	profile[11].textContent = kan_profile[index_n][9];
+	profile[12].textContent = "";
 	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" data-echo="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
 	
 	
