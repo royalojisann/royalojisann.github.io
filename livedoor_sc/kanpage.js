@@ -285,7 +285,7 @@ function kijicreate(){
 	statusdeta[5].textContent = status_deta.回避;
 	statusdeta[6].textContent = status_deta.対空;
 	statusdeta[7].textContent = status_deta.航空;
-	statusdeta[8].textContent = status_deta.燃費;
+	statusdeta[8].textContent = status_deta.消費;
 	statusdeta[9].textContent = status_deta.対潜;
 	statusdeta[10].textContent = status_deta.命中;
 	statusdeta[11].textContent = status_deta.速力;
