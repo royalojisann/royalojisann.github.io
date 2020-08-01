@@ -37,3 +37,7 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 #character_profile table th{background-color: #EEE;}
 
 #link_sinnsuibilist,#link_characterlist{display:none;}
+
+.article-body-inner p {
+    line-height: 1.7;
+}
