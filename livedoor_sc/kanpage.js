@@ -28,8 +28,8 @@ if(document.getElementById("sub_koukoku3")!=null){
         document.getElementById("sub_koukoku4").insertAdjacentHTML('beforeend',adine);
         (adsbygoogle = window.adsbygoogle || []).push({});
     }
-if(document.getElementsByClassName("article-body")[0]!=null){
-        document.getElementsByClassName("article-body")[0].insertAdjacentHTML('afterend',contentkoukoku);
+if(document.getElementById("contentdiv")!=null){
+        document.getElementById("contentdiv").insertAdjacentHTML('afterend',contentkoukoku);
         (adsbygoogle = window.adsbygoogle || []).push({});
     }
 kijicreate();
