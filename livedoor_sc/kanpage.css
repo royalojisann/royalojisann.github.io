@@ -41,3 +41,6 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 .article-body-inner p {
     line-height: 1.7;
 }
+#character_profile td,#character_profile th{padding:4px 4px 4px 8px;}
+#target_status td,#target_status th{padding:4px;}
+.skllcss td,.skllcssth{padding:4px;}
