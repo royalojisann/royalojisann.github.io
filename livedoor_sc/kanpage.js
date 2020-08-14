@@ -29,7 +29,7 @@ if(document.getElementById("sub_koukoku3")!=null){
         (adsbygoogle = window.adsbygoogle || []).push({});
     }
 if(document.getElementById("contentdiv")!=null){
-        document.getElementById("contentdiv").insertAdjacentHTML('afterend',contentkoukoku);
+        document.getElementById("contentdiv").insertAdjacentHTML('beforeend',contentkoukoku);
         (adsbygoogle = window.adsbygoogle || []).push({});
     }
 kijicreate();
