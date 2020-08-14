@@ -214,7 +214,7 @@ function kijicreate(){
 	profile[6].textContent = kan_profile[index_n][6];
 	profile[7].textContent = kan_profile[index_n][13];
 	profile[8].textContent = kan_profile[index_n][7];
-	profile[9].textContent = kan_profile[index_n][14];
+	profile[9].insertAdjacentHTML('beforeend' ,kan_profile[index_n][14]);
 	profile[10].insertAdjacentHTML('beforeend' ,kan_profile[index_n][8]);
 	profile[11].insertAdjacentHTML('beforeend' ,kan_profile[index_n][9]);
 	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" data-echo="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
@@ -265,7 +265,7 @@ function kijicreate(){
             		'<tr><th>Lv.25</th><td>'+status_deta.突破[4]+'</td></tr>\n'+
             		'<tr><th>Lv.30</th><td>'+status_deta.突破[5]+'</td></tr>\n';
             		if(topac == 7){
-                		ketugou += '<tr><th>備考</th><td>'+status_deta.突破[3]+'</td></tr>\n';
+                		ketugou += '<tr><th>備考</th><td>'+status_deta.突破[6]+'</td></tr>\n';
             		}
             		ketugou += '</tbody></table>';
 			topasuu.insertAdjacentHTML('beforeend',ketugou);
