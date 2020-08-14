@@ -30,6 +30,8 @@
 #img_box input{display:none;}
 #img_box input+img{display:none;}
 #img_box input:checked+img{display: block;max-height: 500px;}
+#img_box input+a{display:none;}
+#img_box input:checked+a{display: block;}
 
 p.linkbutton {padding: 0.3em 0;text-align: center;border: 2px solid red;}
 p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight: bold;font-size: 18px;}
@@ -44,3 +46,6 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 #character_profile td,#character_profile th{padding:4px 4px 4px 8px;}
 #target_status td,#target_status th{padding:4px;}
 .skllcss td,.skllcssth{padding:4px;}
+
+
+
