@@ -45,7 +45,8 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 }
 #character_profile td,#character_profile th{padding:4px 4px 4px 8px;}
 #target_status td,#target_status th{padding:4px;}
-.skllcss td,.skllcssth{padding:4px;}
-
+.skllcss td,.skllcss th{padding:4px;}
+.skllcss{border: 1px solid #2196F3;border-top:none;margin: 0.5em 0;}
+.skllcss table{border-top: 1px solid #2196F3;}
 .az_color{color:#28c72f;}
-
+#specdeta th,#specdeta td{border: 1px solid #E91E63;text-align:center;}
