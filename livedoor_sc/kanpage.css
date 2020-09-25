@@ -49,7 +49,8 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 .skllcss{border: 1px solid #2196F3;border-top:none;margin: 0.5em 0;}
 .skllcss table{border-top: 1px solid #2196F3;}
 .az_color{color:#F44336;}
-#specdeta th,#specdeta td{border: 1px solid #E91E63;text-align:center;}
+#specdeta table th,#specdeta table td{border: 1px solid #E91E63;text-align:center;}
+#specdeta table td{background: #EFF;}
 .soubilinecss{width:100%;background: #EEE;margin:0;}
 .img_set{width:60px;height:60px;line-height: 0;}
 .article-body-inner table th, .article-body-inner table td{border: none !important;padding: 4px;}
