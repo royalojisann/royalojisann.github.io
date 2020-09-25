@@ -291,11 +291,11 @@ function kijicreate(){
 	statusdeta[11].textContent = status_deta.速力;
 	statusdeta[12].textContent = status_deta.幸運;
 	document.getElementsByClassName("character_deta")[1].textContent="";
-	document.getElementsByClassName("character_deta")[1].style.textAlign = 'left';
+	document.getElementsByClassName("character_deta")[1].style.textAlign = 'right';
 	document.getElementsByClassName("character_deta")[1].insertAdjacentHTML('beforeend',
-	'<tr><td>'+status_deta.主砲装備+'　'+status_deta.主砲補正+'％　最大'+status_deta.主砲砲座+'</td></tr>'+
-	'<tr><td>'+status_deta.副砲装備+'　'+status_deta.副砲補正+'％　最大'+status_deta.副砲砲座+'</td></tr>'+
-	'<tr><td>'+status_deta.対空装備+'　'+status_deta.対空補正+'％　最大'+status_deta.対空砲座+'</td></tr>'
+	'<tr><td>'+status_deta.主砲装備+'</td><td>補正'+status_deta.主砲補正+'％</td><td>最大'+status_deta.主砲砲座+'</td></tr>'+
+	'<tr><td>'+status_deta.副砲装備+'</td><td>補正'+status_deta.副砲補正+'％</td><td>最大'+status_deta.副砲砲座+'</td></tr>'+
+	'<tr><td>'+status_deta.対空装備+'</td><td>補正'+status_deta.対空補正+'％</td><td>最大'+status_deta.対空砲座+'</td></tr>'
 	);
 // 	statusdeta[15].insertAdjacentHTML('beforeend' ,status_deta.主砲装備+status_deta.主砲補正+'％<br>最大'+status_deta.主砲砲座);
 // 	statusdeta[16].insertAdjacentHTML('beforeend' ,status_deta.副砲装備+status_deta.副砲補正+'％<br>最大'+status_deta.副砲砲座);
