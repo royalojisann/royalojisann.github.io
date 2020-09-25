@@ -52,5 +52,5 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 .soubilinecss{width:100%;background: #EEE;margin:0;}
 .img_set{width:60px;height:60px;line-height: 0;}
 .article-body-inner table th, .article-body-inner table td{border: none !important;padding: 4px;}
-#target_spec #specdeta table th,#target_spec #specdeta table td{border: 1px solid #E91E63;text-align:center;}
+#target_spec #specdeta table th,#target_spec #specdeta table td{text-align:center;}
 #target_spec #specdeta table td{background: #EFF;}
