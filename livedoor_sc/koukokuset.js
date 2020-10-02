@@ -11,7 +11,6 @@
             document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine);
             (adsbygoogle = window.adsbygoogle || []).push({});
         }
-
 if(document.getElementById("sub_koukoku")!=null){
         document.getElementById("sub_koukoku").insertAdjacentHTML('beforeend',adine);
         (adsbygoogle = window.adsbygoogle || []).push({});
