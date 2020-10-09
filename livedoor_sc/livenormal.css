@@ -43,3 +43,8 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 .article-body-inner p {
     line-height: 1.7;
 }
+
+
+.soubi_template_style tr{
+    height:30px;
+}
