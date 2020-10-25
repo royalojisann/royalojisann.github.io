@@ -2,30 +2,42 @@
 
 .article-body h2{
     color: white;
-    background: #9cc5f6;
+    background: cornflowerblue;
     line-height: 1.4;
     padding: 0.5em 0.5em 0.5em 0.5em;
 }
 
 .article-body h2:before {
     content: "\◆";
-    color: #ff6a6a;
+    color: #ffffff;
     padding: 0 0.2em 0 0;
 }
 
 .article-body h3 {
-    padding: 0;
+    padding: 4px 0;
     line-height: 1.4;
-    color: #ff6a6a;
-    background: #fffff4;
+    color: #ffffff;
+    background: #f86868;
 }
 
 .article-body h3:before {
     content: "\★";
-    color: #ff6a6a;
+    color: #ffffff;
     padding: 0 0.2em 0 0;
 }
 
+.article-body h4 {
+    padding: 4px 0;
+    line-height: 1.4;
+    color: #ffffff;
+    background: #3c5a8e;
+}
+.article-body h4:before {
+    content: "\・";
+    color: #ffffff;
+    padding: 0 0.2em 0 0;
+}
+    
 #img_box img{width: auto;max-height: 500px;}
 #img_box input{display:none;}
 #img_box input+img{display:none;}
