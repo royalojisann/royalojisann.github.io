@@ -229,77 +229,145 @@ function kijicreate(){
 	specdeta.textContent = kan_crt+'%';
 	specdeta.textContent = kan_body+'%';
 
-	var topac = 0;
-	var topasuu = document.getElementById("genkaitoxtupa");
-	topasuu.textContent = "";
-    	for(var tp=0; tp<status_deta.突破.length; tp++){
-        	if(status_deta.突破[tp] != ''){
-            	topac++;
-        	}
-    	}
-    	switch(topac){
-        	case 0:
-            		;
-        	break;
-        	case 3:
-        	case 4:
-			var ketugou = '<tbody>\n'+
-            		'<tr><th colspan="2" style="width:50px">限界突破</th></tr>\n'+
-            		'<tr><th>初段</th><td>'+status_deta.突破[0]+'</td></tr>\n'+
-            		'<tr><th>二段</th><td>'+status_deta.突破[1]+'</td></tr>\n'+
-            		'<tr><th>三段</th><td>'+status_deta.突破[2]+'</td></tr>\n';
-            		if(topac == 4){
-                		ketugou += '<tr><th>備考</th><td>'+status_deta.突破[3]+'</td></tr>\n';
-            		}
-            		ketugou += '</tbody></table>';
-			topasuu.insertAdjacentHTML('beforeend',ketugou);
-        	break;
-        	case 6:
-        	case 7:
-			var ketugou = '<tbody>\n'+
-            		'<tr><th colspan="2" style="width:50px">性能強化</th></tr>\n'+
-            		'<tr><th>Lv.5</th><td>'+status_deta.突破[0]+'</td></tr>\n'+
-            		'<tr><th>Lv.10</th><td>'+status_deta.突破[1]+'</td></tr>\n'+
-            		'<tr><th>Lv.15</th><td>'+status_deta.突破[2]+'</td></tr>\n'+
-            		'<tr><th>Lv.20</th><td>'+status_deta.突破[3]+'</td></tr>\n'+
-            		'<tr><th>Lv.25</th><td>'+status_deta.突破[4]+'</td></tr>\n'+
-            		'<tr><th>Lv.30</th><td>'+status_deta.突破[5]+'</td></tr>\n';
-            		if(topac == 7){
-                		ketugou += '<tr><th>備考</th><td>'+status_deta.突破[6]+'</td></tr>\n';
-            		}
-            		ketugou += '</tbody></table>';
-			topasuu.insertAdjacentHTML('beforeend',ketugou);
-        	break;
-    	}
-	var statusth = document.getElementById("target_status").getElementsByTagName("th");
-	statusth[0].textContent = kannamedeta;
-	var statusdeta = document.getElementById("target_status").getElementsByTagName("td");
-	for(var i=0; i<18;i++){
-		statusdeta[i].textContent = "";
-	}
-	statusdeta[0].textContent = status_deta.耐久;
-	statusdeta[1].textContent = status_deta.装甲;
-	statusdeta[2].textContent = status_deta.装填;
-	statusdeta[3].textContent = status_deta.火力;
-	statusdeta[4].textContent = status_deta.雷装;
-	statusdeta[5].textContent = status_deta.回避;
-	statusdeta[6].textContent = status_deta.対空;
-	statusdeta[7].textContent = status_deta.航空;
-	statusdeta[8].textContent = status_deta.消費;
-	statusdeta[9].textContent = status_deta.対潜;
-	statusdeta[10].textContent = status_deta.命中;
-	statusdeta[11].textContent = status_deta.速力;
-	statusdeta[12].textContent = status_deta.幸運;
-	document.getElementsByClassName("character_deta")[1].textContent="";
-	document.getElementsByClassName("character_deta")[1].style.textAlign = 'center';
-	document.getElementsByClassName("character_deta")[1].insertAdjacentHTML('beforeend',
-	'<tr><td>'+status_deta.主砲装備+'</td><td>補正 '+status_deta.主砲補正+'％</td><td>最大数 '+status_deta.主砲砲座+'</td></tr>'+
-	'<tr><td>'+status_deta.副砲装備+'</td><td>補正 '+status_deta.副砲補正+'％</td><td>最大数 '+status_deta.副砲砲座+'</td></tr>'+
-	'<tr><td>'+status_deta.対空装備+'</td><td>補正 '+status_deta.対空補正+'％</td><td>最大数 '+status_deta.対空砲座+'</td></tr>'
-	);
+// 	var topac = 0;
+// 	var topasuu = document.getElementById("genkaitoxtupa");
+// 	topasuu.textContent = "";
+//     	for(var tp=0; tp<status_deta.突破.length; tp++){
+//         	if(status_deta.突破[tp] != ''){
+//             	topac++;
+//         	}
+//     	}
+//     	switch(topac){
+//         	case 0:
+//             		;
+//         	break;
+//         	case 3:
+//         	case 4:
+// 			var ketugou = '<tbody>\n'+
+//             		'<tr><th colspan="2" style="width:50px">限界突破</th></tr>\n'+
+//             		'<tr><th>初段</th><td>'+status_deta.突破[0]+'</td></tr>\n'+
+//             		'<tr><th>二段</th><td>'+status_deta.突破[1]+'</td></tr>\n'+
+//             		'<tr><th>三段</th><td>'+status_deta.突破[2]+'</td></tr>\n';
+//             		if(topac == 4){
+//                 		ketugou += '<tr><th>備考</th><td>'+status_deta.突破[3]+'</td></tr>\n';
+//             		}
+//             		ketugou += '</tbody></table>';
+// 			topasuu.insertAdjacentHTML('beforeend',ketugou);
+//         	break;
+//         	case 6:
+//         	case 7:
+// 			var ketugou = '<tbody>\n'+
+//             		'<tr><th colspan="2" style="width:50px">性能強化</th></tr>\n'+
+//             		'<tr><th>Lv.5</th><td>'+status_deta.突破[0]+'</td></tr>\n'+
+//             		'<tr><th>Lv.10</th><td>'+status_deta.突破[1]+'</td></tr>\n'+
+//             		'<tr><th>Lv.15</th><td>'+status_deta.突破[2]+'</td></tr>\n'+
+//             		'<tr><th>Lv.20</th><td>'+status_deta.突破[3]+'</td></tr>\n'+
+//             		'<tr><th>Lv.25</th><td>'+status_deta.突破[4]+'</td></tr>\n'+
+//             		'<tr><th>Lv.30</th><td>'+status_deta.突破[5]+'</td></tr>\n';
+//             		if(topac == 7){
+//                 		ketugou += '<tr><th>備考</th><td>'+status_deta.突破[6]+'</td></tr>\n';
+//             		}
+//             		ketugou += '</tbody></table>';
+// 			topasuu.insertAdjacentHTML('beforeend',ketugou);
+//         	break;
+//     	}
+// 	var statusth = document.getElementById("target_status").getElementsByTagName("th");
+// 	statusth[0].textContent = kannamedeta;
+// 	var statusdeta = document.getElementById("target_status").getElementsByTagName("td");
+// 	for(var i=0; i<18;i++){
+// 		statusdeta[i].textContent = "";
+// 	}
+// 	statusdeta[0].textContent = status_deta.耐久;
+// 	statusdeta[1].textContent = status_deta.装甲;
+// 	statusdeta[2].textContent = status_deta.装填;
+// 	statusdeta[3].textContent = status_deta.火力;
+// 	statusdeta[4].textContent = status_deta.雷装;
+// 	statusdeta[5].textContent = status_deta.回避;
+// 	statusdeta[6].textContent = status_deta.対空;
+// 	statusdeta[7].textContent = status_deta.航空;
+// 	statusdeta[8].textContent = status_deta.消費;
+// 	statusdeta[9].textContent = status_deta.対潜;
+// 	statusdeta[10].textContent = status_deta.命中;
+// 	statusdeta[11].textContent = status_deta.速力;
+// 	statusdeta[12].textContent = status_deta.幸運;
+// 	document.getElementsByClassName("character_deta")[1].textContent="";
+// 	document.getElementsByClassName("character_deta")[1].style.textAlign = 'center';
+// 	document.getElementsByClassName("character_deta")[1].insertAdjacentHTML('beforeend',
+// 	'<tr><td>'+status_deta.主砲装備+'</td><td>補正 '+status_deta.主砲補正+'％</td><td>最大数 '+status_deta.主砲砲座+'</td></tr>'+
+// 	'<tr><td>'+status_deta.副砲装備+'</td><td>補正 '+status_deta.副砲補正+'％</td><td>最大数 '+status_deta.副砲砲座+'</td></tr>'+
+// 	'<tr><td>'+status_deta.対空装備+'</td><td>補正 '+status_deta.対空補正+'％</td><td>最大数 '+status_deta.対空砲座+'</td></tr>'
+// 	);
 // 	statusdeta[15].insertAdjacentHTML('beforeend' ,status_deta.主砲装備+status_deta.主砲補正+'％<br>最大'+status_deta.主砲砲座);
 // 	statusdeta[16].insertAdjacentHTML('beforeend' ,status_deta.副砲装備+status_deta.副砲補正+'％<br>最大'+status_deta.副砲砲座);
 // 	statusdeta[17].insertAdjacentHTML('beforeend' ,status_deta.対空装備+status_deta.対空補正+'％<br>最大'+status_deta.対空砲座);
+	
+	
+	function genkaitopa(){
+                var topac = 0;
+                for(var tp=0; tp<status_deta.突破.length; tp++){
+                    if(status_deta.突破[tp] != ''){
+                        topac++;
+                    }
+                }
+                switch(topac){
+                    case 0:
+                        ;
+                    break;
+                    case 3:
+                    case 4:
+                        topa = '<tfoot>\n'+
+                        '<tr><th colspan="6" style="background:#dfdfdf;">限界突破</th></tr>\n'+
+                        '<tr><th>初段</th><td colspan="5">'+status_deta.突破[0]+'</td></tr>\n'+
+                        '<tr><th>二段</th><td colspan="5">'+status_deta.突破[1]+'</td></tr>\n'+
+                        '<tr><th>三段</th><td colspan="5">'+status_deta.突破[2]+'</td></tr>\n';
+                        if(topac == 4){
+                            topa += '<tr><th>備考</th><td colspan="5">'+status_deta.突破[3]+'</td></tr>\n';
+                        }
+                        topa += '</tfoot>';
+                    break;
+                    case 6:
+                    case 7:
+                        topa = '<tfoot>\n'+
+                        '<tr><th colspan="6" style="background:#dfdfdf;">性能強化</th></tr>\n'+
+                        '<tr><th>Lv.5</th><td colspan="5">'+status_deta.突破[0]+'</td></tr>\n'+
+                        '<tr><th>Lv.10</th><td colspan="5">'+status_deta.突破[1]+'</td></tr>\n'+
+                        '<tr><th>Lv.15</th><td colspan="5">'+status_deta.突破[2]+'</td></tr>\n'+
+                        '<tr><th>Lv.20</th><td colspan="5">'+status_deta.突破[3]+'</td></tr>\n'+
+                        '<tr><th>Lv.25</th><td colspan="5">'+status_deta.突破[4]+'</td></tr>\n'+
+                        '<tr><th>Lv.30</th><td colspan="5">'+status_deta.突破[5]+'</td></tr>\n';
+                        if(topac == 7){
+                            topa += '<tr><th>備考</th><td colspan="5">'+status_deta.突破[6]+'</td></tr>\n';
+                        }
+                        topa += '</tfoot>';
+                    break;
+                }
+                return topa;
+        }
+            
+	document.getElementsByClassName("maintagu_sute")[0].textContent = "";
+            document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',
+            '<div class="maintagu_sute" data-number="'+status_deta.ソート+'">\n'+
+            '<div class="page_toggle" style="display:block;">\n'+
+            '<table class="status_deta" style="border-top: 1px solid #2196F3;border-bottom: 1px solid #2196F3;">\n'+
+            '<thead>\n'+
+            '<tr style="border-bottom: 1px solid #2196F3;"><td class="picface '+status_deta.レア+'"><img src="'+status_deta.live[0]+'"></td><th class="'+status_deta.レア+'" colspan="5">'+status_deta.名前+'</th></tr>\n'+
+            '</thead>\n'+
+            '<tbody>\n'+
+            '<tr><th>耐久</th><td>'+status_deta.耐久+'</td><th>装甲</th><td>'+status_deta.装甲+'</td><th>装填</th><td>'+status_deta.装填+'</td></tr>\n'+
+            '<tr><th>火力</th><td>'+status_deta.火力+'</td><th>雷装</th><td>'+status_deta.雷装+'</td><th>回避</th><td>'+status_deta.回避+'</td></tr>\n'+
+            '<tr><th>対空</th><td>'+status_deta.対空+'</td><th>航空</th><td>'+status_deta.航空+'</td><th>燃費</th><td>'+status_deta.消費+'</td></tr>\n'+
+            '<tr><th>対潜</th><td>'+status_deta.対潜+'</td><th>命中</th><td>'+status_deta.命中+'</td><th>速力</th><td>'+status_deta.速力+'</td></tr>\n'+
+            '<tr><th>幸運</th><td>'+status_deta.幸運+'</td><th></th><td></td><th></th><td></td></tr>\n'+
+            '<tr style="border-top: 1px solid #2196F3;"><th style="background:#dfdfdf;" colspan="6">装備/補正値/最大数</th></tr>\n'+
+            '<tr><th colspan="2">'+status_deta.主砲装備+'</th><td colspan="2">'+status_deta.主砲補正+'％</td><td colspan="2">'+status_deta.主砲砲座+'</td></tr>\n'+
+            '<tr><th colspan="2">'+status_deta.副砲装備+'</th><td colspan="2">'+status_deta.副砲補正+'％</td><td colspan="2">'+status_deta.副砲砲座+'</td></tr>\n'+
+            '<tr style="border-bottom: 1px solid #2196F3;"><th colspan="2">'+status_deta.対空装備+'</th><td colspan="2">'+status_deta.対空補正+'％</td><td colspan="2">'+status_deta.対空砲座+'</td></tr>\n'+
+            '</tbody>\n'+
+            genkaitopa()+
+            '</table>\n'+
+            '</div>\n'
+	)
+	
 }
 
 //selectbox
