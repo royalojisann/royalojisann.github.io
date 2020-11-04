@@ -228,79 +228,6 @@ function kijicreate(){
 	specdeta.textContent = kan_hit+'%';
 	specdeta.textContent = kan_crt+'%';
 	specdeta.textContent = kan_body+'%';
-
-// 	var topac = 0;
-// 	var topasuu = document.getElementById("genkaitoxtupa");
-// 	topasuu.textContent = "";
-//     	for(var tp=0; tp<status_deta.突破.length; tp++){
-//         	if(status_deta.突破[tp] != ''){
-//             	topac++;
-//         	}
-//     	}
-//     	switch(topac){
-//         	case 0:
-//             		;
-//         	break;
-//         	case 3:
-//         	case 4:
-// 			var ketugou = '<tbody>\n'+
-//             		'<tr><th colspan="2" style="width:50px">限界突破</th></tr>\n'+
-//             		'<tr><th>初段</th><td>'+status_deta.突破[0]+'</td></tr>\n'+
-//             		'<tr><th>二段</th><td>'+status_deta.突破[1]+'</td></tr>\n'+
-//             		'<tr><th>三段</th><td>'+status_deta.突破[2]+'</td></tr>\n';
-//             		if(topac == 4){
-//                 		ketugou += '<tr><th>備考</th><td>'+status_deta.突破[3]+'</td></tr>\n';
-//             		}
-//             		ketugou += '</tbody></table>';
-// 			topasuu.insertAdjacentHTML('beforeend',ketugou);
-//         	break;
-//         	case 6:
-//         	case 7:
-// 			var ketugou = '<tbody>\n'+
-//             		'<tr><th colspan="2" style="width:50px">性能強化</th></tr>\n'+
-//             		'<tr><th>Lv.5</th><td>'+status_deta.突破[0]+'</td></tr>\n'+
-//             		'<tr><th>Lv.10</th><td>'+status_deta.突破[1]+'</td></tr>\n'+
-//             		'<tr><th>Lv.15</th><td>'+status_deta.突破[2]+'</td></tr>\n'+
-//             		'<tr><th>Lv.20</th><td>'+status_deta.突破[3]+'</td></tr>\n'+
-//             		'<tr><th>Lv.25</th><td>'+status_deta.突破[4]+'</td></tr>\n'+
-//             		'<tr><th>Lv.30</th><td>'+status_deta.突破[5]+'</td></tr>\n';
-//             		if(topac == 7){
-//                 		ketugou += '<tr><th>備考</th><td>'+status_deta.突破[6]+'</td></tr>\n';
-//             		}
-//             		ketugou += '</tbody></table>';
-// 			topasuu.insertAdjacentHTML('beforeend',ketugou);
-//         	break;
-//     	}
-// 	var statusth = document.getElementById("target_status").getElementsByTagName("th");
-// 	statusth[0].textContent = kannamedeta;
-// 	var statusdeta = document.getElementById("target_status").getElementsByTagName("td");
-// 	for(var i=0; i<18;i++){
-// 		statusdeta[i].textContent = "";
-// 	}
-// 	statusdeta[0].textContent = status_deta.耐久;
-// 	statusdeta[1].textContent = status_deta.装甲;
-// 	statusdeta[2].textContent = status_deta.装填;
-// 	statusdeta[3].textContent = status_deta.火力;
-// 	statusdeta[4].textContent = status_deta.雷装;
-// 	statusdeta[5].textContent = status_deta.回避;
-// 	statusdeta[6].textContent = status_deta.対空;
-// 	statusdeta[7].textContent = status_deta.航空;
-// 	statusdeta[8].textContent = status_deta.消費;
-// 	statusdeta[9].textContent = status_deta.対潜;
-// 	statusdeta[10].textContent = status_deta.命中;
-// 	statusdeta[11].textContent = status_deta.速力;
-// 	statusdeta[12].textContent = status_deta.幸運;
-// 	document.getElementsByClassName("character_deta")[1].textContent="";
-// 	document.getElementsByClassName("character_deta")[1].style.textAlign = 'center';
-// 	document.getElementsByClassName("character_deta")[1].insertAdjacentHTML('beforeend',
-// 	'<tr><td>'+status_deta.主砲装備+'</td><td>補正 '+status_deta.主砲補正+'％</td><td>最大数 '+status_deta.主砲砲座+'</td></tr>'+
-// 	'<tr><td>'+status_deta.副砲装備+'</td><td>補正 '+status_deta.副砲補正+'％</td><td>最大数 '+status_deta.副砲砲座+'</td></tr>'+
-// 	'<tr><td>'+status_deta.対空装備+'</td><td>補正 '+status_deta.対空補正+'％</td><td>最大数 '+status_deta.対空砲座+'</td></tr>'
-// 	);
-// 	statusdeta[15].insertAdjacentHTML('beforeend' ,status_deta.主砲装備+status_deta.主砲補正+'％<br>最大'+status_deta.主砲砲座);
-// 	statusdeta[16].insertAdjacentHTML('beforeend' ,status_deta.副砲装備+status_deta.副砲補正+'％<br>最大'+status_deta.副砲砲座);
-// 	statusdeta[17].insertAdjacentHTML('beforeend' ,status_deta.対空装備+status_deta.対空補正+'％<br>最大'+status_deta.対空砲座);
-	
 	
 	function genkaitopa(){
                 var topac = 0;
@@ -346,8 +273,6 @@ function kijicreate(){
             
 	document.getElementsByClassName("maintagu_sute")[0].textContent = "";
             document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',
-            '<div class="maintagu_sute" data-number="'+status_deta.ソート+'">\n'+
-            '<div class="page_toggle" style="display:block;">\n'+
             '<table class="status_deta" style="border-top: 1px solid #2196F3;border-bottom: 1px solid #2196F3;">\n'+
             '<thead>\n'+
             '<tr style="border-bottom: 1px solid #2196F3;"><td class="picface '+status_deta.レア+'"><img src="'+status_deta.live[0]+'"></td><th class="'+status_deta.レア+'" colspan="5">'+status_deta.名前+'</th></tr>\n'+
@@ -364,10 +289,8 @@ function kijicreate(){
             '<tr style="border-bottom: 1px solid #2196F3;"><th colspan="2">'+status_deta.対空装備+'</th><td colspan="2">'+status_deta.対空補正+'％</td><td colspan="2">'+status_deta.対空砲座+'</td></tr>\n'+
             '</tbody>\n'+
             genkaitopa()+
-            '</table>\n'+
-            '</div>\n'
-	)
-	
+            '</table>'
+	    )
 }
 
 //selectbox
@@ -378,7 +301,6 @@ imgget[up].style.display = "none";
 }
 imgget[parts.value].style.display = "block";
 }
-
 
 /*! echo-js v1.7.3 | (c) 2016 @toddmotto | https://github.com/toddmotto/echo */
 !function(t,e){"function"==typeof define&&define.amd?define(function(){return e(t)}):"object"==typeof exports?module.exports=e:t.echo=e(t)}(this,function(t){"use strict";var e,n,o,r,c,a={},u=function(){},d=function(t){return null===t.offsetParent},l=function(t,e){if(d(t))return!1;var n=t.getBoundingClientRect();return n.right>=e.l&&n.bottom>=e.t&&n.left<=e.r&&n.top<=e.b},i=function(){(r||!n)&&(clearTimeout(n),n=setTimeout(function(){a.render(),n=null},o))};return a.init=function(n){n=n||{};var d=n.offset||0,l=n.offsetVertical||d,f=n.offsetHorizontal||d,s=function(t,e){return parseInt(t||e,10)};e={t:s(n.offsetTop,l),b:s(n.offsetBottom,l),l:s(n.offsetLeft,f),r:s(n.offsetRight,f)},o=s(n.throttle,250),r=n.debounce!==!1,c=!!n.unload,u=n.callback||u,a.render(),document.addEventListener?(t.addEventListener("scroll",i,!1),t.addEventListener("load",i,!1)):(t.attachEvent("onscroll",i),t.attachEvent("onload",i))},a.render=function(n){for(var o,r,d=(n||document).querySelectorAll("[data-echo], [data-echo-background]"),i=d.length,f={l:0-e.l,t:0-e.t,b:(t.innerHeight||document.documentElement.clientHeight)+e.b,r:(t.innerWidth||document.documentElement.clientWidth)+e.r},s=0;i>s;s++)r=d[s],l(r,f)?(c&&r.setAttribute("data-echo-placeholder",r.src),null!==r.getAttribute("data-echo-background")?r.style.backgroundImage="url("+r.getAttribute("data-echo-background")+")":r.src!==(o=r.getAttribute("data-echo"))&&(r.src=o),c||(r.removeAttribute("data-echo"),r.removeAttribute("data-echo-background")),u(r,"load")):c&&(o=r.getAttribute("data-echo-placeholder"))&&(null!==r.getAttribute("data-echo-background")?r.style.backgroundImage="url("+o+")":r.src=o,r.removeAttribute("data-echo-placeholder"),u(r,"unload"));i||a.detach()},a.detach=function(){document.removeEventListener?t.removeEventListener("scroll",i):t.detachEvent("onscroll",i),clearTimeout(n)},a});
