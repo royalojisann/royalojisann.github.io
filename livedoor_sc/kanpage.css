@@ -67,3 +67,11 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 table#specdeta{text-align:center;background:#EFF;}
 table#specdeta th{background:#e7e7e7;}
 .maintagu_sute table{width: 100%;background: #EFF;}
+
+
+#img_new_box{background: #f6f6f6;display: flex;justify-content: center;align-items: center;"}
+#img_new_box a{display:none;}
+#img_new_box a:first-of-type{display:block;}
+#img_new_box a img{display: block;}
+select[name="imgselectbox"]{width: 100%;height: 24px;margin: 0 0 0.5em 0;}
+
