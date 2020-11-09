@@ -221,7 +221,7 @@ function kijicreate(){
 	
 	var kan_kaihi =Math.floor((1-(0.1+100/(100+status_deta.回避+2)+(50-status_deta.幸運+0)/1000))*10000)/100;
     	var kan_hit =Math.floor(((0.1+status_deta.命中/(status_deta.命中+100+2)+(status_deta.幸運-50+0)/1000))*10000)/100;
-    	var kan_crt = Math.floor((0.05+status_deta.命中*1/(status_deta.命中*1+100+2000)+(status_deta.幸運+50+0)/5000)*10000)/100;
+    	var kan_crt = Math.floor((0.05+status_deta.命中*1/(status_deta.命中*1+100+2000)+(status_deta.幸運-50+0)/5000)*10000)/100;
     	var kan_body = Math.floor(status_deta.耐久/(1-kan_kaihi/100));
 	var specdeta = document.getElementById("target_spec").getElementsByTagName("td");
 	specdeta.textContent = kan_kaihi+'%';
