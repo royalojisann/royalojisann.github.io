@@ -90,6 +90,15 @@ function kijicreate(){
         表記:kan_profile[index_n][21],
         図鑑:kan_profile[index_n][22]
     }
+	if(status_deta.記事.indexOf('改有り')!= -1){
+            rarecolor = status_deta.レア.substring(status_deta.レア.indexOf('→')+1);
+        }else if(status_deta.レア.indexOf('→')!= -1){
+            rarecolor = status_deta.レア.substring(0,status_deta.レア.indexOf('→'));
+        }else{
+            rarecolor =status_deta.レア;
+        }
+        status_deta.修正レア = rarecolor;
+	
 	var kannamedeta = "";
     switch(status_deta.記事){
         case '暫定':
@@ -275,7 +284,7 @@ function kijicreate(){
             document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',
             '<table class="status_deta" style="border-top: 1px solid #2196F3;border-bottom: 1px solid #2196F3;">\n'+
             '<thead>\n'+
-            '<tr style="border-bottom: 1px solid #2196F3;"><td class="picface '+status_deta.レア+'"><img src="'+status_deta.live[0]+'"></td><th class="'+status_deta.レア+'" colspan="5">'+status_deta.名前+'</th></tr>\n'+
+            '<tr style="border-bottom: 1px solid #2196F3;"><td class="picface '+status_deta.修正レア+'"><img src="'+status_deta.live[0]+'"></td><th class="'+status_deta.修正レア+'" colspan="5">'+status_deta.名前+'</th></tr>\n'+
             '</thead>\n'+
             '<tbody>\n'+
             '<tr><th>耐久</th><td>'+status_deta.耐久+'</td><th>装甲</th><td>'+status_deta.装甲+'</td><th>装填</th><td>'+status_deta.装填+'</td></tr>\n'+
