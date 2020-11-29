@@ -67,7 +67,10 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 .az_color{color:#F44336;}
 .soubilinecss{width:100%;background: #EEE;margin:0;}
 .img_set{width:60px;height:60px;line-height: 0;}
-.article-body-inner table th,.article-body-inner table td{border: none !important;padding: 4px;}
+.article-body-inner table th,.article-body-inner table td{
+    //border: none !important;
+    padding: 4px;
+}
 table#specdeta{text-align:center;background:#EFF;}
 table#specdeta th{background:#e7e7e7;}
 
