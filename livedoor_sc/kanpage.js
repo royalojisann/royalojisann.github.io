@@ -88,7 +88,9 @@ function kijicreate(){
         建造:kan_profile[index_n][19],
         突破:kan_profile[index_n][20],
         表記:kan_profile[index_n][21],
-        図鑑:kan_profile[index_n][22]
+	接頭:kan_profile[index_n][22],
+	リンク:kan_profile[index_n][23],
+        図鑑:kan_profile[index_n][24]
     }
 	if(status_deta.記事.indexOf('改有り')!= -1){
             rarecolor = status_deta.レア.substring(status_deta.レア.indexOf('→')+1);
