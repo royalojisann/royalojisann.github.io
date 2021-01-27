@@ -92,6 +92,7 @@ padding: 0;
 .UR{background: linear-gradient(135deg,#6c6,#6ff,#c9f,#c6c) !important;}
 .PR{background: #ffd75d !important;}
 .DR{background: linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9) !important;}
+.META{background: linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802);
 
 #img_new_box{background: #f6f6f6;justify-content: center;}
 #img_new_box a{display:none;}
