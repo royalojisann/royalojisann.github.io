@@ -249,7 +249,7 @@ function kijicreate(){
                 }
                 switch(topac){
                     case 0:
-                        ;
+                        topa = '';
                     break;
                     case 3:
                     case 4:
