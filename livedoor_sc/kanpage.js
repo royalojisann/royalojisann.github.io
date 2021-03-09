@@ -238,7 +238,7 @@ function kijicreate(){
 	specdeta[0].textContent = kan_kaihi+'%';
 	specdeta[1].textContent = kan_hit+'%';
 	specdeta[2].textContent = kan_crt+'%';
-	specdeta[3].textContent = kan_body+'%';
+	specdeta[3].textContent = kan_body;
 	
 	function genkaitopa(){
                 var topac = 0;
