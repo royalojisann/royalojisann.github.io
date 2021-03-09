@@ -235,10 +235,10 @@ function kijicreate(){
     	var kan_crt = Math.floor((0.05+status_deta.命中*1/(status_deta.命中*1+100+2000)+(status_deta.幸運-50+0)/5000)*10000)/100;
     	var kan_body = Math.floor(status_deta.耐久/(1-kan_kaihi/100));
 	var specdeta = document.getElementById("target_spec").getElementsByTagName("td");
-	specdeta.textContent = kan_kaihi+'%';
-	specdeta.textContent = kan_hit+'%';
-	specdeta.textContent = kan_crt+'%';
-	specdeta.textContent = kan_body+'%';
+	specdeta[0].textContent = kan_kaihi+'%';
+	specdeta[1].textContent = kan_hit+'%';
+	specdeta[2].textContent = kan_crt+'%';
+	specdeta[3].textContent = kan_body+'%';
 	
 	function genkaitopa(){
                 var topac = 0;
