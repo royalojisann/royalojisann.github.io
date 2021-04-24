@@ -50,7 +50,8 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 .maintagu_sute table th{background-color: #EEE;}
 #character_profile table th{background-color: #EEE;}
 
-#link_sinnsuibilist,#link_characterlist{display:none;}
+#link_sinnsuibilist{display:none;}
+#link_characterlist{display:block;}
 
 .article-body-inner p {
     line-height: 1.7;
