@@ -10,7 +10,7 @@
     padding: 8px 0;
 }
 #kan_list_div div{
-    width: 62px;height: 122px;overflow: hidden;position: relative;
+    width: 62px;height: 122px;overflow: hidden;position: relative;margin: 0px 2px;
 }
 #kan_list_div div .kanpic{
     width: 62px!important;
