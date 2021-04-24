@@ -1,3 +1,6 @@
+#page_N7 label {
+    font-size: 14px;
+}
 
 #kan_list_div{
     text-align: center;
@@ -41,3 +44,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
