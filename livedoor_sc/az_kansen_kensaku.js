@@ -175,4 +175,3 @@ function kanlist_setbutton(){
         }
     }
 }
-
