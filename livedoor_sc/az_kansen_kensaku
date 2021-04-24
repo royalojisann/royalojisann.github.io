@@ -101,6 +101,13 @@ window.addEventListener('DOMContentLoaded', function() {
         kansen_kakunouko+=('<div style="display: inline-block;">'+adeta+'</div>');
     }
     document.getElementById("kan_list_div").insertAdjacentHTML("beforeend",kansen_kakunouko);
+    
+    //広告
+    var contentkoukoku = "<ins class='adsbygoogle' style='display:block' data-ad-format='autorelaxed' data-ad-client='ca-pub-1820058722476319' data-ad-slot='7882308349'></ins>";
+if(document.getElementById("contentdiv")!=null){
+        document.getElementById("contentdiv").insertAdjacentHTML('beforeend',contentkoukoku);
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    }
 });
 
 function kanlist_setbutton(){
@@ -168,3 +175,4 @@ function kanlist_setbutton(){
         }
     }
 }
+
