@@ -34,6 +34,7 @@
 #kan_list_div div a img{
     width: 64px!important;
     height: 64px!important;
+    text-decoration: none!important;
 }
 
 #kan_list_div div a{
