@@ -96,8 +96,7 @@ window.addEventListener('DOMContentLoaded', function() {
     kansen_kakunouko = "";
     for(var kan=0; kan<kensaku_list.length; kan++){
         urldeta = "https://pasokau.com/"+kensaku_list[kan].接頭辞+'_'+kensaku_list[kan].リンク;
-        adeta = '<img class="kanpic '+kensaku_list[kan]['修正レア']+'" src="'+kensaku_list[kan]['live'][0]+'" alt="'+kensaku_list[kan]['正式名称']+'"/><a href="'+urldeta+'" target="_blank" ><img src="https://livedoor.blogimg.jp/kojinn00home/imgs/c/5/c5d69403.png"/>'+kensaku_list[kan]['正式名称']+'</a>';
-        //bdeta = '<img src="'+kensaku_list[kan]['live'][0]+'" width="48" height="48" alt="'+kensaku_list[kan]['正式名称']+'"/>';
+        adeta = '<img class="kanpic '+kensaku_list[kan]['修正レア']+'" src="'+kensaku_list[kan]['live'][2]+'" alt="'+kensaku_list[kan]['正式名称']+'"/><a href="'+urldeta+'" target="_blank" ><img src="https://livedoor.blogimg.jp/kojinn00home/imgs/c/5/c5d69403.png"/>'+kensaku_list[kan]['正式名称']+'</a>';
         kansen_kakunouko+=('<div style="display: inline-block;">'+adeta+'</div>');
     }
     document.getElementById("kan_list_div").insertAdjacentHTML("beforeend",kansen_kakunouko);
