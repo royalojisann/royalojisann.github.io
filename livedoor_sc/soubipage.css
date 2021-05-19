@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#table_card_soubi{
+.table_card_soubi{
     text-align: center;
     font-weight: bold;
     background: linear-gradient(#dcdcdc, #ffffff);
@@ -16,39 +16,30 @@ grid-template-columns: 104px 104px 104px;
 
 }
 
-#table_card_img{
+.table_card_soubi .table_card_img{
     grid-row: 2 / 5;
     grid-column: 1;
     line-height: 0;
     padding: 0;
 }
 
-#table_card_1{
-    grid-row: 2 / 3;
-    grid-column: 2 / 4;
-}
-#table_card_2{
-    grid-row: 3 / 4;
-    grid-column: 2 / 4;
-}
-#table_card_3{
-    grid-row: 4 / 5;
+.table_card_soubi .table_card_sp{
     grid-column: 2 / 4;
 }
 
-#table_card_soubi .main_card{
+.table_card_soubi .main_card{
 grid-column: 1 / 4;
 width:312px;
 display: grid;
 grid-template-columns: 104px 104px 104px;
 }
 
-#table_card_soubi .card_all{
+.table_card_soubi .card_all{
 grid-column: 1 / 4;
 }
-#main_card.card_single{
+.main_card .card_single{
 grid-column: 1 / 2;
 }
-#main_card.card_doubles{
+.main_card .card_doubles{
 grid-column: 2 / 4;
 }
