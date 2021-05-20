@@ -43,3 +43,7 @@ grid-column: 1 / 2;
 .main_card .card_doubles{
 grid-column: 2 / 4;
 }
+
+.linkbutton{
+    display:none;
+}
