@@ -1,0 +1,43 @@
+/* 艦船検索 */
+.kan_list_div{
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    background: azure;
+    padding: 8px 0;
+}
+.kan_list_div div{
+    width: 68px;height: 122px;overflow: hidden;position: relative;
+}
+.kan_list_div div .kanpic{
+    width: 64px;
+    height: 64px;
+    border:2px solid;
+    border-top:4px solid;
+    border-bottom:4px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.kan_list_div div .kanpic.N{background: #cfcfcf !important;border-color:  #cfcfcf !important;}
+.kan_list_div div .kanpic.R{background: #aee6ff !important;border-color: #aee6ff !important;}
+.kan_list_div div .kanpic.SR{background: #ff9fff !important;border-color: #ff9fff !important;}
+.kan_list_div div .kanpic.SSR{background: #ffec42 !important;border-color: #ffec42 !important;}
+.kan_list_div div .kanpic.UR{background: linear-gradient(135deg,#6c6,#6ff,#c9f,#c6c) !important;border-image:linear-gradient(135deg,#6c6,#6ff,#c9f,#c6c) !important;}
+.kan_list_div div .kanpic.PR{background: #ffd75d !important;border-color: #ffd75d !important;}
+.kan_list_div div .kanpic.DR{background: linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9) !important;border-image:linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9) !important;}
+.kan_list_div div .kanpic.META{background: linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;color: white;border-image:linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;}
+
+.kan_list_div div a img{
+    width: 64px;
+    height: 64px;
+}
+
+.kan_list_div div a{
+    width: 64px;
+    height: 122px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
