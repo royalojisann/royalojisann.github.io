@@ -1,7 +1,16 @@
+
 var kansen_nouryoku = [];
 var kensaku_list = [];
 var BirthdayList = {noname:[],January:[],February:[],March:[],April:[],May:[],June:[],July:[],August:[],September:[],October:[],November:[],December:[],prkansenn:[],colabo:[]};
+
 window.addEventListener('DOMContentLoaded', function() {
+    var moonsun = new Date();
+    var getmoon = moonsun.getMonth() + 1;
+    var getsun = moonsun.getDate();
+
+    document.getElementById("moon").value = getmoon;
+    document.getElementById("sun").value = getsun;
+
     for(var i=0;i<kan_profile.length; i++){
         var inputstatus_deta = {
             陣営:kan_profile[i][0],
@@ -64,34 +73,37 @@ window.addEventListener('DOMContentLoaded', function() {
         }
 
         var utuwa = "";
-        for(var san = 0; san<BirthdayList[Object.keys(BirthdayList)[d]].length; san++){
-            if(san == 0){
+        for(var sun = 0; sun<BirthdayList[Object.keys(BirthdayList)[d]].length; sun++){
+            if(sun == 0){
                 utuwa = '<table class="table_sinsui_box" border="1" cellpadding="0"><tbody>';
             }
 
-            url = ("https://pasokau.com/"+BirthdayList[Object.keys(BirthdayList)[d]][san].接頭辞+'_'+BirthdayList[Object.keys(BirthdayList)[d]][san].リンク);
+            url = ("https://pasokau.com/"+BirthdayList[Object.keys(BirthdayList)[d]][sun].接頭辞+'_'+BirthdayList[Object.keys(BirthdayList)[d]][sun].リンク);
 
             utuwa += (
                 '<tr>'+
                     '<td>'+
                         '<a href="'+url+'" target="_blank">'+
-                        '<img class="lozad" data-echo="'+BirthdayList[Object.keys(BirthdayList)[d]][san]['live'][2]+'"></a></td>'+
+                        '<img class="lozad" data-echo="'+BirthdayList[Object.keys(BirthdayList)[d]][sun]['live'][2]+'"></a></td>'+
                     '<td>'+
-                        BirthdayList[Object.keys(BirthdayList)[d]][san].陣営+BirthdayList[Object.keys(BirthdayList)[d]][san].修正レア+BirthdayList[Object.keys(BirthdayList)[d]][san].艦種+'<br>'+
-                        '「'+BirthdayList[Object.keys(BirthdayList)[d]][san].正式名称+']<br>'+
-                        type+BirthdayList[Object.keys(BirthdayList)[d]][san].進水日+
+                        BirthdayList[Object.keys(BirthdayList)[d]][sun].陣営+BirthdayList[Object.keys(BirthdayList)[d]][sun].修正レア+BirthdayList[Object.keys(BirthdayList)[d]][sun].艦種+'<br>'+
+                        '「'+BirthdayList[Object.keys(BirthdayList)[d]][sun].正式名称+']<br>'+
+                        type+BirthdayList[Object.keys(BirthdayList)[d]][sun].進水日+
                     '</td>'+
                 '</tr>'
                 )
 
-            if(san == BirthdayList[Object.keys(BirthdayList)[d]].length-1){
+            if(sun == BirthdayList[Object.keys(BirthdayList)[d]].length-1){
                 utuwa += '</tbody></table>';
                 document.getElementById(Object.keys(BirthdayList)[d]).insertAdjacentHTML("beforeend",utuwa);
             }
-            kensaku_list.push(BirthdayList[Object.keys(BirthdayList)[d]][san]);
+            kensaku_list.push(BirthdayList[Object.keys(BirthdayList)[d]][sun]);
         }
     }
+
+
 });
+
 
 function button_select_sort(){
     var sort_type = {kunilist:[],typelist:[],rarelist:[]},list = ['kuni','type','rare'],kan = ['陣営','艦種','修正レア'];
@@ -169,45 +181,36 @@ function macthbirthday(){
             }
         }
         texta = '進水日「'+moon+'月'+sun+'日」の艦船は<br>'+aaa+'…です！';
-        tweetset.text1 = '進水日「'+moon+'月'+sun+'日」の艦船を探しました！\n'+twi;
+        tweetset.text1 = '【#アズレン進水日】\n「'+moon+'月'+sun+'日」の艦船を探しました！\n'+twi;
     }else{
         texta = '進水日「'+moon+'月'+sun+'日」の艦船は見つかりませんでした…';
-        tweetset.text1 = '進水日「'+moon+'月'+sun+'日」の艦船は見つかりませんでした…\n';
+        tweetset.text1 = '【#アズレン進水日】\n「'+moon+'月'+sun+'日」の艦船は見つかりませんでした…\n';
     }
 
     if(box.minus.length){
-        twi="",icount=0;
         box.minus.reverse();
         for(var i=0;i<box.minus.length;i++){
             dammset.damm1.push(box.minus[i].正式名称+'('+box.minus[i].進水日まとめ[0]+')');
             url = ("https://pasokau.com/"+box.minus[i].接頭辞+'_'+box.minus[i].リンク);
             textb += ('☆<a href="'+url+'" target="_blank" >'+dammset.damm1[i]+'</a><br>');
-            if(box.minus.length-1 == i || box.minus.length-2 == i){
-                twi += '☆'+dammset.damm1[i]+'\n';
-                icount++;
-            }
         }
-        tweetset.text2 = twi;
     }
 
     if(box.purasu.length){
-        twi="",icount=0;
         for(var i=0;i<box.purasu.length;i++){
             dammset.damm2.push(box.purasu[i].正式名称+'('+box.purasu[i].進水日まとめ[0]+')');
             url = ("https://pasokau.com/"+box.purasu[i].接頭辞+'_'+box.purasu[i].リンク);
             textc +=  ('☆<a href="'+url+'" target="_blank" >'+dammset.damm2[i]+'</a><br>');
-            if(icount!=2){
-                twi += '☆'+dammset.damm2[i]+'\n';
-                icount++;
-            }
         }
-        tweetset.text3 = twi;
     }
 
     document.getElementById("match_birthday").textContent ="";
-    document.getElementById("match_birthday").insertAdjacentHTML('beforeend',
-    texta+'<br><br>'+'近いところだと、<br>'+textb+textc+'…などがいます<br><br>結果をツイートできます。<br>ボタンが現れない時は⇒<span onclick="twion();"  style="background: #f3a93d;border-radius: 3px;color: white;padding: 2px 8px;font-size: 16px;cursor: pointer;display: inline-block;vertical-align: top;">タッチ</span>'
+    document.getElementById("match_birthday").insertAdjacentHTML('beforeend',texta)
+    document.getElementById("no_matching").textContent ="";
+    document.getElementById("no_matching").insertAdjacentHTML('beforeend',
+    '近いところだと、<br>'+textb+textc+'…などがいます！<br>'
     )
+
     twion();
 }
 
@@ -226,7 +229,7 @@ function twion(){
         location.href,
         document.getElementById("tweet1"),{
             count: 'none',
-            text: tweetset.text1+'\n近いところだと…\n'+tweetset.text2+tweetset.text3+'…などがいます\n\n'+'#アズールレーン'+'\n'+'#アズレン進水日'+'\n',
+            text: tweetset.text1,
             size: "large",
             hashtags: "",
         });
