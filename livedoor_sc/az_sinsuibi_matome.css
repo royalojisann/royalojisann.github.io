@@ -50,14 +50,13 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 }
 .table_sinsui_box td{
     vertical-align: middle;
-    height: 86px;
+    height: 76px;
     border:2px solid #00BCD4
 }
 
 .table_sinsui_box td:nth-child(odd){
-    width: 86px;
+    width: 76px;
 } 
 .table_sinsui_box td img{
-    width: 80px!important;
     vertical-align: top;
 }
