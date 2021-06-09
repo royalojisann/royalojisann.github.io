@@ -215,6 +215,7 @@ function macthbirthday(){
 }
 
 // Twitterの初期化
+var shareUrl = "https://pasokau.com/kan_sinnsuibi_deta";
 var js, fjs = document.getElementsByTagName('script')[0];
 if (!document.getElementById('twitter-wjs')) {
  js = document.createElement('script');
@@ -226,7 +227,7 @@ function twion(){
     // twttrが使えるようになったらシェアボタンを作る。
     document.getElementById("tweet1").innerHTML = '';
     twttr.widgets.createShareButton(
-        location.href,
+        shareUrl,
         document.getElementById("tweet1"),{
             count: 'none',
             text: tweetset.text1,
