@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 '<tr>'+
                     '<td>'+
                         '<a href="'+url+'" target="_blank">'+
-                        '<img class="lozad" data-echo="'+BirthdayList[Object.keys(BirthdayList)[d]][sun]['live'][2]+'"></a></td>'+
+                        '<img class="lozad" data-echo="'+BirthdayList[Object.keys(BirthdayList)[d]][sun]['live'][2]+'" alt="'+BirthdayList[Object.keys(BirthdayList)[d]][sun].正式名称+'"></a></td>'+
                     '<td>'+
                         BirthdayList[Object.keys(BirthdayList)[d]][sun].陣営+BirthdayList[Object.keys(BirthdayList)[d]][sun].修正レア+BirthdayList[Object.keys(BirthdayList)[d]][sun].艦種+'<br>'+
                         '「'+BirthdayList[Object.keys(BirthdayList)[d]][sun].正式名称+']<br>'+
