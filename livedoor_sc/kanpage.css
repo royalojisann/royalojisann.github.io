@@ -67,7 +67,7 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 .skllcss table{width:100%;background: #EEE;margin:0;border-collapse: collapse;}
 .skllcss table td {border: 1px solid #2196F3;}
 .az_color{color:#F44336;}
-.soubilinecss{width:100%;background: #EEE;margin:0;}
+.soubilinecss{width:100%;background: #EEE;margin:0;border: 1px solid #ff8686;}
 .img_set{width:60px;height:60px;line-height: 0;}
 .article-body-inner table th,.article-body-inner table td{
     //border: none !important;
