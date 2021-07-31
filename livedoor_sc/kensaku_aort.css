@@ -7,11 +7,11 @@
     padding: 8px 0;
 }
 .kan_list_div div{
-    width: 68px;height: 122px;overflow: hidden;position: relative;
+    width: 62px;height: 122px;overflow: hidden;position: relative;margin: 0px 2px;
 }
 .kan_list_div div .kanpic{
-    width: 64px;
-    height: 64px;
+    width: 62px!important;
+    height: 62px!important;
     border:2px solid;
     border-top:4px solid;
     border-bottom:4px solid;
@@ -29,12 +29,13 @@
 .kan_list_div div .kanpic.META{background: linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;color: white;border-image:linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;}
 
 .kan_list_div div a img{
-    width: 64px;
-    height: 64px;
+    width: 62px!important;
+    height: 62px!important;
+    text-decoration: none!important;
 }
 
 .kan_list_div div a{
-    width: 64px;
+    width: 62px;
     height: 122px;
     position: absolute;
     top: 50%;
