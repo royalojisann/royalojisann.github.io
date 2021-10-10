@@ -4,7 +4,6 @@ var kansen_nouryoku = [];
 var kensaku_kansen = {除外:[],新規:[],META:[],計画艦:[],コラボ:[],通常:[]};
 window.addEventListener('DOMContentLoaded', function() {
   document.getElementsByClassName("kan_list_div")[0].textContent = "";
-  document.getElementsByClassName("kan_list_div")[1].textContent = "";
   for(var i=0;i<kan_profile.length; i++){
       var inputstatus_deta = {
           陣営:kan_list[i][0],
