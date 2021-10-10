@@ -159,7 +159,7 @@ function kanlist_setbutton(){
         }
     }
 
-    for(var i = 0; i<kan_zextupann.length; i++){
+    for(var i = 0; i<zepan.length; i++){
         document.getElementsByClassName("sort_class")[i].style.display = "none";
         //陣営
         if(Object.keys(kensaku_kunilist).length == 0){
