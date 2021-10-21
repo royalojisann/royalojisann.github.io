@@ -132,8 +132,7 @@ function kijicreate(){
                 keisan+=(get_level-1)*(kan_list[index_n][4]*1)/1000;
                 keisan+=(Math.max(get_level,100)-100)*(kan_list[index_n][5]*1)/1000;
                 keisan+=(kan_list[index_n][57]*1);
-                keisan*=(get_kizuna);
-                keisan+=(kan_list[index_n][44]*1);
+keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][44]*1)*get_kizuna : keisan*get_kizuna+(kan_list[index_n][44]*1);
                 status_deta.耐久=Math.floor(keisan);
             //装填
             var keisan = (kan_list[index_n][18]*1);
@@ -141,24 +140,21 @@ function kijicreate(){
                 keisan+=(Math.max(get_level,100)-100)*(kan_list[index_n][20]*1)/1000;
                 keisan+=(kan_list[index_n][43]*1);
                 keisan+=(kan_list[index_n][62]*1);
-                keisan*=(get_kizuna);
-                keisan+=(kan_list[index_n][49]*1);
+keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][49]*1)*get_kizuna : keisan*get_kizuna+(kan_list[index_n][49]*1);
                 status_deta.装填=Math.floor(keisan);
             //回避
             var keisan = (kan_list[index_n][27]*1);
                 keisan+=(get_level-1)*(kan_list[index_n][28]*1)/1000;
                 keisan+=(Math.max(get_level,100)-100)*(kan_list[index_n][29]*1)/1000;
                 keisan+=(kan_list[index_n][64]*1);
-                keisan*=(get_kizuna);
-                keisan+=(kan_list[index_n][52]*1);
+keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][52]*1)*get_kizuna : keisan*get_kizuna+(kan_list[index_n][52]*1);
                 status_deta.回避=Math.floor(keisan);
             //命中
             var keisan = (kan_list[index_n][24]*1);
                 keisan+=(get_level-1)*(kan_list[index_n][25]*1)/1000;
                 keisan+=(Math.max(get_level,100)-100)*(kan_list[index_n][26]*1)/1000;
                 keisan+=(kan_list[index_n][63]*1);
-                keisan*=(get_kizuna);
-                keisan+=(kan_list[index_n][51]*1);
+keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][51]*1)*get_kizuna : keisan*get_kizuna+(kan_list[index_n][51]*1);
                 status_deta.命中=Math.floor(keisan);
             //火力
             var keisan = (kan_list[index_n][6]*1);
@@ -166,8 +162,7 @@ function kijicreate(){
                 keisan+=(Math.max(get_level,100)-100)*(kan_list[index_n][8]*1)/1000;
                 keisan+=(kan_list[index_n][39]*1);
                 keisan+=(kan_list[index_n][58]*1);
-                keisan*=(get_kizuna);
-                keisan+=(kan_list[index_n][45]*1);
+keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][45]*1)*get_kizuna : keisan*get_kizuna+(kan_list[index_n][45]*1);
                 status_deta.火力=Math.floor(keisan);
             //雷装
             var keisan = (kan_list[index_n][9]*1);
@@ -175,8 +170,7 @@ function kijicreate(){
                 keisan+=(Math.max(get_level,100)-100)*(kan_list[index_n][11]*1)/1000;
                 keisan+=(kan_list[index_n][40]*1);
                 keisan+=(kan_list[index_n][59]*1);
-                keisan*=(get_kizuna);
-                keisan+=(kan_list[index_n][46]*1);
+keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][46]*1)*get_kizuna : keisan*get_kizuna+(kan_list[index_n][46]*1);
                 status_deta.雷装=Math.floor(keisan);
             //航空
             var keisan = (kan_list[index_n][15]*1);
@@ -184,8 +178,7 @@ function kijicreate(){
                 keisan+=(Math.max(get_level,100)-100)*(kan_list[index_n][17]*1)/1000;
                 keisan+=(kan_list[index_n][42]*1);
                 keisan+=(kan_list[index_n][61]*1);
-                keisan*=(get_kizuna);
-                keisan+=(kan_list[index_n][48]*1);
+keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][48]*1)*get_kizuna : keisan*get_kizuna+(kan_list[index_n][48]*1);
                 status_deta.航空=Math.floor(keisan);
             //対空
             var keisan = (kan_list[index_n][12]*1);
@@ -193,16 +186,14 @@ function kijicreate(){
                 keisan+=(Math.max(get_level,100)-100)*(kan_list[index_n][14]*1)/1000;
                 keisan+=(kan_list[index_n][41]*1);
                 keisan+=(kan_list[index_n][60]*1);
-                keisan*=(get_kizuna);
-                keisan+=(kan_list[index_n][47]*1);
+keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][47]*1)*get_kizuna : keisan*get_kizuna+(kan_list[index_n][47]*1);
                 status_deta.対空=Math.floor(keisan);
             //対潜
             var keisan = (kan_list[index_n][36]*1);
                 keisan+=(get_level-1)*(kan_list[index_n][37]*1)/1000;
                 keisan+=(Math.max(get_level,100)-100)*(kan_list[index_n][38]*1)/1000;
                 keisan+=(kan_list[index_n][65]*1);
-                keisan*=(get_kizuna);
-                keisan+=(kan_list[index_n][55]*1);
+keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get_kizuna : keisan*get_kizuna+(kan_list[index_n][55]*1);
                 status_deta.対潜=Math.floor(keisan);
             //速力
             var keisan = (kan_list[index_n][30]*1)+(kan_list[index_n][53]*1);
