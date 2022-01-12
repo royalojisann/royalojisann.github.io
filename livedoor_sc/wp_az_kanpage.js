@@ -130,14 +130,14 @@ function kijicreate(){
                 );
             	var imgdeta = (
 		    '<a rel="noopener" class="spotlight" href="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg"" title="'+status_deta.正規名+'" target="_blank">'+
-		    '<img loading="lazy" src="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg" width="480" alt="'+status_deta.正規名+'">'+
+		    '<img src="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg" alt="'+status_deta.正規名+'">'+
 		    '</a>'
             	);
             	for(var li=0; li<Object.keys(skinlist[status_deta.正規名]['テーマ']).length; li++){
                 	kari += ('<option value="'+(li+1)+'">'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'</option>');
                 	imgdeta += (
 				'<a rel="noopener" class="spotlight" href="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'.jpg"" title="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'" target="_blank">'+
-		 		'<img loading="lazy" src="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'.jpg" width="480" alt="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'">'+
+		 		'<img src="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'.jpg" alt="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'">'+
 		    		'</a>'
                 	)
             	}
@@ -341,7 +341,7 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
             document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',
             '<table class="status_deta" style="border-top: 1px solid #2196F3;border-bottom: 1px solid #2196F3;">\n'+
             '<thead>\n'+
-            '<tr style="border-bottom: 1px solid #2196F3;"><td class="picface '+status_deta.修正レア+'"><img src="'+status_deta.live[0]+'"></td><th class="'+status_deta.修正レア+'" colspan="5">'+status_deta.名前+'</th></tr>\n'+
+            '<tr style="border-bottom: 1px solid #2196F3;"><td class="picface '+status_deta.修正レア+'"><img src="'+status_deta.live[0]+'"></td><th class="'+status_deta.修正レア+'" colspan="5">'+status_deta.正規名+'</th></tr>\n'+
             '</thead>\n'+
             '<tbody>\n'+
             '<tr><th>耐久</th><td>'+status_deta.耐久+'</td><th>装甲</th><td>'+status_deta.装甲+'</td><th>装填</th><td>'+status_deta.装填+'</td></tr>\n'+
