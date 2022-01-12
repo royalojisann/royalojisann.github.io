@@ -47,7 +47,7 @@ function kijicreate(){
     status_deta = {
         陣営:kan_list[index_n][0],
         艦種:kan_list[index_n][1],
-        名前:kan_list[index_n][2],
+        正規名:kan_list[index_n][2],
         レア:kan_profile[index_n][3],
         装甲:kan_list[index_n][66],
         耐久:"",
@@ -101,6 +101,7 @@ function kijicreate(){
             rarecolor =status_deta.レア;
         }
         status_deta.修正レア = rarecolor;
+        status_deta.正式名称 = kan_profile[index_n][2].slice(-1) === '改' ? kan_profile[index_n][2].substring(0,kan_profile[index_n][2].indexOf('改')):kan_profile[index_n][2];
 	
 	var profile = document.getElementById("character_profile_table").getElementsByTagName("td");
 	for(var i=1; i<profile.length;i++){
@@ -124,10 +125,11 @@ function kijicreate(){
 	var nextS = deletetext.nextElementSibling;
 	if(nextS.id == 'target_status'){
 		deletetext.insertAdjacentHTML('afterend',
-		'<p>'+status_deta.名前+'のステータス（改造がある艦船は改造後の数値）。当記事ではレベル120愛のステータスを前提にしています。</p>'+
+		'<p>'+status_deta.正規名+'のステータス（改造がある艦船は改造後の数値）。当記事ではレベル120愛のステータスを前提にしています。</p>'+
                 '<p style="margin: 0.2em 0;font-size: 16px;">\n'+
                 'Lv.'+
                 '<select oninput="statuskeisann()" class="kan_select" id="lebel_deta" style="width: 30%;padding: 8px 4px;margin: 0 0 0 4px;">'+
+		'<option value="125">125</option>\n'+
                 '<option value="120" selected="selected">120</option>\n'+
                 '<option value="115">115</option>\n'+
                 '<option value="110">110</option>\n'+
@@ -333,7 +335,15 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
 	
 }
 
-
+function sknchangefanc(th){
+    var cla = th.classList;
+    var val = th.value;
+    var area = document.getElementsByClassName(cla)[1].getElementsByTagName('img');
+    for(var i=0; i<area.length; i++){
+        area[i].style.display = 'none';
+    }
+    area[val].style.display = 'block';
+}
 
 //selectbox
 function imgChangeset(parts,iddeta,tagdeta){
