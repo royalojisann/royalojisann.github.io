@@ -123,8 +123,7 @@ function kijicreate(){
 	let deletetext1= document.getElementById('kan_illust');
 	for(var i=0; i<2; i++){
 		var nextS = deletetext1.nextElementSibling;
-	if(nextS.id == 'img_new_box'){
-		document.getElementById("img_new_box").remove();
+	if(nextS.textContent == 'ファンアート'){
 		var kari = (
                 	'<select class="kan_'+status_deta.正規名+'" onchange="sknchangefanc(this,\'a\')">'+
                 	'<option selected="selected" value="0">'+status_deta.正規名+'</option>'
