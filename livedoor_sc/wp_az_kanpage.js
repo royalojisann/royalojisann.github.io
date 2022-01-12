@@ -35,10 +35,10 @@ if(document.getElementById("contentdiv")!=null){
 kijicreate();
 })
 
-index_n = '';
+index_n = 0;
 function kijicreate(){
     var taget = document.getElementById("target_name").textContent;
-    for(var index_n = 0; index_n < kan_profile.length; index_n++){
+    for(index_n = 0; index_n < kan_profile.length; index_n++){
         if(kan_profile[index_n][2]==taget){
             break;
         }
@@ -178,7 +178,7 @@ function statuskeisann(){
             }
         break;
         default:
-		    kannamedeta = status_deta.名前;
+		kannamedeta = status_deta.名前;
             var get_level = document.getElementById("lebel_deta").value*1;
             var get_kizuna = document.getElementById("kizuna").value*1;
             //耐久
