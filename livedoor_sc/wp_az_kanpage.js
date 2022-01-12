@@ -126,7 +126,7 @@ function kijicreate(){
 	if(nextS.id == 'img_new_box'){
 		document.getElementById("img_new_box").remove();
 		var kari = (
-                	'<select class="kan_'+status_deta.正規名+'" onchange="sknchangefanc(this)">'+
+                	'<select class="kan_'+status_deta.正規名+'" onchange="sknchangefanc(this,\'a\')">'+
                 	'<option selected="selected" value="0">'+status_deta.正規名+'</option>'
                 );
             	var imgdeta = (
@@ -371,10 +371,10 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
 	
 }
 
-function sknchangefanc(th){
+function sknchangefanc(th,tag){
     var cla = th.classList;
     var val = th.value;
-    var area = document.getElementsByClassName(cla)[1].getElementsByTagName('img');
+    var area = document.getElementsByClassName(cla)[1].getElementsByTagName(tag);
     for(var i=0; i<area.length; i++){
         area[i].style.display = 'none';
     }
