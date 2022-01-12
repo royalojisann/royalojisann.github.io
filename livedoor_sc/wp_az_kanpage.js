@@ -90,7 +90,8 @@ function kijicreate(){
         表記:kan_profile[index_n][21],
 	接頭:kan_profile[index_n][22],
 	リンク:kan_profile[index_n][23],
-        図鑑:kan_profile[index_n][24]
+        図鑑:kan_profile[index_n][24],
+	kanname:kan_list[index_n][2]
     }
 	if(status_deta.記事.indexOf('改有り')!= -1){
             rarecolor = status_deta.レア.substring(status_deta.レア.indexOf('→')+1);
@@ -101,8 +102,61 @@ function kijicreate(){
         }
         status_deta.修正レア = rarecolor;
 	
-	var kannamedeta = "";
-    switch(status_deta.記事){
+	var profile = document.getElementById("character_profile_table").getElementsByTagName("td");
+	for(var i=1; i<profile.length;i++){
+		profile[i].textContent = "";
+	}
+	profile[1].textContent = kan_profile[index_n][1];
+	profile[2].textContent = kan_profile[index_n][0];
+	profile[3].textContent = kan_profile[index_n][3];
+	profile[4].textContent = kan_profile[index_n][4];
+	profile[5].textContent = kan_profile[index_n][5];
+	profile[6].textContent = kan_profile[index_n][6];
+	profile[7].textContent = kan_profile[index_n][13];
+	profile[8].textContent = kan_profile[index_n][7];
+	profile[9].insertAdjacentHTML('beforeend' ,kan_profile[index_n][14]);
+	profile[10].insertAdjacentHTML('beforeend' ,kan_profile[index_n][8]);
+	profile[11].insertAdjacentHTML('beforeend' ,kan_profile[index_n][9]);
+	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" data-echo="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
+	
+	let deletetext= document.getElementById('kan_performance');
+	for(var i=0; i<3; i++){
+	var nextS = deletetext.nextElementSibling;
+	if(nextS.id == 'target_status'){
+		deletetext.insertAdjacentHTML('beforeend',
+		'<p>'+status_deta.正規名+'のステータス（改造がある艦船は改造後の数値）。当記事ではレベル120愛のステータスを前提にしています。</p>'+
+                '<p style="margin: 0.2em 0;font-size: 16px;">\n'+
+                'Lv.'+
+                '<select oninput="statuskeisann()" class="kan_select" id="lebel_deta">\n'+
+                '<option value="120" selected="selected">120</option>\n'+
+                '<option value="115">115</option>\n'+
+                '<option value="110">110</option>\n'+
+                '<option value="105">105</option>\n'+
+                '<option value="100">100</option>\n'+
+                '</select>　'+
+                '補正'+
+                '<select oninput="statuskeisann()" class="kan_select" id="kizuna">\n'+
+                '<option value="1.12">婚12%</option>\n'+
+                '<option value="1.09">婚9%</option>\n'+
+                '<option value="1.06" selected="selected">愛6%</option>\n'+
+                '<option value="1.03">好3%</option>\n'+
+                '<option value="1.01">友1%</option>\n'+
+                '<option value="1.00">知0%</option>\n'+
+                '</select>'+
+                '</p>'
+		)
+	break;
+	}else{
+	nextS.remove();
+	}
+	}
+	statuskeisann();
+}
+
+
+function statuskeisann(){
+	
+	switch(status_deta.記事){
         case '暫定':
         case '無し':
 		kannamedeta = status_deta.名前+"(暫定レベル120愛)";
@@ -204,34 +258,7 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
         break;
     }
 	
-	var profile = document.getElementById("character_profile_table").getElementsByTagName("td");
-	for(var i=1; i<profile.length;i++){
-		profile[i].textContent = "";
-	}
-	profile[1].textContent = kan_profile[index_n][1];
-	profile[2].textContent = kan_profile[index_n][0];
-	profile[3].textContent = kan_profile[index_n][3];
-	profile[4].textContent = kan_profile[index_n][4];
-	profile[5].textContent = kan_profile[index_n][5];
-	profile[6].textContent = kan_profile[index_n][6];
-	profile[7].textContent = kan_profile[index_n][13];
-	profile[8].textContent = kan_profile[index_n][7];
-	profile[9].insertAdjacentHTML('beforeend' ,kan_profile[index_n][14]);
-	profile[10].insertAdjacentHTML('beforeend' ,kan_profile[index_n][8]);
-	profile[11].insertAdjacentHTML('beforeend' ,kan_profile[index_n][9]);
-	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" data-echo="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
-	
-	var kan_kaihi =Math.floor((1-(0.1+100/(100+status_deta.回避+2)+(50-status_deta.幸運+0)/1000))*10000)/100;
-    	var kan_hit =Math.floor(((0.1+status_deta.命中/(status_deta.命中+100+2)+(status_deta.幸運-50+0)/1000))*10000)/100;
-    	var kan_crt = Math.floor((0.05+status_deta.命中*1/(status_deta.命中*1+100+2000)+(status_deta.幸運-50+0)/5000)*10000)/100;
-    	var kan_body = Math.floor(status_deta.耐久/(1-kan_kaihi/100));
-	var specdeta = document.getElementById("target_spec").getElementsByTagName("td");
-	specdeta[0].textContent = kan_kaihi+'%';
-	specdeta[1].textContent = kan_hit+'%';
-	specdeta[2].textContent = kan_crt+'%';
-	specdeta[3].textContent = kan_body;
-	
-	function genkaitopa(){
+		function genkaitopa(){
                 var topac = 0;
                 for(var tp=0; tp<status_deta.突破.length; tp++){
                     if(status_deta.突破[tp] != ''){
@@ -293,7 +320,20 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
             genkaitopa()+
             '</table>'
 	    )
+	
+	var kan_kaihi =Math.floor((1-(0.1+100/(100+status_deta.回避+2)+(50-status_deta.幸運+0)/1000))*10000)/100;
+    	var kan_hit =Math.floor(((0.1+status_deta.命中/(status_deta.命中+100+2)+(status_deta.幸運-50+0)/1000))*10000)/100;
+    	var kan_crt = Math.floor((0.05+status_deta.命中*1/(status_deta.命中*1+100+2000)+(status_deta.幸運-50+0)/5000)*10000)/100;
+    	var kan_body = Math.floor(status_deta.耐久/(1-kan_kaihi/100));
+	var specdeta = document.getElementById("target_spec").getElementsByTagName("td");
+	specdeta[0].textContent = kan_kaihi+'%';
+	specdeta[1].textContent = kan_hit+'%';
+	specdeta[2].textContent = kan_crt+'%';
+	specdeta[3].textContent = kan_body;
+	
 }
+
+
 
 //selectbox
 function imgChangeset(parts,iddeta,tagdeta){
