@@ -123,11 +123,11 @@ function kijicreate(){
 	for(var i=0; i<3; i++){
 	var nextS = deletetext.nextElementSibling;
 	if(nextS.id == 'target_status'){
-		deletetext.insertAdjacentHTML('beforeend',
-		'<p>'+status_deta.正規名+'のステータス（改造がある艦船は改造後の数値）。当記事ではレベル120愛のステータスを前提にしています。</p>'+
+		deletetext.insertAdjacentHTML('afterend',
+		'<p>'+status_deta.名前+'のステータス（改造がある艦船は改造後の数値）。当記事ではレベル120愛のステータスを前提にしています。</p>'+
                 '<p style="margin: 0.2em 0;font-size: 16px;">\n'+
                 'Lv.'+
-                '<select oninput="statuskeisann()" class="kan_select" id="lebel_deta">\n'+
+                '<select oninput="statuskeisann()" class="kan_select" id="lebel_deta" style="width: 30%;padding: 8px 4px;margin: 0 0 0 4px;">'+
                 '<option value="120" selected="selected">120</option>\n'+
                 '<option value="115">115</option>\n'+
                 '<option value="110">110</option>\n'+
@@ -135,7 +135,7 @@ function kijicreate(){
                 '<option value="100">100</option>\n'+
                 '</select>　'+
                 '補正'+
-                '<select oninput="statuskeisann()" class="kan_select" id="kizuna">\n'+
+                '<select oninput="statuskeisann()" class="kan_select" id="kizuna" style="width: 30%;padding: 8px 4px;margin: 0 0 0 4px;">'+
                 '<option value="1.12">婚12%</option>\n'+
                 '<option value="1.09">婚9%</option>\n'+
                 '<option value="1.06" selected="selected">愛6%</option>\n'+
