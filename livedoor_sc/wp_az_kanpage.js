@@ -119,12 +119,47 @@ function kijicreate(){
 	profile[10].insertAdjacentHTML('beforeend' ,kan_profile[index_n][8]);
 	profile[11].insertAdjacentHTML('beforeend' ,kan_profile[index_n][9]);
 	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" data-echo="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
+
+	let deletetext1= document.getElementById('kan_illust');
+	for(var i=0; i<2; i++){
+		var nextS = deletetext1.nextElementSibling;
+	if(nextS.id == 'img_new_box'){
+		document.getElementById("img_new_box").remove();
+		var kari = (
+                	'<select class="kan_'+status_deta.正規名+'" onchange="sknchangefanc(this)">'+
+                	'<option selected="selected" value="0">'+status_deta.正規名+'</option>'
+                );
+            	var imgdeta = (
+		    '<a rel="noopener" class="spotlight" href="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg"" title="'+status_deta.正規名+'" target="_blank">'+
+		    '<img loading="lazy" src="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg" width="480" alt="'+status_deta.正規名+'">'+
+		    '</a>'
+            	);
+            	for(var li=0; li<Object.keys(skinlist[status_deta.正規名]['テーマ']).length; li++){
+                	kari += ('<option value="'+(li+1)+'">'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'</option>');
+                	imgdeta += (
+				'<a rel="noopener" class="spotlight" href="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'.jpg"" title="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'" target="_blank">'+
+		 		'<img loading="lazy" src="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'.jpg" width="480" alt="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'">'+
+		    		'</a>'
+                	)
+            	}
+            	kari += '</select>\n';
+            	document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',
+                	'変更'+kari+'<br>'+
+                	'<div id="img_new_box" class="kan_'+status_deta.正規名+'" style="display: flex;justify-content: center;">'+
+                	imgdeta+
+                	'</div>\n'
+                );
+		break;
+	}else{
+		nextS.remove();
+	}
+	}
 	
-	let deletetext= document.getElementById('kan_performance');
+	let deletetext2= document.getElementById('kan_performance');
 	for(var i=0; i<3; i++){
-	var nextS = deletetext.nextElementSibling;
+	var nextS = deletetext2.nextElementSibling;
 	if(nextS.id == 'target_status'){
-		deletetext.insertAdjacentHTML('afterend',
+		deletetext2.insertAdjacentHTML('afterend',
 		'<p>'+status_deta.正規名+'のステータス（改造がある艦船は改造後の数値）。当記事ではレベル120愛のステータスを前提にしています。</p>'+
                 '<p style="margin: 0.2em 0;font-size: 16px;">\n'+
                 'Lv.'+
@@ -343,6 +378,50 @@ function sknchangefanc(th){
         area[i].style.display = 'none';
     }
     area[val].style.display = 'block';
+}
+
+var kingdeta = function(jin){
+    switch(jin){
+        case "ユニオン":
+            return "Eagle_Union";
+        break;
+        case "ロイヤル":
+            return "Royal_Navy";
+        break;
+        case "重桜":
+            return "Sakura_Empire";
+        break;
+        case "鉄血":
+            return "Iron_Blood";
+        break;
+        case "アイリス":
+            return "Iris_Libre";
+        break;
+        case "ヴィシア":
+            return "Vichya_Dominion";
+        break;
+        case "サディア":
+            return "Sardegna_Empire";
+        break;
+        case "東煌":
+            return "Dragon_Empery";
+        break;
+        case "北連":
+            return "Northern_Parliament";
+        break;
+        case "META":
+            return "Universal";
+        break;
+        case "その他":
+            return "Universal";
+        break;
+        case "BILIBILI":
+            return "Collab_Nations";
+        break;
+        default:
+            return "Collab_Nations";
+        break;
+    }
 }
 
 //selectbox
