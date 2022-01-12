@@ -143,8 +143,9 @@ function kijicreate(){
                 	)
             	}
             	kari += '</select>\n';
-            	document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',
-                	'変更'+kari+'<br>'+
+            	deletetext1.insertAdjacentHTML('afterend',
+			'<p>'+status_deta.正規名+'のイラストや着せ替えスキンを掲載しています。</p>\n\n'+
+                	'<p>変更'+kari+'</p>'+
                 	'<div id="img_new_box" class="kan_'+status_deta.正規名+'" style="display: flex;justify-content: center;">'+
                 	imgdeta+
                 	'</div>\n'
