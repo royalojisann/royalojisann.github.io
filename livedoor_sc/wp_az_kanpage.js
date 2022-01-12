@@ -121,7 +121,7 @@ function kijicreate(){
 	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" data-echo="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
 
 	let deletetext1= document.getElementById('kan_illust');
-	for(var i=0; i<2; i++){
+	for(var i=0; i<4; i++){
 		var nextS = deletetext1.nextElementSibling;
 	if(nextS.textContent == 'ファンアート'){
 		var kari = (
