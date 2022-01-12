@@ -1,12 +1,5 @@
 ﻿@charset "UTF-8";
 
-#img_box img{width: auto;max-height: 500px;}
-#img_box input{display:none;}
-#img_box input+img{display:none;}
-#img_box input:checked+img{display: block;max-height: 500px;}
-#img_box input+a{display:none;}
-#img_box input:checked+a{display: block;}
-
 p.linkbutton {padding: 0.3em 0;text-align: center;border: 2px solid red;}
 p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight: bold;font-size: 18px;}
 .maintagu_sute table th{background-color: #EEE;}
@@ -15,9 +8,6 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 #link_sinnsuibilist{display:block;}
 #link_characterlist{display:block;}
 
-.article-body-inner p {
-    line-height: 1.7;
-}
 #character_profile td,#character_profile th{padding:4px 4px 4px 8px;}
 #target_status table{width: 100%;border-collapse: collapse;box-sizing: border-box;}
 #target_status td,#target_status th{width:16.666%;width:-webkit-calc(100%/6);width:calc(100%/6);}
@@ -29,7 +19,7 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 .skllcss table{width:100%;background: #EEE;margin:0;border-collapse: collapse;}
 .skllcss table td {border: 1px solid #2196F3;font-size: 1em;}
 .az_color{color:#F44336;}
-table.soubilinecss{width:100%;background: #EEE;margin:4px 0px;border: 1px solid #ff8686;}
+table.soubilinecss{width:100%;background: #dee8ff;margin:8px 0px;}
 .img_set{width:60px;height:60px;line-height: 0;}
 .article-body-inner table th,.article-body-inner table td{
     //border: none !important;
@@ -48,7 +38,6 @@ padding: 0;
     width: 100%;
 }
 
-
 .N{background: #dbdcdf !important;}
 .R{background: #1bb7eb !important;}
 .SR{background: #ae90ef !important;}
@@ -58,7 +47,6 @@ padding: 0;
 .DR{background: linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9) !important;}
 .META{background: linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;color: #f9f593;}
 .META_SR{background: linear-gradient(45deg,#000000,#8B58AD,#C46FB3,#000000,#8250AB,#5C3B7D)!important;color: #FFCCFF;}
-
 
 #img_new_box{background: #f6f6f6;justify-content: center;}
 #img_new_box a{display:none;}
