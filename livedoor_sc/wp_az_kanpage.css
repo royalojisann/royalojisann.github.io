@@ -65,7 +65,7 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 .skllcss td,.skllcss th{padding:4px 0;}
 .skllcss{border-bottom: 1px solid #2196F3;margin: 0.5em 0;}
 .skllcss table{width:100%;background: #EEE;margin:0;border-collapse: collapse;}
-.skllcss table td {border: 1px solid #2196F3;}
+.skllcss table td {border: 1px solid #2196F3;font-size: 1em;}
 .az_color{color:#F44336;}
 .soubilinecss{width:100%;background: #EEE;margin:4px 0px;border: 1px solid #ff8686;}
 .img_set{width:60px;height:60px;line-height: 0;}
