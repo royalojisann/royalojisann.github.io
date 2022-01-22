@@ -118,7 +118,7 @@ function kijicreate(){
 	profile[9].insertAdjacentHTML('beforeend' ,kan_profile[index_n][14]);
 	profile[10].insertAdjacentHTML('beforeend' ,kan_profile[index_n][8]);
 	profile[11].insertAdjacentHTML('beforeend' ,kan_profile[index_n][9]);
-	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" data-echo="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
+	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" src="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
 
 	let deletetext1= document.getElementById('kan_illust');
 	for(var i=0; i<4; i++){
@@ -134,10 +134,10 @@ function kijicreate(){
 		    '</a>'
             	);
             	for(var li=0; li<Object.keys(skinlist[status_deta.正規名]['テーマ']).length; li++){
-                	kari += ('<option value="'+(li+1)+'">'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'</option>');
+                	kari += ('<option value="'+(li+1)+'">'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'</option>');
                 	imgdeta += (
-				'<a rel="noopener" class="spotlight" href="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'.jpg"" title="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'" target="_blank">'+
-		 		'<img src="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'.jpg" alt="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])+'">'+
+				'<a rel="noopener" class="spotlight" href="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'.jpg"" title="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'" target="_blank">'+
+		 		'<img src="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'.jpg" alt="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'">'+
 		    		'</a>'
                 	)
             	}
