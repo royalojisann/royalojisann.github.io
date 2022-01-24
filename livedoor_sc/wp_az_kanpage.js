@@ -35,6 +35,29 @@ if(document.getElementById("contentdiv")!=null){
 kijicreate();
 })
 
+var teamslist = {
+        ユニオン:{名前:'ユニオン',フォルダ:'Eagle_Union'},
+        ロイヤル:{名前:'ロイヤル',フォルダ:'Royal_Navy'},
+        重桜:{名前:'重桜',フォルダ:'Sakura_Empire'},
+        鉄血:{名前:'鉄血',フォルダ:'Iron_Blood'},
+        アイリス:{名前:'アイリス',フォルダ:'Iris_Libre'},
+        ヴィシア:{名前:'ヴィシア',フォルダ:'Vichya_Dominion'},
+        サディア:{名前:'サディア',フォルダ:'Sardegna_Empire'},
+        東煌:{名前:'東煌',フォルダ:'Dragon_Empery'},
+        北連:{名前:'北連',フォルダ:'Northern_Parliament'},
+        META:{名前:'META',フォルダ:'Universal'},
+        ネプテューヌ:{名前:'ネプテューヌ',フォルダ:'Collab_Nations'},
+        うたわれるもの:{名前:'うたわれるもの',フォルダ:'Collab_Nations'},
+        KizunaAI:{名前:'KizunaAI',フォルダ:'Collab_Nations'},
+        ホロライブ:{名前:'ホロライブ',フォルダ:'Collab_Nations'},
+        DOAXVV:{名前:'DOAXVV',フォルダ:'Collab_Nations'},
+        アイドルマスター:{名前:'アイドルマスター',フォルダ:'Collab_Nations'},
+        SSSS:{名前:'SSSS',フォルダ:'Collab_Nations'},
+        //:{名前:'',フォルダ:'Collab_Nations'},
+        //:{名前:'',フォルダ:'Collab_Nations'},
+        //BILIBILI:{名前:'BILIBILI',フォルダ:'Collab_Nations'},
+        その他:{名前:'その他',フォルダ:'Collab_Nations'}
+    }
 index_n = 0;
 function kijicreate(){
     var taget = document.getElementById("target_name").textContent;
@@ -91,6 +114,7 @@ function kijicreate(){
 	接頭:kan_profile[index_n][22],
 	リンク:kan_profile[index_n][23],
         図鑑:kan_profile[index_n][24],
+	wpurl:kan_profile[i][25],
 	kanname:kan_list[index_n][2]
     }
 	if(status_deta.記事.indexOf('改有り')!= -1){
@@ -118,7 +142,9 @@ function kijicreate(){
 	profile[9].insertAdjacentHTML('beforeend' ,kan_profile[index_n][14]);
 	profile[10].insertAdjacentHTML('beforeend' ,kan_profile[index_n][8]);
 	profile[11].insertAdjacentHTML('beforeend' ,kan_profile[index_n][9]);
-	profile[12].insertAdjacentHTML('beforeend' ,'<img style="max-height: 100px;" src="'+status_deta.live[1]+'" class="lozad" alt="'+status_deta.名前+'">');
+	profile[12].insertAdjacentHTML('beforeend' ,
+	'<img style="max-height: 100px;" src="'+("https://pasokau.com/wp-content/uploads/azpicture/"+teamslist[status_deta.陣営].フォルダ+"/"+status_deta.リンク+"/"+status_deta.リンク+"002.png")+'" class="lozad" alt="'+status_deta.正規名+'">'
+	);
 
 	let deletetext1= document.getElementById('kan_illust');
 	for(var i=0; i<4; i++){
@@ -129,15 +155,15 @@ function kijicreate(){
                 	'<option selected="selected" value="0">'+status_deta.正規名+'</option>'
                 );
             	var imgdeta = (
-		    '<a rel="noopener" class="spotlight" href="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg"" title="'+status_deta.正規名+'" target="_blank">'+
-		    '<img src="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg" alt="'+status_deta.正規名+'">'+
+		    '<a rel="noopener" class="spotlight" href="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg"" title="'+status_deta.正規名+'" target="_blank">'+
+		    '<img src="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg" alt="'+status_deta.正規名+'">'+
 		    '</a>'
             	);
             	for(var li=0; li<Object.keys(skinlist[status_deta.正規名]['テーマ']).length; li++){
                 	kari += ('<option value="'+(li+1)+'">'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'</option>');
                 	imgdeta += (
-				'<a rel="noopener" class="spotlight" href="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'.jpg"" title="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'" target="_blank">'+
-		 		'<img src="'+'C:/Users/soujininn/Documents/ハテナ用/skin/'+kingdeta(status_deta.陣営)+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'.jpg" alt="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'">'+
+				'<a rel="noopener" class="spotlight" href="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'.jpg"" title="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'" target="_blank">'+
+		 		'<img src="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'.jpg" alt="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'">'+
 		    		'</a>'
                 	)
             	}
@@ -378,50 +404,6 @@ function sknchangefanc(th,tag){
         area[i].style.display = 'none';
     }
     area[val].style.display = 'block';
-}
-
-var kingdeta = function(jin){
-    switch(jin){
-        case "ユニオン":
-            return "Eagle_Union";
-        break;
-        case "ロイヤル":
-            return "Royal_Navy";
-        break;
-        case "重桜":
-            return "Sakura_Empire";
-        break;
-        case "鉄血":
-            return "Iron_Blood";
-        break;
-        case "アイリス":
-            return "Iris_Libre";
-        break;
-        case "ヴィシア":
-            return "Vichya_Dominion";
-        break;
-        case "サディア":
-            return "Sardegna_Empire";
-        break;
-        case "東煌":
-            return "Dragon_Empery";
-        break;
-        case "北連":
-            return "Northern_Parliament";
-        break;
-        case "META":
-            return "Universal";
-        break;
-        case "その他":
-            return "Universal";
-        break;
-        case "BILIBILI":
-            return "Collab_Nations";
-        break;
-        default:
-            return "Collab_Nations";
-        break;
-    }
 }
 
 //selectbox
