@@ -101,6 +101,6 @@ padding: 0;
 #img_new_box{background: #f6f6f6;justify-content: center;}
 #img_new_box a{display:none;}
 #img_new_box a:first-of-type{display:block;}
-#img_new_box a img{display: block;}
+#img_new_box a img{display: block;max-height: 400px;}
 select[name="imgselectbox"]{width: 100%;height: 24px;margin: 0 0 0.5em 0;}
 
