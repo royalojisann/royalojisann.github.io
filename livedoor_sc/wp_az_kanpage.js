@@ -114,7 +114,7 @@ function kijicreate(){
 	接頭:kan_profile[index_n][22],
 	リンク:kan_profile[index_n][23],
         図鑑:kan_profile[index_n][24],
-	wpurl:kan_profile[i][25],
+	wpurl:kan_profile[index_n][25],
 	kanname:kan_list[index_n][2]
     }
 	if(status_deta.記事.indexOf('改有り')!= -1){
