@@ -302,18 +302,18 @@
         var dammset = {damm0:[],damm1:[],damm2:[]};
         var texta = "",textb = "",textc = "";
         if(box.macthng.length){
-            aaa="",twi="",icount=0;
+            var link="",twidata="",icount=0,urldata;
             for(var i=0;i<box.macthng.length;i++){
                 dammset.damm0.push(box.macthng[i].正式名称);
-                url = ("https://pasokau.com/"+box.macthng[i].wpurl);
-                aaa += ('☆<a href="'+url+'" target="_blank" >'+dammset.damm0[i]+'</a><br>');
+                urldata = ("https://pasokau.com/"+box.macthng[i].wpurl);
+                link += ('☆<a href="'+urldata+'" target="_blank" >'+dammset.damm0[i]+'</a><br>');
                 if(icount!=2){
-                    twi += ('☆'+dammset.damm0[i]+'\n');
+                    twidata += ('☆'+dammset.damm0[i]+'\n');
                     icount++;
                 }
             }
-            texta = '進水日「'+moon+'月'+sun+'日」の艦船は<br>'+aaa+'…です！';
-            tweetset.text1 = '【#アズレン進水日】\n「'+moon+'月'+sun+'日」の艦船を探しました！\n'+twi;
+            texta = '進水日「'+moon+'月'+sun+'日」の艦船は<br>'+link+'…です！';
+            tweetset.text1 = '【#アズレン進水日】\n「'+moon+'月'+sun+'日」の艦船を探しました！\n'+twidata;
         }else{
             texta = '進水日「'+moon+'月'+sun+'日」の艦船は見つかりませんでした…';
             tweetset.text1 = '【#アズレン進水日】\n「'+moon+'月'+sun+'日」の艦船は見つかりませんでした…\n';
@@ -323,16 +323,16 @@
             box.minus.reverse();
             for(var i=0;i<box.minus.length;i++){
                 dammset.damm1.push(box.minus[i].正式名称+'('+box.minus[i].進水日まとめ[0]+')');
-                url = ("https://pasokau.com/"+box.minus[i].wpurl);
-                textb += ('☆<a href="'+url+'" target="_blank" >'+dammset.damm1[i]+'</a><br>');
+                urldata = ("https://pasokau.com/"+box.minus[i].wpurl);
+                textb += ('☆<a href="'+urldata+'" target="_blank" >'+dammset.damm1[i]+'</a><br>');
             }
         }
 
         if(box.purasu.length){
             for(var i=0;i<box.purasu.length;i++){
                 dammset.damm2.push(box.purasu[i].正式名称+'('+box.purasu[i].進水日まとめ[0]+')');
-                url = ("https://pasokau.com/"+box.purasu[i].wpurl);
-                textc +=  ('☆<a href="'+url+'" target="_blank" >'+dammset.damm2[i]+'</a><br>');
+                urldata = ("https://pasokau.com/"+box.purasu[i].wpurl);
+                textc +=  ('☆<a href="'+urldata+'" target="_blank" >'+dammset.damm2[i]+'</a><br>');
             }
         }
 
