@@ -70,7 +70,7 @@
         var tems = setid[x][1],tenpure = [teamslist,typelist,realitylist],styledeta = ['140px','80px','100px'],textdeta = ['陣営','艦種','レア'];
         for(var y = 0; y<tenpure.length;y++){
             for(var i=0; i<Object.keys(tenpure[y]).length; i++){
-                tems += (i==0) ? ('<select style="width:'+styledeta[y]+';padding: 6px 0px 6px 2px;"'+setid[x][2]+'><option value="全て" selected="selected">'+textdeta[y]+'</option>') : '';
+                tems += (i==0) ? ('<select style="width:'+styledeta[y]+',height: 46px;"'+setid[x][2]+'><option value="全て" selected="selected">'+textdeta[y]+'</option>') : '';
                 tems += '<option value="'+Object.keys(tenpure[y])[i]+'">'+Object.keys(tenpure[y])[i]+'</option>';
                 tems += (i==Object.keys(tenpure[y]).length-1) ? '</select> ' : '';
             }
