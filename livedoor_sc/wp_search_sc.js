@@ -195,7 +195,7 @@
                 adeta = '<img class="kanpic '+kensaku_list[kan]['修正レア']+'" src="'+("https://pasokau.com/wp-content/uploads/face/"+kensaku_list[kan]['正式名称']+".jpg")+'" alt="'+kensaku_list[kan]['正式名称']+'"/><a href="'+urldeta+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/透過.png">'+kensaku_list[kan]['正式名称']+'</a>';
                 kansen_kakunouko+=('<div class="character_box" data-display="inline_block" data-teams="'+kensaku_list[kan]['陣営']+'" data-type="'+kensaku_list[kan]['艦種']+'" data-reality="'+kensaku_list[kan]['修正レア']+'">'+adeta+'</div>');
             }
-            document.getElementById("searchbox").insertAdjacentHTML("beforeend",'<div id="kan_list_div">'+kansen_kakunouko+'</div>');
+            document.getElementById("searchbox").insertAdjacentHTML("beforeend",'<div id="kan_list_div" onmousedown="return false;" onselectstart="return false" oncontextmenu="return false;">'+kansen_kakunouko+'</div>');
         }
 
         //進水日
@@ -222,7 +222,7 @@
                 var utuwa = "";
                 for(var sun = 0; sun<BirthdayList[Object.keys(BirthdayList)[d]].length; sun++){
                     if(sun == 0){
-                        utuwa = '<table class="table_sinsui_box" border="0" cellpadding="0"><tbody>';
+                        utuwa = '<table class="table_sinsui_box" border="0" cellpadding="0" onmousedown="return false;" onselectstart="return false" oncontextmenu="return false;"><tbody>';
                     }
                     url = ("https://pasokau.com/"+BirthdayList[Object.keys(BirthdayList)[d]][sun].wpurl);
                     utuwa += (
@@ -250,7 +250,7 @@
                 adeta = '<img class="kanpic '+zepan[kan]['修正レア']+'" src="'+("https://pasokau.com/wp-content/uploads/face/"+zepan[kan].正式名称+".jpg")+'" alt="'+zepan[kan]['正式名称']+'"/><a href="'+urldeta+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/透過.png">'+zepan[kan]['正式名称']+'</a>';
                 kansen_kakunouko+=('<div class="character_box" data-display="inline_block" data-teams="'+zepan[kan]['陣営']+'" data-type="'+zepan[kan]['艦種']+'" data-reality="'+zepan[kan]['修正レア']+'">'+adeta+'</div>');
             }
-            document.getElementById("nostock").insertAdjacentHTML("beforeend",'<div id="nostock_div">'+kansen_kakunouko+'</div>');
+            document.getElementById("nostock").insertAdjacentHTML("beforeend",'<div id="nostock_div" onmousedown="return false;" onselectstart="return false" oncontextmenu="return false;">'+kansen_kakunouko+'</div>');
         }
     });
 
