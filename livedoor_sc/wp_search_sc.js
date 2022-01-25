@@ -267,6 +267,7 @@
         }
     }
 
+
     //進水日search
     var tweetset = {text1:'',text2:'',text3:''};
     function macthbirthday(){
@@ -300,22 +301,22 @@
         }
 
         var dammset = {damm0:[],damm1:[],damm2:[]};
-        var texta = "",textb = "",textc = "";
+        var textdataA = "",textdataB = "",textdataC = "";
         if(box.macthng.length){
-            var link="",twidata="",icount=0,urldata;
+            var linkdata="",twidata="",icount=0;
             for(var i=0;i<box.macthng.length;i++){
                 dammset.damm0.push(box.macthng[i].正式名称);
-                urldata = ("https://pasokau.com/"+box.macthng[i].wpurl);
-                link += ('☆<a href="'+urldata+'" target="_blank" >'+dammset.damm0[i]+'</a><br>');
+                var url = ("https://pasokau.com/"+box.macthng[i].wpurl);
+                linkdata += ('☆<a href="'+url+'" target="_blank" >'+dammset.damm0[i]+'</a><br>');
                 if(icount!=2){
                     twidata += ('☆'+dammset.damm0[i]+'\n');
                     icount++;
                 }
             }
-            texta = '進水日「'+moon+'月'+sun+'日」の艦船は<br>'+link+'…です！';
+            textdataA = '進水日「'+moon+'月'+sun+'日」の艦船は<br>'+linkdata+'…です！';
             tweetset.text1 = '【#アズレン進水日】\n「'+moon+'月'+sun+'日」の艦船を探しました！\n'+twidata;
         }else{
-            texta = '進水日「'+moon+'月'+sun+'日」の艦船は見つかりませんでした…';
+            textdataA = '進水日「'+moon+'月'+sun+'日」の艦船は見つかりませんでした…';
             tweetset.text1 = '【#アズレン進水日】\n「'+moon+'月'+sun+'日」の艦船は見つかりませんでした…\n';
         }
 
@@ -323,28 +324,28 @@
             box.minus.reverse();
             for(var i=0;i<box.minus.length;i++){
                 dammset.damm1.push(box.minus[i].正式名称+'('+box.minus[i].進水日まとめ[0]+')');
-                urldata = ("https://pasokau.com/"+box.minus[i].wpurl);
-                textb += ('☆<a href="'+urldata+'" target="_blank" >'+dammset.damm1[i]+'</a><br>');
+                var url = ("https://pasokau.com/"+box.minus[i].wpurl);
+                textdataB += ('☆<a href="'+url+'" target="_blank" >'+dammset.damm1[i]+'</a><br>');
             }
         }
 
         if(box.purasu.length){
             for(var i=0;i<box.purasu.length;i++){
                 dammset.damm2.push(box.purasu[i].正式名称+'('+box.purasu[i].進水日まとめ[0]+')');
-                urldata = ("https://pasokau.com/"+box.purasu[i].wpurl);
-                textc +=  ('☆<a href="'+urldata+'" target="_blank" >'+dammset.damm2[i]+'</a><br>');
+                var url = ("https://pasokau.com/"+box.purasu[i].wpurl);
+                textdataC +=  ('☆<a href="'+url+'" target="_blank" >'+dammset.damm2[i]+'</a><br>');
             }
         }
 
         document.getElementById("match_birthday").textContent ="";
-        document.getElementById("match_birthday").insertAdjacentHTML('beforeend',texta)
+        document.getElementById("match_birthday").insertAdjacentHTML('beforeend',textdataA)
         document.getElementById("no_matching").textContent ="";
         document.getElementById("no_matching").insertAdjacentHTML('beforeend',
-        '近いところだと、<br>'+textb+textc+'…などがいます！<br>'
+        '近いところだと、<br>'+textdataB+textdataC+'…などがいます！<br>'
         )
         console.log(dammset);
         console.log(box);
-        console.log(texta,textb,textc);
+        console.log(textdataA,textdataB,textdataC);
 
         // twttrが使えるようになったらシェアボタンを作る。
         document.getElementById("tweet1").innerHTML = '';
