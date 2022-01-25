@@ -299,8 +299,8 @@
             }
         }
 
-        dammset = {damm0:[],damm1:[],damm2:[]};
-        texta = "",textb = "",textc = "";
+        var dammset = {damm0:[],damm1:[],damm2:[]};
+        var texta = "",textb = "",textc = "";
         if(box.macthng.length){
             aaa="",twi="",icount=0;
             for(var i=0;i<box.macthng.length;i++){
