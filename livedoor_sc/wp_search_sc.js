@@ -342,19 +342,7 @@
         document.getElementById("no_matching").insertAdjacentHTML('beforeend',
         '近いところだと、<br>'+textb+textc+'…などがいます！<br>'
         )
-        twion();
-    }
 
-    // Twitterの初期化
-    var shareUrl = "https://pasokau.com/kan_sinnsuibi_deta";
-    var js, fjs = document.getElementsByTagName('script')[0];
-    if (!document.getElementById('twitter-wjs')) {
-     js = document.createElement('script');
-     js.id = 'twitter-wjs';
-     js.src = 'https://platform.twitter.com/widgets.js';
-     fjs.parentNode.insertBefore(js, fjs);
-    }
-    function twion(){
         // twttrが使えるようになったらシェアボタンを作る。
         document.getElementById("tweet1").innerHTML = '';
         twttr.widgets.createShareButton(
@@ -366,3 +354,14 @@
                 hashtags: "",
             });
     }
+
+    // Twitterの初期化
+    var shareUrl = "https://pasokau.com/kan_sinnsuibi_deta";
+    var js, fjs = document.getElementsByTagName('script')[0];
+    if (!document.getElementById('twitter-wjs')) {
+     js = document.createElement('script');
+     js.id = 'twitter-wjs';
+     js.src = 'https://platform.twitter.com/widgets.js';
+     fjs.parentNode.insertBefore(js, fjs);
+    }
+
