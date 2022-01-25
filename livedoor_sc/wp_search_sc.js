@@ -342,7 +342,7 @@
         document.getElementById("no_matching").insertAdjacentHTML('beforeend',
         '近いところだと、<br>'+textb+textc+'…などがいます！<br>'
         )
-        
+        console.log(box);
         console.log(texta,textb,textc);
 
         // twttrが使えるようになったらシェアボタンを作る。
