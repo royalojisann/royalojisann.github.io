@@ -308,7 +308,7 @@ function macthbirthday(){
         aaa="",twi="",icount=0;
         for(var i=0;i<box.macthng.length;i++){
             dammset.damm0.push(box.macthng[i].正式名称);
-            url = ("https://pasokau.com/"+box.macthng[i].接頭辞+'_'+box.macthng[i].リンク);
+            url = ("https://pasokau.com/"+box.macthng[i].wpurl);
             aaa += ('☆<a href="'+url+'" target="_blank" >'+dammset.damm0[i]+'</a><br>');
             if(icount!=2){
                 twi += ('☆'+dammset.damm0[i]+'\n');
@@ -326,7 +326,7 @@ function macthbirthday(){
         box.minus.reverse();
         for(var i=0;i<box.minus.length;i++){
             dammset.damm1.push(box.minus[i].正式名称+'('+box.minus[i].進水日まとめ[0]+')');
-            url = ("https://pasokau.com/"+box.minus[i].接頭辞+'_'+box.minus[i].リンク);
+            url = ("https://pasokau.com/"+box.minus[i].wpurl);
             textb += ('☆<a href="'+url+'" target="_blank" >'+dammset.damm1[i]+'</a><br>');
         }
     }
@@ -334,7 +334,7 @@ function macthbirthday(){
     if(box.purasu.length){
         for(var i=0;i<box.purasu.length;i++){
             dammset.damm2.push(box.purasu[i].正式名称+'('+box.purasu[i].進水日まとめ[0]+')');
-            url = ("https://pasokau.com/"+box.purasu[i].接頭辞+'_'+box.purasu[i].リンク);
+            url = ("https://pasokau.com/"+box.purasu[i].wpurl);
             textc +=  ('☆<a href="'+url+'" target="_blank" >'+dammset.damm2[i]+'</a><br>');
         }
     }
