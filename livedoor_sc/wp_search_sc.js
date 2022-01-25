@@ -203,8 +203,8 @@
             document.getElementById("top_box").insertAdjacentHTML("afterbegin",
             '<p>・<b>月日指定で探す</b>（コラボ除く）<br />'+
             '<input max="12" min="1" value="1" id="moon" type="number" style="width:80px;height:46px;"> 月 <input max="31" min="1" value="1" id="sun" type="number" style="width:80px;height:46px;"> 日 <button  onclick="macthbirthday()" style="width:80px;height:46px;">探す！</button></p>'+
-            '<p>絞り込み検索</p>'+
             '<p id="match_birthday"></p><div id="tweet1"></div><p id="no_matching"></p>'+
+            '<p>絞り込み検索</p>'+
             obj_menue(1));
             var moonsun = new Date(),getmoon = moonsun.getMonth() + 1,getsun = moonsun.getDate();
                 document.getElementById("moon").value = getmoon;
