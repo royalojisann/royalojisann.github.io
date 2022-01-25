@@ -181,21 +181,22 @@
             }
         }
 
+        result = Object.keys(kensaku_kansen['通常']).map(function(key) {
+            return kensaku_kansen['通常'][key];}).sort(function(a, b) {
+                return (a['番号']*1 < b['番号']*1) ? -1 : 1;  
+        });
+        kensaku_list = Object.keys(kensaku_kansen['新規']).map(function(key) {return kensaku_kansen['新規'][key];}).concat(result,Object.keys(kensaku_kansen['計画艦']).map(function(key) {return kensaku_kansen['計画艦'][key];}),Object.keys(kensaku_kansen['META']).map(function(key) {return kensaku_kansen['META'][key];}),Object.keys(kensaku_kansen['コラボ']).map(function(key) {return kensaku_kansen['コラボ'][key];}));
+            
         //全キャラ
         if(document.getElementById("searchbox")){
             document.getElementById("searchbox").insertAdjacentHTML("afterbegin",obj_menue(0));
-            result = Object.keys(kensaku_kansen['通常']).map(function(key) {
-                return kensaku_kansen['通常'][key];}).sort(function(a, b) {
-                    return (a['番号']*1 < b['番号']*1) ? -1 : 1;  
-            });
-            kensaku_list = Object.keys(kensaku_kansen['新規']).map(function(key) {return kensaku_kansen['新規'][key];}).concat(result,Object.keys(kensaku_kansen['計画艦']).map(function(key) {return kensaku_kansen['計画艦'][key];}),Object.keys(kensaku_kansen['META']).map(function(key) {return kensaku_kansen['META'][key];}),Object.keys(kensaku_kansen['コラボ']).map(function(key) {return kensaku_kansen['コラボ'][key];}));
             kansen_kakunouko = "";
             for(var kan=0; kan<kensaku_list.length; kan++){
                 urldeta = "https://pasokau.com/"+kensaku_list[kan].wpurl;
                 adeta = '<img class="kanpic '+kensaku_list[kan]['修正レア']+'" src="'+("https://pasokau.com/wp-content/uploads/face/"+kensaku_list[kan]['正式名称']+".jpg")+'" alt="'+kensaku_list[kan]['正式名称']+'"/><a href="'+urldeta+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/透過.png">'+kensaku_list[kan]['正式名称']+'</a>';
                 kansen_kakunouko+=('<div class="character_box" data-display="inline_block" data-teams="'+kensaku_list[kan]['陣営']+'" data-type="'+kensaku_list[kan]['艦種']+'" data-reality="'+kensaku_list[kan]['修正レア']+'">'+adeta+'</div>');
             }
-            document.getElementById("searchbox").insertAdjacentHTML("beforeend",'<div id="kan_list_div" onmousedown="return false;" onselectstart="return false" oncontextmenu="return false;">'+kansen_kakunouko+'</div>');
+            document.getElementById("searchbox").insertAdjacentHTML("beforeend",'<div id="kan_list_div">'+kansen_kakunouko+'</div>');
         }
 
         //進水日
@@ -269,7 +270,7 @@
 
 
 
-var　box = {macthng:[],purasu:[],minus:[]};
+var box = {macthng:[],purasu:[],minus:[]};
 var tweetset = {text1:'',text2:'',text3:''};
 function macthbirthday(){
     var tosi = [0,31,29,31,30,31,30,31,31,30,31,30,31];
