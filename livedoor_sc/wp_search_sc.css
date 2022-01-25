@@ -1,0 +1,81 @@
+#kan_list_div,#sinsuisearch,#searchnostock {
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    background: azure;
+    padding: 8px 0;
+}
+
+.character_box{
+    width: 62px;
+    height: 122px;
+    overflow: hidden;
+    position: relative;
+    margin: 0px 2px;
+}
+
+.character_box .kanpic {
+    width: 62px!important;
+    height: 62px!important;
+    border: 2px solid;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.character_box a {
+    width: 62px;
+    height: 122px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.character_box a img {
+    width: 62px!important;
+    height: 62px!important;
+    text-decoration: none!important;
+}
+
+.kanpic.N{background: #cfcfcf !important;border-color:  #cfcfcf !important;}
+.kanpic.R{background: #aee6ff !important;border-color: #aee6ff !important;}
+.kanpic.SR{background: #ff9fff !important;border-color: #ff9fff !important;}
+.kanpic.SSR{background: #ffec42 !important;border-color: #ffec42 !important;}
+.kanpic.UR{background: linear-gradient(135deg,#6c6,#6ff,#c9f,#c6c) !important;border-image:linear-gradient(135deg,#6c6,#6ff,#c9f,#c6c) !important;}
+.kanpic.PR{background: #ffd75d !important;border-color: #ffd75d !important;}
+.kanpic.DR{background: linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9) !important;border-image:linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9) !important;}
+.kanpic.META{background: linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;color: white;border-image:linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;}
+
+
+.character_box[data-display="inline_block"],.sinsui_chara[data-display="inline_block"]{display: inline-block;}
+.character_box[data-display="block"],.sinsui_chara[data-display="block"]{display: block;}
+.character_box[data-display="none"],.sinsui_chara[data-display="none"]{display: none;}
+
+.table_sinsui_box{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table_sinsui_box tr{
+    margin: 4px 0px 0px 4px;
+}
+.table_sinsui_box td{
+    vertical-align: middle;
+    width: 256px;
+    border:2px solid #00BCD4;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.sinsui_chara .character_box,.sinsui_chara .character_box img,.sinsui_chara .character_box a{
+    width: 76px!important;
+    height: 76px!important;
+}
+.table_sinsui_box td:nth-child(odd){
+    border: none;
+}
+.table_sinsui_box td:nth-child(even){
+    font-size: 16px;
+    line-height: 22px;
+} 
