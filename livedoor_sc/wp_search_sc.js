@@ -132,8 +132,7 @@
                 接頭辞:kan_profile[i][22],
                 リンク:kan_profile[i][23],
                 番号:kan_profile[i][24],
-                wpurl:kan_profile[i][25],
-                進水日まとめ:kan_profile[i][7].match(/(\d+)月(\d+)日/),//[0]=月日、[1]=月、[2]=日
+                wpurl:kan_profile[i][25]
             };
 
             if(kan_data[kan_list[i][2]].記事.indexOf('改有り')!= -1){
@@ -163,6 +162,7 @@
                 BirthdayList['colabo'].push(kan_data[kan_list[i][2]]);
             }else{
                 if(kan_data[kan_list[i][2]].進水日.indexOf('月') != -1){
+                    kan_data[kan_list[i][2]].進水日まとめ = kan_profile[i][7].match(/(\d+)月(\d+)日/),//[0]=月日、[1]=月、[2]=日
                     BirthdayList[Object.keys(BirthdayList)[kan_data[kan_list[i][2]].進水日まとめ[1]]].push(kan_data[kan_list[i][2]]);
                 }else{
                     BirthdayList['prkansenn'].push(kan_data[kan_list[i][2]]);
@@ -268,12 +268,9 @@
         }
     }
 
-
-
-var box = {macthng:[],purasu:[],minus:[]};
-var tweetset = {text1:'',text2:'',text3:''};
-function macthbirthday(){
+    var box = {macthng:[],purasu:[],minus:[]},tweetset = {text1:'',text2:'',text3:''};
     var tosi = [0,31,29,31,30,31,30,31,31,30,31,30,31];
+function macthbirthday(){
     var moon = document.getElementById("moon").value*1,sun = document.getElementById("sun").value*1;
     box = {macthng:[],purasu:[],minus:[]};
     for(var p=0; p<BirthdayList[Object.keys(BirthdayList)[moon]].length;p++){
@@ -282,8 +279,7 @@ function macthbirthday(){
         }
     }
 
-    var purasu = {月:moon,日:sun};
-    var minus = {月:moon,日:sun};
+    var purasu = {月:moon,日:sun},minus = {月:moon,日:sun};
     for(var i=1;i<5;i++){
         purasu.月 = purasu.日+i > tosi[purasu.月] ? (purasu.月+1 == 13) ? 1 : purasu.月+1 : purasu.月;
         purasu.日 = purasu.日+i > tosi[purasu.月] ? 1 : purasu.日+1;
@@ -303,8 +299,7 @@ function macthbirthday(){
         }
     }
 
-    dammset = {damm0:[],damm1:[],damm2:[]};
-    texta = "",textb = "",textc = "";
+    var dammset = {damm0:[],damm1:[],damm2:[]},texta = "",textb = "",textc = "";
     if(box.macthng.length){
         aaa="",twi="",icount=0;
         for(var i=0;i<box.macthng.length;i++){
