@@ -114,8 +114,7 @@ function kijicreate(){
 	接頭:kan_profile[index_n][22],
 	リンク:kan_profile[index_n][23],
         図鑑:kan_profile[index_n][24],
-	wpurl:kan_profile[index_n][25],
-	kanname:kan_list[index_n][2]
+	wpurl:kan_profile[index_n][25]
     }
 	if(status_deta.記事.indexOf('改有り')!= -1){
             rarecolor = status_deta.レア.substring(status_deta.レア.indexOf('→')+1);
@@ -223,9 +222,9 @@ function statuskeisann(){
 	switch(status_deta.記事){
         case '暫定':
         case '無し':
-		kannamedeta = status_deta.名前+"(暫定レベル120愛)";
+		kannamedeta = status_deta.正規名+"(暫定レベル120愛)";
             for(var pr=0; pr<pr_kansenn.length;pr++){
-                if(pr_kansenn[pr][2]==status_deta.名前){
+                if(pr_kansenn[pr][2]==status_deta.正規名){
                     status_deta.耐久=(pr_kansenn[pr][3]*1);
                     status_deta.火力=(pr_kansenn[pr][4]*1);
                     status_deta.雷装=(pr_kansenn[pr][5]*1);
@@ -242,7 +241,7 @@ function statuskeisann(){
             }
         break;
         default:
-		kannamedeta = status_deta.名前;
+		kannamedeta = status_deta.正規名;
             var get_level = document.getElementById("lebel_deta").value*1;
             var get_kizuna = document.getElementById("kizuna").value*1;
             //耐久
