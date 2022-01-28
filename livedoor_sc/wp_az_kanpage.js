@@ -115,6 +115,7 @@ function kijicreate(){
 	リンク:kan_profile[index_n][23],
         図鑑:kan_profile[index_n][24],
 	wpurl:kan_profile[index_n][25]
+	    
     }
 	if(status_deta.記事.indexOf('改有り')!= -1){
             rarecolor = status_deta.レア.substring(status_deta.レア.indexOf('→')+1);
@@ -218,7 +219,7 @@ function kijicreate(){
 
 
 function statuskeisann(){
-	
+	kannamedeta = "";
 	switch(status_deta.記事){
         case '暫定':
         case '無し':
@@ -367,7 +368,7 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
             document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',								   
 	    '<div style="font-weight: bold;" class="maintagu_sute" id="target_status">\n'+
             '<div class="SSR" style="display: flex;"><img alt="'+status_deta.正規名+'" src="https://pasokau.com/wp-content/uploads/face/'+status_deta.正規名+'.jpg">'+
-            '<span style="font-size: 18px;margin: auto;">'+status_deta.正規名+'</span></div>\n'+
+            '<span style="font-size: 18px;margin: auto;">'+kannamedeta+'</span></div>\n'+
             '<table class="status_deta" style="border-top: 1px solid #2196F3;border-bottom: 1px solid #2196F3;">\n'+
             '<tbody>\n'+
             '<tr><th>耐久</th><td>'+status_deta.耐久+'</td><th>装甲</th><td>'+status_deta.装甲+'</td><th>装填</th><td>'+status_deta.装填+'</td></tr>\n'+
