@@ -362,12 +362,12 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
                 }
                 return topa;
         }
-            
+            //azpicture/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.リンク+'003.png
 	document.getElementsByClassName("maintagu_sute")[0].textContent = "";
             document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',
             '<table class="status_deta" style="border-top: 1px solid #2196F3;border-bottom: 1px solid #2196F3;">\n'+
             '<thead>\n'+
-            '<tr style="border-bottom: 1px solid #2196F3;"><td class="picface '+status_deta.修正レア+'"><img src="https://pasokau.com/wp-content/uploads/azpicture/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.リンク+'003.png"></td><th class="'+status_deta.修正レア+'" colspan="5">'+status_deta.正規名+'</th></tr>\n'+
+            '<tr style="border-bottom: 1px solid #2196F3;"><td class="picface '+status_deta.修正レア+'"><img src="https://pasokau.com/wp-content/uploads/face/'+status_deta.正規名+'.png"></td><th class="'+status_deta.修正レア+'" colspan="5">'+status_deta.正規名+'</th></tr>\n'+
             '</thead>\n'+
             '<tbody>\n'+
             '<tr><th>耐久</th><td>'+status_deta.耐久+'</td><th>装甲</th><td>'+status_deta.装甲+'</td><th>装填</th><td>'+status_deta.装填+'</td></tr>\n'+
