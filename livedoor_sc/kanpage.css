@@ -63,7 +63,7 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 #target_status th{background:#eff;}
 
 .skllcss td,.skllcss th{padding:4px 0;}
-.skllcss{border-bottom: 1px solid #2196F3;margin: 0.5em 0;}
+.skllcss{border-bottom: 1px solid #2196F3;margin: 0 0 0.5em 0;}
 .skllcss table{width:100%;background: #EEE;margin:0;border-collapse: collapse;}
 .skllcss table td {border: 1px solid #2196F3;}
 .az_color{color:#F44336;}
