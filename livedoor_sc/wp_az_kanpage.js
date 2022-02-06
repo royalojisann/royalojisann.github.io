@@ -150,8 +150,8 @@ function kijicreate(){
 		var nextS = deletetext1.nextElementSibling;
 	if(nextS.textContent == 'ファンアート'){
 		var kari = (
-                	'<select class="kan_'+status_deta.正規名+'" onchange="sknchangefanc(this,\'a\')">'+
-                	'<option selected="selected" value="0">'+status_deta.正規名+'</option>'
+                	'<select class="kan_'+status_deta.正式名称+'" onchange="sknchangefanc(this,\'a\')">'+
+                	'<option selected="selected" value="0">'+status_deta.正式名称+'</option>'
                 );
             	var imgdeta = (
 		    '<a rel="noopener" class="spotlight" href="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg"" title="'+status_deta.正規名+'" target="_blank">'+
