@@ -127,26 +127,24 @@ function kijicreate(){
         status_deta.修正レア = rarecolor;
         status_deta.正式名称 = kan_profile[index_n][2].slice(-1) === '改' ? kan_profile[index_n][2].substring(0,kan_profile[index_n][2].indexOf('改')):kan_profile[index_n][2];
 	
-	var profile = document.getElementById("character_profile_table").getElementsByTagName("td");
-	for(var i=1; i<profile.length;i++){
-		profile[i].textContent = "";
+	document.getElementById("character_profile").textContent = '';
+	document.getElementById("character_profile_table").insertAdjacentHTML('beforeend',
+		'<table border="0" style="width: 100%;" id="character_profile_table"><tbody>\n'+
+		'<tr><th style="width:120px;">艦船</th><td>'+status_deta.正規名+'<br>'+status_deta.表記+'</td></tr>\n'+
+		'<tr><th>艦種</th><td>'+status_deta.艦種+'</td></tr>\n'+
+		'<tr><th>陣営</th><td>'+status_deta.陣営+'</td></tr>\n'+
+		'<tr><th>レアリティ</th><td>'+status_deta.レア+'</td></tr>\n'+
+		'<tr><th>入手方法</th><td>'+status_deta.入手+'</td></tr>\n'+
+		'<tr><th>実装日</th><td>'+status_deta.+実装日'</td></tr>\n'+
+		'<tr><th>改造日</th><td>'+status_deta.+改造美'</td></tr>\n'+
+		'<tr><th>起工日</th><td>'+status_deta.+起工日'</td></tr>\n'+
+		'<tr><th>進水日</th><td>'+status_deta.進水日+'</td></tr>\n'+
+		'<tr><th>就役日</th><td>'+status_deta.竣工日+'</td></tr>\n'+
+		'<tr><th>CV・声優</th><td>'+status_deta.声優+'</td></tr>\n'+
+		'<tr><th>イラスト・絵師</th><td>'+status_deta.絵師+'</td></tr>\n'+
+		'</tbody></table>\n'
 	}
-	profile[1].textContent = kan_profile[index_n][1];
-	profile[2].textContent = kan_profile[index_n][0];
-	profile[3].textContent = kan_profile[index_n][3];
-	profile[4].textContent = kan_profile[index_n][4];
-	profile[5].textContent = kan_profile[index_n][5];
-	profile[6].textContent = kan_profile[index_n][6];
-	profile[7].textContent = kan_profile[index_n][13];
-	profile[8].textContent = kan_profile[index_n][7];
-	profile[9].insertAdjacentHTML('beforeend' ,kan_profile[index_n][14]);
-	profile[10].insertAdjacentHTML('beforeend' ,kan_profile[index_n][8]);
-	profile[11].insertAdjacentHTML('beforeend' ,kan_profile[index_n][9]);
-	profile[12].insertAdjacentHTML('beforeend' ,
-	'<img style="max-height: 100px;" src="'+("https://pasokau.com/wp-content/uploads/azpicture/"+teamslist[status_deta.陣営].フォルダ+"/"+status_deta.リンク+"/"+status_deta.リンク+"002.png")+'" alt="'+status_deta.正規名+'">'+
-	'<img style="position: absolute;width: 150px;height: 116px;top: 50%;left: 50%;transform: translate(-50%, -50%);" src="https://pasokau.com/wp-content/uploads/face/透過.png">'
-	);
-
+	
 	let deletetext1= document.getElementById('kan_illust');
 	for(var i=0; i<4; i++){
 		var nextS = deletetext1.nextElementSibling;
@@ -365,7 +363,7 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
         }
             //azpicture/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.リンク+'003.png
 	document.getElementsByClassName("maintagu_sute")[0].textContent = "";
-            document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',								   
+            document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',	
 	    '<div style="font-weight: bold;" class="maintagu_sute" id="target_status">\n'+
             '<div class="SSR" style="display: flex;"><img alt="'+status_deta.正規名+'" src="https://pasokau.com/wp-content/uploads/face/'+status_deta.正規名+'.jpg">'+
             '<span style="font-size: 18px;margin: auto;">'+kannamedeta+'</span></div>\n'+
