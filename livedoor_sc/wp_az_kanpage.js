@@ -143,7 +143,7 @@ function kijicreate(){
 		'<tr><th>CV・声優</th><td>'+status_deta.声優+'</td></tr>\n'+
 		'<tr><th>イラスト・絵師</th><td>'+status_deta.絵師+'</td></tr>\n'+
 		'</tbody></table>\n'
-	}
+		)
 	
 	let deletetext1= document.getElementById('kan_illust');
 	for(var i=0; i<4; i++){
