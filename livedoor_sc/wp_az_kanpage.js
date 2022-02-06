@@ -158,11 +158,11 @@ function kijicreate(){
 		    '<img src="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg" alt="'+status_deta.正規名+'">'+
 		    '</a>'
             	);
-            	for(var li=0; li<Object.keys(skinlist[status_deta.正規名]['テーマ']).length; li++){
-                	kari += ('<option value="'+(li+1)+'">'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'</option>');
+            	for(var li=0; li<Object.keys(skinlist[status_deta.正式名称]['テーマ']).length; li++){
+                	kari += ('<option value="'+(li+1)+'">'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'</option>');
                 	imgdeta += (
-				'<a rel="noopener" class="spotlight" href="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'.jpg"" title="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'" target="_blank">'+
-		 		'<img src="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'.jpg" alt="'+Object.keys(skinlist[status_deta.正規名]['テーマ'])[li]+'">'+
+				'<a rel="noopener" class="spotlight" href="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'.jpg"" title="'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'" target="_blank">'+
+		 		'<img src="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'.jpg" alt="'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'">'+
 		    		'</a>'
                 	)
             	}
