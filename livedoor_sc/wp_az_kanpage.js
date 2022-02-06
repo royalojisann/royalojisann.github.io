@@ -135,9 +135,9 @@ function kijicreate(){
 		'<tr><th>陣営</th><td>'+status_deta.陣営+'</td></tr>\n'+
 		'<tr><th>レアリティ</th><td>'+status_deta.レア+'</td></tr>\n'+
 		'<tr><th>入手方法</th><td>'+status_deta.入手+'</td></tr>\n'+
-		'<tr><th>実装日</th><td>'+status_deta.+実装日'</td></tr>\n'+
-		'<tr><th>改造日</th><td>'+status_deta.+改造美'</td></tr>\n'+
-		'<tr><th>起工日</th><td>'+status_deta.+起工日'</td></tr>\n'+
+		'<tr><th>実装日</th><td>'+status_deta.実装日+'</td></tr>\n'+
+		'<tr><th>改造日</th><td>'+status_deta.改造美+'</td></tr>\n'+
+		'<tr><th>起工日</th><td>'+status_deta.起工日+'</td></tr>\n'+
 		'<tr><th>進水日</th><td>'+status_deta.進水日+'</td></tr>\n'+
 		'<tr><th>就役日</th><td>'+status_deta.竣工日+'</td></tr>\n'+
 		'<tr><th>CV・声優</th><td>'+status_deta.声優+'</td></tr>\n'+
