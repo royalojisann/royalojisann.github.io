@@ -128,7 +128,7 @@ function kijicreate(){
         status_deta.正式名称 = kan_profile[index_n][2].slice(-1) === '改' ? kan_profile[index_n][2].substring(0,kan_profile[index_n][2].indexOf('改')):kan_profile[index_n][2];
 	
 	document.getElementById("character_profile").textContent = '';
-	document.getElementById("character_profile_table").insertAdjacentHTML('beforeend',
+	document.getElementById("character_profile").insertAdjacentHTML('beforeend',
 		'<table border="0" style="width: 100%;" id="character_profile_table"><tbody>\n'+
 		'<tr><th style="width:120px;">艦船</th><td>'+status_deta.正規名+'<br>'+status_deta.表記+'</td></tr>\n'+
 		'<tr><th>艦種</th><td>'+status_deta.艦種+'</td></tr>\n'+
