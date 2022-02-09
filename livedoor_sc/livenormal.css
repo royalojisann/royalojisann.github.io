@@ -1,43 +1,5 @@
 ﻿@charset "UTF-8";
 
-.article-body h2{
-    color: white;
-    background: cornflowerblue;
-    line-height: 1.4;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-}
-
-.article-body h2:before {
-    content: "\◆";
-    color: #ffffff;
-    padding: 0 0.2em 0 0;
-}
-
-.article-body h3 {
-    padding: 4px 0;
-    line-height: 1.4;
-    color: #ffffff;
-    background: #f86868;
-}
-
-.article-body h3:before {
-    content: "\★";
-    color: #ffffff;
-    padding: 0 0.2em 0 0;
-}
-
-.article-body h4 {
-    padding: 4px 0;
-    line-height: 1.4;
-    color: #ffffff;
-    background: #3c5a8e;
-}
-.article-body h4:before {
-    content: "\・";
-    color: #ffffff;
-    padding: 0 0.2em 0 0;
-}
-
 #img_box img{width: auto;max-height: 500px;}
 #img_box input{display:none;}
 #img_box input+img{display:none;}
@@ -52,11 +14,17 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
 
 #link_sinnsuibilist,#link_characterlist{display:none;}
 
-.article-body-inner p {
-    line-height: 1.7;
-}
-
 
 .soubi_template_style tr{
     height:30px;
+}
+
+#img_new_box a:not(:first-of-type){
+display:none;
+}
+#img_new_box02 a:not(:first-of-type){
+display:none;
+}
+#img_new_box03 a:not(:first-of-type){
+display:none;
 }
