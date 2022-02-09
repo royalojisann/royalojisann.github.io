@@ -365,7 +365,7 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
 	document.getElementsByClassName("maintagu_sute")[0].textContent = "";
             document.getElementsByClassName("maintagu_sute")[0].insertAdjacentHTML('beforeend',	
 	    '<div style="font-weight: bold;" class="maintagu_sute" id="target_status">\n'+
-            '<div class="SSR" style="display: flex;"><img alt="'+status_deta.正式名称+'" src="https://pasokau.com/wp-content/uploads/face/'+status_deta.正式名称+'.jpg">'+
+            '<div class="'+status_deta.修正レア+'" style="display: flex;"><img alt="'+status_deta.正式名称+'" src="https://pasokau.com/wp-content/uploads/face/'+status_deta.正式名称+'.jpg">'+
             '<span style="font-size: 18px;margin: auto;">'+kannamedeta+'</span></div>\n'+
             '<table class="status_deta" style="border-top: 1px solid #2196F3;border-bottom: 1px solid #2196F3;">\n'+
             '<tbody>\n'+
