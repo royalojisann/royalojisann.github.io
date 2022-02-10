@@ -49,7 +49,14 @@ padding: 0;
 .META_SR{background: linear-gradient(45deg,#000000,#8B58AD,#C46FB3,#000000,#8250AB,#5C3B7D)!important;color: #FFCCFF;}
 
 #img_new_box{background: #f6f6f6;justify-content: center;}
-#img_new_box a{display:none;}
-#img_new_box a:first-of-type{display:block;}
-#img_new_box a img{display: block;}
+#img_new_box a:not(:first-of-type){
+display:none;
+}
 select[name="imgselectbox"]{width: 100%;height: 24px;margin: 0 0 0.5em 0;}
+
+#img_new_box02 a:not(:first-of-type){
+display:none;
+}
+#img_new_box03 a:not(:first-of-type){
+display:none;
+}
