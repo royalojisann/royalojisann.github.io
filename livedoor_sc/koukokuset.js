@@ -8,7 +8,7 @@
 		 (adsbygoogle = window.adsbygoogle || []).push({});
 	 }
 	 if(document.getElementById("koukoku_bottom")!=null){
-		 document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine);
+		 document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
 		 (adsbygoogle = window.adsbygoogle || []).push({});
 	 }
 	 if(document.getElementById("contentdiv")!=null){
