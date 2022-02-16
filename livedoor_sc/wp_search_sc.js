@@ -60,15 +60,17 @@ var teamslist = {
     }
 
     var realitylist = {
-        N:{名前:'N',背景色:'background:#dbdcdf',ボーダー:'border-color:#dbdcdf'},
-        R:{名前:'R',背景色:'background:#1bb7eb',ボーダー:'border-color:#1bb7eb'},
-        SR:{名前:'SR',背景色:'background:#ae90ef',ボーダー:'border-color:#ae90ef'},
-        SSR:{名前:'SSR',背景色:'background:#f9f593',ボーダー:'border-color:#f9f593'},
-        UR:{名前:'UR',背景色:'background:linear-gradient(135deg,#6c6,#6ff,#c9f,#c6c)',ボーダー:'border-color:linear-gradient(135deg,#6c6,#6ff,#c9f,#c6c)'},
-        PR:{名前:'PR',背景色:'background:#a0522d',ボーダー:'border-color:#a0522d'},
-        DR:{名前:'DR',背景色:'background:linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9)',ボーダー:'border-color:linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9)'},
-        META:{名前:'META',背景色:'background:linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)',ボーダー:'border-color:linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)'},
-        META_SR:{名前:'META_SR',背景色:'background:linear-gradient(45deg,#000000,#8B58AD,#C46FB3,#000000,#8250AB,#5C3B7D)',ボーダー:'border-color:linear-gradient(45deg,#000000,#8B58AD,#C46FB3,#000000,#8250AB,#5C3B7D)'},
+        N:{名前:'N',背景色:'background:#ccc',ボーダー:'border-color:#dbdcdf'},
+        R:{名前:'R',背景色:'background:#9fe8ff',ボーダー:'border-color:#1bb7eb'},
+        SR:{名前:'SR',背景色:'background:#c4adff',ボーダー:'border-color:#ae90ef'},
+        SSR:{名前:'SSR',背景色:'background:#ee9',ボーダー:'border-color:#f9f593'},
+        UR:{名前:'UR',背景色:'background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff)',ボーダー:'border-color:linear-gradient(135deg,#6c6,#6ff,#c9f,#c6c)'},
+        PR:{名前:'PR',背景色:'background:#ee9',ボーダー:'border-color:#f9f593'},
+        DR:{名前:'DR',背景色:'background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff)',ボーダー:'border-color:linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9)'},
+	//PR:{名前:'PR',背景色:'background:#a0522d',ボーダー:'border-color:#a0522d'},
+        //DR:{名前:'DR',背景色:'background:linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9)',ボーダー:'border-color:linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9)'},
+        //META:{名前:'META',背景色:'background:linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)',ボーダー:'border-color:linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)'},
+        //META_SR:{名前:'META_SR',背景色:'background:linear-gradient(45deg,#000000,#8B58AD,#C46FB3,#000000,#8250AB,#5C3B7D)',ボーダー:'border-color:linear-gradient(45deg,#000000,#8B58AD,#C46FB3,#000000,#8250AB,#5C3B7D)'},
     }
 
     var kan_data = new Object();
