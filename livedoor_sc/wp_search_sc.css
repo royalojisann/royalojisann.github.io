@@ -39,15 +39,13 @@
     text-decoration: none!important;
 }
 
-.kanpic.N{background: #cfcfcf !important;border-color:  #cfcfcf !important;}
-.kanpic.R{background: #aee6ff !important;border-color: #aee6ff !important;}
-.kanpic.SR{background: #ff9fff !important;border-color: #ff9fff !important;}
-.kanpic.SSR{background: #ffec42 !important;border-color: #ffec42 !important;}
-.kanpic.UR{background: linear-gradient(135deg,#6c6,#6ff,#c9f,#c6c) !important;border-image:linear-gradient(135deg,#6c6,#6ff,#c9f,#c6c) !important;}
-.kanpic.PR{background: #ffd75d !important;border-color: #ffd75d !important;}
-.kanpic.DR{background: linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9) !important;border-image:linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9) !important;}
-.kanpic.META{background: linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;color: white;border-image:linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;}
-
+.kanpic.N{background:#ccc !important;}
+.kanpic.R{background:#9fe8ff !important;}
+.kanpic.SR{background:#c4adff !important;}
+.kanpic.SSR{background:#ee9 !important;}
+.kanpic.UR{background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
+.kanpic.PR{background:#ee9 !important;}
+.kanpic.DR{background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
 
 .character_box[data-display="inline_block"],.sinsui_chara[data-display="inline_block"]{display: inline-block;}
 .character_box[data-display="block"],.sinsui_chara[data-display="block"]{display: block;}
