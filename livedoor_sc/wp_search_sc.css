@@ -39,13 +39,14 @@
     text-decoration: none!important;
 }
 
-.kanpic.N{background:#ccc !important;}
-.kanpic.R{background:#9fe8ff !important;}
-.kanpic.SR{background:#c4adff !important;}
-.kanpic.SSR{background:#ee9 !important;}
-.kanpic.UR{background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
-.kanpic.PR{background:#ee9 !important;}
-.kanpic.DR{background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
+.kanpic.N{background:#ccc !important;border-color:  #cfcfcf !important;}
+.kanpic.R{background:#9fe8ff !important;border-color: #aee6ff !important;}
+.kanpic.SR{background:#c4adff !important;border-color: #ff9fff !important;}
+.kanpic.SSR{background:#ee9 !important;border-color: #ffec42 !important;}
+.kanpic.UR{background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;border-image:linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
+.kanpic.PR{background:#ee9 !important;border-color: #ffec42 !important;}
+.kanpic.DR{background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;border-image:linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
+
 
 .character_box[data-display="inline_block"],.sinsui_chara[data-display="inline_block"]{display: inline-block;}
 .character_box[data-display="block"],.sinsui_chara[data-display="block"]{display: block;}
