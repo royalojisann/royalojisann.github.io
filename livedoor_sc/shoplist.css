@@ -26,7 +26,7 @@
   border: 2px solid #686868;
   border-radius: 5px;
 }
-.item_card　div:nth-of-type(3){
+.item_card div:nth-of-type(3){
   font-weight: bold;
   margin: auto;
 }
