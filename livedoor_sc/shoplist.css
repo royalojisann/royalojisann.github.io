@@ -13,6 +13,7 @@
   border: 2px solid #686868;
   border-radius: 5px;
   margin: 0.3em 0;
+  box-sizing: border-box;
 }
 .item_card_img{
   display: block;
