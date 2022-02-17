@@ -24,6 +24,10 @@
   border: 2px solid #686868;
   border-radius: 5px;
 }
+item_card　div:nth-child(3){
+  font-weight: bold;
+  margin: auto;
+}
 
 .N{background: #dbdcdf !important;}
 .R{background: #1bb7eb !important;}
