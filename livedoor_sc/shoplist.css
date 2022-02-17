@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  background-image: linear-gradient(to top left,#cccccc,#aaaaaa,#cccccc);
+  padding: 0.5em 0;
 }
 .item_card{
   width: 100px;
