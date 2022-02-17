@@ -21,6 +21,8 @@
 }
 .item_card_img{
   display: block;
+  border: 2px solid #686868;
+  border-radius: 5px;
 }
 
 .N{background: #dbdcdf !important;}
