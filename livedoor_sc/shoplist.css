@@ -1,3 +1,8 @@
+.main_card_box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .item_card{
   width: 100px;
   text-align: center;
@@ -5,10 +10,10 @@
   flex-flow: column;
   font-size: 12px;
   line-height: 18px;
-  border: 2px solid #444;
+  border: 2px solid #686868;
   border-radius: 5px;
+  margin: 0.3em 0;
 }
-
 .item_card_img{
   display: block;
   line-height: 0;
