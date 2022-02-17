@@ -14,10 +14,13 @@
   border-radius: 5px;
   margin: 0.3em 0;
   box-sizing: border-box;
+  background-image: linear-gradient(to top left,#cccccc,rgba(255,255,255,0.75),#cccccc);
+}
+.item_card_imgbox{
+  margin: 4px auto;
 }
 .item_card_img{
   display: block;
-  line-height: 0;
 }
 
 .N{background: #dbdcdf !important;}
