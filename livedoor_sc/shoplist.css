@@ -30,6 +30,11 @@
   font-weight: bold;
   margin: auto;
 }
+.item_card div:nth-of-type(2){
+  width: 80px;
+  margin: auto;
+}
+
 
 .N{background: #dbdcdf !important;}
 .R{background: #1bb7eb !important;}
