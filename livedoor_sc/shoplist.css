@@ -6,6 +6,10 @@
   padding: 0.5em 0;
 }
 
+.rank_card_box{
+    background-image: linear-gradient(to top left,#cccccc,#aaaaaa,#cccccc);
+    padding: 0.5em 0;
+}
 .list_main_box{
     display: flex;
     align-items: center;
