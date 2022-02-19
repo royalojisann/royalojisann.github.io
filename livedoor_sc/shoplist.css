@@ -20,6 +20,7 @@
 }
 .item_card_imgbox{
   margin: 4px auto;
+  position: relative;
 }
 .item_card_img{
   display: block;
