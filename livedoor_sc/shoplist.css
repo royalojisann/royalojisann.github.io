@@ -28,6 +28,7 @@
   border-radius: 5px;
 }
 .item_card_imgbox a{
+  width: 80px;
   position: absolute;
   top: 50%;
   left: 50%;
