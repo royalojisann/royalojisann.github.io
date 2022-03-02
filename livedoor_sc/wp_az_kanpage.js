@@ -131,33 +131,35 @@ function kijicreate(){
 	let deletetext1= document.getElementById('kan_illust');
 	for(var i=0; i<4; i++){
 		var nextS = deletetext1.nextElementSibling;
-		if(nextS.textContent == 'ファンアート' && skinlist[status_deta.正式名称]){
-			var kari = (
-                		'<select class="kan_'+status_deta.正式名称+'" onchange="sknchangefanc(this,\'a\')">'+
-                		'<option selected="selected" value="0">'+status_deta.正式名称+'</option>'
-                	);
-            		var imgdeta = (
-		    		'<a rel="noopener" class="spotlight" href="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg"" title="'+status_deta.正規名+'" target="_blank">'+
-		    		'<img src="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg" alt="'+status_deta.正規名+'">'+
-		    		'</a>'
-            		);
-            		for(var li=0; li<Object.keys(skinlist[status_deta.正式名称]['テーマ']).length; li++){
-                		kari += ('<option value="'+(li+1)+'">'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'</option>');
-                		imgdeta += (
-					'<a rel="noopener" class="spotlight" href="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'.jpg"" title="'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'" target="_blank">'+
-		 			'<img src="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'.jpg" alt="'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'">'+
+		if(nextS.textContent == 'ファンアート'){
+			if(skinlist[status_deta.正式名称]){
+				var kari = (
+                			'<select class="kan_'+status_deta.正式名称+'" onchange="sknchangefanc(this,\'a\')">'+
+                			'<option selected="selected" value="0">'+status_deta.正式名称+'</option>'
+                		);
+            			var imgdeta = (
+		    			'<a rel="noopener" class="spotlight" href="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg"" title="'+status_deta.正規名+'" target="_blank">'+
+		    			'<img src="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+status_deta.正式名称+'.jpg" alt="'+status_deta.正規名+'">'+
 		    			'</a>'
-                		)
-            		}
-            		kari += '</select>\n';
-            		deletetext1.insertAdjacentHTML('afterend',
-				'<p>'+status_deta.正規名+'のイラストや着せ替えスキンを掲載しています。</p>\n\n'+
-                		'<p>イラスト変更'+kari+'</p>'+
-                		'<div id="img_new_box" class="kan_'+status_deta.正式名称+'" style="display: flex;justify-content: center;">'+
-                		imgdeta+
-                		'</div>\n'
-                	);
-			break;
+            			);
+            			for(var li=0; li<Object.keys(skinlist[status_deta.正式名称]['テーマ']).length; li++){
+                			kari += ('<option value="'+(li+1)+'">'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'</option>');
+                			imgdeta += (
+						'<a rel="noopener" class="spotlight" href="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'.jpg"" title="'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'" target="_blank">'+
+		 				'<img src="'+'https://pasokau.com/wp-content/uploads/skin/'+teamslist[status_deta.陣営].フォルダ+'/'+status_deta.リンク+'/'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'.jpg" alt="'+Object.keys(skinlist[status_deta.正式名称]['テーマ'])[li]+'">'+
+		    				'</a>'
+                			)
+            			}
+            			kari += '</select>\n';
+            			deletetext1.insertAdjacentHTML('afterend',
+					'<p>'+status_deta.正規名+'のイラストや着せ替えスキンを掲載しています。</p>\n\n'+
+                			'<p>イラスト変更'+kari+'</p>'+
+                			'<div id="img_new_box" class="kan_'+status_deta.正式名称+'" style="display: flex;justify-content: center;">'+
+                			imgdeta+
+                			'</div>\n'
+                		);
+				break;
+			}
 		}else{
 			nextS.remove();
 		}
