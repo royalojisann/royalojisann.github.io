@@ -7,10 +7,10 @@
 // 		 document.getElementById("koukoku_top").insertAdjacentHTML('beforeend',adine_top);
 // 		 (adsbygoogle = window.adsbygoogle || []).push({});
 // 	 }
-// 	 if(document.getElementById("koukoku_bottom")!=null){
-// 		 document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
-// 		 (adsbygoogle = window.adsbygoogle || []).push({});
-// 	 }
+	 if(document.getElementById("koukoku_bottom")!=null){
+		 document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
+		 (adsbygoogle = window.adsbygoogle || []).push({});
+	 }
 	 if(document.getElementById("contentdiv")!=null){
 		 document.getElementById("contentdiv").insertAdjacentHTML('beforeend',contentkoukoku);
 		 (adsbygoogle = window.adsbygoogle || []).push({});
