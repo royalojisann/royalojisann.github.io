@@ -1,7 +1,7 @@
 ﻿window.addEventListener('DOMContentLoaded', function() {
         //var adine = "<div class='body_koukoku'><ins class='adsbygoogle'style='display:block; text-align:center;'data-ad-layout='in-article'data-ad-format='fluid'data-ad-client='ca-pub-1820058722476319'data-ad-slot='7802009807'></ins></div>";
 	var adine_top = "<ins class='adsbygoogle'style='display:block; text-align:center;'data-ad-layout='in-article'data-ad-format='fluid'data-ad-client='ca-pub-1820058722476319'data-ad-slot='7802009807'></ins>";
-	var contentkoukoku = "<ins class='adsbygoogle' style='display:block' data-ad-format='autorelaxed' data-ad-client='ca-pub-1820058722476319' data-ad-slot='7882308349' data-matched-content-rows-num='4,4' data-matched-content-columns-num='1,2'></ins>";
+	var contentkoukoku = "<ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-1820058722476319' data-ad-slot='7882308349' data-matched-content-rows-num='4,4' data-matched-content-columns-num='1,2' data-matched-content-ui-type='image_card_sidebyside,image_card_stacked' data-ad-format='autorelaxed'></ins>";
 	 
 // 	 if(document.getElementById("koukoku_top")!=null){
 // 		 document.getElementById("koukoku_top").insertAdjacentHTML('beforeend',adine_top);
