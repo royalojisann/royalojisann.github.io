@@ -1,16 +1,16 @@
 window.addEventListener('DOMContentLoaded', function() {
 //         //var adine = "<div class='body_koukoku'><ins class='adsbygoogle'style='display:block; text-align:center;'data-ad-layout='in-article'data-ad-format='fluid'data-ad-client='ca-pub-1820058722476319'data-ad-slot='7802009807'></ins></div>";
-//  	var adine_top = "<ins class='adsbygoogle'style='display:block; text-align:center;'data-ad-layout='in-article'data-ad-format='fluid'data-ad-client='ca-pub-1820058722476319'data-ad-slot='7802009807'></ins>";
+ 	var adine_top = "<ins class='adsbygoogle'style='display:block; text-align:center;'data-ad-layout='in-article'data-ad-format='fluid'data-ad-client='ca-pub-1820058722476319'data-ad-slot='7802009807'></ins>";
 // // 	var contentkoukoku = "<ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-1820058722476319' data-ad-slot='7882308349' data-ad-format='autorelaxed'></ins>";
 	
 // // 	if(document.getElementById("koukoku_top")!=null){
 // // 		document.getElementById("koukoku_top").insertAdjacentHTML('beforeend',adine_top);
 // // 		(adsbygoogle = window.adsbygoogle || []).push({});
 // // 	}
-// 	if(document.getElementById("koukoku_bottom")!=null){
-// 		document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
-// 		(adsbygoogle = window.adsbygoogle || []).push({}); 
-// 	}
+	if(document.getElementById("koukoku_bottom")!=null){
+		document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
+		(adsbygoogle = window.adsbygoogle || []).push({}); 
+	}
 // // 	if(document.getElementById("contentdiv")!=null){
 // // 		 document.getElementById("contentdiv").insertAdjacentHTML('beforeend',contentkoukoku);
 // // 		(adsbygoogle = window.adsbygoogle || []).push({});
