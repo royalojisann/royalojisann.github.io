@@ -11,10 +11,10 @@ window.addEventListener('DOMContentLoaded', function() {
 //             document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine);
 //             (adsbygoogle = window.adsbygoogle || []).push({});
 //         }
-if(document.getElementById("contentdiv")!=null){
-        document.getElementById("contentdiv").insertAdjacentHTML('beforeend',contentkoukoku);
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    }
+// if(document.getElementById("contentdiv")!=null){
+//         document.getElementById("contentdiv").insertAdjacentHTML('beforeend',contentkoukoku);
+//         (adsbygoogle = window.adsbygoogle || []).push({});
+//     }
 })    
  
 var teamslist = {
