@@ -19,12 +19,12 @@ p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight:
     height:30px;
 }
 
-#img_new_box a:not(:first-of-type){
+#img_new_box > *:not(:first-of-type){
 display:none;
 }
-#img_new_box02 a:not(:first-of-type){
+#img_new_box02 *:not(:first-of-type){
 display:none;
 }
-#img_new_box03 a:not(:first-of-type){
+#img_new_box03 *:not(:first-of-type){
 display:none;
 }
