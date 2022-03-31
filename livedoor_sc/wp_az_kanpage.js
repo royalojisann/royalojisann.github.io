@@ -390,12 +390,12 @@ function sknchangefanc(th,tag){
 }
 
 //selectbox
-function imgChangeset(parts,iddeta,tagdeta){
+function imgChangeset(parts,iddeta,tagdeta,blo){
 imgget =  document.getElementById(iddeta).getElementsByTagName(tagdeta);
 for(var up = 0;up<imgget.length;up++){
 imgget[up].style.display = "none";
 }
-imgget[parts.value].style.display = "block";
+imgget[parts.value].style.display = blo || "block";
 }
 
 /*! echo-js v1.7.3 | (c) 2016 @toddmotto | https://github.com/toddmotto/echo */
