@@ -7,3 +7,7 @@
 .div_table_box .div_table_box_bottom{display: block;height: auto;background: azure;padding: 4px 0;}
 .div_table_box[data-display="block"]{display: block;}
 .div_table_box[data-display="none"]{display: none;}
+
+p.linkbutton {padding: 0.3em 0;text-align: center;border: 2px solid red;}
+p.linkbutton a {display: block;text-decoration: none;color: #49439a;font-weight: bold;font-size: 18px;}
+#link_sinnsuibilist{display:block;}
