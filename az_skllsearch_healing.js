@@ -155,9 +155,11 @@ window.addEventListener('DOMContentLoaded', function() {
         kansen_nouryoku[i].正式名称 = kan_profile[i][2].slice(-1) === '改' ? kan_profile[i][2].substring(0,kan_profile[i][2].indexOf('改')):kan_profile[i][2];
         //hokan += '<tr id="'+kansen_nouryoku[i].ソート+'" class="chara_list"><td class="'+kansen_nouryoku[i].修正レア+'" onclick="status_check(this);">'+kansen_nouryoku[i].名前+'</td><td>'+kansen_nouryoku[i].陣営+'</td><td>'+kansen_nouryoku[i].艦種+'</td><td></td></tr>';
     }
-        key_k = Object.keys(skll_sort_list_test);
+   
+    key_k = Object.keys(skll_sort_list_test);
     kan = key_k.concat();
-    textdetain = '<div id="skllsortbox" style="margin-top: 2em;padding:8px;">';
+    
+    textdetain = '<div id="skllsortbox" style="margin-top: 1em;">';
 
     for(var p =0; p<kan.length; p++){
       for(var kand = 0; kand<kansen_nouryoku.length;kand++){
@@ -190,16 +192,16 @@ window.addEventListener('DOMContentLoaded', function() {
             }
 
             textdetain += (
-                    '<div class="div_table_box" style="margin: 1em 0;" data-display="block" data-jin='+skll_sort_list_test[kan[p]].jin+' data-kyouka='+skll_sort_list_test[kan[p]].教科書+' data-heel='+skll_sort_list_test[kan[p]].並び替え+'>'+
-                        '<div style="display: flex;height:70px;position: relative;">'+
-                            '<div style="width:70px;">'+skll_sort_list_test[kan[p]].image+'</div>'+
-                            '<div style="width: calc(100% - 70px);display: flex;flex-direction: column;">'+
-                                '<div style="height:35px;;display: flex;align-items: center;padding: 0 0 0 8px;'+skllcolor(skll_sort_list_test[kan[p]].教科書)+'">'+skll_sort_list_test[kan[p]].スキル+'</div>'+
-                                '<div style="height:35px;display: flex;align-items: center;padding: 0 0 0 8px;background: #ededed;">'+skll_sort_list_test[kan[p]].名前+'</div>'+
+                    '<div class="div_table_box" data-display="block" data-jin='+skll_sort_list_test[kan[p]].jin+' data-kyouka='+skll_sort_list_test[kan[p]].教科書+' data-heel='+skll_sort_list_test[kan[p]].並び替え+'>'+
+                        '<div class="div_table_box_top">'+
+                            '<div>'+skll_sort_list_test[kan[p]].image+'</div>'+
+                            '<div class="div_table_box_name">'+
+                                '<div style="'+skllcolor(skll_sort_list_test[kan[p]].教科書)+'">'+skll_sort_list_test[kan[p]].スキル+'</div>'+
+                                '<div>'+skll_sort_list_test[kan[p]].名前+'</div>'+
                             '</div>'+
                             skll_sort_list_test[kan[p]].url+
                         '</div>'+
-                        '<div style="background: azure;padding: 4px 0;">'+skll_sort_list_test[kan[p]].skll+'</div>'+
+                        '<div class="div_table_box_bottom">'+skll_sort_list_test[kan[p]].skll+'</div>'+
                     '</div>'
             )
             break;
@@ -209,7 +211,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById("skllsearch_id").insertAdjacentHTML('beforebegin',
     '<p id="searchskll_p">'+
-        '<select style="width:200px;height: 46px;padding: 0px;" onchange="search_kansen(\'searchskll_p\',\'skllsortbox\',\'.div_table_box\',\'block\')">'+
+        '<select onchange="search_kansen(\'searchskll_p\',\'skllsortbox\',\'.div_table_box\',\'block\')">'+
             '<option value="全て" selected="selected">陣営</option>'+
             '<option value="ユニオン">ユニオン</option>'+
             '<option value="ロイヤル">ロイヤル</option>'+
@@ -230,13 +232,13 @@ window.addEventListener('DOMContentLoaded', function() {
             '<option value="SSSS">SSSS</option>'+
             '<option value="その他">その他</option>'+
         '</select>'+
-        '<select style="width:200px;height: 46px;padding: 0px;" onchange="search_kansen(\'searchskll_p\',\'skllsortbox\',\'.div_table_box\',\'block\')">'+
+        '<select onchange="search_kansen(\'searchskll_p\',\'skllsortbox\',\'.div_table_box\',\'block\')">'+
             '<option value="全て" selected="selected">回復対象</option>'+
             '<option value="1">自身</option>'+
             '<option value="2">単体</option>'+
             '<option value="3">複数</option>'+
         '</select>'+
-        '<select style="width:200px;height: 46px;padding: 0px;" onchange="search_kansen(\'searchskll_p\',\'skllsortbox\',\'.div_table_box\',\'block\')">'+
+        '<select onchange="search_kansen(\'searchskll_p\',\'skllsortbox\',\'.div_table_box\',\'block\')">'+
             '<option value="全て" selected="selected">教科書</option>'+
             '<option value="攻撃">攻撃</option>'+
             '<option value="防御">防御</option>'+
