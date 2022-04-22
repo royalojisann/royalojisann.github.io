@@ -1,10 +1,10 @@
 #searchskll_p select{display: block; width:200px;height: 36px;padding: 0 0 0 6px;font-size: 18px;}
 .div_table_box{margin: 1em 0;}
-.div_table_box div{display: flex;height: 70px;}
+.div_table_box .div_table_box_top,.div_table_box .div_table_box_top div{display: flex;}
 .div_table_box .div_table_box_top{position: relative;}
-.div_table_box .div_table_box_name{width: calc(100% - 70px);display: flex;flex-direction: column;}
+.div_table_box .div_table_box_name{width: calc(100% - 70px);height: 70px;flex-direction: column;}
 .div_table_box .div_table_box_name div{height:35px;;display: flex;align-items: center;padding: 0 0 0 8px;background: #ededed;}
-.div_table_box .div_table_box_bottom{display: block;height: auto;background: azure;padding: 4px 0;}
+.div_table_box .div_table_box_bottom{display: block;height: auto;background: azure;}
 .div_table_box[data-display="block"]{display: block;}
 .div_table_box[data-display="none"]{display: none;}
 
