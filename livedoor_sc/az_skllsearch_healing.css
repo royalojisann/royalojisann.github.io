@@ -1,3 +1,75 @@
+/*  */
+#skllpictest .douga_onebox{
+    height:auto;
+    padding: 0px;
+    background: rgb(224 224 224);
+    margin: 0 0 1em 0;
+}
+
+/*動画用に調整したもの */
+#douga_convert .douga_onebox{
+    height:auto;
+    padding: 0px;
+    background: rgb(224 224 224);
+    margin: 0 0 1em 0;
+}
+.douga_skll_box{
+    box-sizing: border-box;
+    width: 580px;
+}
+.douga_skll_box h3 {
+    background: #1565c0;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    text-align: left;
+}
+.douga_skll_box h3 img{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.2em 0 0;
+    background: white;
+}
+.douga_skll_box .skllcss {
+    font-size: 26px;
+    line-height: 36px;
+    background-image: url(C:/Users/soujininn/Videos/アイコン素材/シンプル素材/モノクロ03.png);
+    background-color: white;
+}
+.skllcss .skllcss_textsetumei{
+    text-align: left;
+    padding:4px 8px;
+    border-right:2px solid red;
+    border-bottom:2px solid red;
+}
+.skllcss .skllcss_danmaku1{
+    display: flex;
+}
+.skllcss .skllcss_danmaku2{
+    display: flex;
+    background: linear-gradient(20deg, #ffe56e, rgb(255 247 204 / 25%));
+}
+.skllcss .skllcss_danmaku1 div:nth-of-type(1),.skllcss .skllcss_danmaku2 div:nth-of-type(1){
+    width:20%;border-right:2px solid red;border-bottom:2px solid red;
+}
+.skllcss .skllcss_danmaku1 div:nth-of-type(2),.skllcss .skllcss_danmaku2 div:nth-of-type(2){
+    width:20%;border-right:2px solid red;border-bottom:2px solid red;
+}
+.skllcss .skllcss_danmaku1 div:nth-of-type(3),.skllcss .skllcss_danmaku2 div:nth-of-type(3){
+    width:15%;border-right:2px solid red;border-bottom:2px solid red;
+}
+.skllcss .skllcss_danmaku1 div:nth-of-type(4),.skllcss .skllcss_danmaku2 div:nth-of-type(4){
+    width:30%;border-right:2px solid red;border-bottom:2px solid red;
+}
+.skllcss .skllcss_danmaku1 div:nth-of-type(5),.skllcss .skllcss_danmaku2 div:nth-of-type(5){
+    width:15%;border-right:2px solid red;border-bottom:2px solid red;
+}
+
 #searchskll_p select{display: block; width:200px;height: 36px;padding: 0 0 0 6px;font-size: 18px;}
 .div_table_box{margin: 1em 0;}
 .div_table_box .div_table_box_top,.div_table_box .div_table_box_top div{display: flex;}
