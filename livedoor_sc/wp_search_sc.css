@@ -7,16 +7,16 @@
 }
 
 .character_box{
-    width: 62px;
-    height: 122px;
+    width: 60px;
+    height: 120px;
     overflow: hidden;
     position: relative;
     margin: 0px 2px;
 }
 
 .character_box .kanpic {
-    width: 62px!important;
-    height: 62px!important;
+    width: 60px!important;
+    height: 60px!important;
     border: 2px solid;
     border-top: 4px solid;
     border-bottom: 4px solid;
@@ -25,8 +25,8 @@
 }
 
 .character_box a {
-    width: 62px;
-    height: 122px;
+    width: 60px;
+    height: 120px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,8 +34,8 @@
 }
 
 .character_box a img {
-    width: 62px!important;
-    height: 62px!important;
+    width: 60px!important;
+    height: 60px!important;
     text-decoration: none!important;
 }
 
