@@ -80,5 +80,5 @@
   display:none;
 }
 #img_new_box02 + *{
-  display:none;
+  display:block;
 }
