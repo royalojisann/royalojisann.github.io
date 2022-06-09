@@ -41,3 +41,55 @@ display:none;
 .DR{background: linear-gradient(45deg,#cc9,#f9f,#9ff,#9c9) !important;}
 .META{background: linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;color: #f9f593;}
 .META_SR{background: linear-gradient(45deg,#000000,#8B58AD,#C46FB3,#000000,#8250AB,#5C3B7D)!important;color: #FFCCFF;}
+
+
+
+.spweapon{
+    border:2px solid #f00;
+}
+
+.spweapon .spweapon_top{
+    display:flex;width:100%;
+    align-items: center;
+}
+.spweapon_imgbox{
+    width:100px;
+    height:100px;
+    border-right:2px solid #f00;
+}
+.spweapon_imgbox img{
+    width:100px;
+    height:100px;
+}
+.spweapon_side{
+    width: calc(100% - 100px);
+    margin: 0 0 0 10px;
+    height:100px;
+}
+.spweapon_side div{
+    height: calc(100% / 3);
+    display: flex;
+    align-items: center;
+}
+.spweapon_title{
+    font-weight: bold;
+}
+.spweapon_middle{
+    border-top:2px solid #f00;
+    border-bottom:2px solid #f00;
+    padding: 4px 8px;
+}
+.spweapon_bottom{
+    padding: 4px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
