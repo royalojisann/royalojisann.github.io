@@ -29,6 +29,9 @@ display:none;
 display:none;
 }
 
+.az_color {
+    color: #F44336;
+}
 .N{background: #dbdcdf !important;}
 .R{background: #9fe8ff !important;}
 .SR{background: #ae90ef !important;}
