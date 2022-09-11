@@ -12,10 +12,10 @@ window.addEventListener('DOMContentLoaded', function() {
 		document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
 		(adsbygoogle = window.adsbygoogle || []).push({}); 
 	}
-	if(document.getElementById("kan_skill")!=null){
-		 document.getElementById("kan_skill").insertAdjacentHTML('beforebegin',skllue);
-		(adsbygoogle = window.adsbygoogle || []).push({});
-	}
+// 	if(document.getElementById("kan_skill")!=null){
+// 		 document.getElementById("kan_skill").insertAdjacentHTML('beforebegin',skllue);
+// 		(adsbygoogle = window.adsbygoogle || []).push({});
+// 	}
 	kijicreate();
 });
 
