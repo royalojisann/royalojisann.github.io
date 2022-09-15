@@ -206,7 +206,7 @@ function statuskeisann(){
 	switch(status_deta.記事){
         case '暫定':
         case '無し':
-		kannamedeta = status_deta.正規名+"(暫定レベル125愛)";
+		kannamedeta = status_deta.正規名+"(暫定レベル120愛)";
             for(var pr=0; pr<pr_kansenn.length;pr++){
                 if(pr_kansenn[pr][2]==status_deta.正規名){
                     status_deta.耐久=(pr_kansenn[pr][3]*1);
