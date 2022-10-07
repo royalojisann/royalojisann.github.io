@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
 // // 		document.getElementById("koukoku_top").insertAdjacentHTML('beforeend',adine_top);
 // // 		(adsbygoogle = window.adsbygoogle || []).push({});
 // // 	}
-	swich(Math.floor(Math.random()*(4-1))+1){
+	switch(Math.floor(Math.random()*(4-1))+1){
 		case 1:
 			if(document.getElementById("kan_ratings")!=null){
 				document.getElementById("koukoku_bottom").insertAdjacentHTML('beforebegin',adine_top);
