@@ -8,9 +8,28 @@ window.addEventListener('DOMContentLoaded', function() {
 // // 		document.getElementById("koukoku_top").insertAdjacentHTML('beforeend',adine_top);
 // // 		(adsbygoogle = window.adsbygoogle || []).push({});
 // // 	}
-	if(document.getElementById("koukoku_bottom")!=null){
-		document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
-		(adsbygoogle = window.adsbygoogle || []).push({}); 
+	swich(Math.floor(Math.random()*(4-1))+1){
+		case 1:
+			if(document.getElementById("kan_ratings")!=null){
+				document.getElementById("koukoku_bottom").insertAdjacentHTML('beforebegin',adine_top);
+				(adsbygoogle = window.adsbygoogle || []).push({}); 
+			}
+		break;
+		case 2:
+			if(document.getElementById("kan_skill")!=null){
+				document.getElementById("koukoku_bottom").insertAdjacentHTML('beforebegin',adine_top);
+				(adsbygoogle = window.adsbygoogle || []).push({}); 
+			}
+		break;
+		case 3:
+			if(document.getElementById("koukoku_bottom")!=null){
+				document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
+				(adsbygoogle = window.adsbygoogle || []).push({}); 
+			}
+		break;
+		default:
+			;
+		break;
 	}
 // 	if(document.getElementById("kan_skill")!=null){
 // 		 document.getElementById("kan_skill").insertAdjacentHTML('beforebegin',skllue);
