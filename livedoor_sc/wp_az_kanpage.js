@@ -8,29 +8,29 @@ window.addEventListener('DOMContentLoaded', function() {
 // // 		document.getElementById("koukoku_top").insertAdjacentHTML('beforeend',adine_top);
 // // 		(adsbygoogle = window.adsbygoogle || []).push({});
 // // 	}
-	switch(Math.floor(Math.random()*4)+1){
-		case 1:
-			if(document.getElementById("kan_ratings")!=null){
-				document.getElementById("kan_ratings").insertAdjacentHTML('beforebegin',adine_top);
-				(adsbygoogle = window.adsbygoogle || []).push({}); 
-			}
-		break;
-		case 2:
-			if(document.getElementById("kan_skill")!=null){
-				document.getElementById("kan_skill").insertAdjacentHTML('beforebegin',adine_top);
-				(adsbygoogle = window.adsbygoogle || []).push({}); 
-			}
-		break;
-		case 3:
-			if(document.getElementById("koukoku_bottom")!=null){
-				document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
-				(adsbygoogle = window.adsbygoogle || []).push({}); 
-			}
-		break;
-		default:
-			;
-		break;
-	}
+// 	switch(Math.floor(Math.random()*4)+1){
+// 		case 1:
+// 			if(document.getElementById("kan_ratings")!=null){
+// 				document.getElementById("kan_ratings").insertAdjacentHTML('beforebegin',adine_top);
+// 				(adsbygoogle = window.adsbygoogle || []).push({}); 
+// 			}
+// 		break;
+// 		case 2:
+// 			if(document.getElementById("kan_skill")!=null){
+// 				document.getElementById("kan_skill").insertAdjacentHTML('beforebegin',adine_top);
+// 				(adsbygoogle = window.adsbygoogle || []).push({}); 
+// 			}
+// 		break;
+// 		case 3:
+// 			if(document.getElementById("koukoku_bottom")!=null){
+// 				document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
+// 				(adsbygoogle = window.adsbygoogle || []).push({}); 
+// 			}
+// 		break;
+// 		default:
+// 			;
+// 		break;
+// 	}
 // 	if(document.getElementById("kan_skill")!=null){
 // 		 document.getElementById("kan_skill").insertAdjacentHTML('beforebegin',skllue);
 // 		(adsbygoogle = window.adsbygoogle || []).push({});
