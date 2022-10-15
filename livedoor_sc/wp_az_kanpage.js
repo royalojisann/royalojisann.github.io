@@ -15,6 +15,10 @@ window.addEventListener('DOMContentLoaded', function() {
 			document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
 			(adsbygoogle = window.adsbygoogle || []).push({}); 
 		}
+		if(document.getElementById("kan_ratings")!=null){
+			document.getElementById("kan_ratings").insertAdjacentHTML('beforebegin',adine_top);
+			(adsbygoogle = window.adsbygoogle || []).push({}); 
+		}
 	}
 // 	switch(Math.floor(Math.random()*4)+1){
 // 		case 1:
