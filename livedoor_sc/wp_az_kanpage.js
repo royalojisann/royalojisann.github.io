@@ -9,7 +9,10 @@ window.addEventListener('DOMContentLoaded', function() {
 // // 		(adsbygoogle = window.adsbygoogle || []).push({});
 // // 	}
 	if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
-		;
+		if(document.getElementById("koukoku_bottom")!=null){
+			document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
+			(adsbygoogle = window.adsbygoogle || []).push({}); 
+		}
 	}else{
 		if(document.getElementById("koukoku_bottom")!=null){
 			document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
