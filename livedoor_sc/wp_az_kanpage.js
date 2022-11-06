@@ -387,8 +387,7 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
             switch(status_deta.艦種){
                 case "潜水":
                 case "潜母":
-                case "風帆":
-                    senkou = ('<th>潜航力</th><td>'+status_deta.潜航+'</td>');
+                    senkou = ('<th>潜航</th><td>'+status_deta.潜航+'</td>');
                 break;
             }
 
