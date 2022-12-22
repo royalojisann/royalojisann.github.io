@@ -208,7 +208,7 @@ function kijicreate(){
 	var nextS = deletetext2.nextElementSibling;
 	if(nextS.id == 'target_status'){
 		deletetext2.insertAdjacentHTML('afterend',
-		'<p>'+status_deta.正規名+'のステータス（改造がある艦船は改造後の数値）。当記事ではレベル120愛のステータスを前提に計算しています。</p>'+
+		'<p>'+status_deta.正規名+'のステータス（改造がある艦船は改造後の数値）。当記事ではレベル125愛のステータスを前提に計算しています。</p>'+
                 '<p style="margin: 0.2em 0;font-size: 16px;">\n'+
                 'Lv.'+
                 '<select oninput="statuskeisann()" class="kan_select" id="lebel_deta" style="width: 30%;padding: 8px 4px;margin: 0 0 0 4px;">'+
@@ -243,7 +243,7 @@ function statuskeisann(){
 	switch(status_deta.記事){
         case '暫定':
         case '無し':
-		kannamedeta = status_deta.正規名+"(暫定レベル120愛)";
+		kannamedeta = status_deta.正規名+"(暫定レベル125愛)";
             for(var pr=0; pr<pr_kansenn.length;pr++){
                 if(pr_kansenn[pr][2]==status_deta.正規名){
                     status_deta.耐久=(pr_kansenn[pr][3]*1);
