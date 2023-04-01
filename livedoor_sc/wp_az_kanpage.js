@@ -76,7 +76,7 @@ var teamslist = {
         //:{名前:'',フォルダ:'Collab_Nations'},
         //:{名前:'',フォルダ:'Collab_Nations'},
         //BILIBILI:{名前:'BILIBILI',フォルダ:'Collab_Nations'},
-        その他:{名前:'その他',フォルダ:'Collab_Nations'}
+        その他:{名前:'その他',フォルダ:'Universal'}
     }
 index_n = 0;
 function kijicreate(){
