@@ -1,4 +1,10 @@
 @charset "UTF-8";
+#page_N19 select{
+    width: auto;
+    font-size: 16px;
+    padding: 8px 0;
+}
+
 .N19_box_card{
     display: flex;
     font-size: 14px;
