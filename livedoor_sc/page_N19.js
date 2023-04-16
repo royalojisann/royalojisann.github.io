@@ -520,7 +520,127 @@ var kan_technology_list = {
     'ジョッフル':{'艦船名':'ジョッフル','陣営':'ヴィシア','レア':'SSR','艦種':'空母','ティアー':'6','対象1':'軽母・空母','強化1':'耐久+2','対象2':'軽母・空母','強化2':'対空+1'}    
 }
 
+var kansen_nouryoku = [];
+var kansen_namelist = {};
 
+window.addEventListener('DOMContentLoaded', function() {
+    for(var i=0;i<kan_profile.length; i++){
+        console.log(i);
+        var inputstatus_deta = {
+            陣営:kan_profile[i][0],
+            艦種:kan_profile[i][1],
+            正規名:kan_profile[i][2],
+            レア:kan_profile[i][3],
+            装甲:kan_list[i][66],
+            耐久:"",
+            装填:"",
+            回避:"",
+            命中:"",
+            火力:"",
+            雷装:"",
+            航空:"",
+            対空:"",
+            対潜:"",
+            速力:"",
+            幸運:"",
+            潜航:kan_list[i][78]*1,
+            消費:kan_list[i][77]*1,
+            主砲装備:kan_list[i][67],
+            主砲補正:kan_list[i][70],
+            主砲砲座:kan_list[i][73],
+            副砲装備:kan_list[i][68],
+            副砲補正:kan_list[i][71],
+            副砲砲座:kan_list[i][74],
+            対空装備:kan_list[i][69],
+            対空補正:kan_list[i][72],
+            対空砲座:kan_list[i][75],
+            硬直:kan_list[i][76],
+            設備:'設備',
+            //画像:kan_profile[i][10],
+            スキル:kan_profile[i][11],
+            記事:kan_profile[i][12],
+            声優:kan_profile[i][8],
+            絵師:kan_profile[i][9],
+            入手:kan_profile[i][4],
+            実装日:kan_profile[i][5],
+            改造日:kan_profile[i][6],
+            進水日:kan_profile[i][7],
+            起工日:kan_profile[i][13],
+            竣工日:kan_profile[i][14],
+            艦級:kan_profile[i][15],
+            除外:kan_profile[i][16],
+            //live:kan_profile[i][17],
+            評価:kan_profile[i][18],
+            建造:kan_profile[i][19],
+            突破:kan_profile[i][20],
+            表記:kan_profile[i][21],
+            接頭辞:kan_profile[i][22],
+            リンク:kan_profile[i][23],
+            番号:kan_profile[i][24],
+            wpurl:kan_profile[i][25],
+            改造レア:listrule[Object.keys(listrule)[i]].改造,
+            短縮名:listrule[Object.keys(listrule)[i]].短縮名,
+            スキン共有:listrule[Object.keys(listrule)[i]].スキン共有,
+        };
+        kansen_nouryoku.push(inputstatus_deta);
+
+        if(kansen_nouryoku[i].正規名.slice(-1) === '改'){
+            //改は改造後のレアを表示
+            rarecolor = kansen_nouryoku[i].レア.substring(kansen_nouryoku[i].レア.indexOf('→')+1);
+        }else if(kansen_nouryoku[i].正規名.indexOf('半改')!= -1 || kansen_nouryoku[i].レア.indexOf('→')!= -1){
+            //半改とそれ以外の改造は改造前のレア
+            rarecolor = kansen_nouryoku[i].レア.substring(0,kansen_nouryoku[i].レア.indexOf('→'));
+        }else{
+            rarecolor =kansen_nouryoku[i].レア;
+        }
+
+        kansen_nouryoku[i].修正レア = rarecolor;
+        kansen_nouryoku[i].ソート = i;
+        kansen_nouryoku[i].正式名称 = kan_profile[i][2].slice(-1) === '改' ? kan_profile[i][2].substring(0,kan_profile[i][2].indexOf('改')):kan_profile[i][2];
+        //hokan += '<tr id="'+kansen_nouryoku[i].ソート+'" class="chara_list"><td class="'+kansen_nouryoku[i].修正レア+'" onclick="status_check(this);">'+kansen_nouryoku[i].名前+'</td><td>'+kansen_nouryoku[i].陣営+'</td><td>'+kansen_nouryoku[i].艦種+'</td><td></td></tr>';
+        
+        if(kansen_nouryoku[i].除外[0] === '除外'){
+            ;
+        }else{
+            if(kansen_nouryoku[i].進水日.indexOf('月') != -1){
+                kansen_nouryoku[i].進水日まとめ = kan_profile[i][7].match(/(\d+)月(\d+)日/);//[0]=月日、[1]=月、[2]=日
+                BirthdayList[Object.keys(BirthdayList)[kansen_nouryoku[i].進水日まとめ[1]]].push(kansen_nouryoku[i]);
+            }else{
+                kansen_nouryoku[i].進水日まとめ = "無し";
+                BirthdayList[Object.keys(BirthdayList)[0]].push(kansen_nouryoku[i]);
+            }
+        }
+
+        //除外外し中
+        if(kansen_nouryoku[i].除外[1] === '除'){
+            kensaku_kansen.除外.push(kansen_nouryoku[i]);
+        }else if(kansen_nouryoku[i].除外[1] === '新規'){
+            kensaku_kansen.新規.push(kansen_nouryoku[i]);
+        }else if(kansen_nouryoku[i].除外[1] === 'META'){
+            kensaku_kansen['META'].push(kansen_nouryoku[i]);
+        }else if(kansen_nouryoku[i].除外[1] === '計画艦'){
+            kensaku_kansen.計画艦.push(kansen_nouryoku[i]);
+        }else if(kansen_nouryoku[i].除外[1] === 'コラボ'){
+            kensaku_kansen.コラボ.push(kansen_nouryoku[i]);
+        }else{
+            kensaku_kansen.通常.push(kansen_nouryoku[i]);
+        }
+
+        if(kansen_nouryoku[i].除外[3] === '' || kansen_nouryoku[i].除外[3] === '除外'){
+            ;
+        }else{
+            
+            var str = kansen_nouryoku[i].除外[3].replace( '年', '/' );
+            str = str.replace( '月', '/' );
+            str = str.replace( '日', '' );
+            kansen_nouryoku[i].ソート用進水日 = str;
+            zepan.push(kansen_nouryoku[i]);
+        }
+
+        kansen_namelist[kansen_nouryoku[i]['正式名称']]=kansen_nouryoku[i];
+
+    }
+});
 
 window.addEventListener('DOMContentLoaded', function() {
 
