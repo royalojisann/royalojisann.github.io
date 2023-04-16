@@ -578,9 +578,9 @@ window.addEventListener('DOMContentLoaded', function() {
             リンク:kan_profile[i][23],
             番号:kan_profile[i][24],
             wpurl:kan_profile[i][25],
-            改造レア:listrule[Object.keys(listrule)[i]].改造,
-            短縮名:listrule[Object.keys(listrule)[i]].短縮名,
-            スキン共有:listrule[Object.keys(listrule)[i]].スキン共有,
+//             改造レア:listrule[Object.keys(listrule)[i]].改造,
+//             短縮名:listrule[Object.keys(listrule)[i]].短縮名,
+//             スキン共有:listrule[Object.keys(listrule)[i]].スキン共有,
         };
         kansen_nouryoku.push(inputstatus_deta);
 
