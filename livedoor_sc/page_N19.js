@@ -598,44 +598,6 @@ window.addEventListener('DOMContentLoaded', function() {
         kansen_nouryoku[i].ソート = i;
         kansen_nouryoku[i].正式名称 = kan_profile[i][2].slice(-1) === '改' ? kan_profile[i][2].substring(0,kan_profile[i][2].indexOf('改')):kan_profile[i][2];
         //hokan += '<tr id="'+kansen_nouryoku[i].ソート+'" class="chara_list"><td class="'+kansen_nouryoku[i].修正レア+'" onclick="status_check(this);">'+kansen_nouryoku[i].名前+'</td><td>'+kansen_nouryoku[i].陣営+'</td><td>'+kansen_nouryoku[i].艦種+'</td><td></td></tr>';
-        
-        if(kansen_nouryoku[i].除外[0] === '除外'){
-            ;
-        }else{
-            if(kansen_nouryoku[i].進水日.indexOf('月') != -1){
-                kansen_nouryoku[i].進水日まとめ = kan_profile[i][7].match(/(\d+)月(\d+)日/);//[0]=月日、[1]=月、[2]=日
-                BirthdayList[Object.keys(BirthdayList)[kansen_nouryoku[i].進水日まとめ[1]]].push(kansen_nouryoku[i]);
-            }else{
-                kansen_nouryoku[i].進水日まとめ = "無し";
-                BirthdayList[Object.keys(BirthdayList)[0]].push(kansen_nouryoku[i]);
-            }
-        }
-
-        //除外外し中
-        if(kansen_nouryoku[i].除外[1] === '除'){
-            kensaku_kansen.除外.push(kansen_nouryoku[i]);
-        }else if(kansen_nouryoku[i].除外[1] === '新規'){
-            kensaku_kansen.新規.push(kansen_nouryoku[i]);
-        }else if(kansen_nouryoku[i].除外[1] === 'META'){
-            kensaku_kansen['META'].push(kansen_nouryoku[i]);
-        }else if(kansen_nouryoku[i].除外[1] === '計画艦'){
-            kensaku_kansen.計画艦.push(kansen_nouryoku[i]);
-        }else if(kansen_nouryoku[i].除外[1] === 'コラボ'){
-            kensaku_kansen.コラボ.push(kansen_nouryoku[i]);
-        }else{
-            kensaku_kansen.通常.push(kansen_nouryoku[i]);
-        }
-
-        if(kansen_nouryoku[i].除外[3] === '' || kansen_nouryoku[i].除外[3] === '除外'){
-            ;
-        }else{
-            
-            var str = kansen_nouryoku[i].除外[3].replace( '年', '/' );
-            str = str.replace( '月', '/' );
-            str = str.replace( '日', '' );
-            kansen_nouryoku[i].ソート用進水日 = str;
-            zepan.push(kansen_nouryoku[i]);
-        }
 
         kansen_namelist[kansen_nouryoku[i]['正式名称']]=kansen_nouryoku[i];
 
