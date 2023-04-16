@@ -1,9 +1,8 @@
 @charset "UTF-8";
 #page_N19 select{
     width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    font-size: 16px;
+    padding: 6px 0;
 }
 
 .N19_box_card{
