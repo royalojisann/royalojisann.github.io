@@ -263,7 +263,7 @@ function statuskeisann(){
         break;
         default:
 		kannamedeta = status_deta.正規名;
-            var get_level = 125;
+            var get_level = document.getElementById("lebel_deta").value*1;
             var get_kizuna = document.getElementById("kizuna").value*1;
             //耐久
             var keisan = (kan_list[index_n][3]*1);
