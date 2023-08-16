@@ -212,8 +212,8 @@ function kijicreate(){
                 '<p style="margin: 0.2em 0;font-size: 16px;">\n'+
                 'Lv.'+
                 '<select oninput="statuskeisann()" class="kan_select" id="lebel_deta" style="width: 30%;padding: 8px 4px;margin: 0 0 0 4px;">'+
-		'<option value="125">125</option>\n'+
-                '<option value="120" selected="selected">120</option>\n'+
+		'<option value="125" selected="selected">125</option>\n'+
+                '<option value="120">120</option>\n'+
                 '<option value="115">115</option>\n'+
                 '<option value="110">110</option>\n'+
                 '<option value="105">105</option>\n'+
@@ -263,7 +263,7 @@ function statuskeisann(){
         break;
         default:
 		kannamedeta = status_deta.正規名;
-            var get_level = document.getElementById("lebel_deta").value*1;
+            var get_level = 125;
             var get_kizuna = document.getElementById("kizuna").value*1;
             //耐久
             var keisan = (kan_list[index_n][3]*1);
