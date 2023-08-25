@@ -1327,7 +1327,6 @@ window.addEventListener('DOMContentLoaded', function() {
     for (let option of options) {
       if(option.value === selected_food) option.selected = true;
     }
-	N8_kisekae_sort_mood();
 });
 
 var kingdeta = function(jin){
@@ -1402,7 +1401,6 @@ function N8_kisekae_sort_mood(){
 }
 
 function N8_kisekae_sort(hako){
-    document.getElementById('N8_contentbox').textContent = "";
     var sort_kantype = document.getElementById("N8_sort_kantype").value;
     var sort_nations = document.getElementById("N8_sort_nations").value;
     var sort_reality = document.getElementById("N8_sort_reality").value;
@@ -1412,6 +1410,7 @@ function N8_kisekae_sort(hako){
     var skincount = 0;
     var dia = 0,season = 0;
     
+    var hokan = "";
     for(var i=0;i<hako.length;i++){
         if(
             (sort_nations == "ALL" || sort_nations == hako[i].陣営) && 
@@ -1424,7 +1423,7 @@ function N8_kisekae_sort(hako){
             var l2d = (hako[i]['L2D'] == "通常") ? "" : "（"+hako[i]['L2D']+"）";
             var kakaku = (hako[i]['価格'] == "") ? "" : "/ダイヤ"+hako[i]['価格']+"個";
 
-            document.getElementById('N8_contentbox').insertAdjacentHTML("beforeend",
+            hokan += (
                 '<div class="N8_kisekae_boxs" data-name="'+hako[i]['着せ替え']+'">'+
                     '<div class="N8_kisekae_zero_boxs '+hako[i]['レア']+'">'+hako[i]['着せ替え']+l2d+'</div>'+
                     '<div class="N8_kisekae_zero_boxs">'+
@@ -1448,18 +1447,11 @@ function N8_kisekae_sort(hako){
 
         }
     }
+    document.getElementById('N8_contentbox').textContent = "";
+    document.getElementById('N8_contentbox').insertAdjacentHTML("beforeend",hokan);
 
     document.getElementById("N8_diabox").textContent = "";
     document.getElementById("N8_diabox").insertAdjacentHTML("beforeend",
     '<p>表示中のスキン【'+skincount+'】種類。<br>ダイヤ合計【'+dia+'】個。<br>お金に換算すると約【'+Math.floor(dia/7500*10000)+'】円です。</p>'
     )
 }
-
-
-
-
-
-
-
-
-
