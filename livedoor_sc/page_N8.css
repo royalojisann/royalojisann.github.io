@@ -1,6 +1,7 @@
 /* page_N8 */
 #N8_subbox{
     display: flex;
+    font-size: 15px;
 }
 #N8_subbox div{
     width: 174px;
