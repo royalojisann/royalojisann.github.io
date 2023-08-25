@@ -1309,13 +1309,17 @@ window.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById("N8_subbox").textContent ="";
     document.getElementById("N8_subbox").insertAdjacentHTML("beforeend",
+    '<div>'+
         hokan01+
         hokan02+
         hokan03+
+    '</div>'+
+    '<div>'+
         hokan04+
         hokan05+
         hokan06+
-        hokan07
+        hokan07+
+    '</div>'
     )
     let selected_food = document.getElementById("N8_subbox").dataset.theme;
     let options = document.getElementById('N8_sort_kisekaetheme').options;
@@ -1458,7 +1462,7 @@ function N8_kisekae_sort(hako){
 
     document.getElementById("N8_diabox").textContent = "";
     document.getElementById("N8_diabox").insertAdjacentHTML("beforeend",
-    '<p>表示中のスキン【'+skincount+'】種類。<br>こちらの有料スキンを全て揃える場合…<br>必要なダイヤは合計【'+dia+'】個。<br>お金に換算すると約【'+Math.floor(dia/7500*10000)+'】円です。</p>'
+    '<p>表示中のスキン【'+skincount+'】種類。<br>ダイヤ合計【'+dia+'】個。<br>お金に換算すると約【'+Math.floor(dia/7500*10000)+'】円です。</p>'
     )
 }
 
