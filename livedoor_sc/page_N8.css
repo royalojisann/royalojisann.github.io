@@ -1,6 +1,9 @@
 /* page_N8 */
 #N8_contentbox{
     font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .N8_kisekae_boxs{
     width: 360px;
