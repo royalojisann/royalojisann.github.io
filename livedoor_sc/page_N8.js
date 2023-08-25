@@ -1330,34 +1330,6 @@ window.addEventListener('DOMContentLoaded', function() {
 	N8_kisekae_sort_mood();
 });
 
-function easy_moood(hako){
-    var hokan = "";
-    for(var i=0;i<hako.length;i++){
-        var l2d = (hako[i]['L2D'] == "通常") ? "" : "（"+hako[i]['L2D']+"）";
-        var kakaku = (hako[i]['価格'] == "") ? "" : "/ダイヤ"+hako[i]['価格']+"個";
-        hokan += (
-            '<div class="N8_kisekae_boxs" data-name="'+hako[i]['着せ替え']+'">'+
-                '<div class="N8_kisekae_zero_boxs '+hako[i]['レア']+'">'+hako[i]['着せ替え']+l2d+'</div>'+
-                '<div class="N8_kisekae_zero_boxs">'+
-                    '<div class="N8_kisekae_first_boxs">'+
-                    '<a href="'+(hako[i]['アクセス']+hako[i]['着せ替え']+'.jpg')+'" target="_blank" ><img src="'+hako[i]['imgurl']+'"><img class="toukastyle" src="https://pasokau.com/wp-content/uploads/face/透過.png"></a>'+
-                    '</div>'+
-                    //'<div><a href="'+hako[i]['blogurl']+'" target="_blank" ><img src="'+hako[i]['imgurl']+'"></a></div>'
-                    '<div class="N8_kisekae_second_boxs">'+
-                        '<div class="N8_kisekae_second_childs"><a href="'+hako[i]['blogurl']+'" target="_blank">'+hako[i]['名前']+'</a></div>'+
-                        '<div class="N8_kisekae_second_childs"><a href="https://pasokau.com/skin_theme_'+skin_theme_list[hako[i]['テーマ']]+'" target="_blank">'+hako[i]['テーマ']+'</a></div>'+
-                        '<div class="N8_kisekae_second_childs">'+hako[i]['入手方法']+kakaku+'</div>'+
-                        '<div class="N8_kisekae_second_childs">'+hako[i]['実装日']+'</div>'+
-                    '</div>'+
-                '</div>'+
-            '</div>'
-        )
-    }
-    document.getElementById('N8_contentbox').textContent = "";
-    document.getElementById('N8_contentbox').insertAdjacentHTML("beforeend",hokan)
-}
-
-
 var kingdeta = function(jin){
     switch(jin){
         case "ユニオン":
@@ -1421,18 +1393,16 @@ function N8_kisekae_sort_mood(){
             N8_kisekae_sortlist.sort((a, b) => new Date(b['実装日変換']) - new Date(a['実装日変換']));
         break;
         default:
-            easy_moood(N8_kisekae_hairetulist);
             N8_kisekae_sort(N8_kisekae_hairetulist);
         break;
     }
     if(N8_sortid !== 'ALL'){
-        easy_moood(N8_kisekae_sortlist);
         N8_kisekae_sort(N8_kisekae_sortlist);
     }
 }
 
 function N8_kisekae_sort(hako){
-    var keys = document.getElementById("N8_contentbox").getElementsByClassName("N8_kisekae_boxs");
+    document.getElementById('N8_contentbox').textContent = "";
     var sort_kantype = document.getElementById("N8_sort_kantype").value;
     var sort_nations = document.getElementById("N8_sort_nations").value;
     var sort_reality = document.getElementById("N8_sort_reality").value;
@@ -1451,13 +1421,31 @@ function N8_kisekae_sort(hako){
             (sort_gimmick == "ALL" || sort_gimmick == hako[i]['L2D']) && 
             (sort_get == "ALL" || sort_get == hako[i].入手方法)
         ){
-            console.log(keys[i])
-            keys[i].style.display = "flex";
+            var l2d = (hako[i]['L2D'] == "通常") ? "" : "（"+hako[i]['L2D']+"）";
+            var kakaku = (hako[i]['価格'] == "") ? "" : "/ダイヤ"+hako[i]['価格']+"個";
+
+            document.getElementById('N8_contentbox').insertAdjacentHTML("beforeend",
+                '<div class="N8_kisekae_boxs" data-name="'+hako[i]['着せ替え']+'">'+
+                    '<div class="N8_kisekae_zero_boxs '+hako[i]['レア']+'">'+hako[i]['着せ替え']+l2d+'</div>'+
+                    '<div class="N8_kisekae_zero_boxs">'+
+                        '<div class="N8_kisekae_first_boxs">'+
+                        '<a href="'+(hako[i]['アクセス']+hako[i]['着せ替え']+'.jpg')+'" target="_blank" ><img src="'+hako[i]['imgurl']+'"><img class="toukastyle" src="https://pasokau.com/wp-content/uploads/face/透過.png"></a>'+
+                        '</div>'+
+                        //'<div><a href="'+hako[i]['blogurl']+'" target="_blank" ><img src="'+hako[i]['imgurl']+'"></a></div>'
+                        '<div class="N8_kisekae_second_boxs">'+
+                            '<div class="N8_kisekae_second_childs"><a href="'+hako[i]['blogurl']+'" target="_blank">'+hako[i]['名前']+'</a></div>'+
+                            '<div class="N8_kisekae_second_childs"><a href="https://pasokau.com/skin_theme_'+skin_theme_list[hako[i]['テーマ']]+'" target="_blank">'+hako[i]['テーマ']+'</a></div>'+
+                            '<div class="N8_kisekae_second_childs">'+hako[i]['入手方法']+kakaku+'</div>'+
+                            '<div class="N8_kisekae_second_childs">'+hako[i]['実装日']+'</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'
+            );
+
             dia += (hako[i]['価格'] == "") ? 0:hako[i]['価格']*1;
             season += (hako[i]['入手方法'] == "クルーズパス") ? 1200:0;
             skincount++;
-        }else{
-            keys[i].style.display = "none";
+
         }
     }
 
@@ -1466,6 +1454,7 @@ function N8_kisekae_sort(hako){
     '<p>表示中のスキン【'+skincount+'】種類。<br>ダイヤ合計【'+dia+'】個。<br>お金に換算すると約【'+Math.floor(dia/7500*10000)+'】円です。</p>'
     )
 }
+
 
 
 
