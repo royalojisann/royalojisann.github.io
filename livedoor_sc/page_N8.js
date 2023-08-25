@@ -1322,6 +1322,7 @@ window.addEventListener('DOMContentLoaded', function() {
     for (let option of options) {
       if(option.value === selected_food) option.selected = true;
     }
+	N8_kisekae_sort_mood();
 });
 
 function easy_moood(hako){
