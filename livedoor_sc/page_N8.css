@@ -1,5 +1,5 @@
 /* page_N8 */
-#N8_page_link,#N8_buttonbox,#N8_subbox,#N8_diabox,#N8_contentbox{
+#N8_buttonbox,#N8_subbox,#N8_diabox,#N8_contentbox{
     margin: 1em 0;
 }
 #N8_page_link{
@@ -7,7 +7,12 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-#N8_page_link div{
+#N8_page_move {
+    width: 180px;
+    height: 45px;
+    font-size: 16px;
+}
+/* #N8_page_link div{
     width: 118px;
     height: 26px;
     font-size: 14px;
@@ -20,9 +25,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+#N8_buttonbox{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #N8_firstbutton{
-    width: 180px;
+    width: 174px;
     height: 45px;
     font-size: 18px;
 }
