@@ -1386,7 +1386,7 @@ function N8_page_request() {
     }
 };
 function N8_startbutton(){
-    document.getElementById("N8_subbox").style.opacity = 1;
+    document.getElementById("N8_subbox").style.display = "flex";
     N8_kisekae_sort_mood();
 }
 function N8_kisekae_sort_mood(){
