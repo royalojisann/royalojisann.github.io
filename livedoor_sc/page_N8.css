@@ -1,9 +1,11 @@
 /* page_N8 */
+#N8_page_link,#N8_firstbutton,#N8_subbox,#N8_diabox,#N8_contentbox{
+    margin: 1em 0;
+}
 #N8_page_link{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 1em 0;
 }
 #N8_page_link div{
     width: 118px;
