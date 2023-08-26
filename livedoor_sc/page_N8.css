@@ -1,6 +1,32 @@
 /* page_N8 */
+#N8_page_link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em 0;
+}
+#N8_page_link div{
+    width: 118px;
+    height: 26px;
+    font-size: 14px;
+    border: 1px solid #f00;
+    overflow: hidden;
+}
+#N8_page_link div a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#N8_firstbutton{
+    width: 174px;
+    height: 46px;
+    font-size: 18px;
+}
 #N8_subbox{
     display: flex;
+    justify-content: center;
     font-size: 15px;
 }
 #N8_subbox div{
@@ -11,6 +37,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+#N8_subbox select{
+    width: 170px;
+    font-size: 15px;
+    height: 30px;
+}
+#N8_diabox{
+    display: flex;
+    justify-content: center;
 }
 .N8_kisekae_boxs{
     width: 360px;
