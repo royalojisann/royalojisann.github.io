@@ -30,7 +30,7 @@
     font-size: 15px;
 }
 #N8_subbox div{
-    width: 174px;
+    width: 180px;
 }
 #N8_contentbox{
     font-size: 15px;
@@ -39,7 +39,7 @@
     justify-content: space-evenly;
 }
 #N8_subbox select{
-    width: 170px;
+    width: 176px;
     font-size: 15px;
     height: 30px;
 }
