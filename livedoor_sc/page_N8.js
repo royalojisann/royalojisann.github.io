@@ -1451,7 +1451,7 @@ function N8_kisekae_sort(hako){
     document.getElementById('N8_contentbox').insertAdjacentHTML("beforeend",hokan);
     document.getElementById("N8_diabox").textContent = "";
     document.getElementById("N8_diabox").insertAdjacentHTML("beforeend",
-    '<p>表示中のスキン【'+skincount+'】種類。<br>ダイヤ合計【'+dia+'】個。<br>お金に換算すると約【'+Math.floor(dia/7500*10000)+'】円です。</p>'
+    '表示中のスキン【'+skincount+'】種類。<br>ダイヤ合計【'+dia+'】個。<br>お金に換算すると約【'+Math.floor(dia/7500*10000)+'】円です。'
     )
 }
 
