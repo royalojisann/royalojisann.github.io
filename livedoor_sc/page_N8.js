@@ -1,4 +1,3 @@
-
 var kisekaeskn = [
 	["ユニオン","駆逐","ラフィー","Laffey","33娘","その他","","日本未実装","通常","","","2017年6月23日","大陸限定bilibiliコラボ"],
 	["ロイヤル","駆逐","ジャベリン","Javelin","22娘","その他","","日本未実装","通常","","","2017年6月23日","大陸限定bilibiliコラボ"],
@@ -1086,9 +1085,8 @@ var kisekaeskn = [
 	["ヴィシア","駆逐","ケルサン","Kersaint","ホーリー・ランニング","スポーツ","880","限定販売","プチ","通常背景","有り","2023年8月17日",""],
 	["アイリス","重巡","シュフラン","Suffren","インパルシブ・アクシデント","スポーツ","780","限定販売","通常","通常背景","有り","2023年8月17日",""],
 	["ユニオン","空母","ヨークタウン","Yorktown","光る風の明日へ","ケッコン","600","指輪を贈る","通常","","","2023年8月17日",""],
-	
-]
 
+]
 
 var kansen_nouryoku = [];
 var kansen_namelist = {};
@@ -1096,7 +1094,6 @@ var kensaku_kansen = {除外:[],新規:[],META:[],計画艦:[],コラボ:[],通�
 var kensaku_list = [];
 var ranking_deta= {駆逐:[],軽巡:[],重巡:[],超巡:[],砲艦:[],戦艦:[],巡戦:[],軽母:[],空母:[],航戦:[],潜水:[],潜母:[],運送:[],工作:[],ミ駆:[],風帆:[]};
 var weapon_keys = {ALL:'',無し:'',駆逐:'',軽巡:'',重巡:'',大口径主砲:'',超巡主砲:'',戦艦:'',魚雷:'',ミサイル:'',潜水艦砲:'',潜水:'',対空:'',戦闘機:'',爆撃機:'',攻撃機:'',水上機:'',航戦艦載機:'',耐久系:'',攻撃系:'',その他:'',対潜爆雷:'',対潜機:'',特殊装備:'',大砲:''};
-
 var kantype_list= {駆逐:[],軽巡:[],重巡:[],超巡:[],砲艦:[],戦艦:[],巡戦:[],軽母:[],空母:[],航戦:[],潜水:[],潜母:[],運送:[],工作:[],ミ駆:[],風帆:[]};
 var reality_list = {N:{},R:{},SR:{},SSR:{},UR:{},PR:{},DR:{}};
 var nations_list = {ユニオン:{省略:'ユニオン'},ロイヤル:{省略:'ロイヤル'},重桜:{省略:'重桜'},鉄血:{省略:'鉄血'},アイリス:{省略:'アイリス'},ヴィシア:{省略:'ヴィシア'},サディア:{省略:'サディア'},テンペスタ:{省略:'テンペスタ'},東煌:{省略:'東煌'},北連:{省略:'北連'},META:{省略:'META'},ネプテューヌ:{省略:'ネプコラ'},うたわれるもの:{省略:'うたわれ'},KizunaAI:{省略:'KizunaAI'},ホロライブ:{省略:'ホロライブ'},DOAXVV:{省略:'DOAXVV'},アイドルマスター:{省略:'アイマス'},SSSS:{省略:'SSSS'},ライザのアトリエ:{省略:'ライザ'},その他:{省略:'その他'},}
@@ -1116,7 +1113,6 @@ var N8_release_list = {};
 //テーマ
 var skin_theme_list = {ALL:'all',クリスマス:'xmas',お正月:'newyear',東煌風:'spring',学園:'school',水着:'summer',パーティー:'party',ハロウィン:'helloween',私服:'casual',夏祭り:'festival',LIVE:'live',特殊演習:'specialexercise',スポーツ:'sport',レースクイーン:'racequeen',ホスピタル:'hospital',バニー:'bunny',メイド:'maid',永き夜の招き:'vampire',メルヘン:'fairytale',居間着:'homerelaxation',"リズム＆ステップ":'dance',温泉タイム:'hotsprings',仕事百般:'work',改造:'retrofit',ケッコン:'wedding',その他:'misc'};
 
-//["ユニオン","駆逐","ラフィー","Laffey","33娘","その他","","日本版未実装","","","","2017年6月23日","大陸限定bilibiliコラボ"],
 window.addEventListener('DOMContentLoaded', function() {
     for(var i=0;i<kan_profile.length; i++){
         var inputstatus_deta = {
@@ -1171,10 +1167,8 @@ window.addEventListener('DOMContentLoaded', function() {
             rarecolor =kansen_nouryoku[i].レア;
             kansen_nouryoku[i].正式名称  = kan_profile[i][2];
         }
-
         kansen_nouryoku[i].修正レア = rarecolor;
         kansen_nouryoku[i].ソート = i;
-
         kansen_namelist[kansen_nouryoku[i]['正式名称']]=kansen_nouryoku[i];
     }
   
@@ -1307,8 +1301,6 @@ window.addEventListener('DOMContentLoaded', function() {
         '<option value="実装日（降順）">実装日（降順）</option>\n'+
         '</select>\n'
     )
-
-    document.getElementById("N8_subbox").textContent ="";
     document.getElementById("N8_subbox").insertAdjacentHTML("beforeend",
     '<div>'+
         hokan01+
@@ -1328,11 +1320,16 @@ window.addEventListener('DOMContentLoaded', function() {
       if(option.value === selected_food) option.selected = true;
     }
 	document.getElementById('N8_sort_kisekaetheme').style.display = (document.getElementById('N8_sort_kisekaetheme').value == "ALL") ? "block" : "none";
-	document.getElementById("N8_page_link").textContent = "";
-    var linkpage = ('<div><a href="https://pasokau.com/skin_theme_manual" target="_blank" >使い方</a></div>');
-    for(var i=0; i<Object.keys(skin_theme_list).length; i++){
-        linkpage += ('<div><a href="https://pasokau.com/skin_theme_'+skin_theme_list[Object.keys(skin_theme_list)[i]]+'" target="_blank" >'+Object.keys(skin_theme_list)[i]+'</a></div>');
+    var linkpage = (
+        '<select id="N8_page_move" onchange="N8_page_request();">\n'+
+        '<option value="">ページ移動</option>\n'+
+        '<option value="https://pasokau.com/skin_theme_manual">使い方を知る</option>\n'+
+        '<option value="https://pasokau.com/skin_theme_all">全てのテーマ</option>\n'
+        );
+    for(var i=1; i<Object.keys(skin_theme_list).length; i++){
+        linkpage += ('<option value="https://pasokau.com/skin_theme_'+skin_theme_list[Object.keys(skin_theme_list)[i]]+'">'+Object.keys(skin_theme_list)[i]+'</option>\n');
     }
+    linkpage += '</select>\n'
     document.getElementById("N8_page_link").insertAdjacentHTML('beforeend',linkpage);
 });
 
@@ -1383,11 +1380,15 @@ var kingdeta = function(jin){
     }
 }
 
+function N8_page_request() {
+    if(document.getElementById('N8_page_move').value != '') {
+        location.href = document.getElementById('N8_page_move').value;
+    }
+};
 function N8_startbutton(){
     document.getElementById("N8_subbox").style.opacity = 1;
     N8_kisekae_sort_mood();
 }
-
 function N8_kisekae_sort_mood(){
     var N8_sortid = document.getElementById("N8_sort_kisekaesortid").value;
     switch(N8_sortid){
@@ -1411,7 +1412,6 @@ function N8_kisekae_sort_mood(){
         N8_kisekae_sort(N8_kisekae_sortlist);
     }
 }
-
 function N8_kisekae_sort(hako){
     var skincount = 0,dia = 0,season = 0,hokan = "";
     for(var i=0;i<hako.length;i++){
@@ -1454,4 +1454,3 @@ function N8_kisekae_sort(hako){
     '表示中のスキン【'+skincount+'】種類。<br>ダイヤ合計【'+dia+'】個。<br>お金に換算すると約【'+Math.floor(dia/7500*10000)+'】円です。'
     )
 }
-
