@@ -20,8 +20,8 @@
     align-items: center;
 }
 #N8_firstbutton{
-    width: 174px;
-    height: 46px;
+    width: 180px;
+    height: 45px;
     font-size: 18px;
 }
 #N8_subbox{
@@ -41,7 +41,7 @@
 #N8_subbox select{
     width: 176px;
     font-size: 15px;
-    height: 30px;
+    height: 45px;
 }
 #N8_diabox{
     display: flex;
