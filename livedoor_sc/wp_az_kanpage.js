@@ -402,9 +402,9 @@ keisan = (kan_list[index_n][0] == 'META') ? (keisan+kan_list[index_n][55]*1)*get
             '<tbody>\n'+
             '<tr><th>耐久</th><td>'+status_deta.耐久+'</td><th>装甲</th><td>'+status_deta.装甲+'</td><th>装填</th><td>'+status_deta.装填+'</td></tr>\n'+
             '<tr><th>火力</th><td>'+status_deta.火力+'</td><th>雷装</th><td>'+status_deta.雷装+'</td><th>回避</th><td>'+status_deta.回避+'</td></tr>\n'+
-            '<tr><th>対空</th><td>'+status_deta.対空+'</td><th>航空</th><td>'+status_deta.航空+'</td><th>燃費</th><td>'+status_deta.消費+'</td></tr>\n'+
-            '<tr><th>対潜</th><td>'+status_deta.対潜+'</td><th>命中</th><td>'+status_deta.命中+'</td><th>速力</th><td>'+status_deta.速力+'</td></tr>\n'+
-            '<tr><th>幸運</th><td>'+status_deta.幸運+'</td>'+senkou+'<th></th><td></td></tr>\n'+
+                '<tr><th>対空</th><td>'+status_deta.対空+'</td><th>航空</th><td>'+status_deta.航空+'</td><th>命中</th><td>'+status_deta.命中+'</td></tr>\n'+
+                '<tr><th>燃費</th><td>'+status_deta.消費+'</td><th>対潜</th><td>'+status_deta.対潜+'</td><th>速力</th><td>'+status_deta.速力+'</td></tr>\n'+
+		'<tr><th>幸運</th><td>'+status_deta.幸運+'</td>'+senkou+'<th></th><td></td></tr>\n'+
             '<tr style="border-top: 1px solid #2196F3;"><th style="background:#dfdfdf;" colspan="6">装備/補正値/最大数</th></tr>\n'+
             '<tr><th colspan="2">'+status_deta.主砲装備+'</th><td colspan="2">'+status_deta.主砲補正+'％</td><td colspan="2">'+status_deta.主砲砲座+'</td></tr>\n'+
             '<tr><th colspan="2">'+status_deta.副砲装備+'</th><td colspan="2">'+status_deta.副砲補正+'％</td><td colspan="2">'+status_deta.副砲砲座+'</td></tr>\n'+
