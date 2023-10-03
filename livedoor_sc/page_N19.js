@@ -760,18 +760,24 @@ function kan_technology_list_sortbutton(in_id){
         sumdata["完凸"] += kan_technology_list[id]["完凸"];
         sumdata["カンスト"] += kan_technology_list[id]["カンスト"];
         sumdata["合計"] += kan_technology_list[id]["合計"];
-        var listo1 = kan_technology_list[id]["対象1"].split("・");
-        for(var c=0;c<listo1.length;c++){
-            sorttechnology[listo1[c]][kan_technology_list[id]["強化1"].slice(0,2)] += kan_technology_list[id]["強化1"].slice(-1)*1;
+
+        if(bunki == "ALL" || bunki == "入手時"){
+            var listo1 = kan_technology_list[id]["対象1"].split("・");
+            for(var c=0;c<listo1.length;c++){
+                sorttechnology[listo1[c]][kan_technology_list[id]["強化1"].slice(0,2)] += kan_technology_list[id]["強化1"].slice(-1)*1;
+            }
         }
-        var listo2 = kan_technology_list[id]["対象2"].split("・");
-        for(var c=0;c<listo2.length;c++){
-            sorttechnology[listo2[c]][kan_technology_list[id]["強化2"].slice(0,2)] += kan_technology_list[id]["強化2"].slice(-1)*1;
+        if(bunki == "ALL" || bunki == "Lv120"){
+            var listo2 = kan_technology_list[id]["対象2"].split("・");
+            for(var c=0;c<listo2.length;c++){
+                sorttechnology[listo2[c]][kan_technology_list[id]["強化2"].slice(0,2)] += kan_technology_list[id]["強化2"].slice(-1)*1;
+            }
         }
+
         return "flex";
     }
 
-    var sumdata = {"入手":0,"完凸":0,"カンスト":0,"合計":0,};
+    var sumdata = {"入手":0,"完凸":0,"カンスト":0,"合計":0};
     sorttechnology = {
         '駆逐':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
         '軽巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
@@ -797,7 +803,7 @@ function kan_technology_list_sortbutton(in_id){
                     (rare == "ALL" || rare == kan_technology_list[Object.keys(kan_technology_list)[i]].レア) &&
                     (taisyou == "ALL" || taisyou == kan_technology_list[Object.keys(kan_technology_list)[i]].対象1 || taisyou == kan_technology_list[Object.keys(kan_technology_list)[i]].対象2) &&
                     (status == "ALL" || status == kan_technology_list[Object.keys(kan_technology_list)[i]].強化1 || status == kan_technology_list[Object.keys(kan_technology_list)[i]].強化2)
-                ) ? atari(document.getElementById(in_id).childNodes[i].id) : "none";
+                ) ? atari(document.getElementById(in_id).childNodes[i].id,"ALL") : "none";
             }
         break;
         case '入手時':
@@ -808,7 +814,7 @@ function kan_technology_list_sortbutton(in_id){
                     (rare == "ALL" || rare == kan_technology_list[Object.keys(kan_technology_list)[i]].レア) &&
                     (taisyou == "ALL" || taisyou == kan_technology_list[Object.keys(kan_technology_list)[i]].対象1) &&
                     (status == "ALL" || status == kan_technology_list[Object.keys(kan_technology_list)[i]].強化1)
-                ) ? atari(document.getElementById(in_id).childNodes[i].id) : "none";
+                ) ? atari(document.getElementById(in_id).childNodes[i].id,"入手時") : "none";
             }
         break;
         case 'Lv120':
@@ -819,7 +825,7 @@ function kan_technology_list_sortbutton(in_id){
                     (rare == "ALL" || rare == kan_technology_list[Object.keys(kan_technology_list)[i]].レア) &&
                     (taisyou == "ALL" || taisyou == kan_technology_list[Object.keys(kan_technology_list)[i]].対象2) &&
                     (status == "ALL" || status == kan_technology_list[Object.keys(kan_technology_list)[i]].強化2)
-                ) ? atari(document.getElementById(in_id).childNodes[i].id) : "none";
+                ) ? atari(document.getElementById(in_id).childNodes[i].id,"Lv120") : "none";
             }
         break;
     }
