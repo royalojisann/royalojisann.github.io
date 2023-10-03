@@ -806,7 +806,7 @@ window.addEventListener('DOMContentLoaded', function() {
         "<tr><td>完凸</td><td>"+sumdata["完凸"]+"</td></tr>"+
         "<tr><td>120</td><td>"+sumdata["カンスト"]+"</td></tr>"+
         "<tr><td>合計</td><td>"+sumdata["合計"]+"</td></tr>"+
-        "</tbody></table><br>"+
+        "</tbody></table>"+
         "艦船技術内訳"+
         technology_table(sorttechnology)
         );
@@ -899,7 +899,7 @@ function kan_technology_list_sortbutton(in_id){
     "<tr><td>完凸</td><td>"+sumdata["完凸"]+"</td></tr>"+
     "<tr><td>120</td><td>"+sumdata["カンスト"]+"</td></tr>"+
     "<tr><td>合計</td><td>"+sumdata["合計"]+"</td></tr>"+
-    "</tbody></table><br>"+
+    "</tbody></table>"+
     "艦船技術内訳"+
     technology_table(sorttechnology)
     );
