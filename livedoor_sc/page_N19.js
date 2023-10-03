@@ -571,6 +571,57 @@ var kan_technology_list = {
     
 };
 
+var teamstechnology = {
+    '駆逐':{'耐久':35,'火力':9,'雷装':19,'対空':10,'航空':0,'装填':7,'命中':0,'回避':7,'対潜':10},
+    '軽巡':{'耐久':0,'火力':14,'雷装':13,'対空':0,'航空':0,'装填':7,'命中':0,'回避':0,'対潜':10},
+    '重巡':{'耐久':35,'火力':17,'雷装':23,'対空':0,'航空':0,'装填':7,'命中':0,'回避':0,'対潜':0},
+    '超巡':{'耐久':25,'火力':23,'雷装':10,'対空':0,'航空':0,'装填':10,'命中':0,'回避':0,'対潜':0},
+    '巡戦':{'耐久':55,'火力':20,'雷装':0,'対空':10,'航空':0,'装填':0,'命中':13,'回避':10,'対潜':0},
+    '戦艦':{'耐久':55,'火力':17,'雷装':0,'対空':10,'航空':0,'装填':0,'命中':13,'回避':0,'対潜':0},
+    '航戦':{'耐久':45,'火力':17,'雷装':0,'対空':7,'航空':9,'装填':0,'命中':10,'回避':0,'対潜':0},
+    '砲艦':{'耐久':25,'火力':20,'雷装':0,'対空':0,'航空':0,'装填':7,'命中':6,'回避':0,'対潜':0},
+    '軽母':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':24,'装填':14,'命中':0,'回避':0,'対潜':20},
+    '空母':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':17,'装填':14,'命中':0,'回避':0,'対潜':0},
+    '潜水':{'耐久':50,'火力':0,'雷装':23,'対空':0,'航空':0,'装填':0,'命中':13,'回避':13,'対潜':0},
+    '潜母':{'耐久':50,'火力':0,'雷装':23,'対空':0,'航空':9,'装填':0,'命中':13,'回避':13,'対潜':0},
+    '工作':{'耐久':45,'火力':0,'雷装':0,'対空':15,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '運送':{'耐久':45,'火力':0,'雷装':0,'対空':15,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0}
+};
+
+var kansentechnology = {
+    '駆逐':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '軽巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '重巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '超巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '巡戦':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '戦艦':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '航戦':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '砲艦':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '軽母':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '空母':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '潜水':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '潜母':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '工作':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '運送':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0}
+};
+
+var technologysum = {
+    '駆逐':{'耐久':35,'火力':9,'雷装':19,'対空':10,'航空':0,'装填':7,'命中':0,'回避':7,'対潜':10},
+    '軽巡':{'耐久':0,'火力':14,'雷装':13,'対空':0,'航空':0,'装填':7,'命中':0,'回避':0,'対潜':10},
+    '重巡':{'耐久':35,'火力':17,'雷装':23,'対空':0,'航空':0,'装填':7,'命中':0,'回避':0,'対潜':0},
+    '超巡':{'耐久':25,'火力':23,'雷装':10,'対空':0,'航空':0,'装填':10,'命中':0,'回避':0,'対潜':0},
+    '巡戦':{'耐久':55,'火力':20,'雷装':0,'対空':10,'航空':0,'装填':0,'命中':13,'回避':10,'対潜':0},
+    '戦艦':{'耐久':55,'火力':17,'雷装':0,'対空':10,'航空':0,'装填':0,'命中':13,'回避':0,'対潜':0},
+    '航戦':{'耐久':45,'火力':17,'雷装':0,'対空':7,'航空':9,'装填':0,'命中':10,'回避':0,'対潜':0},
+    '砲艦':{'耐久':25,'火力':20,'雷装':0,'対空':0,'航空':0,'装填':7,'命中':6,'回避':0,'対潜':0},
+    '軽母':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':24,'装填':14,'命中':0,'回避':0,'対潜':20},
+    '空母':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':17,'装填':14,'命中':0,'回避':0,'対潜':0},
+    '潜水':{'耐久':50,'火力':0,'雷装':23,'対空':0,'航空':0,'装填':0,'命中':13,'回避':13,'対潜':0},
+    '潜母':{'耐久':50,'火力':0,'雷装':23,'対空':0,'航空':9,'装填':0,'命中':13,'回避':13,'対潜':0},
+    '工作':{'耐久':45,'火力':0,'雷装':0,'対空':15,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '運送':{'耐久':45,'火力':0,'雷装':0,'対空':15,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0}
+};
+
 var sorttechnology = {
     '駆逐':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
     '軽巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
@@ -587,6 +638,26 @@ var sorttechnology = {
     '工作':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
     '運送':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0}
 };
+
+function technology_table(hen){
+    var a001 = "<table class='N19_table' style='border-collapse: collapse;text-align:center;' border='1' cellpadding='0'><tbody><tr><th>艦種</th><th>耐久</th><th>火力</th><th>雷装</th><th>対空</th><th>航空</th><th>装填</th><th>命中</th><th>回避</th><th>対潜</th></tr>";
+    for(var i=0;i<Object.keys(hen).length;i++){
+        a001 += (
+            "<tr><th>"+Object.keys(hen)[i]+"</th>"+
+            "<td>"+hen[Object.keys(hen)[i]]["耐久"]+"</td>"+
+            "<td>"+hen[Object.keys(hen)[i]]["火力"]+"</td>"+
+            "<td>"+hen[Object.keys(hen)[i]]["雷装"]+"</td>"+
+            "<td>"+hen[Object.keys(hen)[i]]["対空"]+"</td>"+
+            "<td>"+hen[Object.keys(hen)[i]]["航空"]+"</td>"+
+            "<td>"+hen[Object.keys(hen)[i]]["命中"]+"</td>"+
+            "<td>"+hen[Object.keys(hen)[i]]["装填"]+"</td>"+
+            "<td>"+hen[Object.keys(hen)[i]]["回避"]+"</td>"+
+            "<td>"+hen[Object.keys(hen)[i]]["対潜"]+"</td>"+
+            "</tr>"
+        )
+    }
+    return (a001 += "</tbody></table>");
+}
 
 var kansen_nouryoku = [];
 var kansen_namelist = {};
@@ -676,9 +747,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var matomelist = "";
     var sumdata = {"入手":0,"完凸":0,"カンスト":0,"合計":0};
     for(var i=0;i<Object.keys(kan_technology_list).length;i++){
-        //console.log(kan_technology_list[Object.keys(kan_technology_list)[i]]["艦船名"]);
         var adeta = ('<img class="kanpic '+kan_technology_list[Object.keys(kan_technology_list)[i]]["レア"]+'" src="https://pasokau.com/wp-content/uploads/face/'+kan_technology_list[Object.keys(kan_technology_list)[i]]["艦船名"]+'.jpg" alt="'+kan_technology_list[Object.keys(kan_technology_list)[i]]["艦船名"]+'"/><a href="https://pasokau.com/'+kansen_namelist[Object.keys(kan_technology_list)[i]]['wpurl']+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/imgpic/toolpic/透過.png"/></a>');
-
         var tiername = function(){
             if(isNaN(kan_technology_list[Object.keys(kan_technology_list)[i]]["ティアー"])){
                 return (kan_technology_list[Object.keys(kan_technology_list)[i]]["ティアー"]);
@@ -702,10 +771,14 @@ window.addEventListener('DOMContentLoaded', function() {
         )
         var listo1 = kan_technology_list[Object.keys(kan_technology_list)[i]]["対象1"].split("・");
         for(var c=0;c<listo1.length;c++){
+            kansentechnology[listo1[c]][kan_technology_list[Object.keys(kan_technology_list)[i]]["強化1"].slice(0,2)] += kan_technology_list[Object.keys(kan_technology_list)[i]]["強化1"].slice(-1)*1;
+            technologysum[listo1[c]][kan_technology_list[Object.keys(kan_technology_list)[i]]["強化1"].slice(0,2)] += kan_technology_list[Object.keys(kan_technology_list)[i]]["強化1"].slice(-1)*1;
             sorttechnology[listo1[c]][kan_technology_list[Object.keys(kan_technology_list)[i]]["強化1"].slice(0,2)] += kan_technology_list[Object.keys(kan_technology_list)[i]]["強化1"].slice(-1)*1;
         }
         var listo2 = kan_technology_list[Object.keys(kan_technology_list)[i]]["対象2"].split("・");
         for(var c=0;c<listo2.length;c++){
+            kansentechnology[listo2[c]][kan_technology_list[Object.keys(kan_technology_list)[i]]["強化2"].slice(0,2)] += kan_technology_list[Object.keys(kan_technology_list)[i]]["強化2"].slice(-1)*1;
+            technologysum[listo2[c]][kan_technology_list[Object.keys(kan_technology_list)[i]]["強化2"].slice(0,2)] += kan_technology_list[Object.keys(kan_technology_list)[i]]["強化2"].slice(-1)*1;
             sorttechnology[listo2[c]][kan_technology_list[Object.keys(kan_technology_list)[i]]["強化2"].slice(0,2)] += kan_technology_list[Object.keys(kan_technology_list)[i]]["強化2"].slice(-1)*1;
         }
         sumdata["入手"] += kan_technology_list[Object.keys(kan_technology_list)[i]]["入手"];
@@ -713,40 +786,32 @@ window.addEventListener('DOMContentLoaded', function() {
         sumdata["カンスト"] += kan_technology_list[Object.keys(kan_technology_list)[i]]["カンスト"];
         sumdata["合計"] += kan_technology_list[Object.keys(kan_technology_list)[i]]["合計"];
     }
-    document.getElementById("N19_box").insertAdjacentHTML('beforeend',matomelist);
-    document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',
-    "技術Pt内訳"+
-    "<table style='border-collapse: collapse;text-align:center;width:200px;' border='1' cellpadding='0'><tbody>"+
-    "<tr><td>入手</td><td>"+sumdata["入手"]+"</td></tr>"+
-    "<tr><td>完凸</td><td>"+sumdata["完凸"]+"</td></tr>"+
-    "<tr><td>120</td><td>"+sumdata["カンスト"]+"</td></tr>"+
-    "<tr><td>合計</td><td>"+sumdata["合計"]+"</td></tr>"+
-    "</tbody></table>"+
-    "艦船技術内訳"+
-    technology_table(sorttechnology)
-    );
-});
-
-function technology_table(hen){
-    var a001 = "<table class='N19_table' style='border-collapse: collapse;text-align:center;' border='1' cellpadding='0'><tbody><tr><th>艦種</th><th>耐久</th><th>火力</th><th>雷装</th><th>対空</th><th>航空</th><th>装填</th><th>命中</th><th>回避</th><th>対潜</th></tr>";
-    for(var i=0;i<Object.keys(hen).length;i++){
-        a001 += (
-            "<tr><th>"+Object.keys(hen)[i]+"</th>"+
-            "<td>"+hen[Object.keys(hen)[i]]["耐久"]+"</td>"+
-            "<td>"+hen[Object.keys(hen)[i]]["火力"]+"</td>"+
-            "<td>"+hen[Object.keys(hen)[i]]["雷装"]+"</td>"+
-            "<td>"+hen[Object.keys(hen)[i]]["対空"]+"</td>"+
-            "<td>"+hen[Object.keys(hen)[i]]["航空"]+"</td>"+
-            "<td>"+hen[Object.keys(hen)[i]]["命中"]+"</td>"+
-            "<td>"+hen[Object.keys(hen)[i]]["装填"]+"</td>"+
-            "<td>"+hen[Object.keys(hen)[i]]["回避"]+"</td>"+
-            "<td>"+hen[Object.keys(hen)[i]]["対潜"]+"</td>"+
-            "</tr>"
-        )
+    if(document.getElementById("N19_box")){
+        document.getElementById("N19_box").insertAdjacentHTML('beforeend',matomelist);
     }
-    return (a001 += "</tbody></table>");
-}
-
+    if(document.getElementById("N19_teams_technology")){
+        document.getElementById("N19_teams_technology").insertAdjacentHTML('beforeend',technology_table(teamstechnology));
+    }
+    if(document.getElementById("N19_kansenn_technology")){
+        document.getElementById("N19_kansenn_technology").insertAdjacentHTML('beforeend',technology_table(kansentechnology));
+    }
+    if(document.getElementById("N19_sum_technology")){
+        document.getElementById("N19_sum_technology").insertAdjacentHTML('beforeend',technology_table(technologysum));
+    }
+    if(document.getElementById("N19_sort_technology")){
+        document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',
+        "技術Pt内訳"+
+        "<table style='border-collapse: collapse;text-align:center;width:200px;' border='1' cellpadding='0'><tbody>"+
+        "<tr><td>入手</td><td>"+sumdata["入手"]+"</td></tr>"+
+        "<tr><td>完凸</td><td>"+sumdata["完凸"]+"</td></tr>"+
+        "<tr><td>120</td><td>"+sumdata["カンスト"]+"</td></tr>"+
+        "<tr><td>合計</td><td>"+sumdata["合計"]+"</td></tr>"+
+        "</tbody></table><br>"+
+        "艦船技術内訳"+
+        technology_table(sorttechnology)
+        );
+    }
+});
 
 function kan_technology_list_sortbutton(in_id){
     var kuni = document.getElementById("N19_kensaku_kuni").value;
@@ -755,12 +820,11 @@ function kan_technology_list_sortbutton(in_id){
     var bunnki = document.getElementById("N19_kensaku_get").value;
     var taisyou = document.getElementById("N19_kensaku_taisyou").value;
     var status = document.getElementById("N19_kensaku_status").value;
-    var atari = function(id){
+    var atari = function(id,bunki){
         sumdata["入手"] += kan_technology_list[id]["入手"];
         sumdata["完凸"] += kan_technology_list[id]["完凸"];
         sumdata["カンスト"] += kan_technology_list[id]["カンスト"];
         sumdata["合計"] += kan_technology_list[id]["合計"];
-
         if(bunki == "ALL" || bunki == "入手時"){
             var listo1 = kan_technology_list[id]["対象1"].split("・");
             for(var c=0;c<listo1.length;c++){
@@ -773,11 +837,9 @@ function kan_technology_list_sortbutton(in_id){
                 sorttechnology[listo2[c]][kan_technology_list[id]["強化2"].slice(0,2)] += kan_technology_list[id]["強化2"].slice(-1)*1;
             }
         }
-
         return "flex";
     }
-
-    var sumdata = {"入手":0,"完凸":0,"カンスト":0,"合計":0};
+    var sumdata = {"入手":0,"完凸":0,"カンスト":0,"合計":0,};
     sorttechnology = {
         '駆逐':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
         '軽巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
@@ -829,7 +891,6 @@ function kan_technology_list_sortbutton(in_id){
             }
         break;
     }
-
     document.getElementById("N19_sort_technology").textContent = '';
     document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',
     "技術Pt内訳"+
@@ -838,11 +899,12 @@ function kan_technology_list_sortbutton(in_id){
     "<tr><td>完凸</td><td>"+sumdata["完凸"]+"</td></tr>"+
     "<tr><td>120</td><td>"+sumdata["カンスト"]+"</td></tr>"+
     "<tr><td>合計</td><td>"+sumdata["合計"]+"</td></tr>"+
-    "</tbody></table>"+
+    "</tbody></table><br>"+
     "艦船技術内訳"+
     technology_table(sorttechnology)
     );
 }
+
 function N19open(){
     document.getElementById("N19_menue_open").style.display = (document.getElementById("N19_menue_open").style.display == "none") ? "block" : "none";
 }
