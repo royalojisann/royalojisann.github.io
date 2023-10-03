@@ -571,7 +571,22 @@ var kan_technology_list = {
     
 };
 
-var sprttechnology = {};
+var sorttechnology = {
+    '駆逐':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '軽巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '重巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '超巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '巡戦':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '戦艦':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '航戦':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '砲艦':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '軽母':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '空母':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '潜水':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '潜母':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '工作':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
+    '運送':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0}
+};
 
 var kansen_nouryoku = [];
 var kansen_namelist = {};
@@ -684,8 +699,17 @@ window.addEventListener('DOMContentLoaded', function() {
                 '</div>'+
             '</div>'
         )
+        var listo1 = kan_technology_list[Object.keys(kan_technology_list)[i]]["対象1"].split("・");
+        for(var c=0;c<listo1.length;c++){
+            sorttechnology[listo1[c]][kan_technology_list[Object.keys(kan_technology_list)[i]]["強化1"].slice(0,2)] += kan_technology_list[Object.keys(kan_technology_list)[i]]["強化1"].slice(-1)*1;
+        }
+        var listo2 = kan_technology_list[Object.keys(kan_technology_list)[i]]["対象2"].split("・");
+        for(var c=0;c<listo2.length;c++){
+            sorttechnology[listo2[c]][kan_technology_list[Object.keys(kan_technology_list)[i]]["強化2"].slice(0,2)] += kan_technology_list[Object.keys(kan_technology_list)[i]]["強化2"].slice(-1)*1;
+        }
     }
     document.getElementById("N19_box").insertAdjacentHTML('beforeend',matomelist);
+    document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',technology_table(sorttechnology));
 });
 
 function technology_table(hen){
@@ -723,17 +747,17 @@ function kan_technology_list_sortbutton(in_id){
         sumdata["合計"] += kan_technology_list[id]["合計"];
         var listo1 = kan_technology_list[id]["対象1"].split("・");
         for(var c=0;c<listo1.length;c++){
-            sprttechnology[listo1[c]][kan_technology_list[id]["強化1"].slice(0,2)] += kan_technology_list[id]["強化1"].slice(-1)*1;
+            sorttechnology[listo1[c]][kan_technology_list[id]["強化1"].slice(0,2)] += kan_technology_list[id]["強化1"].slice(-1)*1;
         }
         var listo2 = kan_technology_list[id]["対象2"].split("・");
         for(var c=0;c<listo2.length;c++){
-            sprttechnology[listo2[c]][kan_technology_list[id]["強化2"].slice(0,2)] += kan_technology_list[id]["強化2"].slice(-1)*1;
+            sorttechnology[listo2[c]][kan_technology_list[id]["強化2"].slice(0,2)] += kan_technology_list[id]["強化2"].slice(-1)*1;
         }
         return "flex";
     }
 
     var sumdata = {"入手":0,"完凸":0,"カンスト":0,"合計":0,};
-    sprttechnology = {
+    sorttechnology = {
         '駆逐':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
         '軽巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
         '重巡':{'耐久':0,'火力':0,'雷装':0,'対空':0,'航空':0,'装填':0,'命中':0,'回避':0,'対潜':0},
@@ -795,7 +819,7 @@ function kan_technology_list_sortbutton(in_id){
     "<tr><td>合計</td><td>"+sumdata["合計"]+"</td></tr>"+
     "</tbody></table>"+
     "艦船技術内訳"+
-    technology_table(sprttechnology)
+    technology_table(sorttechnology)
     );
 }
 function N19open(){
