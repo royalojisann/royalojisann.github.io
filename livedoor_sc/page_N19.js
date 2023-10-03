@@ -674,6 +674,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('DOMContentLoaded', function() {
     var matomelist = "";
+    var sumdata = {"入手":0,"完凸":0,"カンスト":0,"合計":0};
     for(var i=0;i<Object.keys(kan_technology_list).length;i++){
         //console.log(kan_technology_list[Object.keys(kan_technology_list)[i]]["艦船名"]);
         var adeta = ('<img class="kanpic '+kan_technology_list[Object.keys(kan_technology_list)[i]]["レア"]+'" src="https://pasokau.com/wp-content/uploads/face/'+kan_technology_list[Object.keys(kan_technology_list)[i]]["艦船名"]+'.jpg" alt="'+kan_technology_list[Object.keys(kan_technology_list)[i]]["艦船名"]+'"/><a href="https://pasokau.com/'+kansen_namelist[Object.keys(kan_technology_list)[i]]['wpurl']+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/imgpic/toolpic/透過.png"/></a>');
@@ -707,9 +708,23 @@ window.addEventListener('DOMContentLoaded', function() {
         for(var c=0;c<listo2.length;c++){
             sorttechnology[listo2[c]][kan_technology_list[Object.keys(kan_technology_list)[i]]["強化2"].slice(0,2)] += kan_technology_list[Object.keys(kan_technology_list)[i]]["強化2"].slice(-1)*1;
         }
+        sumdata["入手"] += kan_technology_list[Object.keys(kan_technology_list)[i]]["入手"];
+        sumdata["完凸"] += kan_technology_list[Object.keys(kan_technology_list)[i]]["完凸"];
+        sumdata["カンスト"] += kan_technology_list[Object.keys(kan_technology_list)[i]]["カンスト"];
+        sumdata["合計"] += kan_technology_list[Object.keys(kan_technology_list)[i]]["合計"];
     }
     document.getElementById("N19_box").insertAdjacentHTML('beforeend',matomelist);
-    document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',technology_table(sorttechnology));
+    document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',
+    "技術Pt内訳"+
+    "<table style='border-collapse: collapse;text-align:center;width:200px;' border='1' cellpadding='0'><tbody>"+
+    "<tr><td>入手</td><td>"+sumdata["入手"]+"</td></tr>"+
+    "<tr><td>完凸</td><td>"+sumdata["完凸"]+"</td></tr>"+
+    "<tr><td>120</td><td>"+sumdata["カンスト"]+"</td></tr>"+
+    "<tr><td>合計</td><td>"+sumdata["合計"]+"</td></tr>"+
+    "</tbody></table><br>"+
+    "艦船技術内訳"+
+    technology_table(sorttechnology)
+    );
 });
 
 function technology_table(hen){
