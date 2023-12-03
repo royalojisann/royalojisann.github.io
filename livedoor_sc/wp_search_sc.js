@@ -37,6 +37,7 @@ var teamslist = {
         アイドルマスター:{名前:'アイドルマスター',フォルダ:'Collab_Nations'},
         SSSS:{名前:'SSSS',フォルダ:'Collab_Nations'},
         ライザのアトリエ:{名前:'ライザのアトリエ',フォルダ:'Collab_Nations'},
+	閃乱カグラ:{名前:'閃乱カグラ',フォルダ:'Collab_Nations'},
         //:{名前:'',フォルダ:'Collab_Nations'},
         //:{名前:'',フォルダ:'Collab_Nations'},
         //BILIBILI:{名前:'BILIBILI',フォルダ:'Collab_Nations'},
