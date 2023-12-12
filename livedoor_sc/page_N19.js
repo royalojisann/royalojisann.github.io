@@ -660,8 +660,8 @@ function technology_table(hen){
             "<td>"+hen[Object.keys(hen)[i]]["雷装"]+"</td>"+
             "<td>"+hen[Object.keys(hen)[i]]["対空"]+"</td>"+
             "<td>"+hen[Object.keys(hen)[i]]["航空"]+"</td>"+
-            "<td>"+hen[Object.keys(hen)[i]]["命中"]+"</td>"+
             "<td>"+hen[Object.keys(hen)[i]]["装填"]+"</td>"+
+            "<td>"+hen[Object.keys(hen)[i]]["命中"]+"</td>"+
             "<td>"+hen[Object.keys(hen)[i]]["回避"]+"</td>"+
             "<td>"+hen[Object.keys(hen)[i]]["対潜"]+"</td>"+
             "</tr>"
