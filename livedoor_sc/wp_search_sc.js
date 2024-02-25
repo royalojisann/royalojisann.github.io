@@ -26,7 +26,7 @@ var teamslist = {
         ヴィシア:{名前:'ヴィシア',フォルダ:'Vichya_Dominion'},
         サディア:{名前:'サディア',フォルダ:'Sardegna_Empire'},
         東煌:{名前:'東煌',フォルダ:'Dragon_Empery'},
-        北連:{名前:'北連',フォルダ:'Northern_Parliament'},
+        北方連合:{名前:'北方連合',フォルダ:'Northern_Parliament'},
 	テンペスタ:{名前:'テンペスタ',フォルダ:'Tempesta'},
         META:{名前:'META',フォルダ:'Universal'},
         ネプテューヌ:{名前:'ネプテューヌ',フォルダ:'Collab_Nations'},
