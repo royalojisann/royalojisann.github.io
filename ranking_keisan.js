@@ -517,7 +517,7 @@ function list_deta(detaname,root){
             break;
             case "その他":
             switch(kan_list[i][0]){
-                case "北連":
+                case "北方連合":
                 case "ブリ":
                 case "ネプテューヌ":
                 case "うたわれるもの":
