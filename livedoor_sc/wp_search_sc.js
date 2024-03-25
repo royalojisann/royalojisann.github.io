@@ -93,7 +93,7 @@ var teamslist = {
     ]
     var obj_menue = function(x){
         //絞り込みメニュー
-        var tems = setid[x][1],tenpure = [teamslist,typelist,realitylist],styledeta = ['160px','64px','64px'],textdeta = ['陣営','艦種','レア'];
+        var tems = setid[x][1],tenpure = [teamslist,typelist,realitylist],styledeta = ['160px','80px','80px'],textdeta = ['陣営','艦種','レア'];
         for(var y = 0; y<tenpure.length;y++){
             for(var i=0; i<Object.keys(tenpure[y]).length; i++){
                 tems += (i==0) ? ('<select style="width:'+styledeta[y]+';height: 46px;padding: 0px;"'+setid[x][2]+'><option value="全て" selected="selected">'+textdeta[y]+'</option>') : '';
