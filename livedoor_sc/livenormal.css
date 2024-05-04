@@ -97,12 +97,12 @@ display:none;
 
 .N24_formation_area{
     display: flex;
-    width: 600px;
+    width: 100%;
     height: 100%;
     box-sizing: border-box;
     position: relative;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 .N24_mainbox{
     display: flex;
