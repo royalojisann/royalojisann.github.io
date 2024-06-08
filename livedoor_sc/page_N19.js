@@ -611,7 +611,7 @@ var kan_technology_list = {
 };
 
 var updatetext = "6月8日更新：フォッシュ(META)まで収録";
-if(document.getElementById("N19_updatetext"){
+if(document.getElementById("N19_updatetext")){
     document.getElementById("N19_updatetext").textContent = updatetext;
 }
 
