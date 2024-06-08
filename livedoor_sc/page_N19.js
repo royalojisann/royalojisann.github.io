@@ -610,10 +610,6 @@ var kan_technology_list = {
 
 };
 
-var updatetext = "6月8日更新：フォッシュ(META)まで収録";
-if(document.getElementById("N19_updatetext") != null){
-    document.getElementById("N19_updatetext").textContent = updatetext;
-}
 
 var teamstechnology = {
     '駆逐':{'耐久':35,'火力':9,'雷装':19,'対空':10,'航空':0,'装填':7,'命中':0,'回避':7,'対潜':10},
@@ -717,6 +713,10 @@ var kansen_nouryoku = [];
 var kansen_namelist = {};
 var kensaku_kansen = {除外:[],新規:[],META:[],計画艦:[],コラボ:[],通常:[]};
 window.addEventListener('DOMContentLoaded', function() {
+if(document.getElementById("N19_updatetext"){
+    document.getElementById("N19_updatetext").textContent = "6月8日更新：フォッシュ(META)まで収録";
+}
+    
     for(var i=0;i<kan_profile.length; i++){
         console.log(i);
         var inputstatus_deta = {
