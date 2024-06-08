@@ -616,10 +616,7 @@ var kan_technology_list = {
 
 };
 
-var updatetext = "6月8日更新：フォッシュ(META)まで収録";
-if(document.getElementById("N19_updatetext"){
-    document.getElementById("N19_updatetext").textContent = updatetext;
-}
+
 
 var teamstechnology = {
     '駆逐':{'耐久':35,'火力':9,'雷装':19,'対空':10,'航空':0,'装填':7,'命中':0,'回避':7,'対潜':10},
