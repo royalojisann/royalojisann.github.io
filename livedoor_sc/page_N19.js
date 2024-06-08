@@ -713,7 +713,7 @@ var kansen_nouryoku = [];
 var kansen_namelist = {};
 var kensaku_kansen = {除外:[],新規:[],META:[],計画艦:[],コラボ:[],通常:[]};
 window.addEventListener('DOMContentLoaded', function() {
-if(document.getElementById("N19_updatetext"){
+if(document.getElementById("N19_updatetext")){
     document.getElementById("N19_updatetext").textContent = "6月8日更新：フォッシュ(META)まで収録";
 }
     
