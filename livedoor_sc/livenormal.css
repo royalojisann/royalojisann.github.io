@@ -263,6 +263,174 @@ display:none;
 
 
 
+/* ダメ計_page_N24 */
+
+#keys01 .formation_area{
+    display: flex;
+    width: 600px;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#keys01 .mainbox {
+    display: flex;
+    flex-wrap: wrap;
+    height: 120px;
+    width: 270px;
+    box-sizing: border-box;
+}
+#keys01 .selectbox {
+    border: 1px solid #444;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+#keys01 .selectbox a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#keys01 .selectbox img{
+    width: 100%;
+}
+#keys01 .boxleader {
+    width: 90px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: none;
+}
+#keys01 .character_pic {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #444;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    background: white;
+}
+#keys01 .character_pic a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#keys01 .character_pic img{
+    width: 90px;
+    height: 90px;
+    box-sizing: border-box;
+}
+#keys01 .character_name {
+    width: 90px;
+    height: 30px;
+    border: 1px solid #444;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    background: #2f2f2f;
+    color: white;
+}
+#keys01 .subleader {
+    display: flex;
+    width: 180px;
+    flex-wrap: wrap;
+}
+
+#keys01 .span_01{
+    display: none;
+    z-index: 11;
+}
+#keys01 .span_02{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    border-radius: 0 0 0 7px;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    color: white;
+    padding: 0 0 0 4px;
+}
+#keys01 .span_03{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0 100%, 0 0);
+    font-size: 12px;
+    width: 40px;
+    color: white;
+    padding: 0 0 0 4px;
+}
+#keys01 .span_04{
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    font-weight: bold;
+    opacity: 0.85;
+    background: rgba(0, 0, 0, 0.5);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+    font-size: 1em;
+    width: 1em;
+    color: white;
+    padding: 0 0 0 8px;
+    z-index: 11;
+}
+
+#keys01 .kan_span_01{
+    display: none;
+    z-index: 11;
+}
+#keys01 .kan_span_02{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    border-radius: 0 0 0 7px;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    color: white;
+    padding: 0 6px;
+    z-index: 11;
+}
+#keys01 .kan_span_03{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0 100%, 0 0);
+    font-size: 12px;
+    width: 36px;
+    color: white;
+    padding: 0 0 0 4px;
+}
+#keys01 .kan_span_04{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    width: 40px;
+    color: white;
+    text-align: center;
+}
+
 
 
 
