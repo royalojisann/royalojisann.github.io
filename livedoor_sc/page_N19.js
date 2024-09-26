@@ -735,7 +735,7 @@ var kansen_namelist = {};
 var kensaku_kansen = {除外:[],新規:[],META:[],計画艦:[],コラボ:[],通常:[]};
 window.addEventListener('DOMContentLoaded', function() {
 if(document.getElementById("N19_updatetext")){
-    document.getElementById("N19_updatetext").textContent = "2024年6月8日更新：フォッシュ(META)まで収録";
+    document.getElementById("N19_updatetext").textContent = "2024年9月26日更新：天城(空母)や長門(META)まで収録";
 }
     
     for(var i=0;i<kan_profile.length; i++){
