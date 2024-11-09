@@ -87,6 +87,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+      font-size: 15px;
 }
 .list_box_22_card {
     width: 200px;
