@@ -113,7 +113,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 .list_box_22_item02 {
     height: 30px;
