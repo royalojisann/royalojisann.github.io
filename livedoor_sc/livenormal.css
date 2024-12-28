@@ -430,6 +430,24 @@ display:none;
     text-align: center;
 }
 
-
+/* タブコントロール */
+.tab_ctrl_button{
+    background: linear-gradient(180deg, #b9b9b9, transparent);
+    border: 1px solid #686868;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+}
+.tab_ctrl_button.button_light_on{
+    background: linear-gradient(180deg, #ffec42, transparent);
+    border: 1px solid #ffc600;
+}
+.tab_cheng_box{
+    display: none;
+    margin: auto;
+}
+.tab_cheng_box.tab_active{
+    display: block;
+}
 
 
