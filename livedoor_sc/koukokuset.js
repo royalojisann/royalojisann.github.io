@@ -25,6 +25,15 @@ document.getElementsByClassName(classname)[i].style.display = 'none';
 document.getElementsByClassName(classname)[number_data*1].style.display = dis;
 }
 
+//汎用タブコントローラー
+function tab_ctrl_fanc(access,event){
+    var num = Array.prototype.indexOf.call(document.getElementById(access).querySelectorAll('.tab_ctrl_button'),event);
+    document.getElementById(access).querySelectorAll('.tab_active')[0].classList.remove('tab_active');
+    document.getElementById(access).querySelectorAll('.button_light_on')[0].classList.remove('button_light_on');
+    document.getElementById(access).querySelectorAll('.tab_cheng_box')[num].classList.toggle('tab_active');
+    document.getElementById(access).querySelectorAll('.tab_ctrl_button')[num].classList.toggle('button_light_on');
+}
+
 function button_touch_open(e,get,name,dis){
  	//this,idかclassとか,block種類
 	switch(get){
