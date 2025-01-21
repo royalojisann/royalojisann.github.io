@@ -1,4 +1,3 @@
-
 var kan_technology_list = {
 'デューイ':{'艦船名':'デューイ','陣営':'ユニオン','レア':'R','艦種':'駆逐','ティアー':'3','入手':3,'完凸':7,'カンスト':5,'合計':15,'対象1':'駆逐','強化1':'耐久+1','対象2':'駆逐','強化2':'耐久+1'},
 'エールウィン':{'艦船名':'エールウィン','陣営':'ユニオン','レア':'R','艦種':'駆逐','ティアー':'3','入手':3,'完凸':7,'カンスト':5,'合計':15,'対象1':'駆逐','強化1':'耐久+1','対象2':'駆逐','強化2':'耐久+1'},
@@ -762,9 +761,8 @@ window.addEventListener('DOMContentLoaded', function() {
 if(document.getElementById("N19_updatetext")){
     document.getElementById("N19_updatetext").textContent = "2025年1月21日更新：建武まで収録";
 }
-    
     for(var i=0;i<kan_profile.length; i++){
-        console.log(i);
+        //console.log(i);
         var inputstatus_deta = {
             陣営:kan_profile[i][0],
             艦種:kan_profile[i][1],
