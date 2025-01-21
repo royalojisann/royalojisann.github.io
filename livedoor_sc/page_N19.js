@@ -1009,8 +1009,3 @@ function kan_technology_list_sortbutton(in_id){
 
     document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',technology_table(sorttechnology));
 }
-
-function N19open(){
-    document.getElementById("N19_menue_open").style.display = (document.getElementById("N19_menue_open").style.display == "none") ? "flex" : "none";
-}
-
