@@ -119,11 +119,6 @@
 }
 .N19_table th,.N19_table td{
     padding: 0;
+    width: 54px;
     height: 30px;
-}
-.N19_table th{
-    width: 72px;
-}
-.N19_table td{
-    width: 52px;
 }
