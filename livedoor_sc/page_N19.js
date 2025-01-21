@@ -998,7 +998,7 @@ function kan_technology_list_sortbutton(in_id){
     document.getElementById("N19_sort_technology").textContent = '';
     document.getElementById("N19_sort_technical").textContent = '';
     document.getElementById("N19_sort_technical").insertAdjacentHTML('beforeend',
-        "<table style='border-collapse: collapse;text-align:center;width:200px;' border='1' cellpadding='0'><tbody>"+
+        "<table style='margin: auto;border-collapse: collapse;text-align:center;width:300px;' border='1' cellpadding='0'><tbody>"+
         "<tr><td>入手</td><td>"+sumdata["入手"]+"</td></tr>"+
         "<tr><td>完凸</td><td>"+sumdata["完凸"]+"</td></tr>"+
         "<tr><td>120</td><td>"+sumdata["カンスト"]+"</td></tr>"+
