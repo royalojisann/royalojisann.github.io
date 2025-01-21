@@ -1,3 +1,4 @@
+
 var kan_technology_list = {
 'デューイ':{'艦船名':'デューイ','陣営':'ユニオン','レア':'R','艦種':'駆逐','ティアー':'3','入手':3,'完凸':7,'カンスト':5,'合計':15,'対象1':'駆逐','強化1':'耐久+1','対象2':'駆逐','強化2':'耐久+1'},
 'エールウィン':{'艦船名':'エールウィン','陣営':'ユニオン','レア':'R','艦種':'駆逐','ティアー':'3','入手':3,'完凸':7,'カンスト':5,'合計':15,'対象1':'駆逐','強化1':'耐久+1','対象2':'駆逐','強化2':'耐久+1'},
@@ -762,7 +763,6 @@ if(document.getElementById("N19_updatetext")){
     document.getElementById("N19_updatetext").textContent = "2025年1月21日更新：建武まで収録";
 }
     for(var i=0;i<kan_profile.length; i++){
-        //console.log(i);
         var inputstatus_deta = {
             陣営:kan_profile[i][0],
             艦種:kan_profile[i][1],
@@ -996,6 +996,7 @@ function kan_technology_list_sortbutton(in_id){
         break;
     }
     document.getElementById("N19_sort_technology").textContent = '';
+    document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',technology_table(sorttechnology));
     document.getElementById("N19_sort_technical").textContent = '';
     document.getElementById("N19_sort_technical").insertAdjacentHTML('beforeend',
         "<table style='margin: auto;border-collapse: collapse;text-align:center;width:300px;' border='1' cellpadding='0'><tbody>"+
@@ -1006,6 +1007,4 @@ function kan_technology_list_sortbutton(in_id){
         "<tr><td>表示</td><td>"+hitcount+"隻</td></tr>"+
         "</tbody></table><br>"
     );
-
-    document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',technology_table(sorttechnology));
 }
