@@ -840,11 +840,12 @@ if(document.getElementById("N19_updatetext")){
 
     }
 });
-
+var hitcount = 0;
 window.addEventListener('DOMContentLoaded', function() {
     var matomelist = "";
     var sumdata = {"入手":0,"完凸":0,"カンスト":0,"合計":0};
     for(var i=0;i<Object.keys(kan_technology_list).length;i++){
+        hitcount++;
         var adeta = ('<img class="kanpic '+kan_technology_list[Object.keys(kan_technology_list)[i]]["レア"]+'" src="https://pasokau.com/wp-content/uploads/face/'+kan_technology_list[Object.keys(kan_technology_list)[i]]["艦船名"]+'.jpg" alt="'+kan_technology_list[Object.keys(kan_technology_list)[i]]["艦船名"]+'"/><a href="https://pasokau.com/'+kansen_namelist[Object.keys(kan_technology_list)[i]]['wpurl']+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/imgpic/toolpic/透過.png"/></a>');
         var tiername = function(){
             if(isNaN(kan_technology_list[Object.keys(kan_technology_list)[i]]["ティアー"])){
@@ -896,19 +897,19 @@ window.addEventListener('DOMContentLoaded', function() {
     if(document.getElementById("N19_sum_technology")){
         document.getElementById("N19_sum_technology").insertAdjacentHTML('beforeend',technology_table(technologysum));
     }
-    if(document.getElementById("N19_sort_technology")){
-        document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',
-        "技術Pt内訳"+
-        "<table style='border-collapse: collapse;text-align:center;width:200px;' border='1' cellpadding='0'><tbody>"+
+    if(document.getElementById("N19_sort_technical")){
+        document.getElementById("N19_sort_technical").insertAdjacentHTML('beforeend',
+        "<table style='margin: auto;border-collapse: collapse;text-align:center;width:300px;' border='1' cellpadding='0'><tbody>"+
         "<tr><td>入手</td><td>"+sumdata["入手"]+"</td></tr>"+
         "<tr><td>完凸</td><td>"+sumdata["完凸"]+"</td></tr>"+
         "<tr><td>120</td><td>"+sumdata["カンスト"]+"</td></tr>"+
         "<tr><td>合計</td><td>"+sumdata["合計"]+"</td></tr>"+
-        "</tbody></table>"+
-        "艦船技術内訳"+
-        technology_table(sorttechnology)
-        );
+        "<tr><td>表示</td><td>"+hitcount+"隻</td></tr>"+
+        "</tbody></table>");
     }
+    if(document.getElementById("N19_sort_technology")){
+        document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',technology_table(sorttechnology))
+    };
 });
 
 function kan_technology_list_sortbutton(in_id){
@@ -918,7 +919,9 @@ function kan_technology_list_sortbutton(in_id){
     var bunnki = document.getElementById("N19_kensaku_get").value;
     var taisyou = document.getElementById("N19_kensaku_taisyou").value;
     var status = document.getElementById("N19_kensaku_status").value;
+    hitcount = 0;
     var atari = function(id,bunki){
+        hitcount++;
         sumdata["入手"] += kan_technology_list[id]["入手"];
         sumdata["完凸"] += kan_technology_list[id]["完凸"];
         sumdata["カンスト"] += kan_technology_list[id]["カンスト"];
@@ -993,17 +996,18 @@ function kan_technology_list_sortbutton(in_id){
         break;
     }
     document.getElementById("N19_sort_technology").textContent = '';
-    document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',
-    "技術Pt内訳"+
-    "<table style='border-collapse: collapse;text-align:center;width:200px;' border='1' cellpadding='0'><tbody>"+
-    "<tr><td>入手</td><td>"+sumdata["入手"]+"</td></tr>"+
-    "<tr><td>完凸</td><td>"+sumdata["完凸"]+"</td></tr>"+
-    "<tr><td>120</td><td>"+sumdata["カンスト"]+"</td></tr>"+
-    "<tr><td>合計</td><td>"+sumdata["合計"]+"</td></tr>"+
-    "</tbody></table>"+
-    "艦船技術内訳"+
-    technology_table(sorttechnology)
+    document.getElementById("N19_sort_technical").textContent = '';
+    document.getElementById("N19_sort_technical").insertAdjacentHTML('beforeend',
+        "<table style='border-collapse: collapse;text-align:center;width:200px;' border='1' cellpadding='0'><tbody>"+
+        "<tr><td>入手</td><td>"+sumdata["入手"]+"</td></tr>"+
+        "<tr><td>完凸</td><td>"+sumdata["完凸"]+"</td></tr>"+
+        "<tr><td>120</td><td>"+sumdata["カンスト"]+"</td></tr>"+
+        "<tr><td>合計</td><td>"+sumdata["合計"]+"</td></tr>"+
+        "<tr><td>表示</td><td>"+hitcount+"隻</td></tr>"+
+        "</tbody></table><br>"
     );
+
+    document.getElementById("N19_sort_technology").insertAdjacentHTML('beforeend',technology_table(sorttechnology));
 }
 
 function N19open(){
