@@ -117,3 +117,13 @@
 .N19_table tr:nth-child(1){
     background: #ededed;
 }
+.N19_table th,.N19_table td{
+    padding: 0;
+    height: 30px;
+}
+.N19_table th{
+    width: 72px;
+}
+.N19_table td{
+    width: 52px;
+}
