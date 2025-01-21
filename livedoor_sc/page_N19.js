@@ -760,7 +760,7 @@ var kansen_namelist = {};
 var kensaku_kansen = {除外:[],新規:[],META:[],計画艦:[],コラボ:[],通常:[]};
 window.addEventListener('DOMContentLoaded', function() {
 if(document.getElementById("N19_updatetext")){
-    document.getElementById("N19_updatetext").textContent = "2025年1月21日更新：鎮海まで収録";
+    document.getElementById("N19_updatetext").textContent = "2025年1月21日更新：建武まで収録";
 }
     
     for(var i=0;i<kan_profile.length; i++){
