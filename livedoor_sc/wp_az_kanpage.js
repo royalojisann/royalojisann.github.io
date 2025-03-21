@@ -4,10 +4,10 @@ window.addEventListener('DOMContentLoaded', function() {
 // // 	var contentkoukoku = "<ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-1820058722476319' data-ad-slot='7882308349' data-ad-format='autorelaxed'></ins>";
 	var skllue = "<ins class='adsbygoogle'style='display:block'data-ad-client='ca-pub-1820058722476319'data-ad-slot='1771308054'data-ad-format='auto'data-full-width-responsive='true'></ins>";
 	
-// // 	if(document.getElementById("koukoku_top")!=null){
-// // 		document.getElementById("koukoku_top").insertAdjacentHTML('beforeend',adine_top);
-// // 		(adsbygoogle = window.adsbygoogle || []).push({});
-// // 	}
+	if(document.getElementById("koukoku_top")!=null){
+		document.getElementById("koukoku_top").insertAdjacentHTML('beforeend',adine_top);
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	}
 	if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
 		if(document.getElementById("koukoku_bottom")!=null){
 			document.getElementById("koukoku_bottom").insertAdjacentHTML('beforeend',adine_top);
