@@ -168,6 +168,9 @@ function kijicreate(){
 		'<tr><th>起工</th><td>'+status_deta.起工日+'</td></tr>\n'+
 		'<tr><th>進水</th><td>'+status_deta.進水日+'</td></tr>\n'+
 		'<tr><th>就役</th><td>'+status_deta.竣工日+'</td></tr>\n'+
+		'<tr><th>声優</th><td>'+status_deta.声優+'</td></tr>\n'+
+		'<tr><th>絵師</th><td>'+status_deta.絵師+'</td></tr>\n'+
+		'<tr><th>艦級</th><td>'+status_deta.艦級+'</td></tr>\n'+	
 		'</tbody></table>\n'
 	)
 
@@ -198,7 +201,9 @@ function kijicreate(){
 	var sumdata01 = htmlmake(voice_search[kan_profile[index_n][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][8]);
 	var sumdata02 = htmlmake(illust_search[kan_profile[index_n][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][9]);
 	var sumdata03 = htmlmake(shipclass_search[kan_profile[index_n][15]],kan_profile[index_n][15]);
-	document.getElementById("character_profile").insertAdjacentHTML('afterend',sumdata01+sumdata02+sumdata03);
+	if(document.getElementById("contentdiv")){
+		document.getElementById("contentdiv").insertAdjacentHTML('afterend','<h3>関連キャラクター<h3>'+sumdata01+sumdata02+sumdata03);
+	}
 	
 	let deletetext1= document.getElementById('kan_illust');
 	for(var i=0; i<4; i++){
