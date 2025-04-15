@@ -118,3 +118,12 @@ display:none;
     top: 50%;left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.N24_listbox_title {
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+.N24_listbox img {
+    width: 40px;
+}
