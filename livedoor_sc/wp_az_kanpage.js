@@ -189,7 +189,7 @@ function kijicreate(){
     		}
 	}
 	var htmlmake = function(sozai,name){
-    	var parts2 = `<h3 class="N24_listbox N24_listbox_title">${name}</h3>\n<div>`;
+    	var parts2 = `<h3 class="N24_listbox_title">${name}</h3>\n<div class="N24_listbox">`;
     	for(var x=0;x<sozai[1].length;x++){
         	if(x == 10){
             		break;
