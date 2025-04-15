@@ -189,14 +189,14 @@ function kijicreate(){
     		}
 	}
 	var htmlmake = function(sozai,name){
-    	var parts2 = `<div class="N24_listbox"><div class="N24_listbox_title">† ${name} †</div>`;
+    	var parts2 = `<h3 class="N24_listbox N24_listbox_title">† ${name} †</h3>\n<div>`;
     	for(var x=0;x<sozai[1].length;x++){
         	if(x == 10){
             		break;
         	}
         		parts2 +="<div>"+sozai[1][x]+"</div>";
     		}
-    		return (parts2 += "</div>");
+    		return (parts2 += "</div>\n");
 	}
 	var sumdata01 = htmlmake(voice_search[kan_profile[index_n][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][8]);
 	var sumdata02 = htmlmake(illust_search[kan_profile[index_n][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][9]);
