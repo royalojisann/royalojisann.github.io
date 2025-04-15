@@ -200,7 +200,7 @@ function kijicreate(){
 	var sumdata01 = htmlmake(voice_search[kan_profile[index_n][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][8]);
 	var sumdata02 = htmlmake(illust_search[kan_profile[index_n][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][9]);
 	var sumdata03 = htmlmake(shipclass_search[kan_profile[index_n][15]],kan_profile[index_n][15]);
-	document.getElementById("character_profile").insertAdjacentHTML('afterbegin ',sumdata01+sumdata02+sumdata03);
+	document.getElementById("character_profile").insertAdjacentHTML('afterbegin',sumdata01+sumdata02+sumdata03);
 	
 	let deletetext1= document.getElementById('kan_illust');
 	for(var i=0; i<4; i++){
