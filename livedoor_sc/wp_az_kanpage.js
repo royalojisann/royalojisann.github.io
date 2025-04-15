@@ -124,9 +124,9 @@ function kijicreate(){
         スキル:kan_profile[index_n][11],
         記事:kan_profile[index_n][12],
         声優:kan_profile[index_n][8],
-        声優名:(kan_profile[i][8].indexOf('</a>')) ? (kan_profile[i][8].replace('</a>','').slice(kan_profile[i][8].indexOf('>')+1)):kan_profile[i][8],
-        絵師:kan_profile[i][9],
-        絵師名:(kan_profile[i][9].indexOf('</a>')) ? (kan_profile[i][9].replace('</a>','').slice(kan_profile[i][9].indexOf('>')+1)):kan_profile[i][9],
+        声優名:(kan_profile[index_n][8].indexOf('</a>')) ? (kan_profile[index_n][8].replace('</a>','').slice(kan_profile[index_n][8].indexOf('>')+1)):kan_profile[index_n][8],
+        絵師:kan_profile[index_n][9],
+        絵師名:(kan_profile[index_n][9].indexOf('</a>')) ? (kan_profile[index_n][9].replace('</a>','').slice(kan_profile[index_n][9].indexOf('>')+1)):kan_profile[index_n][9],
         入手:kan_profile[index_n][4],
         実装日:kan_profile[index_n][5],
         改造日:kan_profile[index_n][6],
@@ -143,7 +143,7 @@ function kijicreate(){
 	リンク:kan_profile[index_n][23],
         図鑑:kan_profile[index_n][24],
 	wpurl:kan_profile[index_n][25],
-	iconurl:('<a href="https://pasokau.com/'+kan_profile[i][25]+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/'+kan_profile[i][2]+'.jpg">'+kan_profile[i][2]+'</a>')	    
+	iconurl:('<a href="https://pasokau.com/'+kan_profile[index_n][25]+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/'+kan_profile[index_n][2]+'.jpg">'+kan_profile[index_n][2]+'</a>')	    
     }
 	if(status_deta.記事.indexOf('改有り')!= -1){
             rarecolor = status_deta.レア.substring(status_deta.レア.indexOf('→')+1);
