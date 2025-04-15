@@ -168,8 +168,6 @@ function kijicreate(){
 		'<tr><th>起工</th><td>'+status_deta.起工日+'</td></tr>\n'+
 		'<tr><th>進水</th><td>'+status_deta.進水日+'</td></tr>\n'+
 		'<tr><th>就役</th><td>'+status_deta.竣工日+'</td></tr>\n'+
-		'<tr><th>声優</th><td>'+status_deta.声優+'</td></tr>\n'+
-		'<tr><th>絵師</th><td>'+status_deta.絵師+'</td></tr>\n'+
 		'</tbody></table>\n'
 	)
 
