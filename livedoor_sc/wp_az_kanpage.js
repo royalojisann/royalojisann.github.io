@@ -83,7 +83,7 @@ var teamslist = {
         その他:{名前:'その他',フォルダ:'Universal'}
 }
 
-index_n = 0;
+var index_n = 0;
 function kijicreate(){
     var taget = document.getElementById("target_name").textContent;
     for(index_n = 0; index_n < kan_profile.length; index_n++){
@@ -171,7 +171,36 @@ function kijicreate(){
 		'<tr><th>声優</th><td>'+status_deta.声優+'</td></tr>\n'+
 		'<tr><th>絵師</th><td>'+status_deta.絵師+'</td></tr>\n'+
 		'</tbody></table>\n'
-		)
+	)
+
+	for(var zz=0;zz<kan_profile.length;zz++){
+    		if(kan_profile[zz][2].indexOf("半改") == -1){
+        		function tenp(search,ind,name,url){
+            			if(name in search){
+                			search[name][1].push(('<a href="https://pasokau.com/'+kan_profile[ind][25]+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/'+kan_profile[ind][2]+'.jpg">'+kan_profile[ind][2]+'</a>'));//追加
+            			}else{
+                			search[name] = [url,[('<a href="https://pasokau.com/'+kan_profile[ind][25]+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/'+kan_profile[ind][2]+'.jpg">'+kan_profile[ind][2]+'</a>')]];//新規
+            			}
+        		}
+        		tenp(voice_search,zz,kan_profile[i][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''),kan_profile[i][8].match(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/g)[0]);
+        		tenp(illust_search,zz,kan_profile[i][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''),(kan_profile[i][9].indexOf('http') != -1) ? kan_profile[i][9].match(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/g)[0] : "");
+        		tenp(shipclass_search,zz,kan_profile[i][15],"");
+    		}
+	}
+	var htmlmake = function(sozai,name){
+    	var parts2 = `<div class="N24_listbox"><div class="N24_listbox_title">† ${name} †</div>`;
+    	for(var x=0;x<sozai[1].length;x++){
+        	if(x == 10){
+            		break;
+        	}
+        		parts2 +="<div>"+sozai[1][x]+"</div>";
+    		}
+    		return (parts2 += "</div>");
+	}
+	var sumdata01 = htmlmake(voice_search[kan_profile[index_n][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][8]);
+	var sumdata02 = htmlmake(illust_search[kan_profile[index_n][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][9]);
+	var sumdata03 = htmlmake(shipclass_search[kan_profile[index_n][15]],kan_profile[index_n][15]);
+	document.getElementById("character_profile").insertAdjacentHTML('afterbegin ',sumdata01+sumdata02+sumdata03);
 	
 	let deletetext1= document.getElementById('kan_illust');
 	for(var i=0; i<4; i++){
@@ -245,34 +274,6 @@ function kijicreate(){
 	statuskeisann();
 }
 
-for(var zz=0;zz<kan_profile.length;zz++){
-    if(kan_profile[zz][2].indexOf("半改") == -1){
-        function tenp(search,ind,name,url){
-            if(name in search){
-                search[name][1].push(('<a href="https://pasokau.com/'+kan_profile[ind][25]+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/'+kan_profile[ind][2]+'.jpg">'+kan_profile[ind][2]+'</a>'));//追加
-            }else{
-                search[name] = [url,[('<a href="https://pasokau.com/'+kan_profile[ind][25]+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/'+kan_profile[ind][2]+'.jpg">'+kan_profile[ind][2]+'</a>')]];//新規
-            }
-        }
-        tenp(voice_search,zz,kan_profile[i][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''),kan_profile[i][8].match(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/g)[0]);
-        tenp(illust_search,zz,kan_profile[i][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''),(kan_profile[i][9].indexOf('http') != -1) ? kan_profile[i][9].match(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/g)[0] : "");
-        tenp(shipclass_search,zz,kan_profile[i][15],"");
-    }
-}
-var htmlmake = function(sozai,name){
-    var parts2 = `<div class="N24_listbox"><div class="N24_listbox_title">† ${name} †</div>`;
-    for(var x=0;x<sozai[1].length;x++){
-        if(x == 10){
-            break;
-        }
-        parts2 +="<div>"+sozai[1][x]+"</div>";
-    }
-    return (parts2 += "</div>");
-}
-var sumdata01 = htmlmake(voice_search[kan_profile[index_n][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][8]);
-var sumdata02 = htmlmake(illust_search[kan_profile[index_n][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][9]);
-var sumdata03 = htmlmake(shipclass_search[kan_profile[index_n][15]],kan_profile[index_n][15]);
-document.getElementById("character_profile").insertAdjacentHTML('afterbegin ',sumdata01+sumdata02+sumdata03);
 
 function statuskeisann(){
 	kannamedeta = "";
