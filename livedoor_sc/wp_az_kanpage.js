@@ -202,7 +202,7 @@ function kijicreate(){
 	var sumdata02 = htmlmake(illust_search[kan_profile[index_n][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][9]);
 	var sumdata03 = htmlmake(shipclass_search[kan_profile[index_n][15]],kan_profile[index_n][15]);
 	if(document.getElementById("contentdiv")){
-		document.getElementById("contentdiv").insertAdjacentHTML('beforebegin','<h3>関連キャラクター<h3>'+sumdata01+sumdata02+sumdata03);
+		document.getElementById("contentdiv").insertAdjacentHTML('beforebegin','<h3>関連キャラクター</h3>'+sumdata01+sumdata02+sumdata03);
 	}
 	
 	let deletetext1= document.getElementById('kan_illust');
