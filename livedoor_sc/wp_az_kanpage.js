@@ -1,3 +1,7 @@
+var voice_search = {"不明":["",[]]};
+var illust_search = {"不明":["",[]]};
+var shipclass_search = {"未設定":["",[]]};
+
 window.addEventListener('DOMContentLoaded', function() {
 //         //var adine = "<div class='body_koukoku'><ins class='adsbygoogle'style='display:block; text-align:center;'data-ad-layout='in-article'data-ad-format='fluid'data-ad-client='ca-pub-1820058722476319'data-ad-slot='7802009807'></ins></div>";
  	var adine_top = "<ins class='adsbygoogle'style='display:block; text-align:center;'data-ad-layout='in-article'data-ad-format='fluid'data-ad-client='ca-pub-1820058722476319'data-ad-slot='7802009807'></ins>";
@@ -77,7 +81,8 @@ var teamslist = {
         //:{名前:'',フォルダ:'Collab_Nations'},
         //BILIBILI:{名前:'BILIBILI',フォルダ:'Collab_Nations'},
         その他:{名前:'その他',フォルダ:'Universal'}
-    }
+}
+
 index_n = 0;
 function kijicreate(){
     var taget = document.getElementById("target_name").textContent;
@@ -119,7 +124,9 @@ function kijicreate(){
         スキル:kan_profile[index_n][11],
         記事:kan_profile[index_n][12],
         声優:kan_profile[index_n][8],
-        絵師:kan_profile[index_n][9],
+        声優名:(kan_profile[i][8].indexOf('</a>')) ? (kan_profile[i][8].replace('</a>','').slice(kan_profile[i][8].indexOf('>')+1)):kan_profile[i][8],
+        絵師:kan_profile[i][9],
+        絵師名:(kan_profile[i][9].indexOf('</a>')) ? (kan_profile[i][9].replace('</a>','').slice(kan_profile[i][9].indexOf('>')+1)):kan_profile[i][9],
         入手:kan_profile[index_n][4],
         実装日:kan_profile[index_n][5],
         改造日:kan_profile[index_n][6],
@@ -135,8 +142,8 @@ function kijicreate(){
 	接頭:kan_profile[index_n][22],
 	リンク:kan_profile[index_n][23],
         図鑑:kan_profile[index_n][24],
-	wpurl:kan_profile[index_n][25]
-	    
+	wpurl:kan_profile[index_n][25],
+	iconurl:('<a href="https://pasokau.com/'+kan_profile[i][25]+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/'+kan_profile[i][2]+'.jpg">'+kan_profile[i][2]+'</a>')	    
     }
 	if(status_deta.記事.indexOf('改有り')!= -1){
             rarecolor = status_deta.レア.substring(status_deta.レア.indexOf('→')+1);
@@ -237,6 +244,35 @@ function kijicreate(){
 	}
 	statuskeisann();
 }
+
+for(var i=0;i<kan_profile.length;i++){
+    if(kan_profile[i][2].indexOf("半改") == -1){
+        function tenp(search,ind,name,url){
+            if(name in search){
+                search[name][1].push(('<a href="https://pasokau.com/'+kan_profile[ind][25]+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/'+kan_profile[ind][2]+'.jpg">'+kan_profile[ind][2]+'</a>'));//追加
+            }else{
+                search[name] = [url,[('<a href="https://pasokau.com/'+kan_profile[ind][25]+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/'+kan_profile[ind][2]+'.jpg">'+kan_profile[ind][2]+'</a>')]];//新規
+            }
+        }
+        tenp(voice_search,i,kan_profile[i][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''),kan_profile[i][8].match(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/g)[0]);
+        tenp(illust_search,i,kan_profile[i][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''),(kan_profile[i][9].indexOf('http') != -1) ? kan_profile[i][9].match(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/g)[0] : "");
+        tenp(shipclass_search,i,kan_profile[i][15],"");
+    }
+}
+var htmlmake = function(sozai,name){
+    var parts2 = `<div class="N24_listbox"><div class="N24_listbox_title">† ${name} †</div>`;
+    for(var x=0;x<sozai[1].length;x++){
+        if(x == 10){
+            break;
+        }
+        parts2 +="<div>"+sozai[1][x]+"</div>";
+    }
+    return (parts2 += "</div>");
+}
+var sumdata01 = htmlmake(voice_search[kan_profile[index_n][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][8]);
+var sumdata02 = htmlmake(illust_search[kan_profile[index_n][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][9]);
+var sumdata03 = htmlmake(shipclass_search[kan_profile[index_n][15]],kan_profile[index_n][15]);
+document.getElementById("character_profile").insertAdjacentHTML('afterbegin ',sumdata01+sumdata02+sumdata03);
 
 function statuskeisann(){
 	kannamedeta = "";
