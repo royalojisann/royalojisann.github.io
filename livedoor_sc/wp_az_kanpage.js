@@ -189,7 +189,7 @@ function kijicreate(){
     		}
 	}
 	var htmlmake = function(sozai,name){
-    	var parts2 = `<h3 class="N24_listbox N24_listbox_title">† ${name} †</h3>\n<div>`;
+    	var parts2 = `<h3 class="N24_listbox N24_listbox_title">${name}</h3>\n<div>`;
     	for(var x=0;x<sozai[1].length;x++){
         	if(x == 10){
             		break;
@@ -202,7 +202,7 @@ function kijicreate(){
 	var sumdata02 = htmlmake(illust_search[kan_profile[index_n][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')],kan_profile[index_n][9]);
 	var sumdata03 = htmlmake(shipclass_search[kan_profile[index_n][15]],kan_profile[index_n][15]);
 	if(document.getElementById("contentdiv")){
-		document.getElementById("contentdiv").insertAdjacentHTML('beforebegin','<h3>関連キャラクター</h3>'+sumdata01+sumdata02+sumdata03);
+		document.getElementById("contentdiv").insertAdjacentHTML('beforebegin','<h2>関連キャラクター</h2>'+sumdata01+sumdata02+sumdata03);
 	}
 	
 	let deletetext1= document.getElementById('kan_illust');
