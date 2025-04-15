@@ -182,9 +182,9 @@ function kijicreate(){
                 			search[name] = [url,[('<a href="https://pasokau.com/'+kan_profile[ind][25]+'" target="_blank" ><img src="https://pasokau.com/wp-content/uploads/face/'+kan_profile[ind][2]+'.jpg">'+kan_profile[ind][2]+'</a>')]];//新規
             			}
         		}
-        		tenp(voice_search,zz,kan_profile[i][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''),kan_profile[i][8].match(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/g)[0]);
-        		tenp(illust_search,zz,kan_profile[i][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''),(kan_profile[i][9].indexOf('http') != -1) ? kan_profile[i][9].match(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/g)[0] : "");
-        		tenp(shipclass_search,zz,kan_profile[i][15],"");
+        		tenp(voice_search,zz,kan_profile[zz][8].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''),kan_profile[zz][8].match(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/g)[0]);
+        		tenp(illust_search,zz,kan_profile[zz][9].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''),(kan_profile[zz][9].indexOf('http') != -1) ? kan_profile[zz][9].match(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/g)[0] : "");
+        		tenp(shipclass_search,zz,kan_profile[zz][15],"");
     		}
 	}
 	var htmlmake = function(sozai,name){
