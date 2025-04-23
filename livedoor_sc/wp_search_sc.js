@@ -28,6 +28,7 @@ var teamslist = {
         東煌:{名前:'東煌',フォルダ:'Dragon_Empery'},
         北方連合:{名前:'北方連合',フォルダ:'Northern_Parliament'},
 	テンペスタ:{名前:'テンペスタ',フォルダ:'Tempesta'},
+	チュリッパ:{名前:'テンペスタ',フォルダ:'Kingdom_of_Tulipa'},
         META:{名前:'META',フォルダ:'Universal'},
         ネプテューヌ:{名前:'ネプテューヌ',フォルダ:'Collab_Nations'},
         うたわれるもの:{名前:'うたわれるもの',フォルダ:'Collab_Nations'},
