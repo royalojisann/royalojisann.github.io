@@ -521,7 +521,6 @@ window.addEventListener('DOMContentLoaded', function() {
         var kakunou = "";
         for(var z=0;z<az_matome.length;z++){
             if(az_matome[z][0] == bangou){
-                console.log(az_matome[z][1]);
                 kakunou += ("<div style='width:180px;height: 40px;overflow: hidden;'>"+kansen_namelist[az_matome[z][1]]['iconurlmini']+"</div>");
             }
         }
