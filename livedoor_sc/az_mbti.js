@@ -550,7 +550,9 @@ window.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll("[data-"+datatext[i]+"]")[0].textContent = "";
             document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("afterbegin",chara_group[tage]['matome']);
             document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("beforebegin",'<h4>'+tage+'タイプのキャラ</h4>');
-            document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("afterend",'<p>⇒<a href="https://pasokau.com/character_'+tage+'" target="_blank">'+tage+'の診断結果を見る</a></p>');
+        	if(datatext[i] != 'text01'){
+			document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("afterend",'<p>⇒<a href="https://pasokau.com/character_'+tage+'" target="_blank">'+tage+'の診断結果を見る</a></p>');
+		}
         }
     }
 });
