@@ -490,6 +490,14 @@ var chara_group = {
 var kansen_nouryoku = [];
 var kansen_namelist = {};
 var datatext = ["text01","text02","text03","text04","text05","text06","text07","text08","text09","text10","text11","text12","text13","text14","text15","text16",];
+var shareUrl = "";
+var tweetset = "";
+function shuffle(array){
+    for(let i = array.length-1;i>0;i--) {
+        let j = Math.floor(Math.random()*(i+1)); // 0 から i のランダムなインデックス
+        [array[i],array[j]] = [array[j],array[i]]; // 要素を入れ替えます
+    }
+}
 window.addEventListener('DOMContentLoaded', function() {
     for(var i=0;i<kan_profile.length; i++){
         var inputstatus_deta = {
@@ -567,13 +575,40 @@ window.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll("[data-"+datatext[i]+"]")[0].textContent = "";
             document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("afterbegin",chara_group[tage]['matome']);
             document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("beforebegin",'<h4>'+tage+'タイプのキャラ</h4>');
-        	if(datatext[i] != 'text01'){
-			document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("afterend",'<p>⇒<a href="https://pasokau.com/character_'+chara_end[tage]+'" target="_blank">'+tage+'の診断結果を見る</a></p>');
-		}
+            if(datatext[i] != 'text01'){
+                document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("afterend",'<p>⇒<a href="https://pasokau.com/character_'+chara_end[tage]+'" target="_blank">'+tage+'の診断結果を見る</a></p>');
+            }
         }
     }
-});
 
+    shareUrl = ("https://pasokau.com/character_"+document.querySelectorAll("[data-text01]")[0].dataset[datatext[0]]);
+    shuffle(chara_group[document.querySelectorAll("[data-text01]")[0].dataset[datatext[0]]]['kan']);
+    tweetset = (`【#アズレン性格診断】\n`+
+    `あなたの性格は「${document.querySelectorAll("[data-text01]")[0].dataset[datatext[0]]}」タイプです！\n\n`+
+    `★あなたと似ている艦船\n`+
+    `・${chara_group[document.querySelectorAll("[data-text01]")[0].dataset[datatext[0]]]['kan'][0]}\n`+
+    `・${chara_group[document.querySelectorAll("[data-text01]")[0].dataset[datatext[0]]]['kan'][1]}\n`+
+    `・${chara_group[document.querySelectorAll("[data-text01]")[0].dataset[datatext[0]]]['kan'][2]}\n`+
+    `…などがいます！\n\n`)
+
+    // twttrが使えるようになったらシェアボタンを作る。
+    twttr.widgets.createShareButton(
+        shareUrl,
+        document.getElementById("tweet10"),{
+            count: 'none',
+            text: tweetset,
+            size: "large",
+            hashtags: "",
+        }
+    );
+});
+var js, fjs = document.getElementsByTagName('script')[0];
+if (!document.getElementById('twitter-wjs')) {
+    js = document.createElement('script');
+    js.id = 'twitter-wjs';
+    js.src = 'https://platform.twitter.com/widgets.js';
+    fjs.parentNode.insertBefore(js, fjs);
+}
 var kingdeta = function(jin){
     switch(jin){
         case "ユニオン":
