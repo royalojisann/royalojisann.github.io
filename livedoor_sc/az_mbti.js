@@ -451,7 +451,24 @@ var az_matome = [
 	['ENFJ','Z28',''],
 
 ]
-
+var chara_end = {
+    "ESTJ":"estj",
+    "INFJ":"infj",
+    "ESFJ":"esfj",
+    "ESFP":"esfp",
+    "ENTJ":"entj",
+    "ISFJ":"isfj",
+    "ENFJ":"enfj",
+    "INTJ":"intj",
+    "ISTJ":"istj",
+    "ISTP":"istp",
+    "ENTP":"entp",
+    "ISFP":"isfp",
+    "ENFP":"enfp",
+    "INTP":"intp",
+    "ESTP":"estp",
+    "INFP":"infp",
+}
 var chara_group = {
     "ESTJ":{matome:"",kan:[]},
     "INFJ":{matome:"",kan:[]},
@@ -551,7 +568,7 @@ window.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("afterbegin",chara_group[tage]['matome']);
             document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("beforebegin",'<h4>'+tage+'タイプのキャラ</h4>');
         	if(datatext[i] != 'text01'){
-			document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("afterend",'<p>⇒<a href="https://pasokau.com/character_'+tage+'" target="_blank">'+tage+'の診断結果を見る</a></p>');
+			document.querySelectorAll("[data-"+datatext[i]+"]")[0].insertAdjacentHTML("afterend",'<p>⇒<a href="https://pasokau.com/character_'+chara_end[tage]+'" target="_blank">'+tage+'の診断結果を見る</a></p>');
 		}
         }
     }
