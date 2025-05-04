@@ -590,7 +590,8 @@ window.addEventListener('DOMContentLoaded', function() {
     `・${chara_group[document.querySelectorAll("[data-text01]")[0].dataset[datatext[0]]]['kan'][1]}\n`+
     `・${chara_group[document.querySelectorAll("[data-text01]")[0].dataset[datatext[0]]]['kan'][2]}\n`+
     `…などがいます！\n\n`)
-
+});
+window.addEventListener('load', function() {
     // twttrが使えるようになったらシェアボタンを作る。
     twttr.widgets.createShareButton(
         shareUrl,
