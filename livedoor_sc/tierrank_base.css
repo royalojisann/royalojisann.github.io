@@ -1,0 +1,111 @@
+
+.N{background:#ccc !important;}
+.R{background:#9fe8ff !important;}
+.SR{background:#c4adff !important;}
+.SSR{background:#ffff83 !important;}
+.UR{background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
+.PR{background:#ffff83 !important;}
+.DR{background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
+
+
+
+.EX,.SSS,.SS{background: linear-gradient(135deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
+.T0,.T0\.5,.S\+,.S,.S-{background: linear-gradient(135deg, #ffd3d3, #ff5252);}
+.T1,.T1\.5,.A\+,.A,.A-{background: linear-gradient(135deg, #fbffca, #ffc823);}
+.T2,.T2\.5,.B\+,.B,.B-{background: linear-gradient(135deg, #f8fff8, #7fff7f);}
+.T3,.T3\.5,.C\+,.C,.C-{background: linear-gradient(135deg, #c7eeff, #7fbfff);}
+.T4,.T4\.5,.D\+,.D,.D-{background: linear-gradient(135deg, #ffd2ff, #ff7fff);}
+.T5,.T5\.5,.F\+,.F,.F-{background: linear-gradient(135deg, #ffffff, #a3a3a3);}
+
+
+.main_card_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to top left,#cccccc,#aaaaaa,#cccccc);
+}
+.list_main_box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ranklist_mainbox{
+    width: 1280px;
+    height: 720px;
+    border: 20px solid #3895ff;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.ranklist_danraku{
+    width: 1240px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+}
+.ranklist_rankarea{
+    font-size: 50px;
+    font-weight: bold;
+    width: 116px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ranklist_cardarea{
+    width: 1120px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #9c9c9c;
+    height: 100%;
+    align-items: center;
+}
+.rankcard_frame{
+    width: 112px;
+    height: 132px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rankcard_inner{
+    width: 100px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+.rankcard_picbox,.rankcard_picdata{
+    height: 100px;
+}
+
+.rankcard_picbox a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.rankcard_textbox{
+    height: 20px;
+    background: #000000;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rankcard_mark01 {
+    position: absolute;
+    top: -6px;
+    right: 72px;
+    color: #f00;
+    text-shadow: 2px 2px 4px #000000;
+    -webkit-text-stroke: 2px #000000;
+    font-size: 30px;
+}
+.wakuUR,.wakuDR{
+    background: linear-gradient(135deg,#fbffca,#baffbf,#a7efff,#ffabff);
+}
+.wakuSSR,.wakuPR{
+    background: linear-gradient(135deg, #ffffff, #ffc600)
+}
