@@ -30,37 +30,36 @@
     align-items: center;
 }
 
-.ranklist_mainbox{
-    width: 1280px;
-    height: 720px;
-    border: 20px solid #3895ff;
+.ranklist_mainbox {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
-.ranklist_danraku{
-    width: 1240px;
+.ranklist_danraku {
+    width: 100%;
     display: flex;
-    align-items: center;
     border: 2px solid #000000;
     box-sizing: border-box;
+    flex-direction: column;
 }
-.ranklist_rankarea{
-    font-size: 50px;
+.ranklist_rankarea {
+    font-size: 30px;
     font-weight: bold;
-    width: 116px;
-    height: 100%;
+    width: 100%;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.ranklist_cardarea{
-    width: 1120px;
+.ranklist_cardarea {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     background: #9c9c9c;
     height: 100%;
     align-items: center;
+    flex-wrap: wrap;
 }
 .rankcard_frame{
     width: 112px;
