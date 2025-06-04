@@ -450,4 +450,25 @@ display:none;
     display: block;
 }
 
+/* リンク帯 */
+.url_link_obi{
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.url_link_obi a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+.obired{background: #ff5c5c;}
+.obiblue{background: #3aadff;}
+
+
 
