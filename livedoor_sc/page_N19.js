@@ -979,11 +979,13 @@ function kan_technology_list_sortbutton(in_id){
         case 'ALL':
             for(var i = 0; i<Object.keys(kan_technology_list).length; i++){
                 document.getElementById(in_id).childNodes[i].style.display = (
-                    (kuni == "ALL" || kuni == kan_technology_list[Object.keys(kan_technology_list)[i]].陣営) && 
+                    (kuni == "ALL" || kuni == kan_technology_list[Object.keys(kan_technology_list)[i]].陣営) &&
                     (type == "ALL" || type == kan_technology_list[Object.keys(kan_technology_list)[i]].艦種) &&
                     (rare == "ALL" || rare == kan_technology_list[Object.keys(kan_technology_list)[i]].レア) &&
-                    (taisyou == "ALL" || taisyou == kan_technology_list[Object.keys(kan_technology_list)[i]].対象1 || taisyou == kan_technology_list[Object.keys(kan_technology_list)[i]].対象2) &&
-                    (status == "ALL" || status == kan_technology_list[Object.keys(kan_technology_list)[i]].強化1 || status == kan_technology_list[Object.keys(kan_technology_list)[i]].強化2)
+                    ((taisyou == "ALL" && status == "ALL") ||
+                    ((taisyou == "ALL" && status == kan_technology_list[Object.keys(kan_technology_list)[i]].強化1) || (taisyou == "ALL" && status == kan_technology_list[Object.keys(kan_technology_list)[i]].強化2)) ||
+                    ((taisyou == kan_technology_list[Object.keys(kan_technology_list)[i]].対象1 && status == "ALL") || (taisyou == kan_technology_list[Object.keys(kan_technology_list)[i]].対象2 && status == "ALL")) ||
+                    ((taisyou == kan_technology_list[Object.keys(kan_technology_list)[i]].対象1 && status == kan_technology_list[Object.keys(kan_technology_list)[i]].強化1) || (taisyou == kan_technology_list[Object.keys(kan_technology_list)[i]].対象2 && status == kan_technology_list[Object.keys(kan_technology_list)[i]].強化2)))
                 ) ? atari(document.getElementById(in_id).childNodes[i].id,"ALL") : "none";
             }
         break;
