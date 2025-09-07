@@ -49,6 +49,10 @@ function button_touch_open(e,get,name,dis){
 	}
 }
 
+function open_button(id){
+	document.getElementById(id).style.display = (document.getElementById(id).style.display == "none") ? "block" : "none";
+}
+
 function imgChangeset(parts,iddeta,tagdeta,blo){
 imgget =  document.getElementById(iddeta).getElementsByTagName(tagdeta);
 for(var up = 0;up<imgget.length;up++){
