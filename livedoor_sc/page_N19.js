@@ -797,7 +797,7 @@ var kansen_namelist = {};
 var kensaku_kansen = {除外:[],新規:[],META:[],計画艦:[],コラボ:[],通常:[]};
 window.addEventListener('DOMContentLoaded', function() {
 if(document.getElementById("N19_updatetext")){
-    document.getElementById("N19_updatetext").textContent = "2025年5月7日更新：「チュリッパの海へ」まで収録";
+    document.getElementById("N19_updatetext").textContent = "2025年8月「淵層界の秘密」まで収録";
 }
     for(var i=0;i<kan_profile.length; i++){
         var inputstatus_deta = {
@@ -1047,4 +1047,5 @@ function kan_technology_list_sortbutton(in_id){
         "</tbody></table><br>"
     );
 }
+
 
