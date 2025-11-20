@@ -68,6 +68,7 @@ var teamslist = {
         東煌:{名前:'東煌',フォルダ:'Dragon_Empery'},
         北方連合:{名前:'北方連合',フォルダ:'Northern_Parliament'},
 	テンペスタ:{名前:'テンペスタ',フォルダ:'Tempesta'},
+	チュリッパ:{名前:'テンペスタ',フォルダ:'Kingdom_of_Tulipa'},
         META:{名前:'META',フォルダ:'Universal'},
         ネプテューヌ:{名前:'ネプテューヌ',フォルダ:'Collab_Nations'},
         うたわれるもの:{名前:'うたわれるもの',フォルダ:'Collab_Nations'},
@@ -76,11 +77,14 @@ var teamslist = {
         DOAXVV:{名前:'DOAXVV',フォルダ:'Collab_Nations'},
         アイドルマスター:{名前:'アイドルマスター',フォルダ:'Collab_Nations'},
         SSSS:{名前:'SSSS',フォルダ:'Collab_Nations'},
-	ライザのアトリエ:{名前:'ライザのアトリエ',フォルダ:'Collab_Nations'},
+        ライザのアトリエ:{名前:'ライザのアトリエ',フォルダ:'Collab_Nations'},
+	閃乱カグラ:{名前:'閃乱カグラ',フォルダ:'Collab_Nations'},
         ToLOVEる:{名前:'ToLOVEる',フォルダ:'Collab_Nations'},
+	        ダンまち:{名前:'ダンまち',フォルダ:'Collab_Nations'},
+	        'デート・ア・ライブ':{名前:'デート・ア・ライブ',フォルダ:'Collab_Nations'},
         //:{名前:'',フォルダ:'Collab_Nations'},
         //BILIBILI:{名前:'BILIBILI',フォルダ:'Collab_Nations'},
-        その他:{名前:'その他',フォルダ:'Universal'}
+        その他:{名前:'その他',フォルダ:'Collab_Nations'}
 }
 
 var index_n = 0;
