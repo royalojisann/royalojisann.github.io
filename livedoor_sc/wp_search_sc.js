@@ -40,6 +40,8 @@ var teamslist = {
         ライザのアトリエ:{名前:'ライザのアトリエ',フォルダ:'Collab_Nations'},
 	閃乱カグラ:{名前:'閃乱カグラ',フォルダ:'Collab_Nations'},
         ToLOVEる:{名前:'ToLOVEる',フォルダ:'Collab_Nations'},
+	        ダンまち:{名前:'ダンまち',フォルダ:'Collab_Nations'},
+	        'デート・ア・ライブ':{名前:'デート・ア・ライブ',フォルダ:'Collab_Nations'},
         //:{名前:'',フォルダ:'Collab_Nations'},
         //BILIBILI:{名前:'BILIBILI',フォルダ:'Collab_Nations'},
         その他:{名前:'その他',フォルダ:'Collab_Nations'}
