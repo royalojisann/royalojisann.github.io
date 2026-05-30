@@ -470,5 +470,8 @@ display:none;
 .obired{background: #ff5c5c;}
 .obiblue{background: #3aadff;}
 
-
-
+.open_button_design{
+    padding: 4px 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
