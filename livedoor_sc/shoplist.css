@@ -76,8 +76,6 @@
 .META{background: linear-gradient(45deg,#000000,#AD2A02,#D2541B,#000000,#6D2100,#9A2802)!important;color: #f9f593;}
 .META_SR{background: linear-gradient(45deg,#000000,#8B58AD,#C46FB3,#000000,#8250AB,#5C3B7D)!important;color: #FFCCFF;}
 
-
-
 /* 新規Tier */
 .list_box_22{
     display: flex;
@@ -136,7 +134,6 @@
     overflow: hidden;
 }
 
-
 /* コアショップリスト */
 .core_list_box{
     display: flex;
@@ -176,4 +173,24 @@
     width: 192px;
     color: black;
     background: linear-gradient(135deg, #bfbfbf, white);
+}
+
+/* タブコントロール */
+.tab_ctrl_button{
+    background: linear-gradient(180deg, #b9b9b9, transparent);
+    border: 1px solid #686868;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+}
+.tab_ctrl_button.button_light_on{
+    background: linear-gradient(180deg, #ffec42, transparent);
+    border: 1px solid #ffc600;
+}
+.tab_cheng_box{
+    display: none;
+    margin: auto;
+}
+.tab_cheng_box.tab_active{
+    display: block;
 }
