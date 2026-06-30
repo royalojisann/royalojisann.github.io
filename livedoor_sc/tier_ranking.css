@@ -1,0 +1,88 @@
+    #N42_data_set .N14_line_box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #N42_data_set .N14_rank_box {
+        font-size: 50px;
+        font-weight: bold;
+        padding: 0 0.15em;
+    }
+
+    #N42_data_set .N14_item_box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #N42_data_set .N14_item_card {
+        margin: 2px;
+        border: 2px solid #ffffff;
+        width: 104px;
+        height: 128px;
+        box-sizing: border-box;
+    }
+
+    #N42_data_set .N14_card_box {
+        position: relative;
+        width: 100px;
+    }
+
+    #N42_data_set .N14_card_img {
+        display: block;
+        width: 100px;
+    }
+
+    #N42_data_set .N14_item_name_box {
+        font-size: 15px;
+        font-weight: bold;
+        width: 100px;
+        height: 24px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #N42_data_set .N14_item_sp1,
+    #N42_data_set .N14_item_sp2,
+    #N42_data_set .N14_item_sp3,
+    #N42_data_set .N14_item_sp4 {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #N42_data_set .N14_item_sp1 {
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        font-weight: bold;
+        background: black;
+        color: white;
+        height: 26px;
+        width: 26px;
+    }
+
+    #N42_data_set .N14_item_sp2 {
+        top: 0;
+        right: 0;
+        font-size: 20px;
+        font-weight: bold;
+        background: #1565c0;
+        color: white;
+        height: 26px;
+        width: 26px;
+    }
+
+    #N42_data_set .N14_item_sp3 {
+        bottom: 0;
+        left: 0;
+        font-size: 20px;
+        font-weight: bold;
+        background: #f00;
+        color: white;
+        height: 26px;
+        width: 26px;
+    }
