@@ -4,7 +4,7 @@
 .SR{background:#c4adff !important;}
 .SSR{background:#ffff83 !important;}
 .UR{background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
-.PR{background:#ffff83 !important;}
+.PR{background: #a0522d !important;}
 .DR{background: linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff) !important;}
 
 
@@ -139,7 +139,7 @@
     }
 
     #N42_data_set .N14_rank_box {
-        font-size: 50px;
+        font-size: 30px;
         font-weight: bold;
         padding: 0 0.15em;
     }
@@ -147,6 +147,7 @@
     #N42_data_set .N14_item_box {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     #N42_data_set .N14_item_card {
