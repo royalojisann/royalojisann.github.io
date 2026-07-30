@@ -54,6 +54,12 @@ window.addEventListener('DOMContentLoaded', function() {
 // 		 document.getElementById("kan_skill").insertAdjacentHTML('beforebegin',skllue);
 // 		(adsbygoogle = window.adsbygoogle || []).push({});
 // 	}
+
+	if(document.getElementById("link_amazonlist")){
+    	document.getElementById("link_amazonlist").textContent = "";
+    	document.getElementById("link_amazonlist").insertAdjacentHTML('beforeend',`<a href="https://amzn.asia/d/09kcKL4r" target="_blank">アズレングッズまとめ</a>`);
+	}
+	
 	kijicreate();
 });
 
