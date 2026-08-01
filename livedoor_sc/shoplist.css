@@ -194,7 +194,23 @@
 .tab_cheng_box.tab_active{
     display: block;
 }
-
+/* お気に入りのカラーパターン */
+.bg_color_dark{
+    background: #373737;
+    color: white;
+}
+.bg_color_white{
+    background: white;
+    color: black;
+}
+.bg_color_yellow{
+    background: #ffff83;
+    color: black;
+}
+.bg_color_bluu{
+    background: #1565c0;
+    color: white;
+}
 
 .item_sp1,
 .item_sp2,
@@ -259,6 +275,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    font-size: 16px;
 }
 .blog_itemlist_box .list_box_card {
     width: 154px;
