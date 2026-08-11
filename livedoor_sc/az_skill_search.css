@@ -1,0 +1,55 @@
+/* スキルカテゴリー */
+#skill_category_sortbox * {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.scs_mainbox {
+    margin: 12px 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+.scs_picbox img{
+    display: block;
+}
+.scs_namebox {
+    width: calc(100% - 70px);
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+}
+.scs_namebox div{
+    height: 35px;
+    padding: 0 0 0 4px;
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+}
+.scs_namebox .attack_type{
+    background: #ff7676;
+}
+.scs_namebox .support_type{
+    background: #fff680;
+}
+.scs_namebox .defense_type{
+    background: #87d9ff;
+}
+.scs_namebox .nodata_type{
+    background: #c9c9c9;
+}
+.scs_bottombox {
+    background: azure;
+    width: 100%;
+    padding: 4px;
+}
+#searchskll select {
+    display: block;
+    width: 120px;
+    height: 36px;
+    padding: 0;
+    font-size: 18px;
+}
+.az_color {
+    color: #61e000;
+}
