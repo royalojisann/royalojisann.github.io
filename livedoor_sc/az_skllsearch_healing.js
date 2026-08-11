@@ -1,11 +1,16 @@
 //検索絞り込み
-function search_kansen(pid,divid,open,blocktype){
-    var teams = document.getElementById(pid).querySelectorAll('select')[0].value,type = document.getElementById(pid).querySelectorAll('select')[1].value,reality = document.getElementById(pid).querySelectorAll('select')[2].value;
-    var div = document.getElementById(divid).querySelectorAll(open);
-    for(var i=0;i<div.length;i++){
-        div[i].dataset.display = 'none';
-        if((teams == '全て' || teams == div[i].dataset.jin) && (type == '全て' || type == div[i].dataset.heel) && (reality == '全て' || reality == div[i].dataset.kyouka)){
-            div[i].dataset.display = blocktype;
-        }
+function search_kansen(search,setid,open,blo){
+    const select=document.getElementById(search).querySelectorAll('select');
+    const teams=select[0].value;
+    const type=select[1].value;
+    const reality=select[2].value;
+    const div=document.getElementById(setid).querySelectorAll(open);
+    for(const el of div){
+        const d=el.dataset;
+        el.dataset.display=(
+            (teams=='全て'||teams==d.jin)&&
+            (type=='全て'||type==d.heel)&&
+            (reality=='全て'||reality==d.kyouka)
+        )?blo:'none';
     }
 }
