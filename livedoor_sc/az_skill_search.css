@@ -6,10 +6,11 @@
 .scs_mainbox {
     margin: 12px 0 0 0;
     padding: 0;
-    display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
 }
+.scs_mainbox[data-display="flex"]{display: flex;}
+.scs_mainbox[data-display="none"]{display: none;}
 .scs_picbox img{
     display: block;
 }
